@@ -1,5 +1,15 @@
 #include"entidade.h"
 
+Entidade::Entidade(int x, int y, int w, int h, int f){
+  
+    px = x;
+    py = y;
+    width = w;
+    height = h;
+    flag = f;
+  
+}
+
 Entidade::Entidade(){
   
     px = 0;
