@@ -1,6 +1,8 @@
 #pragma once
 
-class Personagem{
+#include"entidade.h"
+
+class Personagem: public Entidade{
 
 protected:
 
