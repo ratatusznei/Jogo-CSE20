@@ -36,4 +36,6 @@ public:
     void setflag(int f);
     int getflag();
     
+    virtual void executar();
+    
 };
