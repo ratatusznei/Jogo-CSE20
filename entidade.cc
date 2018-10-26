@@ -61,3 +61,5 @@ void Entidade::setflag(int f){
 int Entidade::getflag(){
     return flag;
 }
+
+void Entidade::executar(){}
