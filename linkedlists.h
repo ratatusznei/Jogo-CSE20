@@ -161,33 +161,7 @@ public:
         }
 
     }
-
-    int imprimeLista(){ //Imprime a lista ; retorna 1 se a lista estiver vazia
-
-        here = top;
-        if(top == NULL){
-            return 1;
-        }
-        else{
-
-            int i = 2;
-            printf("Topo: Endereço %p; Valor %d\n",top,top->getDataValue());
-            while(here->getProxLista() != NULL){
-
-                here = here->getProxLista();
-                printf("%d: Endereço %p; Valor %d\n",i,here,here->getDataValue());
-                i++;
-
-            }
-
-        }
-        here = NULL;
-        fflush(stdin);
-        getchar();
-        return 0;
-
-    }
-
+    
     void mataLista(){   //Destroi a lista
 
         here = top->getProxLista();     //Define o atual como o segundo elemento
