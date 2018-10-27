@@ -62,5 +62,17 @@ public:
         y = y + v.gety();
         
     }
+    Vetor operator * (Vetor& v, double escalar){
+        
+        x = v.getx() * escalar;
+        y = v.gety() * escalar;
+        
+    }
+    void operator *= (double escalar){
+            
+        x = x * escalar;
+        y = y * escalar;
+        
+    }
 
 };
