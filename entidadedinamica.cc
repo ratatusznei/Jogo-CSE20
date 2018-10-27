@@ -47,4 +47,8 @@ int EntidadeDinamica::getdirecao(){
     return direcao;
 }
 
+void EntidadeDinamica::andar(){}
+
+void EntidadeDinamica::atacar(){}
+
 void EntidadeDinamica::executar(){}
