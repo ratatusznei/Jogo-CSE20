@@ -27,6 +27,8 @@ public:
     void setdirecao(int d);
     int getdirecao();
   
+    virtual void andar();
+    virtual void atacar();
     virtual void executar();
 
 };
