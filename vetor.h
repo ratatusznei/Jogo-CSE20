@@ -68,11 +68,41 @@ public:
         y = v.gety() * escalar;
         
     }
+    double operator * (Vetor& v1, Vetor& v2){
+        
+        return v1.getx()*v2.getx() + v1.gety()*v2.gety();
+        
+    }   
     void operator *= (double escalar){
             
         x = x * escalar;
         y = y * escalar;
         
     }
+    bool operator == (Vetor& v){
+        
+        if (x == v.getx() && y == v.gety())
+            return true;
+        else
+            return false;
+        
+    }
+    bool operator != (Vetor& v){
+        
+        if (x == v.getx() && y == v.gety())
+            return false;
+        else
+            return true;
+        
+    }
+    /*bool operator > (Vetor& v){
+        
+        if (this * this > v * v)
+            return true;
+        else
+            return false;
+        
+    }*/
+    
 
 };
