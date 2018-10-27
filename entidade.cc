@@ -1,5 +1,15 @@
 #include"entidade.h"
 
+Entidade::Entidade(int x, int y, int w, int h, int f){
+  
+    px = x;
+    py = y;
+    width = w;
+    height = h;
+    flag = f;
+  
+}
+
 Entidade::Entidade(){
   
     px = 0;
@@ -51,3 +61,7 @@ void Entidade::setflag(int f){
 int Entidade::getflag(){
     return flag;
 }
+
+void Entidade::executar(){}
+=======
+
