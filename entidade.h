@@ -8,11 +8,12 @@ protected:
     int py;     //Posição em y da entidade
     int width;  //Largura da hitbox da entidade
     int height; //Altura da hitbox da entidade
-    int flag;   /*Determina internamente como a entidade vai se comportar
+    int flag;   /*
+                  Determina internamente como a entidade vai se comportar 
+                  no que diz respeito ao tratamento de colisão
                   Flag negativa = inimigo
                   Flag positiva = amigo
                   Flag zero = plataforma ou obstáculo
-                  Basicamente é uma maneira da entidade saber o que ela é
                 */
     
 public:
