@@ -23,7 +23,7 @@ public:
     ~Entidade();
     
     void setpos(int x, int y);
-    Vetor getpos();
+    Vetor<int> getpos();
     
     void setwidth(int w);
     int getwidth();
