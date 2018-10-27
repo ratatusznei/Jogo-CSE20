@@ -13,7 +13,6 @@ protected:
                   no que diz respeito ao tratamento de colisão
                   Flag negativa = inimigo
                   Flag positiva = amigo
-                  Flag zero = plataforma ou obstáculo
                 */
     
 public:
@@ -39,4 +38,3 @@ public:
     
     virtual void executar();
     
-};

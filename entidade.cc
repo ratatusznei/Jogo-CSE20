@@ -63,3 +63,5 @@ int Entidade::getflag(){
 }
 
 void Entidade::executar(){}
+=======
+
