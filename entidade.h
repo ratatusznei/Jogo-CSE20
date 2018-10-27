@@ -6,7 +6,7 @@ class Entidade{
 
 protected:
 
-    Vetor posicao<int>  //Vetor posição da entidade
+    Vetor<int> posicao  //Vetor posição da entidade
     int width;  //Largura da hitbox da entidade
     int height; //Altura da hitbox da entidade
     int flag;   /*
