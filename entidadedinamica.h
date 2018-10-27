@@ -6,11 +6,11 @@ class EntidadeDinamica: public Entidade{
 
 protected:
 
-
+    
 
 public:
   
-    EntidadeDinamica(int x, int y, int w, int h);
+    EntidadeDinamica(int x, int y, int w, int h, int f);
     EntidadeDinamica();
     ~EntidadeDinamica();
   
