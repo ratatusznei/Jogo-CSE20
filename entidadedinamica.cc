@@ -15,4 +15,36 @@ EntidadeDinamica::EntidadeDinamica(){
 
 EntidadeDinamica::~EntidadeDinamica(){}
 
+void EntidadeDinamica::setvel(Vetor<double> v){
+    velocidade = v;
+}
+
+void EntidadeDinamica::setvel(double vx, double vy){
+    velocidade = (vx, vy);
+}
+
+Vetor<double> EntidadeDinamica::getvel(){
+    return velocidade;
+}
+   
+void EntidadeDinamica::setace(Vetor<double> a){
+    aceleracao = a;
+}
+
+void EntidadeDinamica::setace(double ax, double ay){
+    aceleracao = (ax, ay);
+}
+
+Vetor<double> EntidadeDinamica::getace(){
+    return aceleracao;
+}
+    
+void EntidadeDinamica::setdirecao(int d){
+    direcao = d;
+}
+
+int EntidadeDinamica::getdirecao(){
+    return direcao;
+}
+
 void EntidadeDinamica::executar(){}
