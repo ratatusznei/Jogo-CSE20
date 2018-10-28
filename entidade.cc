@@ -2,8 +2,7 @@
 
 Entidade::Entidade(int x, int y, int w, int h, int f){
   
-    px = x;
-    py = y;
+    posicao = (x,y);
     width = w;
     height = h;
     flag = f;
@@ -12,8 +11,7 @@ Entidade::Entidade(int x, int y, int w, int h, int f){
 
 Entidade::Entidade(){
   
-    px = 0;
-    py = 0;
+    posicao = (0,0);
     width = 0;
     height = 0;
     flag = 1;
@@ -22,20 +20,12 @@ Entidade::Entidade(){
 
 Entidade::~Entidade(){}
 
-void Entidade::setx(int x){
-    px = x;
+void Entidade::setpos(int x, int y){
+    posicao = (x,y);
 }
 
-int Entidade::getx(){
-    return px;
-}
-
-void Entidade::sety(int y){
-    py = y;
-}
-
-int Entidade::gety(){
-    return py;
+Vetor<int> Entidade::getpos(){
+    return posicao;
 }
 
 void Entidade::setwidth(int w){

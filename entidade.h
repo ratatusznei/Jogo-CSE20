@@ -1,11 +1,12 @@
 #pragma once
 
+#include"vetor.h"
+
 class Entidade{
 
 protected:
 
-    int px;     //Posição em x da entidade
-    int py;     //Posição em y da entidade
+    Vetor<int> posicao  //Vetor posição da entidade
     int width;  //Largura da hitbox da entidade
     int height; //Altura da hitbox da entidade
     int flag;   /*
@@ -21,11 +22,8 @@ public:
     Entidade();
     ~Entidade();
     
-    void setx(int x);
-    int getx();
-    
-    void sety(int y);
-    int gety();
+    void setpos(int x, int y);
+    Vetor<int> getpos();
     
     void setwidth(int w);
     int getwidth();
