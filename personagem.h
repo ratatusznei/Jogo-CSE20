@@ -16,7 +16,6 @@ public:
     
     virtual void andar();
     virtual void atacar();
-    
     virtual void executar();
 
 };
