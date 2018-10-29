@@ -1,15 +1,21 @@
 #include"entidadedinamica.h"
 
-EntidadeDinamica::EntidadeDinamica(int x, int y, int w, int h, int f):
-Entidade(x,y,w,h,f){}
+EntidadeDinamica::EntidadeDinamica
+(int x, int y, int w, int h, int f, Vetor<double> v, Vetor<double> a, Direcao d):
+Entidade(x,y,w,h,f){
 
-EntidadeDinamica::EntidadeDinamica(){
+    velocidade = v;
+    aceleracao = a;
+    dir = d;
 
-    px = 0;
-    py = 0;
-    width = 0;
-    height = 0;
-    flag = 0;
+}
+
+EntidadeDinamica::EntidadeDinamica():
+Entidade(0,0,0,0,-1){
+
+    velocidade = Vetor<double>(0,0);
+    aceleracao = Vetor<double>(0,0);
+    dir = Direcao::left;
     
 }
 
@@ -39,12 +45,13 @@ Vetor<double> EntidadeDinamica::getace(){
     return aceleracao;
 }
     
-void EntidadeDinamica::setdirecao(int d){
-    direcao = d;
-}
-
-int EntidadeDinamica::getdirecao(){
-    return direcao;
+void EntidadeDinamica::setdirecao(){
+    
+    if(dir == Direcao::left)
+        dir = Direcao::right;
+    else
+        dir = Direcao::left;
+    
 }
 
 void EntidadeDinamica::andar(){}
