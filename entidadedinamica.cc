@@ -13,8 +13,8 @@ Entidade(x,y,w,h,f){
 EntidadeDinamica::EntidadeDinamica():
 Entidade(0,0,0,0,-1){
 
-    velocidade = Vetor<double>(0,0);
-    aceleracao = Vetor<double>(0,0);
+    velocidade = Vetor<double> v(0,0);
+    aceleracao = Vetor<double> a(0,0);
     dir = Direcao::left;
     
 }
@@ -26,7 +26,7 @@ void EntidadeDinamica::setvel(Vetor<double> v){
 }
 
 void EntidadeDinamica::setvel(double vx, double vy){
-    velocidade = (vx, vy);
+    velocidade = Vetor<double> v(vx, vy);
 }
 
 Vetor<double> EntidadeDinamica::getvel(){
@@ -38,7 +38,7 @@ void EntidadeDinamica::setace(Vetor<double> a){
 }
 
 void EntidadeDinamica::setace(double ax, double ay){
-    aceleracao = (ax, ay);
+    aceleracao = Vetor<double> a(ax, ay);
 }
 
 Vetor<double> EntidadeDinamica::getace(){
