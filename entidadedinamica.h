@@ -14,7 +14,7 @@ protected:
 
 public:
   
-    EntidadeDinamica(int x, int y, int w, int h, int f);
+    EntidadeDinamica(int x, int y, int w, int h, int f, Vetor<double> v, Vetor<double> a, Direcao d);
     EntidadeDinamica();
     ~EntidadeDinamica();
     
