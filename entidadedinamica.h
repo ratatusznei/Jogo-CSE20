@@ -2,7 +2,7 @@
 
 #include"entidade.h"
 
-enum class Direcao {left, right};
+enum Direcao {left, right};
 
 class EntidadeDinamica: public Entidade{
 
