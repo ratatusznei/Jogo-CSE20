@@ -23,13 +23,12 @@ private:
     public:
 
         Node(){     //Construtora
-            data = 0;
             ante = NULL;
             prox = NULL;
         }
         ~Node(){    //Destrutora
-          ante = NULL;
-          prox = NULL;
+            ante = NULL;
+            prox = NULL;
         }
 
         void setDataValue(const T2 a){  //Recebe o dado
