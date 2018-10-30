@@ -1,18 +1,18 @@
 #include"inimigo.h"
 
-Inimigo::Inimigo(int x, int y, int w, int h, Vetor<> v, Vetor<> a, Direcao d):
-EntidadeDinamica(x,y,w,h,v,a,d){
+Inimigo::Inimigo(Vetor<int> p, int w, int h, Vetor<> v, Vetor<> a, Direcao d):
+EntidadeDinamica(p,w,h,v,a,d){
 
     flag = -1;
-    tipo = EntityType::INIMIGO;
+    tipo = INIMIGO;
 
 }
 
 Inimigo::Inimigo():
-EntidadeDinamica(0,0,0,0, Vetor<> v(0,0), Vetor<> a(0,0),Direcao::left){
+EntidadeDinamica(Vetor<int> p(0,0),0,0, Vetor<> v(0,0), Vetor<> a(0,0),LEFT){
 
     flag = -1;
-    tipo = EntityType::INIMIGO;
+    tipo = INIMIGO;
 
 }
 
