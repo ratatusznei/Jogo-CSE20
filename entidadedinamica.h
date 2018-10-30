@@ -8,23 +8,23 @@ class EntidadeDinamica: public Entidade{
 
 protected:
 
-    Vetor<double> velocidade;
-    Vetor<double> aceleracao;
+    Vetor<> velocidade;
+    Vetor<> aceleracao;
     Direcao dir;
 
 public:
   
-    EntidadeDinamica(int x, int y, int w, int h, Vetor<double> v, Vetor<double> a, Direcao d);
+    EntidadeDinamica(int x, int y, int w, int h, Vetor<> v, Vetor<> a, Direcao d);
     EntidadeDinamica();
     ~EntidadeDinamica();
     
-    void setvel(Vetor<double> v);
+    void setvel(Vetor<> v);
     void setvel(double vx, double vy);
-    Vetor<double> getvel();
+    Vetor<> getvel();
    
-    void setace(Vetor<double> a);
+    void setace(Vetor<> a);
     void setace(double ax, double ay);
-    Vetor<double> getace();
+    Vetor<> getace();
     
     void setdirecao();
   
