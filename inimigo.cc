@@ -1,7 +1,7 @@
 #include"inimigo.h"
 
-Inimigo::Inimigo(int x, int y, int w, int h):
-EntidadeDinamica(x,y,w,h){
+Inimigo::Inimigo(int x, int y, int w, int h, Vetor<> v, Vetor<> a, Direcao d):
+EntidadeDinamica(x,y,w,h,v,a,d){
 
     flag = -1;
     tipo = EntityType::INIMIGO;
@@ -9,7 +9,7 @@ EntidadeDinamica(x,y,w,h){
 }
 
 Inimigo::Inimigo():
-EntidadeDinamica(0,0,0,0){
+EntidadeDinamica(0,0,0,0, Vetor<> v(0,0), Vetor<> a(0,0),Direcao::left){
 
     flag = -1;
     tipo = EntityType::INIMIGO;
