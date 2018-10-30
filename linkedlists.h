@@ -160,12 +160,6 @@ public:
 
     }
     
-    void operator += (T1 thing){
-    
-        colaNoFinal(thing);
-        
-    }
-    
     void mataLista(){   //Destroi a lista
 
         here = top->getProxLista();     //Define o atual como o segundo elemento
