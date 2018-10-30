@@ -1,27 +1,25 @@
 #include"entidade.h"
 
-Entidade::Entidade(int x, int y, int w, int h, int f){
+Entidade::Entidade(int x, int y, int w, int h){
   
-    posicao = (x,y);
+    posicao = Vetor<int> p(x,y);
     width = w;
     height = h;
-    flag = f;
   
 }
 
 Entidade::Entidade(){
   
-    posicao = (0,0);
+    posicao = Vetor<int> p(0,0);
     width = 0;
     height = 0;
-    flag = 1;
 
 }
 
 Entidade::~Entidade(){}
 
 void Entidade::setpos(int x, int y){
-    posicao = (x,y);
+    posicao = Vetor<int> p(x,y);
 }
 
 Vetor<int> Entidade::getpos(){
@@ -53,5 +51,4 @@ int Entidade::getflag(){
 }
 
 void Entidade::executar(){}
-=======
 
