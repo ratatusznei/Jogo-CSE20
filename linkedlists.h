@@ -63,7 +63,7 @@ public:
 
     LISTA(){    //Construtora
         top = NULL;
-        here = NULL;
+        here = top;
         bottom = NULL;
     }
     ~LISTA(){   //Destrutora
@@ -88,13 +88,14 @@ public:
         }
         else{
 
+            Node<T1>* aux = here;
             here = top;             //Atual recebe o topo da lista
             no->setProxLista(here); //O antigo topo se torna o próximo do novo topo
             no->setAnteLista(NULL); //Como é o topo, anterior aponta para NULL
             no->setDataValue(a);    //Recebe o dado
             here->setAnteLista(no); //Antigo topo aponta para trás para o novo topo
             top = no;               //Substitui o topo da lista pelo nó novo
-            here = NULL;            //Aterra o atual
+            here = aux;             
 
         }
 
@@ -114,13 +115,14 @@ public:
         }
         else{
 
+            Node<T1>* aux = here;
             here = bottom;         //Atual recebe o fundo da lista
             no->setAnteLista(here);//O antigo fundo se torna o anterior do nó novo
             no->setProxLista(NULL);//Como é o fundo, próximo aponta para NULL
             no->setDataValue(a);   //Recebe o dado
             here->setProxLista(no);//Antigo fundo aponta para frente para o novo fundo
             bottom = no;           //Substitui o fundo da lista pelo nó novo
-            here = NULL;           //Aterra o atual
+            here = aux;           
 
         }
 
@@ -132,11 +134,12 @@ public:
         }
         else{
 
+            Node<T1>* aux = here;
             here = top;                 //Recebe o primeiro elemento da lista
             top = top->getProxLista();  //O segundo elemento se torna o novo primeiro
             top->setAnteLista(NULL);    //O primeiro aponta para NULL
             free(here);                 //Destroi o antigo primeiro
-            here = NULL;                //Aterra o atual
+            here = aux;               
             return 0;
 
         }
@@ -149,15 +152,69 @@ public:
         }
         else{
 
+            Node<T1>* aux = here;
             here = bottom;                  //Recebe o último elemento da lista
             bottom = bottom->getAnteLista();//O penúltimo elemento se torna o novo último
             bottom->setProxLista(NULL);     //O último elemento aponta pra NULL
             free(here);                     //Destroi o antigo último
-            here = NULL;                    //Aterra o atual
+            here = aux;              
             return 0;
 
         }
 
+    }
+    
+    int operator ++ (){
+    
+        if(here == bottom){
+            return 1;
+        }
+        else{
+            here = here->getProxLista();
+            return 0;
+        }
+    
+    }
+    
+    int operator -- (){
+    
+        if(here == top){
+            return 1;
+        }
+        else{
+            here = here->getAnteLista();
+            return 0;
+        }
+        
+    }
+    
+    void goToTop(){
+    
+        here = top;
+        
+    }
+    
+    void goToBottom(){
+    
+        here = bottom;
+        
+    }
+    
+    T1 getWhatIsHere(){
+    
+        return here->getData();
+        
+    }
+    
+    void removeWhatIsHere(){
+    
+        Node<T1>* aux1 = here->getAnteLista();
+        Node<T1>* aux2 = here->getProxLista();
+        free(here);
+        aux1->setProxLista(aux2);
+        aux2->setAnteLista(aux1);
+        here = aux2;
+        
     }
     
     void mataLista(){   //Destroi a lista
