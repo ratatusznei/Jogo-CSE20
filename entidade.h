@@ -22,7 +22,7 @@ protected:
     
 public:
 
-    Entidade(int p, int w, int h);
+    Entidade(Vetor<int> p, int w, int h);
     Entidade();
     ~Entidade();
     
