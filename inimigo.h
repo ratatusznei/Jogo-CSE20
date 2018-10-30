@@ -10,7 +10,7 @@ protected:
 
 public:
 
-    Inimigo(int x, int y, int w, int h, Vetor<> v, Vetor<> a, Direcao d);
+    Inimigo(Vetor<int> p, int w, int h, Vetor<> v, Vetor<> a, Direcao d);
     Inimigo();
     ~Inimigo();
     
