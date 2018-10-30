@@ -1,8 +1,8 @@
 #include"entidadedinamica.h"
 
 EntidadeDinamica::EntidadeDinamica
-(int x, int y, int w, int h, int f, Vetor<double> v, Vetor<double> a, Direcao d):
-Entidade(x,y,w,h,f){
+(int x, int y, int w, int h, Vetor<double> v, Vetor<double> a, Direcao d):
+Entidade(x,y,w,h){
 
     velocidade = v;
     aceleracao = a;
@@ -11,7 +11,7 @@ Entidade(x,y,w,h,f){
 }
 
 EntidadeDinamica::EntidadeDinamica():
-Entidade(0,0,0,0,-1){
+Entidade(0,0,0,0){
 
     velocidade = Vetor<double> v(0,0);
     aceleracao = Vetor<double> a(0,0);
