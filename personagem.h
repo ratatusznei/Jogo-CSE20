@@ -10,7 +10,7 @@ protected:
 
 public:
 
-    Personagem(int x, int y, int w, int h, Vetor<double> v, Vetor<double> a, Direcao d);
+    Personagem(int x, int y, int w, int h, Vetor<> v, Vetor<> a, Direcao d);
     Personagem();
     ~Personagem();
     
