@@ -1,6 +1,6 @@
 #include"entidade.h"
 
-Entidade::Entidade(int p, int w, int h){
+Entidade::Entidade(Vetor<int> p, int w, int h){
   
     posicao = p;
     width = w;
