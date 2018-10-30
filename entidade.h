@@ -1,5 +1,6 @@
 #pragma once
 
+#include"entitytype.h"
 //builder pattern
 //bridge pattern
 #include"vetor.h"
@@ -8,6 +9,7 @@ class Entidade{
 
 protected:
 
+    EntityType tipo;    //Enumeração do tipo de Entidade
     Vetor<int> posicao  //Vetor posição da entidade
     int width;  //Largura da hitbox da entidade
     int height; //Altura da hitbox da entidade
@@ -20,7 +22,7 @@ protected:
     
 public:
 
-    Entidade(int x, int y, int w, int h, int f);
+    Entidade(int x, int y, int w, int h);
     Entidade();
     ~Entidade();
     
