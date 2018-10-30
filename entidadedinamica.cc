@@ -15,7 +15,7 @@ Entidade(Vetor<int> p(0,0),0,0){
 
     velocidade = Vetor<> v(0,0);
     aceleracao = Vetor<> a(0,0);
-    dir = Direcao::left;
+    dir = LEFT;
     
 }
 
@@ -47,10 +47,10 @@ Vetor<> EntidadeDinamica::getace(){
     
 void EntidadeDinamica::setdirecao(){
     
-    if(dir == Direcao::left)
-        dir = Direcao::right;
+    if(dir == LEFT)
+        dir = RIGHT;
     else
-        dir = Direcao::left;
+        dir = LEFT;
     
 }
 
