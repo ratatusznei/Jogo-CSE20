@@ -2,17 +2,19 @@
 
 #include"entidade.h"
 
+enum class Direcao {left, right};
+
 class EntidadeDinamica: public Entidade{
 
 protected:
 
     Vetor<double> velocidade;
     Vetor<double> aceleracao;
-    int direcao;
+    Direcao dir;
 
 public:
   
-    EntidadeDinamica(int x, int y, int w, int h, int f);
+    EntidadeDinamica(int x, int y, int w, int h, int f, Vetor<double> v, Vetor<double> a, Direcao d);
     EntidadeDinamica();
     ~EntidadeDinamica();
     
@@ -24,8 +26,7 @@ public:
     void setace(double ax, double ay);
     Vetor<double> getace();
     
-    void setdirecao(int d);
-    int getdirecao();
+    void setdirecao();
   
     virtual void andar();
     virtual void atacar();

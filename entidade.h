@@ -1,5 +1,7 @@
 #pragma once
 
+//builder pattern
+//bridge pattern
 #include"vetor.h"
 
 class Entidade{
