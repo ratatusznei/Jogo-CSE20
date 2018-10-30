@@ -1,6 +1,6 @@
 #pragma once
 
-enum class EntityType{
+enum EntityType{
     PERSONAGEM,
     INIMIGO,
     PLATAFORMA
