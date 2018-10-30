@@ -1,10 +1,20 @@
 #include"inimigo.h"
 
 Inimigo::Inimigo(int x, int y, int w, int h):
-EntidadeDinamica(x,y,w,h,-1){}
+EntidadeDinamica(x,y,w,h){
+
+    flag = -1;
+    tipo = EntityType::INIMIGO;
+
+}
 
 Inimigo::Inimigo():
-EntidadeDinamica(0,0,0,0,-1){}
+EntidadeDinamica(0,0,0,0){
+
+    flag = -1;
+    tipo = EntityType::INIMIGO;
+
+}
 
 Inimigo::~Inimigo(){}
 
