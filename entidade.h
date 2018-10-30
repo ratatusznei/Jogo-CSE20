@@ -22,7 +22,7 @@ protected:
     
 public:
 
-    Entidade(int x, int y, int w, int h);
+    Entidade(int p, int w, int h);
     Entidade();
     ~Entidade();
     
