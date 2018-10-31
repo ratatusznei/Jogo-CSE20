@@ -77,6 +77,12 @@ public:
         y = y * escalar;
 
     }
+    Vetor<double> operator () (double xis, double ipsilon){
+    
+        Vetor<double> aux(xis,ipsilon);
+        return aux;
+        
+    }
     bool operator == (Vetor& v){
 
         if (x == v.getx() && y == v.gety())
