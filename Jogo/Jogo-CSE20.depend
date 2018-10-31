@@ -1,0 +1,43 @@
+# depslib dependency file v1.0
+1540673743 source:/home/fernando/Programming/Jogo-CSE20/Jogo/main.cpp
+	"Principal.h"
+
+1540684195 source:/home/fernando/Programming/Jogo-CSE20/Jogo/src/GerenciadorGrafico.cpp
+	"GerenciadorGrafico.h"
+
+1540684997 /home/fernando/Programming/Jogo-CSE20/Jogo/include/GerenciadorGrafico.h
+	<SFML/Window.hpp>
+	<SFML/Graphics.hpp>
+	<string>
+	"Menu.h"
+	"Jogo.h"
+	"TelaDeCreditos.h"
+
+1540684556 source:/home/fernando/Programming/Jogo-CSE20/Jogo/src/Jogo.cpp
+	"Jogo.h"
+
+1540684522 /home/fernando/Programming/Jogo-CSE20/Jogo/include/Jogo.h
+
+1540684545 source:/home/fernando/Programming/Jogo-CSE20/Jogo/src/Menu.cpp
+	"Menu.h"
+
+1540684539 /home/fernando/Programming/Jogo-CSE20/Jogo/include/Menu.h
+	<SFML/Window/Mouse.hpp>
+	<string>
+
+1540684641 source:/home/fernando/Programming/Jogo-CSE20/Jogo/src/TelaDeCreditos.cpp
+	"TelaDeCreditos.h"
+
+1540684444 /home/fernando/Programming/Jogo-CSE20/Jogo/include/TelaDeCreditos.h
+	<string>
+
+1540674685 /home/fernando/Programming/Jogo-CSE20/Jogo/include/Principal.h
+	<SFML/Window.hpp>
+	"GerenciadorGrafico.h"
+	"Menu.h"
+	"Jogo.h"
+	"TelaDeCreditos.h"
+
+1540684846 source:/home/fernando/Programming/Jogo-CSE20/Jogo/src/Principal.cpp
+	"Principal.h"
+
