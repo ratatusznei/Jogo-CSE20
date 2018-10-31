@@ -200,9 +200,9 @@ public:
         
     }
     
-    T1 getWhatIsHere(){
+    T1* getWhatIsHere(){
     
-        return here->getData();
+        return &(here->getData());
         
     }
     
