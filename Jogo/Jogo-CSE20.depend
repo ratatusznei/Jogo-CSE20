@@ -2,10 +2,10 @@
 1540673743 source:/home/fernando/Programming/Jogo-CSE20/Jogo/main.cpp
 	"Principal.h"
 
-1540684195 source:/home/fernando/Programming/Jogo-CSE20/Jogo/src/GerenciadorGrafico.cpp
+1541078152 source:/home/fernando/Programming/Jogo-CSE20/Jogo/src/GerenciadorGrafico.cpp
 	"GerenciadorGrafico.h"
 
-1540684997 /home/fernando/Programming/Jogo-CSE20/Jogo/include/GerenciadorGrafico.h
+1541078077 /home/fernando/Programming/Jogo-CSE20/Jogo/include/GerenciadorGrafico.h
 	<SFML/Window.hpp>
 	<SFML/Graphics.hpp>
 	<string>
@@ -18,11 +18,13 @@
 
 1540684522 /home/fernando/Programming/Jogo-CSE20/Jogo/include/Jogo.h
 
-1540684545 source:/home/fernando/Programming/Jogo-CSE20/Jogo/src/Menu.cpp
+1541078006 source:/home/fernando/Programming/Jogo-CSE20/Jogo/src/Menu.cpp
 	"Menu.h"
 
-1540684539 /home/fernando/Programming/Jogo-CSE20/Jogo/include/Menu.h
+1541077823 /home/fernando/Programming/Jogo-CSE20/Jogo/include/Menu.h
 	<SFML/Window/Mouse.hpp>
+	<SFML/Graphics.hpp>
+	<vector>
 	<string>
 
 1540684641 source:/home/fernando/Programming/Jogo-CSE20/Jogo/src/TelaDeCreditos.cpp
@@ -38,6 +40,6 @@
 	"Jogo.h"
 	"TelaDeCreditos.h"
 
-1540684846 source:/home/fernando/Programming/Jogo-CSE20/Jogo/src/Principal.cpp
+1541078134 source:/home/fernando/Programming/Jogo-CSE20/Jogo/src/Principal.cpp
 	"Principal.h"
 

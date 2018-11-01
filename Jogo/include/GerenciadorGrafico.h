@@ -22,20 +22,19 @@ class GerenciadorGrafico {
 		bool EstaAberta ();
 		bool SondarEvento (sf::Event& evento);
 		sf::Vector2i GetPosicaoDoMouse ();
+		bool GetMouseClick ();
 
-		void Limpa ();
+		void Limpa();
 		void Atualiza ();
 
-		void Desenha (Menu menu);
-		void Desenha (Jogo jogo);
-		void Desenha (TelaDeCreditos creditos);
+		void Desenha (Menu& menu);
+		void Desenha (Jogo& jogo);
+		void Desenha (TelaDeCreditos& creditos);
 
 	private:
 		sf::RenderWindow _window;
 		sf::VideoMode _video_mode;
 		string _titulo;
-
-		sf::Font _font_menu;
 };
 
 #endif // GERENCIADORGRAFICO_H

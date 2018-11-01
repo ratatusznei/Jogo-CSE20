@@ -2,6 +2,8 @@
 #define MENU_H
 
 #include <SFML/Window/Mouse.hpp>
+#include <SFML/Graphics.hpp>
+#include <vector>
 #include <string>
 
 #define NUM_OPCOES 5
@@ -23,12 +25,16 @@ class Menu {
 		Menu (EnumEstado& estado);
 		~Menu ();
 
-		void Executa (sf::Vector2i mouse_pos);
+		void Executa (sf::Vector2i mouse_pos, bool mouse_click);
+
+		void SetFont (string file);
+		void IncluiOpcao (string text, int x, int y);
+		const vector<sf::Text*>& GetOpcoes ();
 
 	private:
 		EnumEstado& _estado;
-		int _opcao_atual;
-		string _opcoes[5];
+		vector<sf::Text*> _opcoes;
+		sf::Font _font_menu;
 };
 
 #endif // MENU_H
