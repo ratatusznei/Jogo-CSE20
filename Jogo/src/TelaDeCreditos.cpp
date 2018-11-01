@@ -1,27 +1,19 @@
 #include "TelaDeCreditos.h"
 
-TelaDeCreditos::TelaDeCreditos ():
-_disciplina(""),
-_professor("")
+TelaDeCreditos::TelaDeCreditos (EnumEstado& estado):
+Menu(estado)
 {
+	IncluiOpcao("Voltar", WINDOW_LENGTH / 2, 360);
+
+	IncluiOpcao("Creditos", WINDOW_LENGTH / 2, 100);
 }
 
 TelaDeCreditos::~TelaDeCreditos () {
 	//dtor
 }
 
-void TelaDeCreditos::SetCriadores (string criador0, string criador1) {
-	_criadores[0] = criador0;
-	_criadores[1] = criador1;
-}
-
-void TelaDeCreditos::SetDisciplina (string disciplina) {
-	_disciplina = disciplina;
-}
-
-void TelaDeCreditos::SetProfessor (string professor) {
-	_professor = professor;
-}
-
-void TelaDeCreditos::Executa () {
+void TelaDeCreditos::InterpretaClick (int indice) {
+	if (indice == 0) {
+		_estado = EnumEstado::Menu;
+	}
 }

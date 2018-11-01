@@ -21,6 +21,7 @@ void Menu::Executa (sf::Vector2i mouse_pos, bool mouse_click) {
 
 			if (mouse_click) {
 				_opcoes[i]->setFillColor(sf::Color::Red);
+				InterpretaClick(i);
 			}
 		}
 		else {

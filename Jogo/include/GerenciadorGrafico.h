@@ -4,13 +4,11 @@
 #include <SFML/Window.hpp>
 #include <SFML/Graphics.hpp>
 #include <string>
+#include "common.h"
 #include "Menu.h"
 #include "Jogo.h"
 #include "TelaDeCreditos.h"
 
-#define WINDOW_LENGTH 960
-#define WINDOW_HEIGH 540
-#define WINDOW_LABEL "Jogo"
 
 using namespace std;
 

@@ -4,7 +4,7 @@
 #include <SFML/Window.hpp>
 
 #include "GerenciadorGrafico.h"
-#include "Menu.h"
+#include "MenuPrincipal.h"
 #include "Jogo.h"
 #include "TelaDeCreditos.h"
 
@@ -18,7 +18,7 @@ class Principal
 
 	private:
 		GerenciadorGrafico _janela;
-		Menu _menu;
+		MenuPrincipal _main;
 		Jogo _jogo;
 		TelaDeCreditos _creditos;
 		EnumEstado _estado;

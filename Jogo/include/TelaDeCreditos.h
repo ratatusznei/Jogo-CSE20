@@ -2,26 +2,18 @@
 #define TELADECREDITOS_H
 
 #include <string>
+#include "common.h"
+#include "Menu.h"
 
 using namespace std;
 
-class TelaDeCreditos {
+class TelaDeCreditos: public Menu {
 	public:
-		TelaDeCreditos ();
+		TelaDeCreditos (EnumEstado& estado);
 		~TelaDeCreditos ();
 
-		void SetCriadores (string criador0, string criador1);
-		void SetDisciplina (string disciplina);
-                void SetProfessor (string professor);
-
-		void Executa ();
-
-	protected:
-
 	private:
-		string _criadores[2];
-		string _disciplina;
-		string _professor;
+		void InterpretaClick (int indice);
 };
 
 #endif // TELADECREDITOS_H

@@ -2,13 +2,14 @@
 1540673743 source:/home/fernando/Programming/Jogo-CSE20/Jogo/main.cpp
 	"Principal.h"
 
-1541078152 source:/home/fernando/Programming/Jogo-CSE20/Jogo/src/GerenciadorGrafico.cpp
+1541078441 source:/home/fernando/Programming/Jogo-CSE20/Jogo/src/GerenciadorGrafico.cpp
 	"GerenciadorGrafico.h"
 
-1541078077 /home/fernando/Programming/Jogo-CSE20/Jogo/include/GerenciadorGrafico.h
+1541082092 /home/fernando/Programming/Jogo-CSE20/Jogo/include/GerenciadorGrafico.h
 	<SFML/Window.hpp>
 	<SFML/Graphics.hpp>
 	<string>
+	"common.h"
 	"Menu.h"
 	"Jogo.h"
 	"TelaDeCreditos.h"
@@ -18,28 +19,39 @@
 
 1540684522 /home/fernando/Programming/Jogo-CSE20/Jogo/include/Jogo.h
 
-1541078006 source:/home/fernando/Programming/Jogo-CSE20/Jogo/src/Menu.cpp
+1541081591 source:/home/fernando/Programming/Jogo-CSE20/Jogo/src/Menu.cpp
 	"Menu.h"
 
-1541077823 /home/fernando/Programming/Jogo-CSE20/Jogo/include/Menu.h
+1541082871 /home/fernando/Programming/Jogo-CSE20/Jogo/include/Menu.h
 	<SFML/Window/Mouse.hpp>
 	<SFML/Graphics.hpp>
 	<vector>
 	<string>
 
-1540684641 source:/home/fernando/Programming/Jogo-CSE20/Jogo/src/TelaDeCreditos.cpp
+1541082906 source:/home/fernando/Programming/Jogo-CSE20/Jogo/src/TelaDeCreditos.cpp
 	"TelaDeCreditos.h"
 
-1540684444 /home/fernando/Programming/Jogo-CSE20/Jogo/include/TelaDeCreditos.h
+1541082432 /home/fernando/Programming/Jogo-CSE20/Jogo/include/TelaDeCreditos.h
 	<string>
+	"common.h"
+	"Menu.h"
 
-1540674685 /home/fernando/Programming/Jogo-CSE20/Jogo/include/Principal.h
+1541081846 /home/fernando/Programming/Jogo-CSE20/Jogo/include/Principal.h
 	<SFML/Window.hpp>
 	"GerenciadorGrafico.h"
-	"Menu.h"
+	"MenuPrincipal.h"
 	"Jogo.h"
 	"TelaDeCreditos.h"
 
-1541078134 source:/home/fernando/Programming/Jogo-CSE20/Jogo/src/Principal.cpp
+1541083199 source:/home/fernando/Programming/Jogo-CSE20/Jogo/src/Principal.cpp
 	"Principal.h"
+
+1541082107 /home/fernando/Programming/Jogo-CSE20/Jogo/include/MenuPrincipal.h
+	"common.h"
+	"Menu.h"
+
+1541082082 /home/fernando/Programming/Jogo-CSE20/Jogo/include/common.h
+
+1541082643 source:/home/fernando/Programming/Jogo-CSE20/Jogo/src/MenuPrincipal.cpp
+	"MenuPrincipal.h"
 

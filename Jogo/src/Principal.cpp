@@ -2,21 +2,11 @@
 
 Principal::Principal ():
 _janela(sf::VideoMode(WINDOW_LENGTH, WINDOW_HEIGH), WINDOW_LABEL),
-_menu(_estado),
+_main(_estado),
 _jogo(),
-_creditos(),
+_creditos(_estado),
 _estado(EnumEstado::Menu)
 {
-	_menu.SetFont("data/fonts/BLKCHCRY.TTF");
-	_menu.IncluiOpcao("Jogar solo", WINDOW_LENGTH / 2, 200);
-	_menu.IncluiOpcao("Jogar co-op", WINDOW_LENGTH / 2, 250);
-	_menu.IncluiOpcao("Carregar jogo", WINDOW_LENGTH / 2, 300);
-	_menu.IncluiOpcao("Creditos", WINDOW_LENGTH / 2, 350);
-	_menu.IncluiOpcao("Sair", WINDOW_LENGTH / 2, 430);
-
-	_creditos.SetCriadores("Pedro", "Fernando");
-	_creditos.SetDisciplina("CSE20");
-	_creditos.SetProfessor("Simao");
 }
 
 Principal::~Principal () {
@@ -24,18 +14,27 @@ Principal::~Principal () {
 }
 
 void Principal::Executar () {
+	sf::Event evento;
+	bool mouse_clicked = false;
+
 	while (_estado != EnumEstado::Sair) {
-		sf::Event evento;
+		_janela.Limpa();
+		mouse_clicked = false;
+
 		if (_janela.SondarEvento(evento)) {
 			if (evento.type == sf::Event::Closed) {
 				_estado = EnumEstado::Sair;
+			}
+
+			else if (evento.type == sf::Event::MouseButtonPressed && evento.mouseButton.button == sf::Mouse::Button::Left) {
+				mouse_clicked = true;
 			}
 		}
 
 		switch (_estado) {
 		case EnumEstado::Menu:
-			_menu.Executa(_janela.GetPosicaoDoMouse(), _janela.GetMouseClick());
-			_janela.Desenha(_menu);
+			_main.Executa(_janela.GetPosicaoDoMouse(), mouse_clicked);
+			_janela.Desenha(_main);
 			break;
 
 		case EnumEstado::Jogo:
@@ -44,7 +43,7 @@ void Principal::Executar () {
 			break;
 
 		case EnumEstado::Tela_de_creditos:
-			_creditos.Executa();
+			_creditos.Executa(_janela.GetPosicaoDoMouse(), mouse_clicked);
 			_janela.Desenha(_creditos);
 			break;
 
