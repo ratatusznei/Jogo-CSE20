@@ -1,10 +1,10 @@
 #include"plataforma.h"
 
-Plataforma::Plataforma(int x, int y, int w, int h):
-EntidadeEstatica(x,y,w,h,0){}
+Plataforma::Plataforma(Vetor<int> p, int w, int h):
+EntidadeEstatica(p,w,h){}
 
 Plataforma::Plataforma():
-EntidadeEstatica(0,0,0,0,0){}
+EntidadeEstatica(Vetor<int>(0,0),0,0){}
 
 Plataforma::~Plataforma(){}
 

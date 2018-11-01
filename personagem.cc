@@ -1,24 +1,25 @@
 #include"personagem.h"
 
-Personagem::Personagem(int x, int y, int w, int h, Vetor<> v, Vetor<> a, Direcao d):
-EntidadeDinamica(x,y,w,h,v,a,d){
+Personagem::Personagem
+(Vetor<int> p, int w, int h, Vetor<> v, Vetor<> a, Direcao d):
+EntidadeDinamica(p,w,h,v,a,d){
 
-    
+
 
 }
 
-Personagem::Personagem(int x, int y, int w, int h):
-EntidadeDinamica(x,y,w,h,Vetor<> v(0,0), Vetor<> a(0,0),Direcao::right){
-    
-    
-    
+Personagem::Personagem(Vetor<int> p, int w, int h):
+EntidadeDinamica(p,w,h,Vetor<> (0,0), Vetor<> (0,0),RIGHT){
+
+
+
 }
 
 Personagem::Personagem():
-EntidadeDinamica(0,0,0,0,Vetor<> v(0,0), Vetor<> a(0,0),Direcao::right){
- 
-    
-    
+EntidadeDinamica(Vetor<int> (0,0),0,0,Vetor<> (0,0), Vetor<> (0,0),RIGHT){
+
+
+
 }
 
 Personagem::~Personagem(){}

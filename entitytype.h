@@ -4,4 +4,4 @@ enum EntityType{
     PERSONAGEM,
     INIMIGO,
     PLATAFORMA
-}
+};

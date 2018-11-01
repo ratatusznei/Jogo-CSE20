@@ -1,4 +1,5 @@
 #pragma once
+#include"entidadeestatica.h"
 
 class Plataforma: public EntidadeEstatica{
 
@@ -8,10 +9,10 @@ protected:
 
 public:
 
-    Plataforma(int x, int y, int w, int h);
+    Plataforma(Vetor<int> p, int w, int h);
     Plataforma();
     ~Plataforma();
-    
+
     virtual void executar();
-    
+
 };

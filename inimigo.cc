@@ -9,7 +9,7 @@ EntidadeDinamica(p,w,h,v,a,d){
 }
 
 Inimigo::Inimigo():
-EntidadeDinamica(Vetor<int> p(0,0),0,0, Vetor<> v(0,0), Vetor<> a(0,0),LEFT){
+EntidadeDinamica(Vetor<int> (0,0),0,0, Vetor<> (0,0), Vetor<> (0,0),LEFT){
 
     flag = -1;
     tipo = INIMIGO;
