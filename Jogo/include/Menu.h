@@ -6,8 +6,6 @@
 #include <vector>
 #include <string>
 
-#define NUM_OPCOES 5
-
 using namespace std;
 
 class GerenciadorGrafico;
@@ -23,7 +21,7 @@ enum class EnumEstado {
 class Menu {
 	public:
 		Menu (EnumEstado& estado);
-		~Menu ();
+		virtual ~Menu ();
 
 		void Executa (sf::Vector2i mouse_pos, bool mouse_click);
 
@@ -31,10 +29,12 @@ class Menu {
 		void IncluiOpcao (string text, int x, int y);
 		const vector<sf::Text*>& GetOpcoes ();
 
-	private:
+	protected:
 		vector<sf::Text*> _opcoes;
 		sf::Font _font_menu;
 		EnumEstado& _estado;
+
+		virtual void InterpretaClick (int indice) = 0;
 };
 
 #endif // MENU_H

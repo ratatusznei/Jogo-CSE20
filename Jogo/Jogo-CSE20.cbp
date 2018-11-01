@@ -44,12 +44,15 @@
 		<Unit filename="include/GerenciadorGrafico.h" />
 		<Unit filename="include/Jogo.h" />
 		<Unit filename="include/Menu.h" />
+		<Unit filename="include/MenuPrincipal.h" />
 		<Unit filename="include/Principal.h" />
 		<Unit filename="include/TelaDeCreditos.h" />
+		<Unit filename="include/common.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/GerenciadorGrafico.cpp" />
 		<Unit filename="src/Jogo.cpp" />
 		<Unit filename="src/Menu.cpp" />
+		<Unit filename="src/MenuPrincipal.cpp" />
 		<Unit filename="src/Principal.cpp" />
 		<Unit filename="src/TelaDeCreditos.cpp" />
 		<Extensions>

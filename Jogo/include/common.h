@@ -1,0 +1,8 @@
+#ifndef COMMON_H_INCLUDED
+#define COMMON_H_INCLUDED
+
+#define WINDOW_LENGTH 960
+#define WINDOW_HEIGH 540
+#define WINDOW_LABEL "Jogo"
+
+#endif // COMMON_H_INCLUDED
