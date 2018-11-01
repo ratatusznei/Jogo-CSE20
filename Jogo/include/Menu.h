@@ -32,9 +32,9 @@ class Menu {
 		const vector<sf::Text*>& GetOpcoes ();
 
 	private:
-		EnumEstado& _estado;
 		vector<sf::Text*> _opcoes;
 		sf::Font _font_menu;
+		EnumEstado& _estado;
 };
 
 #endif // MENU_H

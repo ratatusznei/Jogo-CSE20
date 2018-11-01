@@ -17,11 +17,11 @@ class Principal
 		void Executar ();
 
 	private:
-		EnumEstado _estado;
 		GerenciadorGrafico _janela;
-		TelaDeCreditos _creditos;
 		Menu _menu;
 		Jogo _jogo;
+		TelaDeCreditos _creditos;
+		EnumEstado _estado;
 };
 
 #endif // PRINCIPAL_H

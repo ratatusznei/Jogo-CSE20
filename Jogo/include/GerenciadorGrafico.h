@@ -29,7 +29,6 @@ class GerenciadorGrafico {
 
 		void Desenha (Menu& menu);
 		void Desenha (Jogo& jogo);
-		void Desenha (TelaDeCreditos& creditos);
 
 	private:
 		sf::RenderWindow _window;

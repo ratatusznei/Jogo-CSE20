@@ -47,8 +47,3 @@ void GerenciadorGrafico::Desenha (Menu& menu) {
 void GerenciadorGrafico::Desenha (Jogo& jogo) {
 
 }
-
-void GerenciadorGrafico::Desenha (TelaDeCreditos& creditos) {
-
-}
-

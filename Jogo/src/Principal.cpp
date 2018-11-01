@@ -1,11 +1,11 @@
 #include "Principal.h"
 
 Principal::Principal ():
-_estado(EnumEstado::Menu),
 _janela(sf::VideoMode(WINDOW_LENGTH, WINDOW_HEIGH), WINDOW_LABEL),
-_creditos(),
 _menu(_estado),
-_jogo()
+_jogo(),
+_creditos(),
+_estado(EnumEstado::Menu)
 {
 	_menu.SetFont("data/fonts/BLKCHCRY.TTF");
 	_menu.IncluiOpcao("Jogar solo", WINDOW_LENGTH / 2, 200);
