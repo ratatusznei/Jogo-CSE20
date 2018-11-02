@@ -1,8 +1,8 @@
 #include"entidadedinamica.h"
 
 EntidadeDinamica::EntidadeDinamica
-(int x, int y, int w, int h, int f, Vetor<double> v, Vetor<double> a, Direcao d):
-Entidade(x,y,w,h,f){
+(Vetor<int> p, int w, int h, Vetor<> v, Vetor<> a, Direcao d):
+Entidade(p,w,h){
 
     velocidade = v;
     aceleracao = a;
@@ -11,47 +11,47 @@ Entidade(x,y,w,h,f){
 }
 
 EntidadeDinamica::EntidadeDinamica():
-Entidade(0,0,0,0,-1){
+Entidade(Vetor<int> (0,0),0,0){
 
-    velocidade = Vetor<double> v(0,0);
-    aceleracao = Vetor<double> a(0,0);
-    dir = Direcao::left;
-    
+    velocidade(0,0);
+    aceleracao(0,0);
+    dir = LEFT;
+
 }
 
 EntidadeDinamica::~EntidadeDinamica(){}
 
-void EntidadeDinamica::setvel(Vetor<double> v){
+void EntidadeDinamica::setvel(Vetor<>& v){
     velocidade = v;
 }
 
 void EntidadeDinamica::setvel(double vx, double vy){
-    velocidade = Vetor<double> v(vx, vy);
+    velocidade(vx, vy);
 }
 
-Vetor<double> EntidadeDinamica::getvel(){
+Vetor<> EntidadeDinamica::getvel(){
     return velocidade;
 }
-   
-void EntidadeDinamica::setace(Vetor<double> a){
+
+void EntidadeDinamica::setace(Vetor<>& a){
     aceleracao = a;
 }
 
 void EntidadeDinamica::setace(double ax, double ay){
-    aceleracao = Vetor<double> a(ax, ay);
+    aceleracao(ax, ay);
 }
 
-Vetor<double> EntidadeDinamica::getace(){
+Vetor<> EntidadeDinamica::getace(){
     return aceleracao;
 }
-    
+
 void EntidadeDinamica::setdirecao(){
-    
-    if(dir == Direcao::left)
-        dir = Direcao::right;
+
+    if(dir == LEFT)
+        dir = RIGHT;
     else
-        dir = Direcao::left;
-    
+        dir = LEFT;
+
 }
 
 void EntidadeDinamica::andar(){}

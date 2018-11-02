@@ -1,7 +1,6 @@
 #pragma once
 
-template <class T>
-class Vetor{
+template <class T = double> class Vetor{
 
 protected:
 
@@ -38,91 +37,22 @@ public:
         return y;
     }
 
-    void operator = (Vetor& v){
+    void operator = (Vetor<T>& v){
 
         x = v.getx();
         y = v.gety();
 
     }
-    Vetor operator + (Vetor& v){
+    Vetor<T>& operator * (double escalar){
 
-        Vetor<T> aux;
-        aux.setx(x+v.getx());
-        aux.sety(y+v.gety());
-        return aux;
+        x *= escalar;
+        y *= escalar;
 
     }
-    void operator += (Vetor& v){
+    void operator ()(T xis, T ipsilon){
 
-        x = x + v.getx();
-        y = y + v.gety();
-
-    }
-    Vetor operator * (double escalar){
-
-        Vetor<T> aux;
-        aux.setx(x*escalar);
-        aux.sety(y*escalar);
-        return aux;
-
-    }
-    T operator * (Vetor& v){
-
-        return x*v.getx() + y*v.gety();
-
-    }
-    void operator *= (double escalar){
-
-        x = x * escalar;
-        y = y * escalar;
-
-    }
-    bool operator == (Vetor& v){
-
-        if (x == v.getx() && y == v.gety())
-            return true;
-        else
-            return false;
-
-    }
-    bool operator != (Vetor& v){
-
-        if (x == v.getx() && y == v.gety())
-            return false;
-        else
-            return true;
-
-    }
-    bool operator > (Vetor& v){
-
-        if ((x*x+y*y) > v * v)
-            return true;
-        else
-            return false;
-
-    }
-    bool operator >= (Vetor& v){
-
-        if ((x*x+y*y) >= v * v)
-            return true;
-        else
-            return false;
-
-    }
-    bool operator < (Vetor& v){
-
-        if ((x*x+y*y) < v * v)
-            return true;
-        else
-            return false;
-
-    }
-    bool operator <= (Vetor& v){
-
-        if ((x*x+y*y) <= v * v)
-            return true;
-        else
-            return false;
+        x = xis;
+        y = ipsilon;
 
     }
 

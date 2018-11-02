@@ -1,10 +1,10 @@
 #include"entidadeestatica.h"
 
-EntidadeEstatica::EntidadeEstatica(int x, int y, int w, int h, int f):
-Entidade(x,y,w,h,f){}
+EntidadeEstatica::EntidadeEstatica(Vetor<int> p, int w, int h):
+Entidade(p,w,h){}
 
 EntidadeEstatica::EntidadeEstatica():
-Entidade(0,0,0,0,0){}
+Entidade(Vetor<int> (0,0),0,0){}
 
 EntidadeEstatica::~EntidadeEstatica(){}
 
