@@ -1,22 +1,12 @@
 #ifndef MENU_H
 #define MENU_H
 
-#include <SFML/Window/Mouse.hpp>
 #include <SFML/Graphics.hpp>
 #include <vector>
 #include <string>
+#include "common.h"
 
 using namespace std;
-
-class GerenciadorGrafico;
-
-enum class EnumEstado {
-	Nenhum = 0,
-	Menu,
-	Jogo,
-	Tela_de_creditos,
-	Sair,
-};
 
 class Menu {
 	public:

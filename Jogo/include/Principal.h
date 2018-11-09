@@ -8,8 +8,7 @@
 #include "Jogo.h"
 #include "TelaDeCreditos.h"
 
-class Principal
-{
+class Principal {
 	public:
 		Principal ();
 		~Principal ();
