@@ -1,12 +1,13 @@
 #include "Principal.h"
 
 Principal::Principal ():
-_janela(sf::VideoMode(WINDOW_LENGTH, WINDOW_HEIGH), WINDOW_LABEL),
 _main(_estado),
 _jogo(),
 _creditos(_estado),
 _estado(EnumEstado::Menu)
 {
+	GerenciadorGrafico* _janela = GerenciadorGrafico::GetInstance();
+	_janela->CriaJanela(sf::VideoMode(WINDOW_LENGTH, WINDOW_HEIGH), WINDOW_LABEL);
 }
 
 Principal::~Principal () {
@@ -15,13 +16,15 @@ Principal::~Principal () {
 
 void Principal::Executar () {
 	sf::Event evento;
+	GerenciadorGrafico* _janela = GerenciadorGrafico::GetInstance();
+
 	bool mouse_clicked = false;
 
 	while (_estado != EnumEstado::Sair) {
-		_janela.Limpa();
+		_janela->Limpa();
 		mouse_clicked = false;
 
-		if (_janela.SondarEvento(evento)) {
+		if (_janela->SondarEvento(evento)) {
 			if (evento.type == sf::Event::Closed) {
 				_estado = EnumEstado::Sair;
 			}
@@ -33,18 +36,18 @@ void Principal::Executar () {
 
 		switch (_estado) {
 		case EnumEstado::Menu:
-			_main.Executa(_janela.GetPosicaoDoMouse(), mouse_clicked);
-			_janela.Desenha(_main);
+			_main.Executa(_janela->GetPosicaoDoMouse(), mouse_clicked);
+			_main.Desenha();
 			break;
 
 		case EnumEstado::Jogo:
 			_jogo.Executa();
-			_janela.Desenha(_jogo);
+			_jogo.Desenha();
 			break;
 
 		case EnumEstado::Tela_de_creditos:
-			_creditos.Executa(_janela.GetPosicaoDoMouse(), mouse_clicked);
-			_janela.Desenha(_creditos);
+			_creditos.Executa(_janela->GetPosicaoDoMouse(), mouse_clicked);
+			_creditos.Desenha();
 			break;
 
 		case EnumEstado::Sair:
@@ -55,6 +58,6 @@ void Principal::Executar () {
 			_estado = EnumEstado::Menu;
 		}
 
-		_janela.Atualiza();
+		_janela->Atualiza();
 	}
 }

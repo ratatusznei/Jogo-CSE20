@@ -1,15 +1,33 @@
 #include "GerenciadorGrafico.h"
 
-GerenciadorGrafico::GerenciadorGrafico (sf::VideoMode video_mode, string titulo):
-_window(video_mode, titulo),
-_video_mode(video_mode),
-_titulo(titulo)
+GerenciadorGrafico* GerenciadorGrafico::_instance = NULL;
+
+GerenciadorGrafico* GerenciadorGrafico::GetInstance () {
+	if (_instance == NULL) {
+		_instance = new GerenciadorGrafico();
+	}
+
+	return _instance;
+}
+
+GerenciadorGrafico::GerenciadorGrafico ():
+_window(),
+_video_mode(),
+_titulo()
 {
-	_window.setVerticalSyncEnabled(true);
+
 }
 
 GerenciadorGrafico::~GerenciadorGrafico () {
 	_window.close();
+}
+
+void GerenciadorGrafico::CriaJanela (sf::VideoMode video_mode, string titulo) {
+	_video_mode = video_mode;
+	_titulo = titulo;
+
+	_window.create(video_mode, titulo);
+	_window.setVerticalSyncEnabled(true);
 }
 
 bool GerenciadorGrafico::EstaAberta () {
@@ -36,14 +54,6 @@ void GerenciadorGrafico::Atualiza () {
 	_window.display();
 }
 
-void GerenciadorGrafico::Desenha (Menu& menu) {
-	const vector<sf::Text*> opcoes = menu.GetOpcoes();
-
-	for (unsigned i = 0; i < opcoes.size(); i++) {
-		_window.draw(*opcoes[i]);
-	}
-}
-
-void GerenciadorGrafico::Desenha (Jogo& jogo) {
-
+void GerenciadorGrafico::Desenha (sf::Drawable& objeto) {
+	_window.draw(objeto);
 }

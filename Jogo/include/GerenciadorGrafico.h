@@ -5,30 +5,29 @@
 #include <SFML/Graphics.hpp>
 #include <string>
 #include "common.h"
-#include "Menu.h"
-#include "Jogo.h"
-#include "TelaDeCreditos.h"
-
 
 using namespace std;
 
 class GerenciadorGrafico {
 	public:
-		GerenciadorGrafico (sf::VideoMode video_mode, string titulo);
-		~GerenciadorGrafico ();
+		static GerenciadorGrafico* GetInstance ();
 
-		bool EstaAberta ();
+		~GerenciadorGrafico ();
+		void CriaJanela (sf::VideoMode video_mode, string titulo);
+
+		bool EstaAberta();
 		bool SondarEvento (sf::Event& evento);
 		sf::Vector2i GetPosicaoDoMouse ();
 		bool GetMouseClick ();
 
 		void Limpa();
 		void Atualiza ();
-
-		void Desenha (Menu& menu);
-		void Desenha (Jogo& jogo);
+		void Desenha (sf::Drawable& objeto);
 
 	private:
+		GerenciadorGrafico ();
+		static GerenciadorGrafico* _instance;
+
 		sf::RenderWindow _window;
 		sf::VideoMode _video_mode;
 		string _titulo;

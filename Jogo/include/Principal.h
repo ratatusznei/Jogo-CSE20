@@ -16,7 +16,6 @@ class Principal {
 		void Executar ();
 
 	private:
-		GerenciadorGrafico _janela;
 		MenuPrincipal _main;
 		Jogo _jogo;
 		TelaDeCreditos _creditos;

@@ -2,48 +2,46 @@
 1541083900 source:/home/fernando/Programming/Jogo-CSE20/Jogo/main.cpp
 	"Principal.h"
 
-1541083900 source:/home/fernando/Programming/Jogo-CSE20/Jogo/src/GerenciadorGrafico.cpp
+1541762834 source:/home/fernando/Programming/Jogo-CSE20/Jogo/src/GerenciadorGrafico.cpp
 	"GerenciadorGrafico.h"
 
-1541083900 /home/fernando/Programming/Jogo-CSE20/Jogo/include/GerenciadorGrafico.h
+1541763041 /home/fernando/Programming/Jogo-CSE20/Jogo/include/GerenciadorGrafico.h
 	<SFML/Window.hpp>
 	<SFML/Graphics.hpp>
 	<string>
 	"common.h"
-	"Menu.h"
-	"Jogo.h"
-	"TelaDeCreditos.h"
 
-1541083900 source:/home/fernando/Programming/Jogo-CSE20/Jogo/src/Jogo.cpp
+1541762518 source:/home/fernando/Programming/Jogo-CSE20/Jogo/src/Jogo.cpp
 	"Jogo.h"
 
-1541083900 /home/fernando/Programming/Jogo-CSE20/Jogo/include/Jogo.h
+1541762510 /home/fernando/Programming/Jogo-CSE20/Jogo/include/Jogo.h
 
-1541083900 source:/home/fernando/Programming/Jogo-CSE20/Jogo/src/Menu.cpp
+1541763942 source:/home/fernando/Programming/Jogo-CSE20/Jogo/src/Menu.cpp
 	"Menu.h"
 
-1541116896 /home/fernando/Programming/Jogo-CSE20/Jogo/include/Menu.h
+1541763759 /home/fernando/Programming/Jogo-CSE20/Jogo/include/Menu.h
 	<SFML/Graphics.hpp>
 	<vector>
 	<string>
+	"GerenciadorGrafico.h"
 	"common.h"
 
 1541083900 source:/home/fernando/Programming/Jogo-CSE20/Jogo/src/TelaDeCreditos.cpp
 	"TelaDeCreditos.h"
 
-1541083900 /home/fernando/Programming/Jogo-CSE20/Jogo/include/TelaDeCreditos.h
+1541762888 /home/fernando/Programming/Jogo-CSE20/Jogo/include/TelaDeCreditos.h
 	<string>
 	"common.h"
 	"Menu.h"
 
-1541116947 /home/fernando/Programming/Jogo-CSE20/Jogo/include/Principal.h
+1541763294 /home/fernando/Programming/Jogo-CSE20/Jogo/include/Principal.h
 	<SFML/Window.hpp>
 	"GerenciadorGrafico.h"
 	"MenuPrincipal.h"
 	"Jogo.h"
 	"TelaDeCreditos.h"
 
-1541083900 source:/home/fernando/Programming/Jogo-CSE20/Jogo/src/Principal.cpp
+1541763342 source:/home/fernando/Programming/Jogo-CSE20/Jogo/src/Principal.cpp
 	"Principal.h"
 
 1541083900 /home/fernando/Programming/Jogo-CSE20/Jogo/include/MenuPrincipal.h

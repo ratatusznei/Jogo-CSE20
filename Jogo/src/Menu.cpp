@@ -1,6 +1,8 @@
 #include "Menu.h"
 
 Menu::Menu (EnumEstado& estado):
+_opcoes(),
+_font_menu(),
 _estado(estado)
 {
 	_font_menu.loadFromFile("data/fonts/BLKCHCRY.TTF");
@@ -30,6 +32,14 @@ void Menu::Executa (sf::Vector2i mouse_pos, bool mouse_click) {
 	}
 }
 
+void Menu::Desenha () {
+	GerenciadorGrafico* janela = GerenciadorGrafico::GetInstance();
+
+	for (unsigned i = 0; i < _opcoes.size(); i++) {
+		janela->Desenha(*_opcoes[i]);
+	}
+}
+
 void Menu::SetFont (string file) {
 	_font_menu.loadFromFile(file);
 }
@@ -40,8 +50,4 @@ void Menu::IncluiOpcao (string text, int x, int y) {
 	nova_opcao->setPosition(x - nova_opcao->getLocalBounds().width / 2, y);
 
 	_opcoes.push_back(nova_opcao);
-}
-
-const vector<sf::Text*>& Menu::GetOpcoes() {
-	return _opcoes;
 }

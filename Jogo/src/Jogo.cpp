@@ -9,3 +9,7 @@ Jogo::~Jogo () {
 
 void Jogo::Executa () {
 }
+
+void Jogo::Desenha () {
+	
+}
