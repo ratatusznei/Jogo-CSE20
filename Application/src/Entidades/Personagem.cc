@@ -1,6 +1,8 @@
 #include "Personagem.h"
 
-Personagem::Personagem () {
+Personagem::Personagem (float x, float y, string tex_path):
+Entidade(x, y, tex_path)
+{
 	//ctor
 }
 

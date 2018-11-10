@@ -2,7 +2,7 @@
 #define JOGADOR_H
 
 #include "GerenciadorDeInput.h"
-#include "../Personagem/Personagem.h"
+#include "../Entidades/Personagem.h"
 #include "../common.h"
 
 class Jogador: public Personagem {
