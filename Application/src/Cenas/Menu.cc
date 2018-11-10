@@ -2,10 +2,11 @@
 
 Menu::Menu (EnumEstado& estado):
 _opcoes(),
-_font_menu(),
-_estado(estado)
+_estado(estado),
+_font(),
+_tx_fundo(),
+_sp_fundo()
 {
-	_font_menu.loadFromFile("data/fonts/BLKCHCRY.TTF");
 }
 
 Menu::~Menu () {
@@ -27,7 +28,7 @@ void Menu::Executa (sf::Vector2i mouse_pos, bool mouse_click) {
 			}
 		}
 		else {
-			_opcoes[i]->setFillColor(sf::Color::White);
+			_opcoes[i]->setFillColor(sf::Color::Black);
 		}
 	}
 }
@@ -35,18 +36,25 @@ void Menu::Executa (sf::Vector2i mouse_pos, bool mouse_click) {
 void Menu::Desenha () {
 	GerenciadorGrafico* janela = GerenciadorGrafico::GetInstance();
 
+	janela->Desenha(_sp_fundo);
+
 	for (unsigned i = 0; i < _opcoes.size(); i++) {
 		janela->Desenha(*_opcoes[i]);
 	}
 }
 
 void Menu::SetFont (string file) {
-	_font_menu.loadFromFile(file);
+	_font.loadFromFile(file);
+}
+
+void Menu::SetFundo (string file) {
+	_tx_fundo.loadFromFile(file);
+	_sp_fundo.setTexture(_tx_fundo);
 }
 
 void Menu::IncluiOpcao (string text, int x, int y) {
-	sf::Text* nova_opcao = new sf::Text(text, _font_menu, 32);
-	nova_opcao->setFillColor(sf::Color::White);
+	sf::Text* nova_opcao = new sf::Text(text, _font, 32);
+	nova_opcao->setFillColor(sf::Color::Black);
 	nova_opcao->setPosition(x - nova_opcao->getLocalBounds().width / 2, y);
 
 	_opcoes.push_back(nova_opcao);

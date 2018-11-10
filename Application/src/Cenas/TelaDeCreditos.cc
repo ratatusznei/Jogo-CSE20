@@ -3,8 +3,10 @@
 TelaDeCreditos::TelaDeCreditos (EnumEstado& estado):
 Menu(estado)
 {
+	SetFont(Resources::fonte_menu);
+	SetFundo(Resources::fundo_tela_creditos);
+
 	IncluiOpcao("Voltar", Janela::meia_largura, 360);
-	IncluiOpcao("Creditos", Janela::meia_largura, 100);
 }
 
 TelaDeCreditos::~TelaDeCreditos () {

@@ -26,7 +26,7 @@ void GerenciadorGrafico::CriaJanela (sf::VideoMode video_mode, string titulo) {
 	_video_mode = video_mode;
 	_titulo = titulo;
 
-	_window.create(video_mode, titulo);
+	_window.create(video_mode, titulo, sf::Style::Close);
 	_window.setVerticalSyncEnabled(true);
 }
 

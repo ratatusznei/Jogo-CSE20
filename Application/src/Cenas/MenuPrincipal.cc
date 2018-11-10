@@ -3,7 +3,9 @@
 MenuPrincipal::MenuPrincipal (EnumEstado& estado):
 Menu(estado)
 {
-	SetFont("data/fonts/BLKCHCRY.TTF");
+	SetFont(Resources::fonte_menu);
+        SetFundo(Resources::fundo_menu_principal);
+
 	IncluiOpcao("Jogar solo", Janela::meia_largura, 200);
 	IncluiOpcao("Jogar co-op", Janela::meia_largura, 250);
 	IncluiOpcao("Carregar jogo", Janela::meia_largura, 300);

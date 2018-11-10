@@ -1,7 +1,6 @@
 #ifndef MENU_H
 #define MENU_H
 
-#include <SFML/Graphics.hpp>
 #include <vector>
 #include <string>
 #include "../common.h"
@@ -18,12 +17,16 @@ class Menu {
 		void Desenha ();
 
 		void SetFont (string file);
+		void SetFundo (string file);
 		void IncluiOpcao (string text, int x, int y);
 
 	protected:
 		vector<sf::Text*> _opcoes;
-		sf::Font _font_menu;
 		EnumEstado& _estado;
+
+		sf::Font _font;
+		sf::Texture _tx_fundo;
+		sf::Sprite _sp_fundo;
 
 		virtual void InterpretaClick (int indice) = 0;
 };
