@@ -3,10 +3,10 @@
 
 #include <SFML/Window.hpp>
 
-#include "GerenciadorGrafico.h"
-#include "MenuPrincipal.h"
-#include "Jogo.h"
-#include "TelaDeCreditos.h"
+#include "Cenas/GerenciadorGrafico.h"
+#include "Cenas/MenuPrincipal.h"
+#include "Cenas/Jogo.h"
+#include "Cenas/TelaDeCreditos.h"
 
 class Principal {
 	public:

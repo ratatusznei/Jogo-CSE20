@@ -7,7 +7,7 @@ _creditos(_estado),
 _estado(EnumEstado::Menu)
 {
 	GerenciadorGrafico* _janela = GerenciadorGrafico::GetInstance();
-	_janela->CriaJanela(sf::VideoMode(WINDOW_LENGTH, WINDOW_HEIGH), WINDOW_LABEL);
+	_janela->CriaJanela(sf::VideoMode(Janela::largura, Janela::altura), Janela::titulo);
 }
 
 Principal::~Principal () {

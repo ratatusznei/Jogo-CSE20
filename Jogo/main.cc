@@ -1,4 +1,4 @@
-#include "Principal.h"
+#include "src/Principal.h"
 
 int main () {
 	Principal principal;

@@ -4,8 +4,8 @@
 #include <SFML/Graphics.hpp>
 #include <vector>
 #include <string>
+#include "../common.h"
 #include "GerenciadorGrafico.h"
-#include "common.h"
 
 using namespace std;
 

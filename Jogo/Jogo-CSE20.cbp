@@ -41,20 +41,20 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
-		<Unit filename="include/GerenciadorGrafico.h" />
-		<Unit filename="include/Jogo.h" />
-		<Unit filename="include/Menu.h" />
-		<Unit filename="include/MenuPrincipal.h" />
-		<Unit filename="include/Principal.h" />
-		<Unit filename="include/TelaDeCreditos.h" />
-		<Unit filename="include/common.h" />
-		<Unit filename="main.cpp" />
-		<Unit filename="src/GerenciadorGrafico.cpp" />
-		<Unit filename="src/Jogo.cpp" />
-		<Unit filename="src/Menu.cpp" />
-		<Unit filename="src/MenuPrincipal.cpp" />
-		<Unit filename="src/Principal.cpp" />
-		<Unit filename="src/TelaDeCreditos.cpp" />
+		<Unit filename="main.cc" />
+		<Unit filename="src/Cenas/GerenciadorGrafico.cc" />
+		<Unit filename="src/Cenas/GerenciadorGrafico.h" />
+		<Unit filename="src/Cenas/Jogo.cc" />
+		<Unit filename="src/Cenas/Jogo.h" />
+		<Unit filename="src/Cenas/Menu.cc" />
+		<Unit filename="src/Cenas/Menu.h" />
+		<Unit filename="src/Cenas/MenuPrincipal.cc" />
+		<Unit filename="src/Cenas/MenuPrincipal.h" />
+		<Unit filename="src/Cenas/TelaDeCreditos.cc" />
+		<Unit filename="src/Cenas/TelaDeCreditos.h" />
+		<Unit filename="src/Principal.cc" />
+		<Unit filename="src/Principal.h" />
+		<Unit filename="src/common.h" />
 		<Extensions>
 			<code_completion />
 			<debugger />

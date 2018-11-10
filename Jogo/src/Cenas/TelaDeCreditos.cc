@@ -3,9 +3,8 @@
 TelaDeCreditos::TelaDeCreditos (EnumEstado& estado):
 Menu(estado)
 {
-	IncluiOpcao("Voltar", WINDOW_LENGTH / 2, 360);
-
-	IncluiOpcao("Creditos", WINDOW_LENGTH / 2, 100);
+	IncluiOpcao("Voltar", Janela::meia_largura, 360);
+	IncluiOpcao("Creditos", Janela::meia_largura, 100);
 }
 
 TelaDeCreditos::~TelaDeCreditos () {

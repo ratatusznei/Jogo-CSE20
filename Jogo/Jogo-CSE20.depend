@@ -53,3 +53,65 @@
 1541083900 source:/home/fernando/Programming/Jogo-CSE20/Jogo/src/MenuPrincipal.cpp
 	"MenuPrincipal.h"
 
+1541810438 source:/home/fernando/Programming/Jogo-CSE20/Jogo/main.cc
+	"src/Principal.h"
+
+1541811638 source:/home/fernando/Programming/Jogo-CSE20/Jogo/src/Principal.cc
+	"Principal.h"
+
+1541810465 /home/fernando/Programming/Jogo-CSE20/Jogo/src/Principal.h
+	<SFML/Window.hpp>
+	"Cenas/GerenciadorGrafico.h"
+	"Cenas/MenuPrincipal.h"
+	"Cenas/Jogo.h"
+	"Cenas/TelaDeCreditos.h"
+
+1541810377 /home/fernando/Programming/Jogo-CSE20/Jogo/src/Cenas/GerenciadorGrafico.h
+	<SFML/Window.hpp>
+	<SFML/Graphics.hpp>
+	<string>
+	"../common.h"
+
+1541811491 /home/fernando/Programming/Jogo-CSE20/Jogo/src/common.h
+
+1541810473 /home/fernando/Programming/Jogo-CSE20/Jogo/src/Cenas/MenuPrincipal.h
+	"../common.h"
+	"Menu.h"
+
+1541810486 /home/fernando/Programming/Jogo-CSE20/Jogo/src/Cenas/Menu.h
+	<SFML/Graphics.hpp>
+	<vector>
+	<string>
+	"../common.h"
+	"GerenciadorGrafico.h"
+
+1541762510 /home/fernando/Programming/Jogo-CSE20/Jogo/src/Cenas/Jogo.h
+
+1541810494 /home/fernando/Programming/Jogo-CSE20/Jogo/src/Cenas/TelaDeCreditos.h
+	<string>
+	"../common.h"
+	"Menu.h"
+
+1541762834 source:/home/fernando/Programming/Jogo-CSE20/Jogo/src/Cenas/GerenciadorGrafico.cc
+	"GerenciadorGrafico.h"
+
+1541762518 source:/home/fernando/Programming/Jogo-CSE20/Jogo/src/Cenas/Jogo.cc
+	"Jogo.h"
+
+1541763942 source:/home/fernando/Programming/Jogo-CSE20/Jogo/src/Cenas/Menu.cc
+	"Menu.h"
+
+1541811578 source:/home/fernando/Programming/Jogo-CSE20/Jogo/src/Cenas/MenuPrincipal.cc
+	"MenuPrincipal.h"
+
+1541811595 source:/home/fernando/Programming/Jogo-CSE20/Jogo/src/Cenas/TelaDeCreditos.cc
+	"TelaDeCreditos.h"
+
+1541810680 source:/home/fernando/Programming/Jogo-CSE20/Jogo/src/Ontologias/Entidade.cc
+	"Entidade.h"
+
+1541810760 /home/fernando/Programming/Jogo-CSE20/Jogo/src/Ontologias/Entidade.h
+	"../Lib/Vetor.h"
+
+1541810938 /home/fernando/Programming/Jogo-CSE20/Jogo/src/Lib/Vetor.h
+

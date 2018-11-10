@@ -1,5 +1,6 @@
 Jogo/bin/*
-Jogo/.vscode/
+Jogo/.vscode/*
+.vscode/
 
 # Prerequisites
 *.d

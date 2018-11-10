@@ -4,11 +4,11 @@ MenuPrincipal::MenuPrincipal (EnumEstado& estado):
 Menu(estado)
 {
 	SetFont("data/fonts/BLKCHCRY.TTF");
-	IncluiOpcao("Jogar solo", WINDOW_LENGTH / 2, 200);
-	IncluiOpcao("Jogar co-op", WINDOW_LENGTH / 2, 250);
-	IncluiOpcao("Carregar jogo", WINDOW_LENGTH / 2, 300);
-	IncluiOpcao("Creditos", WINDOW_LENGTH / 2, 350);
-	IncluiOpcao("Sair", WINDOW_LENGTH / 2, 430);
+	IncluiOpcao("Jogar solo", Janela::meia_largura, 200);
+	IncluiOpcao("Jogar co-op", Janela::meia_largura, 250);
+	IncluiOpcao("Carregar jogo", Janela::meia_largura, 300);
+	IncluiOpcao("Creditos", Janela::meia_largura, 350);
+	IncluiOpcao("Sair", Janela::meia_largura, 430);
 }
 
 MenuPrincipal::~MenuPrincipal () {

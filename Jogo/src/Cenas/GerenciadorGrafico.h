@@ -4,7 +4,7 @@
 #include <SFML/Window.hpp>
 #include <SFML/Graphics.hpp>
 #include <string>
-#include "common.h"
+#include "../common.h"
 
 using namespace std;
 
