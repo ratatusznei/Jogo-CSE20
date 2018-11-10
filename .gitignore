@@ -1,5 +1,5 @@
-Jogo/bin/*
-Jogo/.vscode/*
+**/bin/*
+**/.vscode/*
 .vscode/
 
 # Prerequisites
