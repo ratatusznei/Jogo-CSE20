@@ -1,6 +1,6 @@
 #include "MenuPrincipal.h"
 
-MenuPrincipal::MenuPrincipal (EnumEstado& estado):
+MenuPrincipal::MenuPrincipal (EstadoApp& estado):
 Menu(estado)
 {
 	SetFont(Resources::fonte_menu);
@@ -32,11 +32,11 @@ void MenuPrincipal::InterpretarClick (int indice) {
 		break;
 
 	case 3:
-		_estado = EnumEstado::Tela_de_creditos;
+		_estado = EstadoApp::Tela_de_creditos;
 		break;
 
 	case 4:
-		_estado = EnumEstado::Sair;
+		_estado = EstadoApp::Sair;
 		break;
 
 	default:

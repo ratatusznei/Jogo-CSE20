@@ -19,6 +19,7 @@ class GerenciadorGrafico {
 		bool SondarEvento (sf::Event& evento);
 		sf::Vector2i GetPosicaoDoMouse ();
 		bool GetMouseClick ();
+		float GetDeltaTime ();
 
 		void Limpar ();
 		void Atualizar ();
@@ -27,6 +28,9 @@ class GerenciadorGrafico {
 	private:
 		GerenciadorGrafico ();
 		static GerenciadorGrafico* _instance;
+
+		sf::Clock _timer;
+		float _delta_t;
 
 		sf::RenderWindow _window;
 		sf::VideoMode _video_mode;

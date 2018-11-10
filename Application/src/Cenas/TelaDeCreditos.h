@@ -9,7 +9,7 @@ using namespace std;
 
 class TelaDeCreditos: public Menu {
 	public:
-		TelaDeCreditos (EnumEstado& estado);
+		TelaDeCreditos (EstadoApp& estado);
 		~TelaDeCreditos ();
 
 	private:

@@ -3,7 +3,7 @@
 
 #include <SFML/Window.hpp>
 
-#include "Cenas/GerenciadorGrafico.h"
+#include "GerenciadorGrafico.h"
 #include "Cenas/MenuPrincipal.h"
 #include "Cenas/Jogo.h"
 #include "Cenas/TelaDeCreditos.h"
@@ -19,7 +19,7 @@ class Principal {
 		MenuPrincipal _main;
 		Jogo _jogo;
 		TelaDeCreditos _creditos;
-		EnumEstado _estado;
+		EstadoApp _estado;
 };
 
 #endif // PRINCIPAL_H

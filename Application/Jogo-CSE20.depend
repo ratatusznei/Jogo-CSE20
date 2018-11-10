@@ -124,54 +124,80 @@
 	<string>
 	"../common.h"
 
-1541853441 /home/fernando/Programming/time-travel/Application/src/common.h
+1541868835 /home/fernando/Programming/time-travel/Application/src/common.h
 	<string>
+	<iostream>
 
 1541855234 source:/home/fernando/Programming/time-travel/Application/src/Cenas/Jogo.cc
 	"Jogo.h"
 
 1541855197 /home/fernando/Programming/time-travel/Application/src/Cenas/Jogo.h
 
-1541855283 source:/home/fernando/Programming/time-travel/Application/src/Cenas/Menu.cc
+1541860118 source:/home/fernando/Programming/time-travel/Application/src/Cenas/Menu.cc
 	"Menu.h"
 
-1541855379 /home/fernando/Programming/time-travel/Application/src/Cenas/Menu.h
+1541860102 /home/fernando/Programming/time-travel/Application/src/Cenas/Menu.h
 	<vector>
 	<string>
 	"../common.h"
-	"GerenciadorGrafico.h"
+	"../GerenciadorGrafico.h"
 
-1541855303 source:/home/fernando/Programming/time-travel/Application/src/Cenas/MenuPrincipal.cc
+1541860129 source:/home/fernando/Programming/time-travel/Application/src/Cenas/MenuPrincipal.cc
 	"MenuPrincipal.h"
 
-1541855396 /home/fernando/Programming/time-travel/Application/src/Cenas/MenuPrincipal.h
+1541860106 /home/fernando/Programming/time-travel/Application/src/Cenas/MenuPrincipal.h
 	"../common.h"
 	"Menu.h"
 
-1541853511 source:/home/fernando/Programming/time-travel/Application/src/Cenas/TelaDeCreditos.cc
+1541860139 source:/home/fernando/Programming/time-travel/Application/src/Cenas/TelaDeCreditos.cc
 	"TelaDeCreditos.h"
 
-1541855404 /home/fernando/Programming/time-travel/Application/src/Cenas/TelaDeCreditos.h
+1541860110 /home/fernando/Programming/time-travel/Application/src/Cenas/TelaDeCreditos.h
 	<string>
 	"../common.h"
 	"Menu.h"
 
-1541855261 source:/home/fernando/Programming/time-travel/Application/src/Principal.cc
+1541860169 source:/home/fernando/Programming/time-travel/Application/src/Principal.cc
 	"Principal.h"
 
-1541849759 /home/fernando/Programming/time-travel/Application/src/Principal.h
+1541860113 /home/fernando/Programming/time-travel/Application/src/Principal.h
 	<SFML/Window.hpp>
-	"Cenas/GerenciadorGrafico.h"
+	"GerenciadorGrafico.h"
 	"Cenas/MenuPrincipal.h"
 	"Cenas/Jogo.h"
 	"Cenas/TelaDeCreditos.h"
 
-1541852338 source:/home/fernando/Programming/time-travel/Application/main.cc
+1541866983 source:/home/fernando/Programming/time-travel/Application/main.cc
 	"src/Principal.h"
-
-1541851235 source:/home/fernando/Programming/time-travel/Application/src/Jogador/Jogador.cpp
 	"Jogador.h"
 
-1541855217 /home/fernando/Programming/time-travel/Application/src/Jogador/Jogador.h
-	"../Cenas/GerenciadorGrafico.h"
+1541859645 source:/home/fernando/Programming/time-travel/Application/src/Jogador/Jogador.cpp
+	"Jogador.h"
+
+1541866288 /home/fernando/Programming/time-travel/Application/src/Jogador/Jogador.h
+	"GerenciadorDeInput.h"
+	"../GerenciadorGrafico.h"
+	"../common.h"
+
+1541867961 /home/fernando/Programming/time-travel/Application/src/GerenciadorGrafico.h
+	<SFML/Window.hpp>
+	<SFML/Graphics.hpp>
+	<string>
+	"../common.h"
+
+1541867993 source:/home/fernando/Programming/time-travel/Application/src/GerenciadorGrafico.cc
+	"GerenciadorGrafico.h"
+
+1541859736 source:/home/fernando/Programming/time-travel/Application/src/Jogador/GerenciadorDeInput.cpp
+	"GerenciadorDeInput.h"
+
+1541865856 /home/fernando/Programming/time-travel/Application/src/Jogador/GerenciadorDeInput.h
+	<SFML/Window/Keyboard.hpp>
+	"../common.h"
+
+1541867820 source:/home/fernando/Programming/time-travel/Application/src/Jogador/GerenciadorDeInput.cc
+	"GerenciadorDeInput.h"
+
+1541868777 source:/home/fernando/Programming/time-travel/Application/src/Jogador/Jogador.cc
+	"Jogador.h"
 

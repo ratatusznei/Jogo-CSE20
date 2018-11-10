@@ -1,6 +1,6 @@
 #include "TelaDeCreditos.h"
 
-TelaDeCreditos::TelaDeCreditos (EnumEstado& estado):
+TelaDeCreditos::TelaDeCreditos (EstadoApp& estado):
 Menu(estado)
 {
 	SetFont(Resources::fonte_menu);
@@ -15,6 +15,6 @@ TelaDeCreditos::~TelaDeCreditos () {
 
 void TelaDeCreditos::InterpretarClick (int indice) {
 	if (indice == 0) {
-		_estado = EnumEstado::Menu;
+		_estado = EstadoApp::Menu;
 	}
 }

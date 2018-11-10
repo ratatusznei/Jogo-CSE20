@@ -11,6 +11,8 @@ GerenciadorGrafico* GerenciadorGrafico::GetInstance () {
 }
 
 GerenciadorGrafico::GerenciadorGrafico ():
+_timer(),
+_delta_t(0),
 _window(),
 _video_mode(),
 _titulo()
@@ -46,12 +48,17 @@ bool GerenciadorGrafico::GetMouseClick() {
 	return sf::Mouse::isButtonPressed(sf::Mouse::Left);
 }
 
+float GerenciadorGrafico::GetDeltaTime () {
+	return _delta_t;
+}
+
 void GerenciadorGrafico::Limpar () {
 	_window.clear();
 }
 
 void GerenciadorGrafico::Atualizar () {
 	_window.display();
+	_delta_t = _timer.restart().asSeconds();
 }
 
 void GerenciadorGrafico::Desenhar (sf::Drawable& objeto) {

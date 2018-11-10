@@ -4,7 +4,7 @@ Principal::Principal ():
 _main(_estado),
 _jogo(),
 _creditos(_estado),
-_estado(EnumEstado::Menu)
+_estado(EstadoApp::Menu)
 {
 	GerenciadorGrafico* _janela = GerenciadorGrafico::GetInstance();
 	_janela->CriaJanela(sf::VideoMode(Janela::largura, Janela::altura), Janela::titulo);
@@ -20,13 +20,13 @@ void Principal::Executar () {
 
 	bool mouse_clicked = false;
 
-	while (_estado != EnumEstado::Sair) {
+	while (_estado != EstadoApp::Sair) {
 		_janela->Limpar();
 		mouse_clicked = false;
 
 		if (_janela->SondarEvento(evento)) {
 			if (evento.type == sf::Event::Closed) {
-				_estado = EnumEstado::Sair;
+				_estado = EstadoApp::Sair;
 			}
 
 			else if (evento.type == sf::Event::MouseButtonPressed && evento.mouseButton.button == sf::Mouse::Button::Left) {
@@ -35,27 +35,27 @@ void Principal::Executar () {
 		}
 
 		switch (_estado) {
-		case EnumEstado::Menu:
+		case EstadoApp::Menu:
 			_main.Executar(_janela->GetPosicaoDoMouse(), mouse_clicked);
 			_main.Desenhar();
 			break;
 
-		case EnumEstado::Jogo:
+		case EstadoApp::Jogo:
 			_jogo.Executar();
 			_jogo.Desenhar();
 			break;
 
-		case EnumEstado::Tela_de_creditos:
+		case EstadoApp::Tela_de_creditos:
 			_creditos.Executar(_janela->GetPosicaoDoMouse(), mouse_clicked);
 			_creditos.Desenhar();
 			break;
 
-		case EnumEstado::Sair:
+		case EstadoApp::Sair:
 			break;
 
-		case EnumEstado::Nenhum:
+		case EstadoApp::Nenhum:
 		default:
-			_estado = EnumEstado::Menu;
+			_estado = EstadoApp::Menu;
 		}
 
 		_janela->Atualizar();
