@@ -1,7 +1,7 @@
 #include "src/Principal.h"
 
 #include "Jogador.h"
-#include "Plataforma.h"
+#include "src/Entidades/Plataforma.h"
 
 int main () {
 	GerenciadorGrafico* janela = GerenciadorGrafico::GetInstance();
