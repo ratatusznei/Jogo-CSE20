@@ -1,12 +1,11 @@
 #ifndef PERSONAGEM_H
 #define PERSONAGEM_H
 
-#include "../GerenciadorGrafico.h"
-#include "../common.h"
+#include "Entidade.h"
 
-class Personagem {
+class Personagem: public Entidade {
 	public:
-		Personagem ();
+		Personagem (float x = 0, float y = 0, string tex_path = "");
 		~Personagem ();
 
 		void Machucar (int dano);
@@ -17,13 +16,8 @@ class Personagem {
 		void Desenhar ();
 
 	protected:
-		sf::Texture _tex;
-		sf::IntRect _tex_rect;
-		sf::Sprite _sp;
-
 		int _vida;
 
-		sf::Vector2f _posicao;
 		sf::Vector2f _old_posicao;
 
 		sf::Vector2f _velocidade;

@@ -22,6 +22,7 @@ namespace Resources {
 	const string fundo_tela_creditos = "res/backgrounds/tela_creditos.png";
 
 	const string tex_jogador = "res/jogador.png";
+	const string tex_plataforma = "res/plataforma.png";
 
 	const float pixel_scale = 4;
 	const int block_size = 16;

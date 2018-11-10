@@ -14,6 +14,8 @@
 				<Compiler>
 					<Add option="-g" />
 					<Add directory="include" />
+					<Add directory="src/Jogador" />
+					<Add directory="src/Personagem" />
 				</Compiler>
 				<Linker>
 					<Add library="sfml-graphics" />
@@ -29,6 +31,8 @@
 				<Compiler>
 					<Add option="-O2" />
 					<Add directory="include" />
+					<Add directory="src/Jogador" />
+					<Add directory="src/Personagem" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -42,8 +46,6 @@
 			<Add option="-Wall" />
 		</Compiler>
 		<Unit filename="main.cc" />
-		<Unit filename="src/Cenas/GerenciadorGrafico.cc" />
-		<Unit filename="src/Cenas/GerenciadorGrafico.h" />
 		<Unit filename="src/Cenas/Jogo.cc" />
 		<Unit filename="src/Cenas/Jogo.h" />
 		<Unit filename="src/Cenas/Menu.cc" />
@@ -52,6 +54,14 @@
 		<Unit filename="src/Cenas/MenuPrincipal.h" />
 		<Unit filename="src/Cenas/TelaDeCreditos.cc" />
 		<Unit filename="src/Cenas/TelaDeCreditos.h" />
+		<Unit filename="src/GerenciadorGrafico.cc" />
+		<Unit filename="src/GerenciadorGrafico.h" />
+		<Unit filename="src/Jogador/GerenciadorDeInput.cc" />
+		<Unit filename="src/Jogador/GerenciadorDeInput.h" />
+		<Unit filename="src/Jogador/Jogador.cc" />
+		<Unit filename="src/Jogador/Jogador.h" />
+		<Unit filename="src/Personagem/Personagem.cpp" />
+		<Unit filename="src/Personagem/Personagem.h" />
 		<Unit filename="src/Principal.cc" />
 		<Unit filename="src/Principal.h" />
 		<Unit filename="src/common.h" />

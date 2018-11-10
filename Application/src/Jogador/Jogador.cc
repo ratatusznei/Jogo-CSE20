@@ -1,19 +1,14 @@
 #include "Jogador.h"
 
 Jogador::Jogador (GerenciadorDeInput *inputs):
+Personagem(0, 0, Resources::tex_jogador),
 _inputs(inputs)
 {
 	_tex_rect.top = 0;
 	_tex_rect.left = 0;
 	_tex_rect.width = Resources::block_size;
 	_tex_rect.height = Resources::block_size;
-
-	_tex.loadFromFile(Resources::tex_jogador);
-	_sp.setTexture(_tex);
-
-	_sp.setPosition(_posicao);
 	_sp.setTextureRect(_tex_rect);
-	_sp.setScale(Resources::pixel_scale, Resources::pixel_scale);
 
 	_esta_no_chao = false;
 }
