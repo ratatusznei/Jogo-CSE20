@@ -7,9 +7,9 @@ Jogo::~Jogo () {
 	//dtor
 }
 
-void Jogo::Executa () {
+void Jogo::Executar () {
 }
 
-void Jogo::Desenha () {
-	
+void Jogo::Desenhar () {
+
 }

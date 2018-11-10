@@ -21,7 +21,7 @@ void Principal::Executar () {
 	bool mouse_clicked = false;
 
 	while (_estado != EnumEstado::Sair) {
-		_janela->Limpa();
+		_janela->Limpar();
 		mouse_clicked = false;
 
 		if (_janela->SondarEvento(evento)) {
@@ -36,18 +36,18 @@ void Principal::Executar () {
 
 		switch (_estado) {
 		case EnumEstado::Menu:
-			_main.Executa(_janela->GetPosicaoDoMouse(), mouse_clicked);
-			_main.Desenha();
+			_main.Executar(_janela->GetPosicaoDoMouse(), mouse_clicked);
+			_main.Desenhar();
 			break;
 
 		case EnumEstado::Jogo:
-			_jogo.Executa();
-			_jogo.Desenha();
+			_jogo.Executar();
+			_jogo.Desenhar();
 			break;
 
 		case EnumEstado::Tela_de_creditos:
-			_creditos.Executa(_janela->GetPosicaoDoMouse(), mouse_clicked);
-			_creditos.Desenha();
+			_creditos.Executar(_janela->GetPosicaoDoMouse(), mouse_clicked);
+			_creditos.Desenhar();
 			break;
 
 		case EnumEstado::Sair:
@@ -58,6 +58,6 @@ void Principal::Executar () {
 			_estado = EnumEstado::Menu;
 		}
 
-		_janela->Atualiza();
+		_janela->Atualizar();
 	}
 }

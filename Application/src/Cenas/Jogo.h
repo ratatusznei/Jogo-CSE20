@@ -6,8 +6,8 @@ class Jogo {
 		Jogo ();
 		~Jogo ();
 
-		void Executa ();
-		void Desenha ();
+		void Executar ();
+		void Desenhar ();
 
 	private:
 };

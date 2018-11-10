@@ -13,7 +13,7 @@ class TelaDeCreditos: public Menu {
 		~TelaDeCreditos ();
 
 	private:
-		void InterpretaClick (int indice);
+		void InterpretarClick (int indice);
 };
 
 #endif // TELADECREDITOS_H

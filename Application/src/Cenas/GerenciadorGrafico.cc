@@ -46,14 +46,14 @@ bool GerenciadorGrafico::GetMouseClick() {
 	return sf::Mouse::isButtonPressed(sf::Mouse::Left);
 }
 
-void GerenciadorGrafico::Limpa () {
+void GerenciadorGrafico::Limpar () {
 	_window.clear();
 }
 
-void GerenciadorGrafico::Atualiza () {
+void GerenciadorGrafico::Atualizar () {
 	_window.display();
 }
 
-void GerenciadorGrafico::Desenha (sf::Drawable& objeto) {
+void GerenciadorGrafico::Desenhar (sf::Drawable& objeto) {
 	_window.draw(objeto);
 }

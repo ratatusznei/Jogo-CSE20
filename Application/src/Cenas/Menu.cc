@@ -15,7 +15,7 @@ Menu::~Menu () {
 	}
 }
 
-void Menu::Executa (sf::Vector2i mouse_pos, bool mouse_click) {
+void Menu::Executar (sf::Vector2i mouse_pos, bool mouse_click) {
 	for (unsigned i = 0; i < _opcoes.size(); i++) {
 		sf::FloatRect txt_box = _opcoes[i]->getGlobalBounds();
 
@@ -24,7 +24,7 @@ void Menu::Executa (sf::Vector2i mouse_pos, bool mouse_click) {
 
 			if (mouse_click) {
 				_opcoes[i]->setFillColor(sf::Color::Red);
-				InterpretaClick(i);
+				InterpretarClick(i);
 			}
 		}
 		else {
@@ -33,13 +33,13 @@ void Menu::Executa (sf::Vector2i mouse_pos, bool mouse_click) {
 	}
 }
 
-void Menu::Desenha () {
+void Menu::Desenhar () {
 	GerenciadorGrafico* janela = GerenciadorGrafico::GetInstance();
 
-	janela->Desenha(_sp_fundo);
+	janela->Desenhar(_sp_fundo);
 
 	for (unsigned i = 0; i < _opcoes.size(); i++) {
-		janela->Desenha(*_opcoes[i]);
+		janela->Desenhar(*_opcoes[i]);
 	}
 }
 
@@ -52,7 +52,7 @@ void Menu::SetFundo (string file) {
 	_sp_fundo.setTexture(_tx_fundo);
 }
 
-void Menu::IncluiOpcao (string text, int x, int y) {
+void Menu::IncluirOpcao (string text, int x, int y) {
 	sf::Text* nova_opcao = new sf::Text(text, _font, 32);
 	nova_opcao->setFillColor(sf::Color::Black);
 	nova_opcao->setPosition(x - nova_opcao->getLocalBounds().width / 2, y);

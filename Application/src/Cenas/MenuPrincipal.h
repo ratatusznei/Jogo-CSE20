@@ -10,7 +10,7 @@ class MenuPrincipal: public Menu {
 		~MenuPrincipal();
 
 	private:
-		void InterpretaClick (int indice);
+		void InterpretarClick (int indice);
 };
 
 #endif // MENUPRINCIPAL_H

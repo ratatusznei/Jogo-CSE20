@@ -6,14 +6,14 @@ Menu(estado)
 	SetFont(Resources::fonte_menu);
 	SetFundo(Resources::fundo_tela_creditos);
 
-	IncluiOpcao("Voltar", Janela::meia_largura, 360);
+	IncluirOpcao("Voltar", Janela::meia_largura, 360);
 }
 
 TelaDeCreditos::~TelaDeCreditos () {
 	//dtor
 }
 
-void TelaDeCreditos::InterpretaClick (int indice) {
+void TelaDeCreditos::InterpretarClick (int indice) {
 	if (indice == 0) {
 		_estado = EnumEstado::Menu;
 	}

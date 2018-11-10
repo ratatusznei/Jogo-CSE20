@@ -15,14 +15,14 @@ class GerenciadorGrafico {
 		~GerenciadorGrafico ();
 		void CriaJanela (sf::VideoMode video_mode, string titulo);
 
-		bool EstaAberta();
+		bool EstaAberta ();
 		bool SondarEvento (sf::Event& evento);
 		sf::Vector2i GetPosicaoDoMouse ();
 		bool GetMouseClick ();
 
-		void Limpa();
-		void Atualiza ();
-		void Desenha (sf::Drawable& objeto);
+		void Limpar ();
+		void Atualizar ();
+		void Desenhar (sf::Drawable& objeto);
 
 	private:
 		GerenciadorGrafico ();
