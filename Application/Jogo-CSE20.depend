@@ -167,10 +167,11 @@
 	"Cenas/Jogo.h"
 	"Cenas/TelaDeCreditos.h"
 
-1541978411 source:/home/fernando/Programming/time-travel/Application/main.cc
+1541980689 source:/home/fernando/Programming/time-travel/Application/main.cc
 	"src/Principal.h"
 	"Jogador.h"
 	"src/Entidades/Plataforma.h"
+	"src/DiretorDeColisao.h"
 
 1541859645 source:/home/fernando/Programming/time-travel/Application/src/Jogador/Jogador.cpp
 	"Jogador.h"
@@ -217,7 +218,7 @@
 	"../GerenciadorGrafico.h"
 	"../common.h"
 
-1541978356 source:/home/fernando/Programming/time-travel/Application/src/Entidades/Personagem.cc
+1541980622 source:/home/fernando/Programming/time-travel/Application/src/Entidades/Personagem.cc
 	"Personagem.h"
 
 1541971193 source:/home/fernando/Programming/time-travel/Application/src/Entidades/Plataforma.cc
@@ -228,4 +229,12 @@
 
 1541977923 source:/home/fernando/Programming/time-travel/Application/src/Entidades/Entidade.cc
 	"Entidade.h"
+
+1541980272 /home/fernando/Programming/time-travel/Application/src/DiretorDeColisao.h
+	<list>
+	"Jogador.h"
+	"Entidades/Plataforma.h"
+
+1541980484 source:/home/fernando/Programming/time-travel/Application/src/DiretorDeColisao.cpp
+	"DiretorDeColisao.h"
 

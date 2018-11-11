@@ -90,7 +90,7 @@ bool Personagem::ChecarChao (Plataforma& plat) {
 	// Linha 1px embaixo do personagem
 	int y = pers_rect.top + pers_rect.height + 1;
 	int x0 = pers_rect.left + 2;
-	int xf = pers_rect.left + pers_rect.width - 1;
+	int xf = pers_rect.left + pers_rect.width - 2;
 
 	// Colisao da linha com plataforma
 	if (	(xf < plat_rect.left) ||
@@ -118,7 +118,7 @@ bool Personagem::ChecarTeto (Plataforma& plat) {
 	// Linha 1px em cima do personagem
 	int y = pers_rect.top - 1;
 	int x0 = pers_rect.left + 2;
-	int xf = pers_rect.left + pers_rect.width - 1;
+	int xf = pers_rect.left + pers_rect.width - 2;
 
 	// Colisao da linha com plataforma
 	if (	(xf < plat_rect.left) ||
