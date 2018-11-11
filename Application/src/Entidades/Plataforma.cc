@@ -4,8 +4,11 @@ Plataforma::Plataforma (int x, int y, int w, int h):
 Entidade(x, y, Resources::tex_plataforma),
 largura(w),
 altura(h),
-_AABB(x, y, w, h)
+_caixa_colisao(_sp.getGlobalBounds())
 {
+	// Pre calcula caixa de colisao
+	_caixa_colisao.width *= largura;
+	_caixa_colisao.height *= altura;
 }
 
 Plataforma::~Plataforma () {
@@ -27,4 +30,8 @@ void Plataforma::Desenhar () {
 	}
 
 	_sp.setPosition(_posicao);
+}
+
+sf::IntRect Plataforma::GetCaixaDeColisao() {
+	return _caixa_colisao;
 }

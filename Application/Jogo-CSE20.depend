@@ -167,7 +167,7 @@
 	"Cenas/Jogo.h"
 	"Cenas/TelaDeCreditos.h"
 
-1541891847 source:/home/fernando/Programming/time-travel/Application/main.cc
+1541978411 source:/home/fernando/Programming/time-travel/Application/main.cc
 	"src/Principal.h"
 	"Jogador.h"
 	"src/Entidades/Plataforma.h"
@@ -199,32 +199,33 @@
 1541891399 source:/home/fernando/Programming/time-travel/Application/src/Jogador/GerenciadorDeInput.cc
 	"GerenciadorDeInput.h"
 
-1541938261 source:/home/fernando/Programming/time-travel/Application/src/Jogador/Jogador.cc
+1541978218 source:/home/fernando/Programming/time-travel/Application/src/Jogador/Jogador.cc
 	"Jogador.h"
 
 1541876037 /home/fernando/Programming/time-travel/Application/src/Personagem/Personagem.h
 	"../GerenciadorGrafico.h"
 	"../common.h"
 
-1541938484 /home/fernando/Programming/time-travel/Application/src/Entidades/Personagem.h
+1541977295 /home/fernando/Programming/time-travel/Application/src/Entidades/Personagem.h
 	"Entidade.h"
+	"Plataforma.h"
 
 1541876247 source:/home/fernando/Programming/time-travel/Application/src/Entidades/Personagem.cpp
 	"Personagem.h"
 
-1541886480 /home/fernando/Programming/time-travel/Application/src/Entidades/Entidade.h
+1541970871 /home/fernando/Programming/time-travel/Application/src/Entidades/Entidade.h
 	"../GerenciadorGrafico.h"
 	"../common.h"
 
-1541938900 source:/home/fernando/Programming/time-travel/Application/src/Entidades/Personagem.cc
+1541978356 source:/home/fernando/Programming/time-travel/Application/src/Entidades/Personagem.cc
 	"Personagem.h"
 
-1541886480 source:/home/fernando/Programming/time-travel/Application/src/Entidades/Plataforma.cc
+1541971193 source:/home/fernando/Programming/time-travel/Application/src/Entidades/Plataforma.cc
 	"Plataforma.h"
 
-1541886480 /home/fernando/Programming/time-travel/Application/src/Entidades/Plataforma.h
+1541971229 /home/fernando/Programming/time-travel/Application/src/Entidades/Plataforma.h
 	"Entidade.h"
 
-1541886480 source:/home/fernando/Programming/time-travel/Application/src/Entidades/Entidade.cc
+1541977923 source:/home/fernando/Programming/time-travel/Application/src/Entidades/Entidade.cc
 	"Entidade.h"
 

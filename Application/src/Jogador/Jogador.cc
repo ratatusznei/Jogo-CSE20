@@ -25,12 +25,11 @@ void Jogador::Executar () {
 
 	AtualizarFisica(dt);
 
-	/****  Chao Temporario ****/
+	/****  Temporario ****/
 	if (_posicao.y + _sp.getGlobalBounds().height > Janela::altura) {
-		_esta_no_chao = true;
-		_posicao.y = Janela::altura - _sp.getGlobalBounds().height;
+		_posicao.y = 0;
 	}
-	/****  Chao Temporario/ ****/
+	/****  Temporario/ ****/
 
 	switch (_estado) {
 	case EstadoJogador::Parado:
@@ -57,6 +56,10 @@ void Jogador::Executar () {
 
 	case EstadoJogador::Andando:
 		_velocidade.y = 0;
+
+		if (!_esta_no_chao) {
+			_estado = EstadoJogador::Pulando;
+		}
 
 		if (_inputs->GetDireita() == _inputs->GetEsquerda()) {
 			_estado = EstadoJogador::Parado;
@@ -96,11 +99,13 @@ void Jogador::Executar () {
 			Acelerar(dt, Fisica::aceleracao_jogador);
 		}
 
-		if (_esta_no_chao && _inputs->GetEsquerda() == _inputs->GetDireita()) {
-			_estado = EstadoJogador::Parado;
-		}
-		else if (_esta_no_chao && _inputs->GetEsquerda() != _inputs->GetDireita()) {
-			_estado = EstadoJogador::Andando;
+		if (_esta_no_chao) {
+			if (_inputs->GetEsquerda() == _inputs->GetDireita()) {
+				_estado = EstadoJogador::Parado;
+			}
+			else if (_inputs->GetEsquerda() != _inputs->GetDireita()) {
+				_estado = EstadoJogador::Andando;
+			}
 		}
 
 		break;

@@ -10,6 +10,7 @@ class Entidade {
 		~Entidade ();
 
 		virtual void Desenhar ();
+		virtual sf::IntRect GetCaixaDeColisao();
 
 	protected:
 		sf::Texture _tex;

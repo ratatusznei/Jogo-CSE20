@@ -9,11 +9,13 @@ class Plataforma: public Entidade {
 		~Plataforma ();
 
 		void Desenhar ();
+		sf::IntRect GetCaixaDeColisao();
 
 	protected:
 		int largura;
 		int altura;
-		sf::IntRect _AABB;
+
+		sf::IntRect _caixa_colisao;
 };
 
 #endif // PLATAFORMA_H

@@ -2,6 +2,7 @@
 #define PERSONAGEM_H
 
 #include "Entidade.h"
+#include "Plataforma.h"
 
 class Personagem: public Entidade {
 	public:
@@ -12,6 +13,12 @@ class Personagem: public Entidade {
 
 		virtual void Executar () = 0;
 		void Desenhar ();
+
+		// y do chao eh saida
+		bool ChecarChao (Plataforma& plat);
+		bool ChecarTeto (Plataforma& plat);
+		bool ChecarEsquerda (Plataforma& plat);
+		bool ChecarDireita (Plataforma& plat);
 
 	protected:
 		void AtualizarFisica (float dt);

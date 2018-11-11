@@ -15,4 +15,17 @@ Entidade::~Entidade () {
 }
 
 void Entidade::Desenhar () {
+
+}
+
+sf::IntRect Entidade::GetCaixaDeColisao () {
+	// Caixa de colisao dinamica, nao eh pre calculada
+	sf::FloatRect caixa_sp = _sp.getGlobalBounds();
+
+	sf::IntRect caixa_col(caixa_sp);
+	// Atualizando as coordenadas da caixa
+	caixa_col.top = _posicao.y;
+	caixa_col.left = _posicao.x;
+
+	return caixa_col;
 }

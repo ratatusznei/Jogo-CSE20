@@ -22,25 +22,39 @@ int main () {
 	i_j2.SetKeyAtaque(sf::Keyboard::M);
 
 	Jogador j1(&i_j1);
-	Jogador j2(&i_j2);
 
-	Plataforma p1(0, Janela::altura - 16, Janela::largura / 16, 1);
-	Plataforma p2(100, Janela::altura - 16 * 3, 3, 1);
-	Plataforma p3(300, 0, 4, 35);
+	Plataforma p1(0, Janela::altura - 16, 16, 1);
+	Plataforma p2(100, Janela::altura - 16 * 4, 3, 2);
+	Plataforma p3(300, 50, 4, 35);
 
 	while (1) {
 		janela->Limpar();
 		janela->SondarEvento(ev);
 
 		j1.Executar();
-		j2.Executar();
+
+		if(!j1.ChecarChao(p1))
+			if (!j1.ChecarChao(p2))
+				j1.ChecarChao(p3);
+
+		if(!j1.ChecarTeto(p1))
+			if (!j1.ChecarTeto(p2))
+				j1.ChecarTeto(p3);
+
+		if(!j1.ChecarEsquerda(p1))
+			if (!j1.ChecarEsquerda(p2))
+				j1.ChecarEsquerda(p3);
+
+		if(!j1.ChecarDireita(p1))
+			if (!j1.ChecarDireita(p2))
+				j1.ChecarDireita(p3);
+
 
 		p1.Desenhar();
 		p2.Desenhar();
 		p3.Desenhar();
 
 		j1.Desenhar();
-		j2.Desenhar();
 
 		janela->Atualizar();
 	}
