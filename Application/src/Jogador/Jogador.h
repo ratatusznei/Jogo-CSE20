@@ -16,7 +16,6 @@ class Jogador: public Personagem {
 		GerenciadorDeInput *_inputs;
 
 		EstadoJogador _estado;
-		unsigned _contador;
 };
 
 #endif // JOGADOR_H

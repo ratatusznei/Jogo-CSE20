@@ -24,20 +24,19 @@ namespace Resources {
 	const string tex_jogador = "res/jogador.png";
 	const string tex_plataforma = "res/plataforma.png";
 
-	const float pixel_scale = 4;
+	const float pixel_scale = 1;
 	const int block_size = 16;
 }
 
 namespace Fisica {
-	const float G = 16;
-	const float velocidade_terminal = 500;
+	const float G = 300;
+	const float velocidade_terminal = 800;
 
-	const float atrito_ar = 0.6;
-	const float atrito_chao = 0.2;
-
-	const float aceleracao_jogador = 200;
-	const float velocidade_max_jogador = 500;
-	const float velocidade_pulo_jogador = 500;
+	const float desaceleracao_jogador = 500;
+	const float aceleracao_jogador = 340;
+	const float max_vx_jogador = 160;
+	const float v0_pulo_jogador = 205;
+	const float vmin_pulo_jogador = 100;
 }
 
 enum class EstadoApp {

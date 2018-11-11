@@ -42,10 +42,14 @@ bool GerenciadorDeInput::GetEsquerda () {
 	return _esquerda;
 }
 
-bool GerenciadorDeInput::GetPulo () {
+bool GerenciadorDeInput::GetPulou () {
 	return (_pulo && !_old_pulo);
 }
 
-bool GerenciadorDeInput::GetAtaque () {
+bool GerenciadorDeInput::GetPulando () {
+	return _pulo;
+}
+
+bool GerenciadorDeInput::GetAtacou () {
 	return (_ataque && !_old_ataque);
 }

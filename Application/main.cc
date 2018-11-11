@@ -24,9 +24,9 @@ int main () {
 	Jogador j1(&i_j1);
 	Jogador j2(&i_j2);
 
-	Plataforma p1(0, Janela::altura - 16 * 4, Janela::largura / (16 * 4), 1);
-	Plataforma p2(100, Janela::altura - 16 * 4 * 3, 3, 1);
-	Plataforma p3(600, 0, 1, 7);
+	Plataforma p1(0, Janela::altura - 16, Janela::largura / 16, 1);
+	Plataforma p2(100, Janela::altura - 16 * 3, 3, 1);
+	Plataforma p3(300, 0, 4, 35);
 
 	while (1) {
 		janela->Limpar();

@@ -10,12 +10,14 @@ class Personagem: public Entidade {
 
 		void Machucar (int dano);
 
-		void Mover ();
-
 		virtual void Executar () = 0;
 		void Desenhar ();
 
 	protected:
+		void AtualizarFisica (float dt);
+		void Desacelerar (float dt, float aceleracao);
+		void Acelerar (float dt, float aceleracao);
+
 		int _vida;
 
 		sf::Vector2f _old_posicao;
@@ -26,6 +28,8 @@ class Personagem: public Entidade {
 		sf::Vector2f _aceleracao;
 
 		bool _esta_no_chao;
+		float _max_vx;
+		float _max_vy;
 };
 
 #endif // PERSONAGEM_H
