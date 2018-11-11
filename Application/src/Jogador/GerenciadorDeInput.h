@@ -16,10 +16,11 @@ class GerenciadorDeInput {
 
 		void Atualizar ();
 
-		bool GetEsquerda ();
-		bool GetDireita ();
-		bool GetPulo ();
-		bool GetAtaque ();
+		bool GetEsquerda (); // Retorna true em nivel
+		bool GetDireita (); // Retorna true em nivel
+		bool GetPulou (); // Retorna true em borda
+		bool GetPulando ();  // Retorna true em nivel
+		bool GetAtacou (); // Retorna true em borda
 
 	private:
 		bool _esquerda;

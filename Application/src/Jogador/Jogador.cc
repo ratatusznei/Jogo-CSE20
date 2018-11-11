@@ -11,6 +11,8 @@ _inputs(inputs)
 	_sp.setTextureRect(_tex_rect);
 
 	_esta_no_chao = false;
+	_max_vx = Fisica::max_vx_jogador;
+	_max_vy = Fisica::velocidade_terminal;
 }
 
 Jogador::~Jogador () {
@@ -18,20 +20,23 @@ Jogador::~Jogador () {
 }
 
 void Jogador::Executar () {
+	float dt = GerenciadorGrafico::GetInstance()->GetDeltaTime();
 	_inputs->Atualizar();
 
-	_aceleracao.x = 0;
-	_aceleracao.y = 0;
+	AtualizarFisica(dt);
 
+	/****  Chao Temporario ****/
 	if (_posicao.y + _sp.getGlobalBounds().height > Janela::altura) {
 		_esta_no_chao = true;
 		_posicao.y = Janela::altura - _sp.getGlobalBounds().height;
 	}
+	/****  Chao Temporario/ ****/
 
 	switch (_estado) {
 	case EstadoJogador::Parado:
-		_velocidade.x = 0;
 		_velocidade.y = 0;
+
+		Desacelerar(dt, Fisica::desaceleracao_jogador);
 
 		if (!_esta_no_chao) {
 			_estado = EstadoJogador::Pulando;
@@ -39,11 +44,11 @@ void Jogador::Executar () {
 		else if (_inputs->GetDireita() != _inputs->GetEsquerda()) {
 			_estado = EstadoJogador::Andando;
 		}
-		else if (_inputs->GetAtaque()) {
+		else if (_inputs->GetAtacou()) {
 			_estado = EstadoJogador::Atacando;
 		}
-		else if (_inputs->GetPulo()) {
-			_velocidade.y = -Fisica::velocidade_pulo_jogador;
+		else if (_inputs->GetPulou()) {
+			_velocidade.y = -Fisica::v0_pulo_jogador;
 			_esta_no_chao = false;
 			_estado = EstadoJogador::Pulando;
 		}
@@ -51,18 +56,20 @@ void Jogador::Executar () {
 		break;
 
 	case EstadoJogador::Andando:
+		_velocidade.y = 0;
+
 		if (_inputs->GetDireita() == _inputs->GetEsquerda()) {
 			_estado = EstadoJogador::Parado;
 		}
 		else if (_inputs->GetEsquerda()) {
-			_velocidade.x = -Fisica::velocidade_max_jogador;
+			Acelerar(dt, -Fisica::aceleracao_jogador);
 		}
 		else if (_inputs->GetDireita()) {
-			_velocidade.x = Fisica::velocidade_max_jogador;
+			Acelerar(dt, Fisica::aceleracao_jogador);
 		}
 
-		if (_inputs->GetPulo()) {
-			_velocidade.y = -Fisica::velocidade_pulo_jogador;
+		if (_inputs->GetPulou()) {
+			_velocidade.y = -Fisica::v0_pulo_jogador;
 			_esta_no_chao = false;
 			_estado = EstadoJogador::Pulando;
 		}
@@ -70,24 +77,30 @@ void Jogador::Executar () {
 		break;
 
 	case EstadoJogador::Pulando:
-		_velocidade.y += Fisica::G;
+		_aceleracao.y = Fisica::G;
 
-		if (_velocidade.y > Fisica::velocidade_terminal) {
-			_velocidade.y = Fisica::velocidade_terminal;
+		// Salta mais alto quando pressionar o botar mais tempo
+		if (!_inputs->GetPulando() && _velocidade.y < 0) {
+			if (-_velocidade.y > Fisica::vmin_pulo_jogador) {
+				_velocidade.y = -Fisica::vmin_pulo_jogador;
+			}
 		}
 
 		if (_inputs->GetEsquerda() == _inputs->GetDireita()) {
-			_velocidade.x = 0;
+			Desacelerar(dt, Fisica::desaceleracao_jogador);
 		}
 		else if (_inputs->GetEsquerda()) {
-			_velocidade.x = -Fisica::velocidade_max_jogador;
+			Acelerar(dt, -Fisica::aceleracao_jogador);
 		}
 		else if (_inputs->GetDireita()) {
-			_velocidade.x = Fisica::velocidade_max_jogador;
+			Acelerar(dt, Fisica::aceleracao_jogador);
 		}
 
-		if (_esta_no_chao) {
+		if (_esta_no_chao && _inputs->GetEsquerda() == _inputs->GetDireita()) {
 			_estado = EstadoJogador::Parado;
+		}
+		else if (_esta_no_chao && _inputs->GetEsquerda() != _inputs->GetDireita()) {
+			_estado = EstadoJogador::Andando;
 		}
 
 		break;
@@ -97,6 +110,4 @@ void Jogador::Executar () {
 	default:
 		_estado = EstadoJogador::Parado;
 	}
-
-	Mover();
 }

@@ -2731,30 +2731,13 @@
 											"height": 13,
 											"text": "-_estado: EstadoJogador",
 											"horizontalAlignment": 0
-										},
-										{
-											"_type": "UMLAttributeView",
-											"_id": "AAAAAAFm/uXRgOzbawQ=",
-											"_parent": {
-												"$ref": "AAAAAAFm/bnc9Zv/tHw="
-											},
-											"model": {
-												"$ref": "AAAAAAFm/uXRKOzSXJM="
-											},
-											"font": "Arial;13;0",
-											"left": 1557,
-											"top": 1420,
-											"width": 359,
-											"height": 13,
-											"text": "-_contador: unsigned",
-											"horizontalAlignment": 0
 										}
 									],
 									"font": "Arial;13;0",
 									"left": 1552,
 									"top": 1385,
 									"width": 369,
-									"height": 53
+									"height": 38
 								},
 								{
 									"_type": "UMLOperationCompartmentView",
@@ -2777,7 +2760,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 1557,
-											"top": 1443,
+											"top": 1428,
 											"width": 359,
 											"height": 13,
 											"text": "«Constructor»+Jogador(inputs: GerenciadorDeInput* = NULL)",
@@ -2794,7 +2777,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 1557,
-											"top": 1458,
+											"top": 1443,
 											"width": 359,
 											"height": 13,
 											"text": "«Destructor»+~Jogador()",
@@ -2811,7 +2794,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 1557,
-											"top": 1473,
+											"top": 1458,
 											"width": 359,
 											"height": 13,
 											"text": "+Executar()",
@@ -2820,7 +2803,7 @@
 									],
 									"font": "Arial;13;0",
 									"left": 1552,
-									"top": 1438,
+									"top": 1423,
 									"width": 369,
 									"height": 53
 								},
@@ -3962,23 +3945,6 @@
 										},
 										{
 											"_type": "UMLOperationView",
-											"_id": "AAAAAAFm/u3VwASxE7Q=",
-											"_parent": {
-												"$ref": "AAAAAAFm/usVivu2TUo="
-											},
-											"model": {
-												"$ref": "AAAAAAFm/u3VZASl2i8="
-											},
-											"font": "Arial;13;0",
-											"left": 1605,
-											"top": 1077,
-											"width": 270,
-											"height": 13,
-											"text": "+Mover()",
-											"horizontalAlignment": 0
-										},
-										{
-											"_type": "UMLOperationView",
 											"_id": "AAAAAAFm/u339QUbdeM=",
 											"_parent": {
 												"$ref": "AAAAAAFm/usVivu2TUo="
@@ -3988,10 +3954,61 @@
 											},
 											"font": "Arial;13;2",
 											"left": 1605,
-											"top": 1092,
+											"top": 1077,
 											"width": 270,
 											"height": 13,
 											"text": "«vitual»+Executar()",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "AAAAAAFm/u3VwASxE7Q=",
+											"_parent": {
+												"$ref": "AAAAAAFm/usVivu2TUo="
+											},
+											"model": {
+												"$ref": "AAAAAAFm/u3VZASl2i8="
+											},
+											"font": "Arial;13;0",
+											"left": 1605,
+											"top": 1092,
+											"width": 270,
+											"height": 13,
+											"text": "-AtualizaFisica(dt: float)",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "AAAAAAFnAr60sMb31Ys=",
+											"_parent": {
+												"$ref": "AAAAAAFm/usVivu2TUo="
+											},
+											"model": {
+												"$ref": "AAAAAAFnAr60TMbp/Ss="
+											},
+											"font": "Arial;13;0",
+											"left": 1605,
+											"top": 1107,
+											"width": 270,
+											"height": 13,
+											"text": "-Desacelerar(dt: float, aceleracao: float)",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "AAAAAAFnAr67ysdJJFg=",
+											"_parent": {
+												"$ref": "AAAAAAFm/usVivu2TUo="
+											},
+											"model": {
+												"$ref": "AAAAAAFnAr67Zsc7MDY="
+											},
+											"font": "Arial;13;0",
+											"left": 1605,
+											"top": 1122,
+											"width": 270,
+											"height": 13,
+											"text": "-Asacelerar(dt: float, aceleracao: float)",
 											"horizontalAlignment": 0
 										}
 									],
@@ -3999,7 +4016,7 @@
 									"left": 1600,
 									"top": 1027,
 									"width": 280,
-									"height": 83
+									"height": 113
 								},
 								{
 									"_type": "UMLReceptionCompartmentView",
@@ -4037,7 +4054,7 @@
 							"left": 1600,
 							"top": 904,
 							"width": 280,
-							"height": 217,
+							"height": 236,
 							"nameCompartment": {
 								"$ref": "AAAAAAFm/usVifuwDf4="
 							},
@@ -4076,7 +4093,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": 1726,
-									"top": 1233,
+									"top": 1242,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 15,
@@ -4097,7 +4114,7 @@
 									"visible": null,
 									"font": "Arial;13;0",
 									"left": 1711,
-									"top": 1233,
+									"top": 1242,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 30,
@@ -4118,7 +4135,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": 1756,
-									"top": 1234,
+									"top": 1243,
 									"height": 13,
 									"alpha": -1.5707963267948966,
 									"distance": 15,
@@ -4135,7 +4152,7 @@
 							"tail": {
 								"$ref": "AAAAAAFm/bnc9Zv5phA="
 							},
-							"points": "1741:1360;1741:1120",
+							"points": "1741:1360;1741:1139",
 							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAFm/uvOQPxQ4Vo="
@@ -5865,16 +5882,6 @@
 							"name": "_estado",
 							"visibility": "private",
 							"type": "EstadoJogador"
-						},
-						{
-							"_type": "UMLAttribute",
-							"_id": "AAAAAAFm/uXRKOzSXJM=",
-							"_parent": {
-								"$ref": "AAAAAAFm/bm65ptHf20="
-							},
-							"name": "_contador",
-							"visibility": "private",
-							"type": "unsigned"
 						}
 					],
 					"operations": [
@@ -6369,14 +6376,6 @@
 						},
 						{
 							"_type": "UMLOperation",
-							"_id": "AAAAAAFm/u3VZASl2i8=",
-							"_parent": {
-								"$ref": "AAAAAAFm/usViPutq98="
-							},
-							"name": "Mover"
-						},
-						{
-							"_type": "UMLOperation",
 							"_id": "AAAAAAFm/u33mQUP3qw=",
 							"_parent": {
 								"$ref": "AAAAAAFm/usViPutq98="
@@ -6384,6 +6383,84 @@
 							"name": "Executar",
 							"stereotype": "vitual",
 							"isAbstract": true
+						},
+						{
+							"_type": "UMLOperation",
+							"_id": "AAAAAAFm/u3VZASl2i8=",
+							"_parent": {
+								"$ref": "AAAAAAFm/usViPutq98="
+							},
+							"name": "AtualizaFisica",
+							"visibility": "private",
+							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "AAAAAAFnAqmq271Yero=",
+									"_parent": {
+										"$ref": "AAAAAAFm/u3VZASl2i8="
+									},
+									"name": "dt",
+									"type": "float"
+								}
+							]
+						},
+						{
+							"_type": "UMLOperation",
+							"_id": "AAAAAAFnAr60TMbp/Ss=",
+							"_parent": {
+								"$ref": "AAAAAAFm/usViPutq98="
+							},
+							"name": "Desacelerar",
+							"visibility": "private",
+							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "AAAAAAFnAr60TMbqnTQ=",
+									"_parent": {
+										"$ref": "AAAAAAFnAr60TMbp/Ss="
+									},
+									"name": "dt",
+									"type": "float"
+								},
+								{
+									"_type": "UMLParameter",
+									"_id": "AAAAAAFnAr8AyseM+/E=",
+									"_parent": {
+										"$ref": "AAAAAAFnAr60TMbp/Ss="
+									},
+									"name": "aceleracao",
+									"type": "float"
+								}
+							]
+						},
+						{
+							"_type": "UMLOperation",
+							"_id": "AAAAAAFnAr67Zsc7MDY=",
+							"_parent": {
+								"$ref": "AAAAAAFm/usViPutq98="
+							},
+							"name": "Asacelerar",
+							"visibility": "private",
+							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "AAAAAAFnAr67Z8c8nnk=",
+									"_parent": {
+										"$ref": "AAAAAAFnAr67Zsc7MDY="
+									},
+									"name": "dt",
+									"type": "float"
+								},
+								{
+									"_type": "UMLParameter",
+									"_id": "AAAAAAFnAr8alsfykcg=",
+									"_parent": {
+										"$ref": "AAAAAAFnAr67Zsc7MDY="
+									},
+									"name": "aceleracao",
+									"type": "float"
+								}
+							]
 						}
 					],
 					"isAbstract": true
