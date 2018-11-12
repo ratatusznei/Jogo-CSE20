@@ -11,7 +11,7 @@ class Personagem: public Entidade {
 
 		void Machucar (int dano);
 
-		virtual void Executar () = 0;
+		virtual void Executar (float dt) = 0;
 		void Desenhar ();
 
 		// y do chao eh saida

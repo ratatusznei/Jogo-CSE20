@@ -3,6 +3,7 @@
 
 #include <list>
 #include "Jogador.h"
+#include "Inimigos/Mumia.h"
 #include "Entidades/Plataforma.h"
 
 class DiretorDeColisao {
@@ -11,12 +12,14 @@ class DiretorDeColisao {
 		~DiretorDeColisao ();
 
 		void Incluir (Jogador *pj);
+		void Incluir (Mumia *pi);
 		void Incluir (Plataforma *pp);
 
 		void Calcular ();
 
 	private:
 		list<Jogador*> _jogadores;
+		list<Mumia*> _inimigos;
 		list<Plataforma*> _plataformas;
 };
 

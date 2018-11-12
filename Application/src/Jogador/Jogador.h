@@ -10,7 +10,8 @@ class Jogador: public Personagem {
 		Jogador(GerenciadorDeInput *inputs = NULL);
 		~Jogador();
 
-		void Executar ();
+		void Executar (float dt);
+		const sf::Vector2f GetPosicao ();
 
 	private:
 		GerenciadorDeInput *_inputs;

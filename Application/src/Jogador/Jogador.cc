@@ -19,8 +19,7 @@ Jogador::~Jogador () {
 	delete _inputs;
 }
 
-void Jogador::Executar () {
-	float dt = GerenciadorGrafico::GetInstance()->GetDeltaTime();
+void Jogador::Executar (float dt) {
 	_inputs->Atualizar();
 
 	/****  Temporario ****/
@@ -115,4 +114,8 @@ void Jogador::Executar () {
 	}
 
 	AtualizarFisica(dt);
+}
+
+const sf::Vector2f Jogador::GetPosicao () {
+	return _posicao;
 }
