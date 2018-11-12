@@ -16,11 +16,11 @@ void Personagem::Machucar (int dano) {
 void Personagem::Desenhar () {
 	GerenciadorGrafico* janela = GerenciadorGrafico::GetInstance();
 
-	if (_velocidade.x > 0) {
+	if (_velocidade.x > 0.01) {
 		_sp.setScale(Resources::pixel_scale, Resources::pixel_scale);
 		_sp.setOrigin(0, 0);
 	}
-	else if (_velocidade.x < 0) {
+	else if (_velocidade.x < -0.01) {
 		_sp.setOrigin(_sp.getLocalBounds().width, 0);
 		_sp.setScale(-Resources::pixel_scale, Resources::pixel_scale);
 	}
@@ -55,7 +55,7 @@ void Personagem::Desacelerar (float dt, float aceleracao) {
 	if (_velocidade.x > 0) {
 		_aceleracao.x = -aceleracao;
 
-		if (_velocidade.x < _aceleracao.x * dt) {
+		if (_velocidade.x < aceleracao * dt) {
 			_velocidade.x = 0;
 			_aceleracao.x = 0;
 		}
@@ -63,7 +63,7 @@ void Personagem::Desacelerar (float dt, float aceleracao) {
 	else if (_velocidade.x < 0) {
 		_aceleracao.x = aceleracao;
 
-		if (_velocidade.x > -_aceleracao.x * dt) {
+		if (_velocidade.x > -aceleracao * dt) {
 			_velocidade.x = 0;
 			_aceleracao.x = 0;
 		}

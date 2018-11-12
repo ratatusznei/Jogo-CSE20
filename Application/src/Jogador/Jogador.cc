@@ -23,8 +23,6 @@ void Jogador::Executar () {
 	float dt = GerenciadorGrafico::GetInstance()->GetDeltaTime();
 	_inputs->Atualizar();
 
-	AtualizarFisica(dt);
-
 	/****  Temporario ****/
 	if (_posicao.y + _sp.getGlobalBounds().height > Janela::altura) {
 		_posicao.y = 0;
@@ -115,4 +113,6 @@ void Jogador::Executar () {
 	default:
 		_estado = EstadoJogador::Parado;
 	}
+
+	AtualizarFisica(dt);
 }

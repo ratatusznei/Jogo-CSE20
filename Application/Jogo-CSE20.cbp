@@ -16,6 +16,7 @@
 					<Add directory="include" />
 					<Add directory="src/Jogador" />
 					<Add directory="src/Personagem" />
+					<Add directory="./" />
 				</Compiler>
 				<Linker>
 					<Add library="sfml-graphics" />
@@ -33,6 +34,7 @@
 					<Add directory="include" />
 					<Add directory="src/Jogador" />
 					<Add directory="src/Personagem" />
+					<Add directory="./" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -54,6 +56,8 @@
 		<Unit filename="src/Cenas/MenuPrincipal.h" />
 		<Unit filename="src/Cenas/TelaDeCreditos.cc" />
 		<Unit filename="src/Cenas/TelaDeCreditos.h" />
+		<Unit filename="src/DiretorDeColisao.cpp" />
+		<Unit filename="src/DiretorDeColisao.h" />
 		<Unit filename="src/Entidades/Entidade.cc" />
 		<Unit filename="src/Entidades/Entidade.h" />
 		<Unit filename="src/Entidades/Personagem.cc" />
