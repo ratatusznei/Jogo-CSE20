@@ -1,13 +1,15 @@
 #include "Mumia.h"
 
-Mumia::Mumia(Jogador *j1, Jogador *j2):
-Personagem(0, 0, Resources::tex_mumia) {
+Mumia::Mumia(Jogador *j1, Jogador *j2, int x, int y):
+Inimigo(x, y, Resources::tex_mumia) {
 	_j1 = j1;
 	_j2 = j2;
 	_estado = EstadoMumia::Perdida;
 
 	_max_vx = max_vx_mumia;
 	_max_vy = max_vy_mumia;
+
+	_x0 = x;
 }
 
 Mumia::~Mumia() {
@@ -42,9 +44,27 @@ void Mumia::Executar (float dt) {
 		_aceleracao.y = 0;
 	}
 
+	int delta_x = 50;
         switch (_estado) {
         case EstadoMumia::Perdida:
-		Desacelerar(dt, desaceleracao_mumia);
+		if (_posicao.x > _x0 && _posicao.x - _x0 >= delta_x) {
+			Acelerar(dt, -aceleracao_mumia);
+		}
+		else if (_posicao.x < _x0 && _x0 - _posicao.x >= delta_x) {
+			Acelerar(dt, aceleracao_mumia);
+		}
+		else if (_velocidade.x > 0) {
+			Acelerar(dt, aceleracao_mumia);
+		}
+		else {
+			Acelerar(dt, -aceleracao_mumia);
+		}
+
+		if (_esta_no_chao) {
+			if (_batendo_esquerda || _batendo_direta) {
+				_velocidade.y = -v_pulo_mumia;
+			}
+		}
 
 		if (_j1 != NULL) {
 			if (mag_dist_j1 < distancia_deteccao && mag_dist_j1 < mag_dist_j2) {
@@ -72,6 +92,12 @@ void Mumia::Executar (float dt) {
 		else if (dist_j1 < 0) {
 			Acelerar(dt,-aceleracao_mumia);
 		}
+
+		if (_esta_no_chao) {
+			if (_batendo_esquerda || _batendo_direta) {
+				_velocidade.y = -v_pulo_mumia;
+			}
+		}
 		break;
 
 	case EstadoMumia::SeguindoJ2:
@@ -86,6 +112,12 @@ void Mumia::Executar (float dt) {
 		}
 		else if (dist_j2 < 0) {
 			Acelerar(dt, -aceleracao_mumia);
+		}
+
+		if (_esta_no_chao) {
+			if (_batendo_esquerda || _batendo_direta) {
+				_velocidade.y = -v_pulo_mumia;
+			}
 		}
 		break;
 

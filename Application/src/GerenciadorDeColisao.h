@@ -6,20 +6,20 @@
 #include "Inimigos/Mumia.h"
 #include "Entidades/Plataforma.h"
 
-class DiretorDeColisao {
+class GerenciadorDeColisao {
 	public:
-		DiretorDeColisao ();
-		~DiretorDeColisao ();
+		GerenciadorDeColisao ();
+		~GerenciadorDeColisao ();
 
 		void Incluir (Jogador *pj);
-		void Incluir (Mumia *pi);
+		void Incluir (Inimigo *pi);
 		void Incluir (Plataforma *pp);
 
 		void Calcular ();
 
 	private:
 		list<Jogador*> _jogadores;
-		list<Mumia*> _inimigos;
+		list<Inimigo*> _inimigos;
 		list<Plataforma*> _plataformas;
 };
 

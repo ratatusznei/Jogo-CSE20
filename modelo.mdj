@@ -8366,7 +8366,8 @@
 									"_parent": {
 										"$ref": "AAAAAAFnB+3tgnTc2Tw="
 									},
-									"name": "Plataforma& plat"
+									"name": "Plataforma& plat",
+									"type": ""
 								},
 								{
 									"_type": "UMLParameter",
@@ -8393,7 +8394,8 @@
 									"_parent": {
 										"$ref": "AAAAAAFnB+32gnUx+vU="
 									},
-									"name": "Plataforma& plat"
+									"name": "Plataforma& plat",
+									"type": ""
 								},
 								{
 									"_type": "UMLParameter",
@@ -8420,7 +8422,8 @@
 									"_parent": {
 										"$ref": "AAAAAAFnB+3/mXWGbUw="
 									},
-									"name": "Plataforma& plat"
+									"name": "Plataforma& plat",
+									"type": ""
 								},
 								{
 									"_type": "UMLParameter",
@@ -8919,7 +8922,8 @@
 									"_parent": {
 										"$ref": "AAAAAAFnB/m/EImZ0a8="
 									},
-									"name": "Plataforma* pp"
+									"name": "Plataforma* pp",
+									"type": ""
 								}
 							]
 						},
@@ -8937,7 +8941,8 @@
 									"_parent": {
 										"$ref": "AAAAAAFnB/pYL4sVDdE="
 									},
-									"name": "Jogador* pj"
+									"name": "Jogador* pj",
+									"type": ""
 								}
 							]
 						},

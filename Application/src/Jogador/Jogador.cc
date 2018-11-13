@@ -1,7 +1,7 @@
 #include "Jogador.h"
 
-Jogador::Jogador (GerenciadorDeInput *inputs):
-Personagem(0, 0, Resources::tex_jogador),
+Jogador::Jogador (GerenciadorDeInput *inputs, int x, int y):
+Personagem(x, y, Resources::tex_jogador),
 _inputs(inputs)
 {
 	_tex_rect.top = 0;

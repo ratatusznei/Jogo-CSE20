@@ -1,31 +1,38 @@
-#include "DiretorDeColisao.h"
+#include "GerenciadorDeColisao.h"
 
-DiretorDeColisao::DiretorDeColisao () {
+GerenciadorDeColisao::GerenciadorDeColisao () {
 	//ctor
 }
 
-DiretorDeColisao::~DiretorDeColisao () {
+GerenciadorDeColisao::~GerenciadorDeColisao () {
 	//dtor
 }
 
-void DiretorDeColisao::Incluir (Jogador *pj) {
+void GerenciadorDeColisao::Incluir (Jogador *pj) {
 	_jogadores.push_back(pj);
 }
 
-void DiretorDeColisao::Incluir (Mumia *pi) {
+void GerenciadorDeColisao::Incluir (Inimigo *pi) {
 	_inimigos.push_back(pi);
 }
 
-void DiretorDeColisao::Incluir (Plataforma *pp) {
+void GerenciadorDeColisao::Incluir (Plataforma *pp) {
 	_plataformas.push_back(pp);
 }
 
-void DiretorDeColisao::Calcular () {
+void GerenciadorDeColisao::Calcular () {
 	list<Jogador*>::iterator ji;
-	list<Mumia*>::iterator ii;
+	list<Inimigo*>::iterator ii;
 	list<Plataforma*>::iterator pi;
 
 	for (ji = _jogadores.begin(); ji != _jogadores.end(); ji++) {
+		for (ii = _inimigos.begin(); ii != _inimigos.end(); ii++) {
+			if ((*ji)->GetCaixaDeColisao().intersects((*ii)->GetCaixaDeColisao())) {
+				/**** TEMPORARIO ****/
+				(*ji)->Machucar(0);
+			}
+		}
+
 		for (pi = _plataformas.begin(); pi != _plataformas.end(); pi++) {
 			if ((*ji)->ChecarChao(**pi)) {
 				break;

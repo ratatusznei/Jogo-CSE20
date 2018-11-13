@@ -27,14 +27,14 @@ class Personagem: public Entidade {
 
 		int _vida;
 
-		sf::Vector2f _old_posicao;
-
 		sf::Vector2f _velocidade;
-		sf::Vector2f _old_velocidade;
-
 		sf::Vector2f _aceleracao;
 
 		bool _esta_no_chao;
+		bool _batendo_teto;
+		bool _batendo_direta;
+		bool _batendo_esquerda;
+
 		float _max_vx;
 		float _max_vy;
 };

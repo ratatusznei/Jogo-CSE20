@@ -7,7 +7,7 @@
 
 class Jogador: public Personagem {
 	public:
-		Jogador(GerenciadorDeInput *inputs = NULL);
+		Jogador(GerenciadorDeInput *inputs = NULL, int x = 0, int y = 0);
 		~Jogador();
 
 		void Executar (float dt);
