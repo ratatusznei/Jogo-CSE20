@@ -1,6 +1,9 @@
 #ifndef JOGO_H
 #define JOGO_H
 
+#include "../GerenciadorGrafico.h"
+#include "Fase.h"
+
 class Jogo {
 	public:
 		Jogo ();
@@ -10,6 +13,8 @@ class Jogo {
 		void Desenhar ();
 
 	private:
+		Fase _fase;
+
 };
 
 #endif // JOGO_H

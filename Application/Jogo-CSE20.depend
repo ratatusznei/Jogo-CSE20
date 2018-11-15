@@ -124,14 +124,16 @@
 	<string>
 	"../common.h"
 
-1542116939 /home/fernando/Programming/time-travel/Application/src/common.h
+1542313128 /home/fernando/Programming/time-travel/Application/src/common.h
 	<string>
 	<iostream>
 
 1541855234 source:/home/fernando/Programming/time-travel/Application/src/Cenas/Jogo.cc
 	"Jogo.h"
 
-1541855197 /home/fernando/Programming/time-travel/Application/src/Cenas/Jogo.h
+1542311609 /home/fernando/Programming/time-travel/Application/src/Cenas/Jogo.h
+	"../GerenciadorGrafico.h"
+	"Fase.h"
 
 1541886480 source:/home/fernando/Programming/time-travel/Application/src/Cenas/Menu.cc
 	"Menu.h"
@@ -167,7 +169,7 @@
 	"Cenas/Jogo.h"
 	"Cenas/TelaDeCreditos.h"
 
-1542117009 source:/home/fernando/Programming/time-travel/Application/main.cc
+1542117251 source:/home/fernando/Programming/time-travel/Application/main.cc
 	"src/Principal.h"
 	"Jogador.h"
 	"src/Entidades/Plataforma.h"
@@ -255,12 +257,28 @@
 1542113376 /home/fernando/Programming/time-travel/Application/src/Inimigos/Inimigo.h
 	"../Entidades/Personagem.h"
 
-1542113342 /home/fernando/Programming/time-travel/Application/src/GerenciadorDeColisao.h
-	<list>
+1542312535 /home/fernando/Programming/time-travel/Application/src/GerenciadorDeColisao.h
+	"LinkedLists.h"
 	"Jogador.h"
-	"Inimigos/Mumia.h"
+	"Inimigos/Inimigo.h"
 	"Entidades/Plataforma.h"
 
-1542116076 source:/home/fernando/Programming/time-travel/Application/src/GerenciadorDeColisao.cpp
+1542312969 source:/home/fernando/Programming/time-travel/Application/src/GerenciadorDeColisao.cpp
 	"GerenciadorDeColisao.h"
+
+1542312269 /home/fernando/Programming/time-travel/Application/src/Fases/Fase.h
+	<SFML/System.hpp>
+	<fstream>
+	"../GerenciadorGrafico.h"
+	"../GerenciadorDeColisao.h"
+	"../LinkedLists.h"
+	"../Jogador/Jogador.h"
+	"../Inimigos/Inimigo.h"
+	"../Entidades/Plataforma.h"
+
+1542311596 /home/fernando/Programming/time-travel/Application/src/LinkedLists.h
+	<stdlib.h>
+
+1542312421 source:/home/fernando/Programming/time-travel/Application/src/Fases/Fase.cpp
+	"Fase.h"
 
