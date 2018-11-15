@@ -12,17 +12,19 @@
 				<Option type="1" />
 				<Option compiler="gcc" />
 				<Compiler>
+					<Add option="-std=c++1y" />
 					<Add option="-g" />
 					<Add directory="include" />
 					<Add directory="src/Jogador" />
 					<Add directory="src/Personagem" />
 					<Add directory="./" />
-					<Add directory="src/Inimigos" />
+					<Add directory="C:/SFML-2.5.0/include" />
 				</Compiler>
 				<Linker>
-					<Add library="sfml-graphics" />
-					<Add library="sfml-window" />
-					<Add library="sfml-system" />
+					<Add library="sfml-graphics-d" />
+					<Add library="sfml-window-d" />
+					<Add library="sfml-system-d" />
+					<Add directory="C:/SFML-2.5.0/lib" />
 				</Linker>
 			</Target>
 			<Target title="Release">
@@ -36,7 +38,6 @@
 					<Add directory="src/Jogador" />
 					<Add directory="src/Personagem" />
 					<Add directory="./" />
-					<Add directory="src/Inimigos" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -58,20 +59,16 @@
 		<Unit filename="src/Cenas/MenuPrincipal.h" />
 		<Unit filename="src/Cenas/TelaDeCreditos.cc" />
 		<Unit filename="src/Cenas/TelaDeCreditos.h" />
+		<Unit filename="src/DiretorDeColisao.cpp" />
+		<Unit filename="src/DiretorDeColisao.h" />
 		<Unit filename="src/Entidades/Entidade.cc" />
 		<Unit filename="src/Entidades/Entidade.h" />
 		<Unit filename="src/Entidades/Personagem.cc" />
 		<Unit filename="src/Entidades/Personagem.h" />
 		<Unit filename="src/Entidades/Plataforma.cc" />
 		<Unit filename="src/Entidades/Plataforma.h" />
-		<Unit filename="src/GerenciadorDeColisao.cpp" />
-		<Unit filename="src/GerenciadorDeColisao.h" />
 		<Unit filename="src/GerenciadorGrafico.cc" />
 		<Unit filename="src/GerenciadorGrafico.h" />
-		<Unit filename="src/Inimigos/Inimigo.cpp" />
-		<Unit filename="src/Inimigos/Inimigo.h" />
-		<Unit filename="src/Inimigos/Mumia.cpp" />
-		<Unit filename="src/Inimigos/Mumia.h" />
 		<Unit filename="src/Jogador/GerenciadorDeInput.cc" />
 		<Unit filename="src/Jogador/GerenciadorDeInput.h" />
 		<Unit filename="src/Jogador/Jogador.cc" />
@@ -82,6 +79,7 @@
 		<Extensions>
 			<code_completion />
 			<debugger />
+			<envvars />
 		</Extensions>
 	</Project>
 </CodeBlocks_project_file>

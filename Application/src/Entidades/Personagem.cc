@@ -11,8 +11,6 @@ Personagem::~Personagem () {
 
 void Personagem::Machucar (int dano) {
 	_vida -= dano;
-	/**** TEMPORARIO ****/
-	_posicao.y -= 100;
 }
 
 void Personagem::Desenhar () {
@@ -31,6 +29,9 @@ void Personagem::Desenhar () {
 }
 
 void Personagem::AtualizarFisica (float dt) {
+	_old_velocidade = _velocidade;
+	_old_posicao = _posicao;
+
 	_velocidade += _aceleracao * dt;
 	_posicao += _velocidade * dt;
 
@@ -82,8 +83,8 @@ void Personagem::Acelerar(float dt, float aceleracao) {
 	}
 }
 
-bool Personagem::ChecarChao (Plataforma& plat) {
-	sf::IntRect plat_rect = plat.GetCaixaDeColisao();
+bool Personagem::ChecarChao (Plataforma* plat) {
+	sf::IntRect plat_rect = plat->GetCaixaDeColisao();
 	sf::IntRect pers_rect = GetCaixaDeColisao();
 
 	// Linha 1px embaixo do personagem
@@ -110,8 +111,8 @@ bool Personagem::ChecarChao (Plataforma& plat) {
 	}
 }
 
-bool Personagem::ChecarTeto (Plataforma& plat) {
-	sf::IntRect plat_rect = plat.GetCaixaDeColisao();
+bool Personagem::ChecarTeto (Plataforma* plat) {
+	sf::IntRect plat_rect = plat->GetCaixaDeColisao();
 	sf::IntRect pers_rect = GetCaixaDeColisao();
 
 	// Linha 1px em cima do personagem
@@ -125,22 +126,20 @@ bool Personagem::ChecarTeto (Plataforma& plat) {
 		(y < plat_rect.top) ||
 		(y > plat_rect.top + plat_rect.height)) {
 
-		_batendo_teto = false;
 		return false;
 	}
 	else {
 		if (_velocidade.y < 0.01) {
 			_posicao.y = plat_rect.top + plat_rect.height;
 			_velocidade.y = 0;
-			_batendo_teto = true;
 		}
 
 		return true;
 	}
 }
 
-bool Personagem::ChecarEsquerda (Plataforma& plat) {
-	sf::IntRect plat_rect = plat.GetCaixaDeColisao();
+bool Personagem::ChecarEsquerda (Plataforma* plat) {
+	sf::IntRect plat_rect = plat->GetCaixaDeColisao();
 	sf::IntRect pers_rect = GetCaixaDeColisao();
 
 	// Linha 1px a esquerda do personagem
@@ -154,22 +153,20 @@ bool Personagem::ChecarEsquerda (Plataforma& plat) {
 		(x < plat_rect.left) ||
 		(x > plat_rect.left + plat_rect.width)) {
 
-		_batendo_esquerda = false;
 		return false;
 	}
 	else {
 		if (_velocidade.x < 0.01) {
 			_posicao.x = plat_rect.left + plat_rect.width;
 			_velocidade.x = 0;
-			_batendo_esquerda = true;
 		}
 
 		return true;
 	}
 }
 
-bool Personagem::ChecarDireita (Plataforma& plat) {
-	sf::IntRect plat_rect = plat.GetCaixaDeColisao();
+bool Personagem::ChecarDireita (Plataforma* plat) {
+	sf::IntRect plat_rect = plat->GetCaixaDeColisao();
 	sf::IntRect pers_rect = GetCaixaDeColisao();
 
 	// Linha 1px a direita do personagem
@@ -183,14 +180,12 @@ bool Personagem::ChecarDireita (Plataforma& plat) {
 		(x < plat_rect.left) ||
 		(x > plat_rect.left + plat_rect.width)) {
 
-		_batendo_direta = false;
 		return false;
 	}
 	else {
 		if (_velocidade.x > -0.01) {
 			_posicao.x = plat_rect.left - pers_rect.width;
 			_velocidade.x = 0;
-			_batendo_direta = true;
 		}
 
 		return true;

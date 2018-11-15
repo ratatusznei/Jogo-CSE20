@@ -2,20 +2,13 @@
 
 #include "Jogador.h"
 #include "src/Entidades/Plataforma.h"
-#include "src/GerenciadorDeColisao.h"
-#include "src/Inimigos/Mumia.h"
-
-int __main () {
-	Principal p;
-	p.Executar();
-	return 0;
-}
+#include "src/DiretorDeColisao.h"
 
 int main () {
 	GerenciadorGrafico* janela = GerenciadorGrafico::GetInstance();
 	janela->CriaJanela(sf::VideoMode(Janela::largura, Janela::altura), Janela::titulo);
 
-	GerenciadorDeColisao colisoes;
+	DiretorDeColisao colisoes;
 
 	sf::Event ev;
 
@@ -31,20 +24,16 @@ int main () {
 	i_j2.SetKeyPulo(sf::Keyboard::Up);
 	i_j2.SetKeyAtaque(sf::Keyboard::M);
 
-	Jogador j1(&i_j1, 20, 50);
-	Jogador j2(&i_j2, 680, 0);
+	Jogador j1(&i_j1);
+	Jogador j2(&i_j2);
 
 	Plataforma p1(0, Janela::altura - 16, 16, 1);
-	Plataforma p2(70, Janela::altura - 16 * 4, 3, 1);
-	Plataforma p3(700, 50, 4, 6);
-	Plataforma p4(200, Janela::altura - 16 * 8, 3, 1);
-
-	Mumia m1(&j1, &j2, 380, 50);
+	Plataforma p2(100, Janela::altura - 16 * 4, 3, 2);
+	Plataforma p3(300, 50, 4, 35);
+	Plataforma p4(200, Janela::altura - 16 * 7, 3, 2);
 
 	colisoes.Incluir(&j1);
 	colisoes.Incluir(&j2);
-
-	colisoes.Incluir(&m1);
 
 	colisoes.Incluir(&p1);
 	colisoes.Incluir(&p2);
@@ -52,15 +41,11 @@ int main () {
 	colisoes.Incluir(&p4);
 
 	while (1) {
-		float dt = janela->GetDeltaTime();
-
 		janela->Limpar();
 		janela->SondarEvento(ev);
 
-		j1.Executar(dt);
-		j2.Executar(dt);
-
-		m1.Executar(dt);
+		j1.Executar();
+		j2.Executar();
 
 		colisoes.Calcular();
 
@@ -71,7 +56,6 @@ int main () {
 
 		j1.Desenhar();
 		j2.Desenhar();
-		m1.Desenhar();
 
 		janela->Atualizar();
 	}
