@@ -1,6 +1,11 @@
 #pragma once
 
+#include"../Principal.h"
+
+#include<SFML/System.hpp>
+
 #include"../GerenciadorGrafico.h"
+#include"../GerenciadorDeColisao.h"
 #include"linkedlists.h"
 #include<fstream>
 
@@ -12,6 +17,7 @@ class Fase{
 
 private:
 
+    int isOver;
     Personagem* jogador1;
     Personagem* jogador2;
     Lista<Inimigo*> ListaInimigos;
@@ -23,7 +29,6 @@ public:
     ~Fase();
 
     void carregaFase(char* path);
-    bool isOver();
 
     void executar();
 

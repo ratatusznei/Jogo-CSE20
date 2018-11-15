@@ -59,6 +59,8 @@
 		<Unit filename="src/Cenas/MenuPrincipal.h" />
 		<Unit filename="src/Cenas/TelaDeCreditos.cc" />
 		<Unit filename="src/Cenas/TelaDeCreditos.h" />
+		<Unit filename="src/Cenas/fase.cc" />
+		<Unit filename="src/Cenas/fase.h" />
 		<Unit filename="src/DiretorDeColisao.cpp" />
 		<Unit filename="src/DiretorDeColisao.h" />
 		<Unit filename="src/Entidades/Entidade.cc" />

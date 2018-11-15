@@ -1,15 +1,13 @@
 #include "src/Principal.h"
 
-#include "Jogador.h"
-#include "src/Entidades/Plataforma.h"
-#include "src/DiretorDeColisao.h"
-
 int main () {
-	GerenciadorGrafico* janela = GerenciadorGrafico::GetInstance();
+
+    Principal p;
+    p.Executar();
+
+/*	GerenciadorGrafico* janela = GerenciadorGrafico::GetInstance();
 	janela->CriaJanela(sf::VideoMode(Janela::largura, Janela::altura), Janela::titulo);
-
-	DiretorDeColisao colisoes;
-
+	GerenciadorDeColisao colisoes;
 	sf::Event ev;
 
 	GerenciadorDeInput i_j1;
@@ -59,6 +57,6 @@ int main () {
 
 		janela->Atualizar();
 	}
-
+*/
 	return 0;
 }

@@ -238,11 +238,8 @@
 1541980484 source:/home/fernando/Programming/time-travel/Application/src/DiretorDeColisao.cpp
 	"DiretorDeColisao.h"
 
-1542094406 source:c:\users\pedro\desktop\engenharia de computação\técnicas de programação\jogo\application\main.cc
+1542281275 source:c:\users\pedro\desktop\engenharia de computação\técnicas de programação\jogo\application\main.cc
 	"src/Principal.h"
-	"Jogador.h"
-	"src/Entidades/Plataforma.h"
-	"src/DiretorDeColisao.h"
 
 1542094406 c:\users\pedro\desktop\engenharia de computação\técnicas de programação\jogo\application\src\principal.h
 	<SFML/Window.hpp>
@@ -680,7 +677,10 @@
 	"../common.h"
 	"../GerenciadorGrafico.h"
 
-1542094406 c:\users\pedro\desktop\engenharia de computação\técnicas de programação\jogo\application\src\cenas\jogo.h
+1542299984 c:\users\pedro\desktop\engenharia de computação\técnicas de programação\jogo\application\src\cenas\jogo.h
+	"../GerenciadorGrafico.h"
+	"fase.h"
+	"MenuPrincipal.h"
 
 1542094406 c:\users\pedro\desktop\engenharia de computação\técnicas de programação\jogo\application\src\cenas\teladecreditos.h
 	<string>
@@ -754,8 +754,11 @@
 1542220838 source:c:\users\pedro\desktop\engenharia de computação\técnicas de programação\jogo\application\src\cenas\fase.cc
 	"fase.h"
 
-1542219269 c:\users\pedro\desktop\engenharia de computação\técnicas de programação\jogo\application\src\cenas\fase.h
+1542300230 c:\users\pedro\desktop\engenharia de computação\técnicas de programação\jogo\application\src\cenas\fase.h
+	"../Principal.h"
+	<SFML/System.hpp>
 	"../GerenciadorGrafico.h"
+	"../GerenciadorDeColisao.h"
 	"linkedlists.h"
 	<fstream>
 	"../Jogador/Jogador.h"
@@ -764,4 +767,16 @@
 
 1542095802 c:\users\pedro\desktop\engenharia de computação\técnicas de programação\jogo\application\src\inimigos\inimigo.h
 	"../Entidades/Personagem.h"
+
+1542095802 c:\users\pedro\desktop\engenharia de computação\técnicas de programação\jogo\application\src\gerenciadordecolisao.h
+	<list>
+	"Jogador.h"
+	"Inimigos/Mumia.h"
+	"Entidades/Plataforma.h"
+
+1542095802 c:\users\pedro\desktop\engenharia de computação\técnicas de programação\jogo\application\src\inimigos\mumia.h
+	"../GerenciadorGrafico.h"
+	"../Inimigos/Inimigo.h"
+	"../Jogador/Jogador.h"
+	"../common.h"
 

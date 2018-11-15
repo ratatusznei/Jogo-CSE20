@@ -1,6 +1,10 @@
 #include"fase.h"
 
-Fase::Fase(){}
+Fase::Fase(){
+
+    isOver = 0;
+
+}
 
 Fase::~Fase(){}
 
@@ -23,22 +27,47 @@ void Fase::carregaFase(char* path){
 
 }
 
-bool Fase::isOver(){
-
-    return false;
-
-}
-
 void Fase::executar(){
 
-    //Recebe dados do teclado
-    //Atualiza a posição dos jogadores
-    //Verifica colisão dos jogadores com as plataformas
-    //Verifica colisão dos jogadores com os inimigos
-    //Verifica colisão dos jogadores com os obstáculos
-    //Verifica colisão dos inimigos com as plataformas
-    //Verifica colisão dos inimigos com os obstáculos
-    //Atualiza as posições dos inimigos
-    //Envia para a tela
+    GerenciadorDeColisao colisoes;
+
+    sf::Event ev;
+
+    GerenciadorDeInput i_j1;
+    i_j1.SetKeyEsquerda(sf::Keyboard::A);
+    i_j1.SetKeyDireita(sf::Keyboard::D);
+    i_j1.SetKeyPulo(sf::Keyboard::W);
+    i_j1.SetKeyAtaque(sf::Keyboard::Space);
+
+    GerenciadorDeInput i_j2;
+    i_j2.SetKeyEsquerda(sf::Keyboard::Left);
+    i_j2.SetKeyDireita(sf::Keyboard::Right);
+    i_j2.SetKeyPulo(sf::Keyboard::Up);
+    i_j2.SetKeyAtaque(sf::Keyboard::M);
+
+    Jogador j1(&i_j1);
+    Jogador j2(&i_j2);
+
+    while(!isOver){
+
+        janela->Limpar();
+        janela->SondarEvento(ev);
+
+        j1.Executar();
+        j2.Executar();
+
+        colisoes.Calcular();
+
+        p1.Desenhar();
+        p2.Desenhar();
+        p3.Desenhar();
+        p4.Desenhar();
+
+        j1.Desenhar();
+        j2.Desenhar();
+
+        janela->Atualizar();
+
+    }
 
 }

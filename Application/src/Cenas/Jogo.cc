@@ -8,6 +8,9 @@ Jogo::~Jogo () {
 }
 
 void Jogo::Executar () {
+
+
+
 }
 
 void Jogo::Desenhar () {
