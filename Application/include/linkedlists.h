@@ -32,13 +32,19 @@ Funções de linkedlists.h:
         Esvazia a lista.
 
 Operadores:
-    operator++ : int
+    operator ++ : int
         Ponteiro da lista aponta para o próximo elemento.
         Retorna 1 se estiver no fundo da lista.
 
-    operator-- : int
+    operator -- : int
         Ponteiro da lista aponta para o elemento anterior.
         Retorna 1 se estiver no topo da lista.
+
+    operator += : void
+        Adiciona um dado no final da lista.
+
+    operator -= : void
+        Adiciona um dado no começo da lista.
 */
 
 #include<stdlib.h>
@@ -225,6 +231,18 @@ public:
             here = here->getAnteLista();
             return 0;
         }
+
+    }
+
+    void operator += (T1 n){
+
+        colaNoFinal(n);
+
+    }
+
+    void operator -= (T1 n){
+
+        colaNoComeco(n);
 
     }
 

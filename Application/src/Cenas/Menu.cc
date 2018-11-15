@@ -1,6 +1,6 @@
 #include "Menu.h"
 
-Menu::Menu (EstadoApp& estado):
+Menu::Menu (EstadoApp estado):
 _opcoes(),
 _estado(estado),
 _font(),

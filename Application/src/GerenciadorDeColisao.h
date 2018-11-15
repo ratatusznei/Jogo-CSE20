@@ -1,7 +1,7 @@
 #ifndef DIRETORDECOLISAO_H
 #define DIRETORDECOLISAO_H
 
-#include <list>
+#include "../../include/linkedlists.h"
 #include "Jogador.h"
 #include "Inimigos/Mumia.h"
 #include "Entidades/Plataforma.h"
@@ -18,9 +18,9 @@ class GerenciadorDeColisao {
 		void Calcular ();
 
 	private:
-		list<Jogador*> _jogadores;
-		list<Inimigo*> _inimigos;
-		list<Plataforma*> _plataformas;
+		Lista<Jogador*> _jogadores;
+		Lista<Inimigo*> _inimigos;
+		Lista<Plataforma*> _plataformas;
 };
 
 #endif // DIRETORDECOLISAO_H

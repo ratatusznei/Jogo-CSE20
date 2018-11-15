@@ -7,10 +7,11 @@
 
 class Jogador: public Personagem {
 	public:
-		Jogador(GerenciadorDeInput *inputs = NULL);
+		Jogador(GerenciadorDeInput *inputs = NULL, int x = 0, int y = 0);
 		~Jogador();
 
-		void Executar ();
+		virtual void Executar (float dt);
+		const sf::Vector2f GetPosicao ();
 
 	private:
 		GerenciadorDeInput *_inputs;

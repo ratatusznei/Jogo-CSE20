@@ -13,6 +13,20 @@ Menu(estado)
 	IncluirOpcao("Sair", Janela::meia_largura, 430);
 }
 
+MenuPrincipal::MenuPrincipal():
+Menu(EstadoApp::Menu){
+
+    SetFont(Resources::fonte_menu);
+        SetFundo(Resources::fundo_menu_principal);
+
+	IncluirOpcao("Jogar solo", Janela::meia_largura, 200);
+	IncluirOpcao("Jogar co-op", Janela::meia_largura, 250);
+	IncluirOpcao("Carregar jogo", Janela::meia_largura, 300);
+	IncluirOpcao("Creditos", Janela::meia_largura, 350);
+	IncluirOpcao("Sair", Janela::meia_largura, 430);
+
+}
+
 MenuPrincipal::~MenuPrincipal () {
 	//dtor
 }

@@ -10,7 +10,7 @@ using namespace std;
 
 class Menu {
 	public:
-		Menu (EstadoApp& estado);
+		Menu (EstadoApp estado);
 		~Menu ();
 
 		void Executar (sf::Vector2i mouse_pos, bool mouse_click);
@@ -22,7 +22,7 @@ class Menu {
 
 	protected:
 		vector<sf::Text*> _opcoes;
-		EstadoApp& _estado;
+		EstadoApp _estado;
 
 		sf::Font _font;
 		sf::Texture _tx_fundo;

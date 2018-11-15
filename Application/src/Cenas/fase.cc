@@ -29,6 +29,7 @@ void Fase::carregaFase(char* path){
 
 void Fase::executar(){
 
+    GerenciadorGrafico* janela = GerenciadorGrafico::GetInstance();
     GerenciadorDeColisao colisoes;
 
     sf::Event ev;
@@ -43,7 +44,7 @@ void Fase::executar(){
     i_j2.SetKeyEsquerda(sf::Keyboard::Left);
     i_j2.SetKeyDireita(sf::Keyboard::Right);
     i_j2.SetKeyPulo(sf::Keyboard::Up);
-    i_j2.SetKeyAtaque(sf::Keyboard::M);
+    i_j2.SetKeyAtaque(sf::Keyboard::Num0);
 
     Jogador j1(&i_j1);
     Jogador j2(&i_j2);
@@ -53,15 +54,11 @@ void Fase::executar(){
         janela->Limpar();
         janela->SondarEvento(ev);
 
-        j1.Executar();
-        j2.Executar();
+        j1.Executar(janela->GetDeltaTime());
+        j2.Executar(janela->GetDeltaTime());
 
         colisoes.Calcular();
 
-        p1.Desenhar();
-        p2.Desenhar();
-        p3.Desenhar();
-        p4.Desenhar();
 
         j1.Desenhar();
         j2.Desenhar();

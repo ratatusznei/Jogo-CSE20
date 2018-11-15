@@ -7,6 +7,7 @@
 class MenuPrincipal: public Menu {
 	public:
 		MenuPrincipal(EstadoApp& estado);
+		MenuPrincipal();
 		~MenuPrincipal();
 
 	private:

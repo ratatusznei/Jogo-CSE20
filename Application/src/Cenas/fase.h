@@ -1,6 +1,5 @@
 #pragma once
 
-#include"../Principal.h"
 
 #include<SFML/System.hpp>
 

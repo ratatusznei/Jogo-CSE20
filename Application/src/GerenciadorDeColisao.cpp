@@ -9,78 +9,91 @@ GerenciadorDeColisao::~GerenciadorDeColisao () {
 }
 
 void GerenciadorDeColisao::Incluir (Jogador *pj) {
-	_jogadores.push_back(pj);
+	_jogadores.colaNoFinal(pj);
 }
 
 void GerenciadorDeColisao::Incluir (Inimigo *pi) {
-	_inimigos.push_back(pi);
+	_inimigos.colaNoFinal(pi);
 }
 
 void GerenciadorDeColisao::Incluir (Plataforma *pp) {
-	_plataformas.push_back(pp);
+	_plataformas.colaNoFinal(pp);
 }
 
 void GerenciadorDeColisao::Calcular () {
-	list<Jogador*>::iterator ji;
-	list<Inimigo*>::iterator ii;
-	list<Plataforma*>::iterator pi;
 
-	for (ji = _jogadores.begin(); ji != _jogadores.end(); ji++) {
-		for (ii = _inimigos.begin(); ii != _inimigos.end(); ii++) {
-			if ((*ji)->GetCaixaDeColisao().intersects((*ii)->GetCaixaDeColisao())) {
+    _jogadores.goToTop();
+    _plataformas.goToTop();
+    _inimigos.goToTop();
+
+	do{
+		do{
+			if (_jogadores.getWhatIsHere()->GetCaixaDeColisao().intersects(
+                _inimigos.getWhatIsHere()->GetCaixaDeColisao())) {
 				/**** TEMPORARIO ****/
-				(*ji)->Machucar(0);
+				_jogadores.getWhatIsHere()->Machucar(0);
 			}
 		}
+		while(!++_inimigos);
 
-		for (pi = _plataformas.begin(); pi != _plataformas.end(); pi++) {
-			if ((*ji)->ChecarChao(**pi)) {
+		do{
+			if (_jogadores.getWhatIsHere()->ChecarChao(*(_plataformas.getWhatIsHere()))){
 				break;
 			}
 		}
+		while(!++_plataformas);
 
-		for (pi = _plataformas.begin(); pi != _plataformas.end(); pi++) {
-			if ((*ji)->ChecarTeto(**pi)) {
+		do{
+			if (_jogadores.getWhatIsHere()->ChecarTeto(*(_plataformas.getWhatIsHere()))){
 				break;
 			}
 		}
+		while(!--_plataformas);
 
-		for (pi = _plataformas.begin(); pi != _plataformas.end(); pi++) {
-			if ((*ji)->ChecarEsquerda(**pi)) {
+		do{
+			if (_jogadores.getWhatIsHere()->ChecarEsquerda(*(_plataformas.getWhatIsHere()))){
 				break;
 			}
 		}
+		while(!++_plataformas);
 
-		for (pi = _plataformas.begin(); pi != _plataformas.end(); pi++) {
-			if ((*ji)->ChecarDireita(**pi)) {
+		do{
+			if (_jogadores.getWhatIsHere()->ChecarDireita(*(_plataformas.getWhatIsHere()))){
 				break;
 			}
 		}
+		while(!--_plataformas);
  	}
+ 	while(!++_jogadores);
 
-	for (ii = _inimigos.begin(); ii != _inimigos.end(); ii++) {
-		for (pi = _plataformas.begin(); pi != _plataformas.end(); pi++) {
-			if ((*ii)->ChecarChao(**pi)) {
+	do{
+		do{
+			if (_inimigos.getWhatIsHere()->ChecarChao(*(_plataformas.getWhatIsHere()))) {
 				break;
 			}
 		}
+		while(!++_plataformas);
 
-		for (pi = _plataformas.begin(); pi != _plataformas.end(); pi++) {
-			if ((*ii)->ChecarTeto(**pi)) {
+		do{
+			if (_inimigos.getWhatIsHere()->ChecarTeto(*(_plataformas.getWhatIsHere()))) {
 				break;
 			}
 		}
+		while(!--_plataformas);
 
-		for (pi = _plataformas.begin(); pi != _plataformas.end(); pi++) {
-			if ((*ii)->ChecarEsquerda(**pi)) {
+		do{
+			if (_inimigos.getWhatIsHere()->ChecarEsquerda(*(_plataformas.getWhatIsHere()))) {
 				break;
 			}
 		}
+		while(!++_plataformas);
 
-		for (pi = _plataformas.begin(); pi != _plataformas.end(); pi++) {
-			if ((*ii)->ChecarDireita(**pi)) {
+		do{
+			if (_inimigos.getWhatIsHere()->ChecarDireita(*(_plataformas.getWhatIsHere()))) {
 				break;
 			}
 		}
+		while(!--_plataformas);
  	}
+ 	while(!--_inimigos);
 }

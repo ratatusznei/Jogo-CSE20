@@ -50,6 +50,7 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="include/linkedlists.h" />
 		<Unit filename="main.cc" />
 		<Unit filename="src/Cenas/Jogo.cc" />
 		<Unit filename="src/Cenas/Jogo.h" />
@@ -61,16 +62,20 @@
 		<Unit filename="src/Cenas/TelaDeCreditos.h" />
 		<Unit filename="src/Cenas/fase.cc" />
 		<Unit filename="src/Cenas/fase.h" />
-		<Unit filename="src/DiretorDeColisao.cpp" />
-		<Unit filename="src/DiretorDeColisao.h" />
 		<Unit filename="src/Entidades/Entidade.cc" />
 		<Unit filename="src/Entidades/Entidade.h" />
 		<Unit filename="src/Entidades/Personagem.cc" />
 		<Unit filename="src/Entidades/Personagem.h" />
 		<Unit filename="src/Entidades/Plataforma.cc" />
 		<Unit filename="src/Entidades/Plataforma.h" />
+		<Unit filename="src/GerenciadorDeColisao.cpp" />
+		<Unit filename="src/GerenciadorDeColisao.h" />
 		<Unit filename="src/GerenciadorGrafico.cc" />
 		<Unit filename="src/GerenciadorGrafico.h" />
+		<Unit filename="src/Inimigos/Inimigo.cpp" />
+		<Unit filename="src/Inimigos/Inimigo.h" />
+		<Unit filename="src/Inimigos/Mumia.cpp" />
+		<Unit filename="src/Inimigos/Mumia.h" />
 		<Unit filename="src/Jogador/GerenciadorDeInput.cc" />
 		<Unit filename="src/Jogador/GerenciadorDeInput.h" />
 		<Unit filename="src/Jogador/Jogador.cc" />
