@@ -18,6 +18,7 @@
 					<Add directory="src/Personagem" />
 					<Add directory="./" />
 					<Add directory="src/Inimigos" />
+					<Add directory="src/Fases" />
 				</Compiler>
 				<Linker>
 					<Add library="sfml-graphics" />
@@ -37,6 +38,7 @@
 					<Add directory="src/Personagem" />
 					<Add directory="./" />
 					<Add directory="src/Inimigos" />
+					<Add directory="src/Fases" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -64,6 +66,8 @@
 		<Unit filename="src/Entidades/Personagem.h" />
 		<Unit filename="src/Entidades/Plataforma.cc" />
 		<Unit filename="src/Entidades/Plataforma.h" />
+		<Unit filename="src/Fases/Fase.cpp" />
+		<Unit filename="src/Fases/Fase.h" />
 		<Unit filename="src/GerenciadorDeColisao.cpp" />
 		<Unit filename="src/GerenciadorDeColisao.h" />
 		<Unit filename="src/GerenciadorGrafico.cc" />
@@ -76,6 +80,7 @@
 		<Unit filename="src/Jogador/GerenciadorDeInput.h" />
 		<Unit filename="src/Jogador/Jogador.cc" />
 		<Unit filename="src/Jogador/Jogador.h" />
+		<Unit filename="src/LinkedLists.h" />
 		<Unit filename="src/Principal.cc" />
 		<Unit filename="src/Principal.h" />
 		<Unit filename="src/common.h" />

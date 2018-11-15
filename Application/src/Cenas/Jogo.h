@@ -2,7 +2,7 @@
 #define JOGO_H
 
 #include "../GerenciadorGrafico.h"
-#include "Fase.h"
+#include "../Fases/Fase.h"
 
 class Jogo {
 	public:
