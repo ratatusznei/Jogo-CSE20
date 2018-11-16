@@ -37,7 +37,7 @@
 	"../GerenciadorGrafico.h"
 	"../Fases/Fase.h"
 
-1542389654 /home/fernando/Programming/time-travel/Application/src/Fases/Fase.h
+1542390459 /home/fernando/Programming/time-travel/Application/src/Fases/Fase.h
 	<SFML/System.hpp>
 	<fstream>
 	"../GerenciadorGrafico.h"
