@@ -5,13 +5,13 @@
 #include "src/GerenciadorDeColisao.h"
 #include "src/Inimigos/Mumia.h"
 
-int __main () {
+int main () {
 	Principal p;
 	p.Executar();
 	return 0;
 }
 
-int main () {
+int __main () {
 	GerenciadorGrafico* janela = GerenciadorGrafico::GetInstance();
 	janela->CriaJanela(sf::VideoMode(Janela::largura, Janela::altura), Janela::titulo);
 

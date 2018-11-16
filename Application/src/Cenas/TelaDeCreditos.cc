@@ -1,8 +1,6 @@
 #include "TelaDeCreditos.h"
 
-TelaDeCreditos::TelaDeCreditos (EstadoApp& estado):
-Menu(estado)
-{
+TelaDeCreditos::TelaDeCreditos () {
 	SetFont(Resources::fonte_menu);
 	SetFundo(Resources::fundo_tela_creditos);
 
@@ -13,8 +11,8 @@ TelaDeCreditos::~TelaDeCreditos () {
 	//dtor
 }
 
-void TelaDeCreditos::InterpretarClick (int indice) {
-	if (indice == 0) {
-		_estado = EstadoApp::Menu;
+EstadoApp TelaDeCreditos::InterpretarEscolha (int botao_selecionado) {
+	if (botao_selecionado == 0) {
+		return EstadoApp::Menu;
 	}
 }

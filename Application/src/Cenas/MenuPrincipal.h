@@ -6,11 +6,11 @@
 
 class MenuPrincipal: public Menu {
 	public:
-		MenuPrincipal(EstadoApp& estado);
-		~MenuPrincipal();
+		MenuPrincipal ();
+		~MenuPrincipal ();
 
 	private:
-		void InterpretarClick (int indice);
+		EstadoApp InterpretarEscolha (int botao_selecionado);
 };
 
 #endif // MENUPRINCIPAL_H

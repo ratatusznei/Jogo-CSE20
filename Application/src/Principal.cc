@@ -1,9 +1,9 @@
 #include "Principal.h"
 
 Principal::Principal ():
-_main(_estado),
+_main(),
 _jogo(),
-_creditos(_estado),
+_creditos(),
 _estado(EstadoApp::Menu)
 {
 	GerenciadorGrafico* _janela = GerenciadorGrafico::GetInstance();
@@ -36,7 +36,7 @@ void Principal::Executar () {
 
 		switch (_estado) {
 		case EstadoApp::Menu:
-			_main.Executar(_janela->GetPosicaoDoMouse(), mouse_clicked);
+			_main.Executar(_janela->GetPosicaoDoMouse(), mouse_clicked, &_estado);
 			_main.Desenhar();
 			break;
 
@@ -46,7 +46,7 @@ void Principal::Executar () {
 			break;
 
 		case EstadoApp::Tela_de_creditos:
-			_creditos.Executar(_janela->GetPosicaoDoMouse(), mouse_clicked);
+			_creditos.Executar(_janela->GetPosicaoDoMouse(), mouse_clicked, &_estado);
 			_creditos.Desenhar();
 			break;
 

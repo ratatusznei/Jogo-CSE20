@@ -1,9 +1,7 @@
 #include "Menu.h"
 
-Menu::Menu (EstadoApp& estado):
+Menu::Menu ():
 _opcoes(),
-_estado(estado),
-_font(),
 _tx_fundo(),
 _sp_fundo()
 {
@@ -15,7 +13,7 @@ Menu::~Menu () {
 	}
 }
 
-void Menu::Executar (sf::Vector2i mouse_pos, bool mouse_click) {
+void Menu::Executar (sf::Vector2i mouse_pos, bool mouse_click, EstadoApp *estado) {
 	for (unsigned i = 0; i < _opcoes.size(); i++) {
 		sf::FloatRect txt_box = _opcoes[i]->getGlobalBounds();
 
@@ -24,7 +22,7 @@ void Menu::Executar (sf::Vector2i mouse_pos, bool mouse_click) {
 
 			if (mouse_click) {
 				_opcoes[i]->setFillColor(sf::Color::Red);
-				InterpretarClick(i);
+				*estado = InterpretarEscolha(i);
 			}
 		}
 		else {

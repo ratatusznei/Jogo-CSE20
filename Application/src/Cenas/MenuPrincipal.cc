@@ -1,8 +1,6 @@
 #include "MenuPrincipal.h"
 
-MenuPrincipal::MenuPrincipal (EstadoApp& estado):
-Menu(estado)
-{
+MenuPrincipal::MenuPrincipal () {
 	SetFont(Resources::fonte_menu);
         SetFundo(Resources::fundo_menu_principal);
 
@@ -17,8 +15,8 @@ MenuPrincipal::~MenuPrincipal () {
 	//dtor
 }
 
-void MenuPrincipal::InterpretarClick (int indice) {
-	switch (indice) {
+EstadoApp MenuPrincipal::InterpretarEscolha (int botao_selecionado) {
+	switch (botao_selecionado) {
 	case 0:
 		//solo
 		break;
@@ -32,14 +30,16 @@ void MenuPrincipal::InterpretarClick (int indice) {
 		break;
 
 	case 3:
-		_estado = EstadoApp::Tela_de_creditos;
+		return EstadoApp::Tela_de_creditos;
 		break;
 
 	case 4:
-		_estado = EstadoApp::Sair;
+		return EstadoApp::Sair;
 		break;
 
 	default:
 		break;
 	}
+
+	return EstadoApp::Nenhum;
 }

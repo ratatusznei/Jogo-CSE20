@@ -10,10 +10,10 @@ using namespace std;
 
 class Menu {
 	public:
-		Menu (EstadoApp& estado);
+		Menu ();
 		~Menu ();
 
-		void Executar (sf::Vector2i mouse_pos, bool mouse_click);
+		void Executar (sf::Vector2i mouse_pos, bool mouse_click, EstadoApp *estado);
 		void Desenhar ();
 
 		void SetFont (string file);
@@ -22,13 +22,12 @@ class Menu {
 
 	protected:
 		vector<sf::Text*> _opcoes;
-		EstadoApp& _estado;
 
 		sf::Font _font;
 		sf::Texture _tx_fundo;
 		sf::Sprite _sp_fundo;
 
-		virtual void InterpretarClick (int indice) = 0;
+		virtual EstadoApp InterpretarEscolha (int botao_selecionado) = 0;
 };
 
 #endif // MENU_H

@@ -9,11 +9,11 @@ using namespace std;
 
 class TelaDeCreditos: public Menu {
 	public:
-		TelaDeCreditos (EstadoApp& estado);
+		TelaDeCreditos ();
 		~TelaDeCreditos ();
 
 	private:
-		void InterpretarClick (int indice);
+		EstadoApp InterpretarEscolha (int botao_selecionado);
 };
 
 #endif // TELADECREDITOS_H

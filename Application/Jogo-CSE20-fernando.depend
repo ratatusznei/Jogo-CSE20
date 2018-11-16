@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1542117251 source:/home/fernando/Programming/time-travel/Application/main.cc
+1542386423 source:/home/fernando/Programming/time-travel/Application/main.cc
 	"src/Principal.h"
 	"Jogador.h"
 	"src/Entidades/Plataforma.h"
@@ -23,11 +23,11 @@
 	<string>
 	<iostream>
 
-1541886480 /home/fernando/Programming/time-travel/Application/src/Cenas/MenuPrincipal.h
+1542386066 /home/fernando/Programming/time-travel/Application/src/Cenas/MenuPrincipal.h
 	"../common.h"
 	"Menu.h"
 
-1541886480 /home/fernando/Programming/time-travel/Application/src/Cenas/Menu.h
+1542386276 /home/fernando/Programming/time-travel/Application/src/Cenas/Menu.h
 	<vector>
 	<string>
 	"../common.h"
@@ -53,7 +53,7 @@
 	"Inimigos/Inimigo.h"
 	"Entidades/Plataforma.h"
 
-1542311596 /home/fernando/Programming/time-travel/Application/src/LinkedLists.h
+1542386605 /home/fernando/Programming/time-travel/Application/src/LinkedLists.h
 	<stdlib.h>
 
 1542115082 /home/fernando/Programming/time-travel/Application/src/Jogador/Jogador.h
@@ -79,7 +79,7 @@
 1542113376 /home/fernando/Programming/time-travel/Application/src/Inimigos/Inimigo.h
 	"../Entidades/Personagem.h"
 
-1541886480 /home/fernando/Programming/time-travel/Application/src/Cenas/TelaDeCreditos.h
+1542386182 /home/fernando/Programming/time-travel/Application/src/Cenas/TelaDeCreditos.h
 	<string>
 	"../common.h"
 	"Menu.h"
@@ -93,13 +93,13 @@
 1541855234 source:/home/fernando/Programming/time-travel/Application/src/Cenas/Jogo.cc
 	"Jogo.h"
 
-1541886480 source:/home/fernando/Programming/time-travel/Application/src/Cenas/Menu.cc
+1542386296 source:/home/fernando/Programming/time-travel/Application/src/Cenas/Menu.cc
 	"Menu.h"
 
-1541886480 source:/home/fernando/Programming/time-travel/Application/src/Cenas/MenuPrincipal.cc
+1542386352 source:/home/fernando/Programming/time-travel/Application/src/Cenas/MenuPrincipal.cc
 	"MenuPrincipal.h"
 
-1541886480 source:/home/fernando/Programming/time-travel/Application/src/Cenas/TelaDeCreditos.cc
+1542386046 source:/home/fernando/Programming/time-travel/Application/src/Cenas/TelaDeCreditos.cc
 	"TelaDeCreditos.h"
 
 1541977923 source:/home/fernando/Programming/time-travel/Application/src/Entidades/Entidade.cc
@@ -132,6 +132,6 @@
 1542115074 source:/home/fernando/Programming/time-travel/Application/src/Jogador/Jogador.cc
 	"Jogador.h"
 
-1541886480 source:/home/fernando/Programming/time-travel/Application/src/Principal.cc
+1542386327 source:/home/fernando/Programming/time-travel/Application/src/Principal.cc
 	"Principal.h"
 
