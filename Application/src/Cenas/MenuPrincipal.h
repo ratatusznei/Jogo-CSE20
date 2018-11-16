@@ -1,3 +1,9 @@
+/*
+	Menu principal da aplicacao
+
+	Possui botoes para entrar no jogo, sair da aplicacao, ver tela de creditos
+*/
+
 #ifndef MENUPRINCIPAL_H
 #define MENUPRINCIPAL_H
 

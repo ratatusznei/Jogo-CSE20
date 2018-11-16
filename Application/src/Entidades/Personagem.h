@@ -1,3 +1,7 @@
+/*
+	Personagem que se move pela fase, colidindo com plataformas
+*/
+
 #ifndef PERSONAGEM_H
 #define PERSONAGEM_H
 
@@ -9,20 +13,36 @@ class Personagem: public Entidade {
 		Personagem (float x = 0, float y = 0, string tex_path = "");
 		~Personagem ();
 
+		/*	IN: O dano causado
+			OUT: Remove da vida o dano */
 		void Machucar (int dano);
 
+		/*	IN: Delta tempo da ultima frame
+			OUT: Calcula as novas propriedades do personagem */
 		virtual void Executar (float dt) = 0;
+
+		/*	IN: Nenhum
+			OUT: Desenha o personagem na tela */
 		void Desenhar ();
 
-		// y do chao eh saida
+		/*	IN: Plataforma
+			OUT: Retorna verdadeiro se o personagem esta colidindo com a plataforma: a baixo, em cima, a esquerda ou a direita, respectivamente */
 		bool ChecarChao (Plataforma& plat);
 		bool ChecarTeto (Plataforma& plat);
 		bool ChecarEsquerda (Plataforma& plat);
 		bool ChecarDireita (Plataforma& plat);
 
 	protected:
+		/*	IN: Delta tempo da ultima frame
+			OUT: Atualiza as posicoes conforme velocidades e velocidades conforme aceleracoes */
 		void AtualizarFisica (float dt);
+
+		/*	IN: Delta tempo da ultima frame, magnetude da aceleracao
+			OUT: Aplica uma aceleracao no sentido oposto ao movimento */
 		void Desacelerar (float dt, float aceleracao);
+
+		/*	IN: Delta tempo da ultima frame, magnetude da aceleracao
+			OUT: Aplica uma aceleracao */
 		void Acelerar (float dt, float aceleracao);
 
 		int _vida;

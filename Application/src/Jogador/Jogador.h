@@ -1,3 +1,9 @@
+/*
+	Jogador
+
+	Responsavel por ler entradas, executar e atualizar o personagem
+*/
+
 #ifndef JOGADOR_H
 #define JOGADOR_H
 
@@ -10,7 +16,12 @@ class Jogador: public Personagem {
 		Jogador(GerenciadorDeInput *inputs = NULL, int x = 0, int y = 0);
 		~Jogador();
 
+		/*	IN: O delta tempo da ultima frame
+			OUT: Calcula novas propriedades do jogador conforme entradas */
 		void Executar (float dt);
+
+		/*	IN: Nenhum
+			OUT: Posicao relativa ao TOPO-ESQUERDO da janela */
 		const sf::Vector2f GetPosicao ();
 
 	private:

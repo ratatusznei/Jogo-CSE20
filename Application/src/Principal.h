@@ -1,3 +1,12 @@
+/*
+	Classe Principal da aplicação
+
+	Encapsula o projeto em um objeto, seguindo as boas praticas de POO
+
+	Aplicacao eh o executavel como um todo
+	Jogo eh apenas a cena onde os jogadores controlam personagens
+*/
+
 #ifndef PRINCIPAL_H
 #define PRINCIPAL_H
 

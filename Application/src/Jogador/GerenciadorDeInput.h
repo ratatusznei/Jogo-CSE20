@@ -1,3 +1,9 @@
+/*
+	Interface das entradas do usuario para o controle do personagem
+
+	TODO: Implementar isso atraves de um bridge se der tempo
+*/
+
 #ifndef GERENCIADORDEINPUT_H
 #define GERENCIADORDEINPUT_H
 
@@ -9,13 +15,19 @@ class GerenciadorDeInput {
 		GerenciadorDeInput ();
 		~GerenciadorDeInput ();
 
+		/*	IN: Entrada do teclado
+			OUT: Configura essa tecla para os Gets a seguir */
 		void SetKeyEsquerda (sf::Keyboard::Key key);
 		void SetKeyDireita (sf::Keyboard::Key key);
 		void SetKeyPulo (sf::Keyboard::Key key);
 		void SetKeyAtaque (sf::Keyboard::Key key);
 
+		/*	IN: Nenhum
+			OUT: Atualiza os boleanos internos */
 		void Atualizar ();
 
+		/*	IN: Nenhum
+			OUT: Retorna verdadeiro ou falso conforme as teclas configuradas */
 		bool GetEsquerda (); // Retorna true em nivel
 		bool GetDireita (); // Retorna true em nivel
 		bool GetPulou (); // Retorna true em borda

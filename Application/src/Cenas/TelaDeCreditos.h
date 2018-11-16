@@ -1,3 +1,10 @@
+/*
+	Tela de creditos
+
+	Tem um botao para voltar ao menu iniciar
+	E o fundo possui os creditos
+*/
+
 #ifndef TELADECREDITOS_H
 #define TELADECREDITOS_H
 

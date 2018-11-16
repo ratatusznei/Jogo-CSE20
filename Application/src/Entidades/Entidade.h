@@ -1,3 +1,7 @@
+/*
+	Entidade desenhavel na janela
+*/
+
 #ifndef ENTIDADE_H
 #define ENTIDADE_H
 
@@ -9,7 +13,12 @@ class Entidade {
 		Entidade (float x = 0, float y = 0, string tex_path = "");
 		~Entidade ();
 
+		/*	IN: Nenhum
+			OUT: Desenha a entidade na janela */
 		virtual void Desenhar ();
+
+		/*	IN: Nenhum
+			OUT: Retorna a caixa de colisao da entidade */
 		virtual sf::IntRect GetCaixaDeColisao();
 
 	protected:

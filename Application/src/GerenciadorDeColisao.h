@@ -1,3 +1,11 @@
+/*
+	Gerencia o tratamento de colisoes entre conjuntos de objetos
+
+	Gerencia colisoes jogador-plataforma
+	Gerencia colisoes jogador-inimigo
+	Gerencia colisoes inimigo-plataforma
+*/
+
 #ifndef DIRETORDECOLISAO_H
 #define DIRETORDECOLISAO_H
 
@@ -11,6 +19,8 @@ class GerenciadorDeColisao {
 		GerenciadorDeColisao ();
 		~GerenciadorDeColisao ();
 
+		/* 	IN: Objeto para tratar as colisoes
+			OUT: Adiciona o objeto nas listas internas */
 		void Incluir (Jogador *pj);
 		void Incluir (Inimigo *pi);
 		void Incluir (Plataforma *pp);
