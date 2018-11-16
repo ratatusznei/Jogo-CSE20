@@ -15,4 +15,6 @@ EstadoApp TelaDeCreditos::InterpretarEscolha (int botao_selecionado) {
 	if (botao_selecionado == 0) {
 		return EstadoApp::Menu;
 	}
+
+	return EstadoApp::Nenhum;
 }
