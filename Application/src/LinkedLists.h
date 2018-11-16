@@ -244,16 +244,19 @@ public:
 	}
 
 	void mataLista(){   //Destroi a lista
-		here = top->getProxLista();     //Define o atual como o segundo elemento
-		
-		while(here != NULL){            //Enquanto não estiver no final da lista
-			free(top);                  //Libera o topo
-			top = here;                 //Desloca o topo uma posição para frente
-			here = top->getProxLista(); //Desloca o atual uma posição para frente
-		}//Enquanto não estiver no final da lista, vai destruindo ela
+		if (here != NULL) {
+			here = top->getProxLista();     //Define o atual como o segundo elemento
 
-		free(top);      //Quando chegar no final, destroi o final
-		here = NULL;    //Aterra o atual
+			while (here != NULL){            //Enquanto não estiver no final da lista
+				free(top);                  //Libera o topo
+				top = here;                 //Desloca o topo uma posição para frente
+				here = top->getProxLista(); //Desloca o atual uma posição para frente
+			}//Enquanto não estiver no final da lista, vai destruindo ela
+
+			free(top);      //Quando chegar no final, destroi o final
+			here = NULL;    //Aterra o atual
+			top = NULL;
+		}
 	}
 };
 
