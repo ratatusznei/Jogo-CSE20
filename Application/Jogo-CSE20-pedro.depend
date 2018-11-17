@@ -135,12 +135,20 @@
 	"../Inimigos/Inimigo.h"
 	"../Entidades/Plataforma.h"
 
-1542443096 source:c:\users\pedro\desktop\engenharia de computação\técnicas de programação\jogo\application\src\cenas\jogo.cc
+1542485085 source:c:\users\pedro\desktop\engenharia de computação\técnicas de programação\jogo\application\src\cenas\jogo.cc
 	"Jogo.h"
 
-1542443096 c:\users\pedro\desktop\engenharia de computação\técnicas de programação\jogo\application\src\cenas\jogo.h
+1542485077 c:\users\pedro\desktop\engenharia de computação\técnicas de programação\jogo\application\src\cenas\jogo.h
 	"../GerenciadorGrafico.h"
 	"../Fases/Fase.h"
+	<SFML/System.hpp>
+	<fstream>
+	"../GerenciadorGrafico.h"
+	"../GerenciadorDeColisao.h"
+	"../LinkedLists.h"
+	"../Jogador/Jogador.h"
+	"../Inimigos/Mumia.h"
+	"../Entidades/Plataforma.h"
 
 1542443096 c:\users\pedro\desktop\engenharia de computação\técnicas de programação\jogo\application\src\gerenciadorgrafico.h
 	<SFML/Window.hpp>
@@ -561,7 +569,7 @@
 	<string>
 	<iostream>
 
-1542443096 c:\users\pedro\desktop\engenharia de computação\técnicas de programação\jogo\application\src\fases\fase.h
+1542484227 c:\users\pedro\desktop\engenharia de computação\técnicas de programação\jogo\application\src\fases\fase.h
 	<SFML/System.hpp>
 	<fstream>
 	"../GerenciadorGrafico.h"
@@ -571,7 +579,7 @@
 	"../Inimigos/Inimigo.h"
 	"../Entidades/Plataforma.h"
 
-1542443096 c:\users\pedro\desktop\engenharia de computação\técnicas de programação\jogo\application\src\gerenciadordecolisao.h
+1542483758 c:\users\pedro\desktop\engenharia de computação\técnicas de programação\jogo\application\src\gerenciadordecolisao.h
 	"LinkedLists.h"
 	"Jogador.h"
 	"Inimigos/Inimigo.h"
@@ -638,7 +646,7 @@
 	"../common.h"
 	"Menu.h"
 
-1542443096 source:c:\users\pedro\desktop\engenharia de computação\técnicas de programação\jogo\application\main.cc
+1542483751 source:c:\users\pedro\desktop\engenharia de computação\técnicas de programação\jogo\application\main.cc
 	"src/Principal.h"
 	"Jogador.h"
 	"src/Entidades/Plataforma.h"
@@ -694,7 +702,7 @@
 	"../Inimigos/Inimigo.h"
 	"../Entidades/Plataforma.h"
 
-1542475057 source:c:\users\pedro\desktop\engenharia de computação\técnicas de programação\jogo\application\src\jogador\registrodejogada.cc
+1542475299 source:c:\users\pedro\desktop\engenharia de computação\técnicas de programação\jogo\application\src\jogador\registrodejogada.cc
 	"RegistroDeJogada.h"
 
 1542475089 c:\users\pedro\desktop\engenharia de computação\técnicas de programação\jogo\application\src\jogador\registrodejogada.h

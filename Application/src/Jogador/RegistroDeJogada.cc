@@ -40,6 +40,7 @@ void RegistroDeJogada::salvarJogada(Jogador* j1, Jogador* j2, Lista<Inimigo*>* l
 	save.close();
 }
 
+
 void RegistroDeJogada::carregarJogada (Jogador* j1, Jogador* j2, Lista<Inimigo*>* li, Lista<Plataforma*>* lp, int* pontuacao) {
 	char* data = (char*) malloc(sizeof(char) * 64);
 

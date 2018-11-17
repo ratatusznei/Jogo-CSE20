@@ -1,63 +1,36 @@
 #include "Fase.h"
 
 Fase::Fase () {
+
+    janela = GerenciadorGrafico::GetInstance();
 	_isOver = 0;
+
 }
 
 Fase::~Fase () {
 }
 
-void Fase::CarregarFase (char *path) {
-	int x, y, w, h;
-	char str[64];
-	ifstream f;
+bool Fase::Executar (Jogador* j1, Jogador* j2, Lista<Inimigo*>* li,
+                     Lista<Plataforma*>* lp, GerenciadorDeColisao* colisoes){
 
-	f.open(path);
+    float dt = janela->GetDeltaTime();
 
-	while (!f.eof()) {
-		f.getline(str, 64);
-		sscanf(str, "%d,%d,%d,%d", &x, &y, &w, &h);
-		Plataforma *p = new Plataforma(x, y, w, h);
-		_listaPlataformas.colaNoComeco(p);
-		f.getline(str, 1);
-	}
+    sf::Event ev;
 
-	f.close();
-}
+    janela->Limpar();
+    janela->SondarEvento(ev);
 
-void Fase::Executar () {
-	GerenciadorGrafico *janela = GerenciadorGrafico::GetInstance();
-	GerenciadorDeColisao colisoes;
+    j1->Executar(dt);
+    j2->Executar(dt);
 
-	sf::Event ev;
+    li->goToTop();
+    do{
+        li->getWhatIsHere()->Executar(dt);
+    }
+    while(!(++li));
 
-	GerenciadorDeInput i_j1;
-	i_j1.SetKeyEsquerda(sf::Keyboard::A);
-	i_j1.SetKeyDireita(sf::Keyboard::D);
-	i_j1.SetKeyPulo(sf::Keyboard::W);
-	i_j1.SetKeyAtaque(sf::Keyboard::Space);
+    colisoes->Calcular();
 
-	GerenciadorDeInput i_j2;
-	i_j2.SetKeyEsquerda(sf::Keyboard::Left);
-	i_j2.SetKeyDireita(sf::Keyboard::Right);
-	i_j2.SetKeyPulo(sf::Keyboard::Up);
-	i_j2.SetKeyAtaque(sf::Keyboard::Num0);
+    return _isOver;
 
-	Jogador j1(&i_j1, 20, 50);
-	Jogador j2(&i_j2, 680, 0);
-
-	while (!_isOver) {
-		janela->Limpar();
-		janela->SondarEvento(ev);
-
-		j1.Executar(janela->GetDeltaTime());
-		j2.Executar(janela->GetDeltaTime());
-
-		colisoes.Calcular();
-
-		j1.Desenhar();
-		j2.Desenhar();
-
-		janela->Atualizar();
-	}
 }
