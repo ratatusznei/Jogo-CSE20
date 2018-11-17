@@ -19,6 +19,7 @@
 					<Add directory="src/Personagem" />
 					<Add directory="./" />
 					<Add directory="C:/SFML-2.5.0/include" />
+					<Add directory="src/Cenas" />
 				</Compiler>
 				<Linker>
 					<Add library="sfml-graphics-d" />
@@ -50,6 +51,7 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="main.cc" />
 		<Unit filename="src/Cenas/Jogo.cc" />
 		<Unit filename="src/Cenas/Jogo.h" />
 		<Unit filename="src/Cenas/Menu.cc" />
@@ -78,6 +80,8 @@
 		<Unit filename="src/Jogador/GerenciadorDeInput.h" />
 		<Unit filename="src/Jogador/Jogador.cc" />
 		<Unit filename="src/Jogador/Jogador.h" />
+		<Unit filename="src/Jogador/RegistroDeJogada.cc" />
+		<Unit filename="src/Jogador/RegistroDeJogada.h" />
 		<Unit filename="src/LinkedLists.h" />
 		<Unit filename="src/Principal.cc" />
 		<Unit filename="src/Principal.h" />

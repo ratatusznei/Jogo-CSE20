@@ -80,6 +80,8 @@
 		<Unit filename="src/Jogador/GerenciadorDeInput.h" />
 		<Unit filename="src/Jogador/Jogador.cc" />
 		<Unit filename="src/Jogador/Jogador.h" />
+		<Unit filename="src/Jogador/RegistroDeJogada.cc" />
+		<Unit filename="src/Jogador/RegistroDeJogada.h" />
 		<Unit filename="src/LinkedLists.h" />
 		<Unit filename="src/Principal.cc" />
 		<Unit filename="src/Principal.h" />
@@ -87,6 +89,7 @@
 		<Extensions>
 			<code_completion />
 			<debugger />
+			<envvars />
 		</Extensions>
 	</Project>
 </CodeBlocks_project_file>
