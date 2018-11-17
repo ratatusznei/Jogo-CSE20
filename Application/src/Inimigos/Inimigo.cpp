@@ -8,3 +8,7 @@ Personagem(x, y, tex_path) {
 Inimigo::~Inimigo () {
 	//dtor
 }
+
+int Inimigo::QualTipo() {
+	return _tipo;
+}
