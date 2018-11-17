@@ -20,10 +20,6 @@ class Jogador: public Personagem {
 			OUT: Calcula novas propriedades do jogador conforme entradas */
 		void Executar (float dt);
 
-		/*	IN: Nenhum
-			OUT: Posicao relativa ao TOPO-ESQUERDO da janela */
-		const sf::Vector2f GetPosicao ();
-
 	private:
 		GerenciadorDeInput *_inputs;
 

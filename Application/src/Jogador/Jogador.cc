@@ -116,6 +116,4 @@ void Jogador::Executar (float dt) {
 	AtualizarFisica(dt);
 }
 
-const sf::Vector2f Jogador::GetPosicao () {
-	return _posicao;
-}
+
