@@ -29,3 +29,7 @@ sf::IntRect Entidade::GetCaixaDeColisao () {
 
 	return caixa_col;
 }
+
+const sf::Vector2f Entidade::GetPosicao () {
+	return _posicao;
+}

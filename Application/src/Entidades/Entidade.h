@@ -21,6 +21,10 @@ class Entidade {
 			OUT: Retorna a caixa de colisao da entidade */
 		virtual sf::IntRect GetCaixaDeColisao();
 
+		/*	IN: Nenhum
+			OUT: Posicao relativa ao TOPO-ESQUERDO da janela */
+		const sf::Vector2f GetPosicao ();
+
 	protected:
 		sf::Texture _tex;
 		sf::IntRect _tex_rect;
