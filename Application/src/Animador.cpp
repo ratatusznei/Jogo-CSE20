@@ -34,8 +34,6 @@ void Animador::Executar (float dt) {
 	_timer += dt;
 
 	if (_timer > _periodo) {
-		cout << _quadro_atual << endl;
-
 		if (!_terminou) {
 			_timer -= _periodo;
 

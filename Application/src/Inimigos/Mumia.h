@@ -18,6 +18,10 @@ class Mumia: public Inimigo {
 		SeguindoJ1,
 		SeguindoJ2,
 		Perdida,
+		Atacando,
+		PulandoParaJ1,
+		PulandoParaJ2,
+		Pulando,
 	};
 
 	public:
@@ -32,6 +36,7 @@ class Mumia: public Inimigo {
 
 		int _x0;
 		float _range;
+		float _range_ataque;
 
 		EstadoMumia _estado;
 

@@ -8,21 +8,21 @@
 #include "../Entidades/Personagem.h"
 
 class Inimigo: public Personagem {
-public:
-	Inimigo (float x = 0, float y = 0, string tex_path = "");
-	~Inimigo ();
+	public:
+		Inimigo (float x = 0, float y = 0, string tex_path = "", int n_animacoes = 1);
+		~Inimigo ();
 
-	/*	IN: O delta tempo da ultima frame
-		OUT: Calcula novas propriedades do inimigo */
-	virtual void Executar(float dt) = 0;
+		/*	IN: O delta tempo da ultima frame
+			OUT: Calcula novas propriedades do inimigo */
+		virtual void Executar(float dt) = 0;
 
-	/*	IN: void
-		OUT: retorna o valor correspondente ao tipo de inimigo */
-	int QualTipo();
+		/*	IN: void
+			OUT: retorna o valor correspondente ao tipo de inimigo */
+		int QualTipo();
 
-protected:
+	protected:
 
-    int _tipo;
+	    int _tipo;
 
 };
 

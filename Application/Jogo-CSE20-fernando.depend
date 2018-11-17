@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1542464061 source:/home/fernando/Programming/time-travel/Application/main.cc
+1542418407 source:/home/fernando/Programming/time-travel/Application/main.cc
 	"src/Principal.h"
 	"Jogador.h"
 	"src/Entidades/Plataforma.h"
@@ -77,7 +77,11 @@
 1542390413 /home/fernando/Programming/time-travel/Application/src/Entidades/Plataforma.h
 	"Entidade.h"
 
+<<<<<<< HEAD
 1542464508 /home/fernando/Programming/time-travel/Application/src/Inimigos/Inimigo.h
+=======
+1542419157 /home/fernando/Programming/time-travel/Application/src/Inimigos/Inimigo.h
+>>>>>>> animacoes
 	"../Entidades/Personagem.h"
 
 1542389685 /home/fernando/Programming/time-travel/Application/src/Cenas/TelaDeCreditos.h
@@ -85,7 +89,11 @@
 	"../common.h"
 	"Menu.h"
 
+<<<<<<< HEAD
 1542464444 /home/fernando/Programming/time-travel/Application/src/Inimigos/Mumia.h
+=======
+1542419608 /home/fernando/Programming/time-travel/Application/src/Inimigos/Mumia.h
+>>>>>>> animacoes
 	"../GerenciadorGrafico.h"
 	"../Inimigos/Inimigo.h"
 	"../Jogador/Jogador.h"
@@ -106,7 +114,11 @@
 1542464444 source:/home/fernando/Programming/time-travel/Application/src/Entidades/Entidade.cc
 	"Entidade.h"
 
+<<<<<<< HEAD
 1542464444 source:/home/fernando/Programming/time-travel/Application/src/Entidades/Personagem.cc
+=======
+1542419726 source:/home/fernando/Programming/time-travel/Application/src/Entidades/Personagem.cc
+>>>>>>> animacoes
 	"Personagem.h"
 
 1541971193 source:/home/fernando/Programming/time-travel/Application/src/Entidades/Plataforma.cc
@@ -121,10 +133,17 @@
 1541886480 source:/home/fernando/Programming/time-travel/Application/src/GerenciadorGrafico.cc
 	"GerenciadorGrafico.h"
 
+<<<<<<< HEAD
 1542464444 source:/home/fernando/Programming/time-travel/Application/src/Inimigos/Inimigo.cpp
 	"Inimigo.h"
 
 1542464444 source:/home/fernando/Programming/time-travel/Application/src/Inimigos/Mumia.cpp
+=======
+1542419141 source:/home/fernando/Programming/time-travel/Application/src/Inimigos/Inimigo.cpp
+	"Inimigo.h"
+
+1542419065 source:/home/fernando/Programming/time-travel/Application/src/Inimigos/Mumia.cpp
+>>>>>>> animacoes
 	"Mumia.h"
 
 1541891399 source:/home/fernando/Programming/time-travel/Application/src/Jogador/GerenciadorDeInput.cc
@@ -140,7 +159,11 @@
 	<SFML/Graphics.hpp>
 	"common.h"
 
+<<<<<<< HEAD
 1542464444 source:/home/fernando/Programming/time-travel/Application/src/Animador.cpp
+=======
+1542419025 source:/home/fernando/Programming/time-travel/Application/src/Animador.cpp
+>>>>>>> animacoes
 	"Animador.h"
 
 1542464444 source:/home/fernando/Programming/time-travel/Application/src/Jogador/RegistroDeJogada.cc
