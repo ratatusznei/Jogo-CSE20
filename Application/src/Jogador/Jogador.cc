@@ -10,6 +10,7 @@ Jogador::Jogador (GerenciadorDeInput *inputs, int x, int y):
 Personagem(x, y, Resources::tex_jogador, total_anims),
 _inputs(inputs)
 {
+	_podeAtacar = true;
 }
 
 Jogador::~Jogador () {
@@ -37,6 +38,8 @@ void Jogador::IniciarRobo () {
 	_animador.SetFrameCount(anim_pulando, 1);
 	_animador.SetFrameCount(anim_atacando, 3);
 	_animador.SetFrameCount(anim_andando, 2);
+
+	_projetil_protipo.SetTempoPraMorrer(1);
 }
 
 void Jogador::IniciarDoctor () {
@@ -60,6 +63,8 @@ void Jogador::IniciarDoctor () {
 	_animador.SetFrameCount(anim_pulando, 1);
 	_animador.SetFrameCount(anim_atacando, 1);
 	_animador.SetFrameCount(anim_andando, 2);
+
+	_projetil_protipo.SetTempoPraMorrer(1);
 }
 
 void Jogador::Executar (float dt) {
@@ -173,8 +178,14 @@ void Jogador::Executar (float dt) {
 
 		_velocidade.x = 0;
 
+		if (_podeAtacar) {
+			Atacar();
+			_podeAtacar = false;
+		}
+
 		if (_animador.GetTerminou()) {
 			_estado = EstadoJogador::Parado;
+			_podeAtacar = true;
 		}
 		break;
 

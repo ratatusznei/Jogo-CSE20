@@ -25,12 +25,15 @@ class Entidade {
 			OUT: Posicao relativa ao TOPO-ESQUERDO da janela */
 		const sf::Vector2f GetPosicao ();
 
+		void SetPosicao(int x, int y);
+
 	protected:
 		sf::Texture _tex;
 		sf::IntRect _tex_rect;
 		sf::Sprite _sp;
 
 		sf::Vector2f _posicao;
+		bool _viradoPraEsquerda;
 };
 
 #endif // ENTIDADE_H

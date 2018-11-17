@@ -3,6 +3,7 @@
 Personagem::Personagem (float x, float y, string tex_path, int n_animacoes):
 Entidade(x, y, tex_path),
 _animador(n_animacoes),
+_projetil_protipo(tex_path),
 _esta_no_chao(false),
 _batendo_teto(false),
 _batendo_direta(false),
@@ -13,6 +14,11 @@ _batendo_esquerda(false)
 	_tex_rect.width = Resources::block_size;
 	_tex_rect.height = Resources::block_size;
 	_sp.setTextureRect(_tex_rect);
+
+	_offSetAtaqueX = 0;
+	_offSetAtaqueY = 0;
+	_vx_ataque = 100;
+	_tempoPraMorrerAtaque = 1;
 }
 
 Personagem::~Personagem () {
@@ -25,14 +31,29 @@ void Personagem::Machucar (int dano) {
 	_posicao.y -= 100;
 }
 
+void Personagem::Atacar () {
+	Projetil* pp = new Projetil(_projetil_protipo);
+
+	pp->SetPosicao(_posicao.x + _offSetAtaqueX, _posicao.y + _offSetAtaqueY);
+
+	if (_viradoPraEsquerda) {
+		pp->SetVelocidade(_vx_ataque);
+	}
+	else {
+		pp->SetVelocidade(-_vx_ataque);
+	}
+
+	Projetil::Incluir(pp);
+}
+
 void Personagem::Desenhar () {
 	GerenciadorGrafico* janela = GerenciadorGrafico::GetInstance();
 
-	if (_velocidade.x > 0.1) {
+	if (_viradoPraEsquerda) {
 		_sp.setScale(Resources::pixel_scale, Resources::pixel_scale);
 		_sp.setOrigin(0, 0);
 	}
-	else if (_velocidade.x < -0.1) {
+	else {
 		_sp.setOrigin(_sp.getLocalBounds().width, 0);
 		_sp.setScale(-Resources::pixel_scale, Resources::pixel_scale);
 	}
@@ -43,6 +64,13 @@ void Personagem::Desenhar () {
 void Personagem::AtualizarFisica (float dt) {
 	_velocidade += _aceleracao * dt;
 	_posicao += _velocidade * dt;
+
+	if (_velocidade.x > 0.1) {
+		_viradoPraEsquerda = true;
+	}
+	else if (_velocidade.x < -0.1) {
+		_viradoPraEsquerda = false;
+	}
 
 	if (_velocidade.x > _max_vx) {
 		_velocidade.x = _max_vx;

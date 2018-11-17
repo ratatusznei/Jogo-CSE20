@@ -1,12 +1,13 @@
 # depslib dependency file v1.0
-1542473172 source:/home/fernando/Programming/time-travel/Application/main.cc
+1542490180 source:/home/fernando/Programming/time-travel/Application/main.cc
 	"src/Principal.h"
 	"Jogador.h"
 	"src/Entidades/Plataforma.h"
 	"src/GerenciadorDeColisao.h"
 	"src/Inimigos/Mumia.h"
+	"src/Entidades/Projetil.h"
 
-1542387397 /home/fernando/Programming/time-travel/Application/src/Principal.h
+1542491510 /home/fernando/Programming/time-travel/Application/src/Principal.h
 	<SFML/Window.hpp>
 	"GerenciadorGrafico.h"
 	"Cenas/MenuPrincipal.h"
@@ -53,7 +54,7 @@
 	"Inimigos/Inimigo.h"
 	"Entidades/Plataforma.h"
 
-1542386605 /home/fernando/Programming/time-travel/Application/src/LinkedLists.h
+1542492695 /home/fernando/Programming/time-travel/Application/src/LinkedLists.h
 	<stdlib.h>
 
 1542464444 /home/fernando/Programming/time-travel/Application/src/Jogador/Jogador.h
@@ -65,12 +66,13 @@
 	<SFML/Window/Keyboard.hpp>
 	"../common.h"
 
-1542464061 /home/fernando/Programming/time-travel/Application/src/Entidades/Personagem.h
+1542489912 /home/fernando/Programming/time-travel/Application/src/Entidades/Personagem.h
 	"../Animador.h"
 	"Entidade.h"
 	"Plataforma.h"
+	"Projetil.h"
 
-1542464444 /home/fernando/Programming/time-travel/Application/src/Entidades/Entidade.h
+1542493314 /home/fernando/Programming/time-travel/Application/src/Entidades/Entidade.h
 	"../GerenciadorGrafico.h"
 	"../common.h"
 
@@ -115,10 +117,10 @@
 1542398866 source:/home/fernando/Programming/time-travel/Application/src/Cenas/TelaDeCreditos.cc
 	"TelaDeCreditos.h"
 
-1542464444 source:/home/fernando/Programming/time-travel/Application/src/Entidades/Entidade.cc
+1542493324 source:/home/fernando/Programming/time-travel/Application/src/Entidades/Entidade.cc
 	"Entidade.h"
 
-1542464556 source:/home/fernando/Programming/time-travel/Application/src/Entidades/Personagem.cc
+1542493449 source:/home/fernando/Programming/time-travel/Application/src/Entidades/Personagem.cc
 	"Personagem.h"
 
 1542473120 source:/home/fernando/Programming/time-travel/Application/src/Entidades/Plataforma.cc
@@ -136,13 +138,13 @@
 1542464556 source:/home/fernando/Programming/time-travel/Application/src/Inimigos/Inimigo.cpp
 	"Inimigo.h"
 
-1542464556 source:/home/fernando/Programming/time-travel/Application/src/Inimigos/Mumia.cpp
+1542473696 source:/home/fernando/Programming/time-travel/Application/src/Inimigos/Mumia.cpp
 	"Mumia.h"
 
 1541891399 source:/home/fernando/Programming/time-travel/Application/src/Jogador/GerenciadorDeInput.cc
 	"GerenciadorDeInput.h"
 
-1542464444 source:/home/fernando/Programming/time-travel/Application/src/Jogador/Jogador.cc
+1542493514 source:/home/fernando/Programming/time-travel/Application/src/Jogador/Jogador.cc
 	"Jogador.h"
 
 1542386327 source:/home/fernando/Programming/time-travel/Application/src/Principal.cc
@@ -155,15 +157,24 @@
 1542473531 source:/home/fernando/Programming/time-travel/Application/src/Animador.cpp
 	"Animador.h"
 
-1542464444 source:/home/fernando/Programming/time-travel/Application/src/Jogador/RegistroDeJogada.cc
+1542489456 source:/home/fernando/Programming/time-travel/Application/src/Jogador/RegistroDeJogada.cc
 	"RegistroDeJogada.h"
 
-1542464444 /home/fernando/Programming/time-travel/Application/src/Jogador/RegistroDeJogada.h
+1542478172 /home/fernando/Programming/time-travel/Application/src/Jogador/RegistroDeJogada.h
 	"Jogador.h"
 	"../Inimigos/Inimigo.h"
+	"../Inimigos/Mumia.h"
 	"../Entidades/Plataforma.h"
 	"../LinkedLists.h"
 	<fstream>
 	<SFML/Graphics.hpp>
 	<string.h>
+
+1542493498 source:/home/fernando/Programming/time-travel/Application/src/Entidades/Projetil.cpp
+	"Projetil.h"
+
+1542493483 /home/fernando/Programming/time-travel/Application/src/Entidades/Projetil.h
+	"Entidade.h"
+	"../LinkedLists.h"
+	"../common.h"
 

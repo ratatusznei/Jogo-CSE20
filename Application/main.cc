@@ -4,6 +4,7 @@
 #include "src/Entidades/Plataforma.h"
 #include "src/GerenciadorDeColisao.h"
 #include "src/Inimigos/Mumia.h"
+#include "src/Entidades/Projetil.h"
 
 int __main () {
 	Principal p;
@@ -74,6 +75,8 @@ int main () {
 
 		m1.Executar(dt);
 
+		Projetil::ExecutarTodos(dt);
+
 		colisoes.Calcular();
 
 		janela->Desenhar(fundo);
@@ -86,6 +89,8 @@ int main () {
 		j1.Desenhar();
 		j2.Desenhar();
 		m1.Desenhar();
+
+		Projetil::DesenharTodos();
 
 		janela->Atualizar();
 	}

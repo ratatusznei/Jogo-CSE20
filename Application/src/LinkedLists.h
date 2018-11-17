@@ -120,6 +120,10 @@ public:
 		bottom = NULL;
 	}
 
+	bool estaVazia () {
+		return (top == NULL) && (bottom == NULL);
+	}
+
 	void colaNoComeco(T1 a){
 		Node<T1>* no = (Node<T1>*) malloc(sizeof(Node<T1>));  //Cria um nó novo
 
@@ -199,8 +203,13 @@ public:
 			return 1;
 		}
 		else{
-			here = here->getProxLista();
-			return 0;
+			if (here != NULL) {
+				here = here->getProxLista();
+				return 0;
+			}
+			else {
+				return 1;
+			}
 		}
 	}
 
@@ -209,8 +218,13 @@ public:
 			return 1;
 		}
 		else{
-			here = here->getAnteLista();
-			return 0;
+			if (here != NULL) {
+				here = here->getAnteLista();
+				return 0;
+			}
+			else {
+				return 1;
+			}
 		}
 	}
 
@@ -231,15 +245,32 @@ public:
 	}
 
 	T1 getWhatIsHere(){
-		return here->getDataValue();
+		if (here != NULL) {
+			return here->getDataValue();
+		}
+
+		return NULL;
 	}
 
 	void removeWhatIsHere(){
 		Node<T1>* aux1 = here->getAnteLista();
 		Node<T1>* aux2 = here->getProxLista();
 		free(here);
-		aux1->setProxLista(aux2);
-		aux2->setAnteLista(aux1);
+
+		if (aux1 != NULL){
+			aux1->setProxLista(aux2);
+		}
+		else {
+			top = aux2;
+		}
+
+		if (aux2 != NULL) {
+			aux2->setAnteLista(aux1);
+		}
+		else {
+			bottom = aux1;
+		}
+
 		here = aux2;
 	}
 

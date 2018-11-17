@@ -1,7 +1,8 @@
 #include "Entidade.h"
 
 Entidade::Entidade (float x, float y, string tex_path):
-_posicao(x, y)
+_posicao(x, y),
+_viradoPraEsquerda(true)
 {
 	_tex.loadFromFile(tex_path);
 
@@ -15,7 +16,8 @@ Entidade::~Entidade () {
 }
 
 void Entidade::Desenhar () {
-
+	GerenciadorGrafico* janela = GerenciadorGrafico::GetInstance();
+	janela->Desenhar(_sp);
 }
 
 sf::IntRect Entidade::GetCaixaDeColisao () {
@@ -32,4 +34,10 @@ sf::IntRect Entidade::GetCaixaDeColisao () {
 
 const sf::Vector2f Entidade::GetPosicao () {
 	return _posicao;
+}
+
+void Entidade::SetPosicao(int x, int y) {
+	_posicao.x = x;
+	_posicao.y = y;
+	_sp.setPosition(_posicao);
 }

@@ -1,125 +1,99 @@
 #include "RegistroDeJogada.h"
 
-RegistroDeJogada::RegistroDeJogada(const char* nome){
+RegistroDeJogada::RegistroDeJogada (const char* nome){
+	_nome_jogada = nome;
+	strcpy(_path,"save/");
+	strcat(_path,_nome_jogada);
+	strcat(_path,".txt");
+}
 
-    _nome_jogada = nome;
-    strcpy(_path,"save/");
-    strcat(_path,_nome_jogada);
-    strcat(_path,".txt");
+RegistroDeJogada::~RegistroDeJogada (){
 
 }
 
-RegistroDeJogada::~RegistroDeJogada(){}
+void RegistroDeJogada::salvarJogada(Jogador* j1, Jogador* j2, Lista<Inimigo*>* li, Lista<Plataforma*>* lp, int* pontuacao, const char* fase) {
+	li->goToBottom();
+	lp->goToBottom();
 
-void RegistroDeJogada::salvarJogada(
-Jogador* j1, Jogador* j2,
-Lista<Inimigo*>* li, Lista<Plataforma*>* lp,
-int* pontuacao, const char* fase){
+	ofstream save;
+	save.open(_path);
 
-    li->goToBottom();
-    lp->goToBottom();
+	save << "F "  << fase << endl;
 
-    ofstream save;
-    save.open(_path);
+	save << "J "  << *pontuacao << endl;
+	save << "K " << j1->GetPosicao().x << ' ' << j1->GetPosicao().y << endl;
+	save << "L " << j2->GetPosicao().x << ' ' << j1->GetPosicao().y << endl;
 
-    save << "F "  << fase << endl;
+	do {
+		save << "I " << li->getWhatIsHere()->GetPosicao().x << ' '
+			<< li->getWhatIsHere()->GetPosicao().y << ' ';
+		save << li->getWhatIsHere()->QualTipo() << endl;
 
-    save << "J "  << *pontuacao << endl;
-    save << "K " << j1->GetPosicao().x << ' ' << j1->GetPosicao().y << endl;
-    save << "L " << j2->GetPosicao().x << ' ' << j1->GetPosicao().y << endl;
+	} while(!li--);
 
-    do{
-
-        save << "I " << li->getWhatIsHere()->GetPosicao().x << ' '
-                << li->getWhatIsHere()->GetPosicao().y << ' ';
-        save << li->getWhatIsHere()->QualTipo() << endl;
-
-    }
-    while(!li--);
-
-    do{
-
-        save << "P " << lp->getWhatIsHere()->GetPosicao().x << ' '
-                << lp->getWhatIsHere()->GetPosicao().y << ' '
-                 << endl;
-
-    }
-    while(!lp--);
-
-    save.close();
-
+	do{
+		save << "P " << lp->getWhatIsHere()->GetPosicao().x << ' '
+			<< lp->getWhatIsHere()->GetPosicao().y << ' '
+			 << endl;
+	}
+	while(!lp--);
+	save.close();
 }
 
-void RegistroDeJogada::carregarJogada(
-Jogador* j1, Jogador* j2,
-Lista<Inimigo*>* li, Lista<Plataforma*>* lp,
-int* pontuacao){
+void RegistroDeJogada::carregarJogada (Jogador* j1, Jogador* j2, Lista<Inimigo*>* li, Lista<Plataforma*>* lp, int* pontuacao) {
+	char* data = (char*) malloc(sizeof(char) * 64);
 
-    char* data = (char*) malloc(sizeof(char)*64);
+	li->mataLista();
+	lp->mataLista();
 
-    li->mataLista();
-    lp->mataLista();
+	int xis, ipsilon, w, h, f;
 
-    int xis, ipsilon, w, h, f;
+	ifstream save;
+	save.open(_path);
 
-    ifstream save;
-    save.open(_path);
+	while (!save.eof()) {
+		save.getline(data,32);
 
-    while(!save.eof()){
+		switch (data[0]) {
+		case 'F':
+			break;
 
-        save.getline(data,32);
+		case 'J':
+			sscanf(data,"J %d", pontuacao);
+			break;
 
-        switch(data[0]){
+		case 'K':
+			sscanf(data,"K %d %d", &xis, &ipsilon);
+			j1->SetPosicao(xis, ipsilon);
+			break;
 
-            case 'F':
-                break;
+		case 'L':
+			sscanf(data,"L %d %d", &xis, &ipsilon);
+			j2->SetPosicao(xis, ipsilon);
+			break;
 
-            case 'J':
-                sscanf(data,"J %d",pontuacao);
-                break;
+		case 'I':
+			sscanf(data,"I %d %d %d", &xis, &ipsilon, &f);
+			switch(f){
+			case 0:
+				li->colaNoFinal(new Mumia(j1, j2, xis, ipsilon));
+				break;
+			case 1:
+				break;
+			case 2:
+				break;
+			case 3:
+				break;
+			}
+			break;
 
-            case 'K':
-                sscanf(data,"K %d %d",xis,ipsilon);
-                j1->SetPosX(xis);
-                j1->SetPosY(ipsilon);
-                break;
+		case 'P':
+			sscanf(data,"P %d %d %d %d", &xis, &ipsilon, &w, &h);
+			lp->colaNoFinal(new Plataforma(xis, ipsilon, w, h));
+			break;
+		}
+	}
 
-            case 'L':
-                sscanf(data,"L %d %d",xis,ipsilon);
-                j2->SetPosX(xis);
-                j2->SetPosY(ipsilon);
-                break;
-
-            case 'I':
-                sscanf(data,"I %d %d %d", xis, ipsilon, f);
-                switch(f){
-
-                    case 0:
-                        li->colaNoFinal(new Mumia(j1,j2,xis,ipsilon));
-                        break;
-
-                    case 1:
-                        break;
-
-                    case 2:
-                        break;
-
-                    case 3:
-                        break;
-
-                }
-                break;
-
-            case 'P':
-                sscanf(data,"P %d %d %d %d",xis,ipsilon,w,h);
-                lp->colaNoFinal(new Plataforma(xis,ipsilon,w,h));
-                break;
-
-        }
-
-    }
-
-    free(data);
-    save.close();
-
+	free(data);
+	save.close();
 }

@@ -8,6 +8,7 @@
 #include "../Animador.h"
 #include "Entidade.h"
 #include "Plataforma.h"
+#include "Projetil.h"
 
 class Personagem: public Entidade {
 	public:
@@ -17,6 +18,8 @@ class Personagem: public Entidade {
 		/*	IN: O dano causado
 			OUT: Remove da vida o dano */
 		void Machucar (int dano);
+
+		void Atacar ();
 
 		/*	IN: Delta tempo da ultima frame
 			OUT: Calcula as novas propriedades do personagem */
@@ -47,6 +50,14 @@ class Personagem: public Entidade {
 		void Acelerar (float dt, float aceleracao);
 
 		Animador _animador;
+
+		Projetil _projetil_protipo;
+		int _offSetAtaqueX;
+		int _offSetAtaqueY;
+		int _vx_ataque;
+		float _tempoPraMorrerAtaque;
+
+		bool _podeAtacar;
 
 		int _vida;
 
