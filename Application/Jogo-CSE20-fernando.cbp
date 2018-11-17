@@ -52,6 +52,8 @@
 			<Add option="-Wall" />
 		</Compiler>
 		<Unit filename="main.cc" />
+		<Unit filename="src/Animador.cpp" />
+		<Unit filename="src/Animador.h" />
 		<Unit filename="src/Cenas/Jogo.cc" />
 		<Unit filename="src/Cenas/Jogo.h" />
 		<Unit filename="src/Cenas/Menu.cc" />

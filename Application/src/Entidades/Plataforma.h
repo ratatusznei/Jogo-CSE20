@@ -15,11 +15,14 @@ class Plataforma: public Entidade {
 		~Plataforma ();
 
 		void Desenhar ();
+		void SetPosicao (int x, int y);
+		void SetTamanho (int w, int h);
+
 		sf::IntRect GetCaixaDeColisao();
 
 	protected:
-		int largura;
-		int altura;
+		int _largura;
+		int _altura;
 
 		sf::IntRect _caixa_colisao;
 };

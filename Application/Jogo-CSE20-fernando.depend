@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1542418407 source:/home/fernando/Programming/time-travel/Application/main.cc
+1542472850 source:/home/fernando/Programming/time-travel/Application/main.cc
 	"src/Principal.h"
 	"Jogador.h"
 	"src/Entidades/Plataforma.h"
@@ -74,26 +74,30 @@
 	"../GerenciadorGrafico.h"
 	"../common.h"
 
-1542390413 /home/fernando/Programming/time-travel/Application/src/Entidades/Plataforma.h
+1542472734 /home/fernando/Programming/time-travel/Application/src/Entidades/Plataforma.h
 	"Entidade.h"
 
-<<<<<<< HEAD
-1542464508 /home/fernando/Programming/time-travel/Application/src/Inimigos/Inimigo.h
-=======
-1542419157 /home/fernando/Programming/time-travel/Application/src/Inimigos/Inimigo.h
->>>>>>> animacoes
+1542464061 D
+
+1542464634 /home/fernando/Programming/time-travel/Application/src/Inimigos/Inimigo.h
 	"../Entidades/Personagem.h"
+
+1542419025 macoes
+	"../Entidades/Personagem.h"
+	"../GerenciadorGrafico.h"
+	"../Inimigos/Inimigo.h"
+	"../Jogador/Jogador.h"
+	"../common.h"
+	"Personagem.h"
+	"Mumia.h"
+	"Animador.h"
 
 1542389685 /home/fernando/Programming/time-travel/Application/src/Cenas/TelaDeCreditos.h
 	<string>
 	"../common.h"
 	"Menu.h"
 
-<<<<<<< HEAD
-1542464444 /home/fernando/Programming/time-travel/Application/src/Inimigos/Mumia.h
-=======
-1542419608 /home/fernando/Programming/time-travel/Application/src/Inimigos/Mumia.h
->>>>>>> animacoes
+1542464556 /home/fernando/Programming/time-travel/Application/src/Inimigos/Mumia.h
 	"../GerenciadorGrafico.h"
 	"../Inimigos/Inimigo.h"
 	"../Jogador/Jogador.h"
@@ -114,14 +118,10 @@
 1542464444 source:/home/fernando/Programming/time-travel/Application/src/Entidades/Entidade.cc
 	"Entidade.h"
 
-<<<<<<< HEAD
-1542464444 source:/home/fernando/Programming/time-travel/Application/src/Entidades/Personagem.cc
-=======
-1542419726 source:/home/fernando/Programming/time-travel/Application/src/Entidades/Personagem.cc
->>>>>>> animacoes
+1542464556 source:/home/fernando/Programming/time-travel/Application/src/Entidades/Personagem.cc
 	"Personagem.h"
 
-1541971193 source:/home/fernando/Programming/time-travel/Application/src/Entidades/Plataforma.cc
+1542473120 source:/home/fernando/Programming/time-travel/Application/src/Entidades/Plataforma.cc
 	"Plataforma.h"
 
 1542312421 source:/home/fernando/Programming/time-travel/Application/src/Fases/Fase.cpp
@@ -133,17 +133,10 @@
 1541886480 source:/home/fernando/Programming/time-travel/Application/src/GerenciadorGrafico.cc
 	"GerenciadorGrafico.h"
 
-<<<<<<< HEAD
-1542464444 source:/home/fernando/Programming/time-travel/Application/src/Inimigos/Inimigo.cpp
+1542464556 source:/home/fernando/Programming/time-travel/Application/src/Inimigos/Inimigo.cpp
 	"Inimigo.h"
 
-1542464444 source:/home/fernando/Programming/time-travel/Application/src/Inimigos/Mumia.cpp
-=======
-1542419141 source:/home/fernando/Programming/time-travel/Application/src/Inimigos/Inimigo.cpp
-	"Inimigo.h"
-
-1542419065 source:/home/fernando/Programming/time-travel/Application/src/Inimigos/Mumia.cpp
->>>>>>> animacoes
+1542464556 source:/home/fernando/Programming/time-travel/Application/src/Inimigos/Mumia.cpp
 	"Mumia.h"
 
 1541891399 source:/home/fernando/Programming/time-travel/Application/src/Jogador/GerenciadorDeInput.cc
@@ -159,11 +152,7 @@
 	<SFML/Graphics.hpp>
 	"common.h"
 
-<<<<<<< HEAD
-1542464444 source:/home/fernando/Programming/time-travel/Application/src/Animador.cpp
-=======
-1542419025 source:/home/fernando/Programming/time-travel/Application/src/Animador.cpp
->>>>>>> animacoes
+1542464556 source:/home/fernando/Programming/time-travel/Application/src/Animador.cpp
 	"Animador.h"
 
 1542464444 source:/home/fernando/Programming/time-travel/Application/src/Jogador/RegistroDeJogada.cc

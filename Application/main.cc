@@ -60,6 +60,9 @@ int main () {
 	sf::Sprite fundo(t_fundo);
 	fundo.setScale(2, 2);
 
+	p3.SetTamanho(7, 1);
+	p3.SetPosicao(400, 300);
+
 	while (1) {
 		float dt = janela->GetDeltaTime();
 
