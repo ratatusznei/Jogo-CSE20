@@ -1,8 +1,18 @@
 #include "Personagem.h"
 
-Personagem::Personagem (float x, float y, string tex_path):
-Entidade(x, y, tex_path)
+Personagem::Personagem (float x, float y, string tex_path, int n_animacoes):
+Entidade(x, y, tex_path),
+_animador(n_animacoes),
+_esta_no_chao(false),
+_batendo_teto(false),
+_batendo_direta(false),
+_batendo_esquerda(false)
 {
+	_tex_rect.top = 0;
+	_tex_rect.left = 0;
+	_tex_rect.width = Resources::block_size;
+	_tex_rect.height = Resources::block_size;
+	_sp.setTextureRect(_tex_rect);
 }
 
 Personagem::~Personagem () {

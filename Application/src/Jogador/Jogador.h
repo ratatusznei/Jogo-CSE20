@@ -16,6 +16,9 @@ class Jogador: public Personagem {
 		Jogador(GerenciadorDeInput *inputs = NULL, int x = 0, int y = 0);
 		~Jogador();
 
+		void IniciarRobo ();
+		void IniciarDoctor ();
+
 		/*	IN: O delta tempo da ultima frame
 			OUT: Calcula novas propriedades do jogador conforme entradas */
 		void Executar (float dt);
@@ -24,6 +27,8 @@ class Jogador: public Personagem {
 		GerenciadorDeInput *_inputs;
 
 		EstadoJogador _estado;
+
+		float _vmin_pulo;
 };
 
 #endif // JOGADOR_H

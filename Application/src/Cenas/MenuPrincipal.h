@@ -7,8 +7,8 @@
 #ifndef MENUPRINCIPAL_H
 #define MENUPRINCIPAL_H
 
-#include "../common.h"
 #include "Menu.h"
+#include "../common.h"
 
 class MenuPrincipal: public Menu {
 	public:
