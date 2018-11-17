@@ -223,10 +223,14 @@ void Mumia::Executar (float dt) {
 		_velocidade.x = 0;
 
 		if (_animador.GetTerminou()) {
-			if (dist_j1 < _range) {
+			if (mag_dist_j1 < _range_ataque || mag_dist_j2 < _range_ataque) {
+				_estado = EstadoMumia::Atacando;
+				_animador.Restart();
+			}
+			else if (mag_dist_j1 < _range) {
 				_estado = EstadoMumia::SeguindoJ1;
 			}
-			else if (dist_j2 < _range) {
+			else if (mag_dist_j2 < _range) {
 				_estado = EstadoMumia::SeguindoJ2;
 			}
 			else {

@@ -30,6 +30,16 @@ void Animador::Play (int indice) {
 	}
 }
 
+void Animador::Restart () {
+	_quadro_atual = 0;
+	_timer = 0;
+	_terminou = false;
+
+	_tex_rect->top = _anim_atual * _tamanho + _offSetY;
+	_tex_rect->left = _quadro_atual * _tamanho;
+	_sp->setTextureRect(*_tex_rect);
+}
+
 void Animador::Executar (float dt) {
 	_timer += dt;
 

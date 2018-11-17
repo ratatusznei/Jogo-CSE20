@@ -11,6 +11,7 @@ class Animador {
 
 		void Executar (float dt);
 		void Play (int indice);
+		void Restart ();
 
 		void SetFrameCount (int indice, int count);
 		void SetTamanhoQuadro (int tamanho);

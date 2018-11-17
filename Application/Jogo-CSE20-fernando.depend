@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1542472850 source:/home/fernando/Programming/time-travel/Application/main.cc
+1542473172 source:/home/fernando/Programming/time-travel/Application/main.cc
 	"src/Principal.h"
 	"Jogador.h"
 	"src/Entidades/Plataforma.h"
@@ -148,11 +148,11 @@
 1542386327 source:/home/fernando/Programming/time-travel/Application/src/Principal.cc
 	"Principal.h"
 
-1542464061 /home/fernando/Programming/time-travel/Application/src/Animador.h
+1542473543 /home/fernando/Programming/time-travel/Application/src/Animador.h
 	<SFML/Graphics.hpp>
 	"common.h"
 
-1542464556 source:/home/fernando/Programming/time-travel/Application/src/Animador.cpp
+1542473531 source:/home/fernando/Programming/time-travel/Application/src/Animador.cpp
 	"Animador.h"
 
 1542464444 source:/home/fernando/Programming/time-travel/Application/src/Jogador/RegistroDeJogada.cc
