@@ -135,14 +135,14 @@
 	"../Inimigos/Inimigo.h"
 	"../Entidades/Plataforma.h"
 
-1542376516 source:c:\users\pedro\desktop\engenharia de computação\técnicas de programação\jogo\application\src\cenas\jogo.cc
+1542443096 source:c:\users\pedro\desktop\engenharia de computação\técnicas de programação\jogo\application\src\cenas\jogo.cc
 	"Jogo.h"
 
-1542376516 c:\users\pedro\desktop\engenharia de computação\técnicas de programação\jogo\application\src\cenas\jogo.h
+1542443096 c:\users\pedro\desktop\engenharia de computação\técnicas de programação\jogo\application\src\cenas\jogo.h
 	"../GerenciadorGrafico.h"
 	"../Fases/Fase.h"
 
-1542376516 c:\users\pedro\desktop\engenharia de computação\técnicas de programação\jogo\application\src\gerenciadorgrafico.h
+1542443096 c:\users\pedro\desktop\engenharia de computação\técnicas de programação\jogo\application\src\gerenciadorgrafico.h
 	<SFML/Window.hpp>
 	<SFML/Graphics.hpp>
 	<string>
@@ -557,11 +557,11 @@
 	<SFML/Graphics/Drawable.hpp>
 	<SFML/Window/GlResource.hpp>
 
-1542460177 c:\users\pedro\desktop\engenharia de computação\técnicas de programação\jogo\application\src\common.h
+1542443096 c:\users\pedro\desktop\engenharia de computação\técnicas de programação\jogo\application\src\common.h
 	<string>
 	<iostream>
 
-1542376516 c:\users\pedro\desktop\engenharia de computação\técnicas de programação\jogo\application\src\fases\fase.h
+1542443096 c:\users\pedro\desktop\engenharia de computação\técnicas de programação\jogo\application\src\fases\fase.h
 	<SFML/System.hpp>
 	<fstream>
 	"../GerenciadorGrafico.h"
@@ -571,113 +571,114 @@
 	"../Inimigos/Inimigo.h"
 	"../Entidades/Plataforma.h"
 
-1542376516 c:\users\pedro\desktop\engenharia de computação\técnicas de programação\jogo\application\src\gerenciadordecolisao.h
+1542443096 c:\users\pedro\desktop\engenharia de computação\técnicas de programação\jogo\application\src\gerenciadordecolisao.h
 	"LinkedLists.h"
 	"Jogador.h"
 	"Inimigos/Inimigo.h"
 	"Entidades/Plataforma.h"
 
-1542376516 c:\users\pedro\desktop\engenharia de computação\técnicas de programação\jogo\application\src\linkedlists.h
+1542443096 c:\users\pedro\desktop\engenharia de computação\técnicas de programação\jogo\application\src\linkedlists.h
 	<stdlib.h>
 
-1542459215 c:\users\pedro\desktop\engenharia de computação\técnicas de programação\jogo\application\src\jogador\jogador.h
+1542443096 c:\users\pedro\desktop\engenharia de computação\técnicas de programação\jogo\application\src\jogador\jogador.h
 	"GerenciadorDeInput.h"
 	"../Entidades/Personagem.h"
 	"../common.h"
 
-1542376516 c:\users\pedro\desktop\engenharia de computação\técnicas de programação\jogo\application\src\jogador\gerenciadordeinput.h
+1542443096 c:\users\pedro\desktop\engenharia de computação\técnicas de programação\jogo\application\src\jogador\gerenciadordeinput.h
 	<SFML/Window/Keyboard.hpp>
 	"../common.h"
 
-1542376516 c:\users\pedro\desktop\engenharia de computação\técnicas de programação\jogo\application\src\entidades\personagem.h
+1542474445 c:\users\pedro\desktop\engenharia de computação\técnicas de programação\jogo\application\src\entidades\personagem.h
 	"Entidade.h"
 	"Plataforma.h"
+	"../Animador.h"
 
-1542459213 c:\users\pedro\desktop\engenharia de computação\técnicas de programação\jogo\application\src\entidades\entidade.h
+1542469408 c:\users\pedro\desktop\engenharia de computação\técnicas de programação\jogo\application\src\entidades\entidade.h
 	"../GerenciadorGrafico.h"
 	"../common.h"
 
-1542376516 c:\users\pedro\desktop\engenharia de computação\técnicas de programação\jogo\application\src\entidades\plataforma.h
+1542474142 c:\users\pedro\desktop\engenharia de computação\técnicas de programação\jogo\application\src\entidades\plataforma.h
 	"Entidade.h"
 
-1542460478 c:\users\pedro\desktop\engenharia de computação\técnicas de programação\jogo\application\src\inimigos\inimigo.h
+1542471084 c:\users\pedro\desktop\engenharia de computação\técnicas de programação\jogo\application\src\inimigos\inimigo.h
 	"../Entidades/Personagem.h"
 
-1542376516 source:c:\users\pedro\desktop\engenharia de computação\técnicas de programação\jogo\application\src\cenas\menuprincipal.cc
+1542443096 source:c:\users\pedro\desktop\engenharia de computação\técnicas de programação\jogo\application\src\cenas\menuprincipal.cc
 	"MenuPrincipal.h"
 
-1542400632 c:\users\pedro\desktop\engenharia de computação\técnicas de programação\jogo\application\src\cenas\menuprincipal.h
+1542443096 c:\users\pedro\desktop\engenharia de computação\técnicas de programação\jogo\application\src\cenas\menuprincipal.h
 	"Menu.h"
 	"../common.h"
 
-1542376516 c:\users\pedro\desktop\engenharia de computação\técnicas de programação\jogo\application\src\cenas\menu.h
+1542443096 c:\users\pedro\desktop\engenharia de computação\técnicas de programação\jogo\application\src\cenas\menu.h
 	<vector>
 	<string>
 	"../common.h"
 	"../GerenciadorGrafico.h"
 
-1542376516 source:c:\users\pedro\desktop\engenharia de computação\técnicas de programação\jogo\application\src\fases\fase.cpp
+1542443096 source:c:\users\pedro\desktop\engenharia de computação\técnicas de programação\jogo\application\src\fases\fase.cpp
 	"Fase.h"
 
-1542376516 source:c:\users\pedro\desktop\engenharia de computação\técnicas de programação\jogo\application\src\gerenciadordecolisao.cpp
+1542443096 source:c:\users\pedro\desktop\engenharia de computação\técnicas de programação\jogo\application\src\gerenciadordecolisao.cpp
 	"GerenciadorDeColisao.h"
 
-1542376516 source:c:\users\pedro\desktop\engenharia de computação\técnicas de programação\jogo\application\src\principal.cc
+1542443096 source:c:\users\pedro\desktop\engenharia de computação\técnicas de programação\jogo\application\src\principal.cc
 	"Principal.h"
 
-1542376516 c:\users\pedro\desktop\engenharia de computação\técnicas de programação\jogo\application\src\principal.h
+1542443096 c:\users\pedro\desktop\engenharia de computação\técnicas de programação\jogo\application\src\principal.h
 	<SFML/Window.hpp>
 	"GerenciadorGrafico.h"
 	"Cenas/MenuPrincipal.h"
 	"Cenas/Jogo.h"
 	"Cenas/TelaDeCreditos.h"
 
-1542376516 c:\users\pedro\desktop\engenharia de computação\técnicas de programação\jogo\application\src\cenas\teladecreditos.h
+1542443096 c:\users\pedro\desktop\engenharia de computação\técnicas de programação\jogo\application\src\cenas\teladecreditos.h
 	<string>
 	"../common.h"
 	"Menu.h"
 
-1542376516 source:c:\users\pedro\desktop\engenharia de computação\técnicas de programação\jogo\application\main.cc
+1542443096 source:c:\users\pedro\desktop\engenharia de computação\técnicas de programação\jogo\application\main.cc
 	"src/Principal.h"
 	"Jogador.h"
 	"src/Entidades/Plataforma.h"
 	"src/GerenciadorDeColisao.h"
 	"src/Inimigos/Mumia.h"
 
-1542376516 c:\users\pedro\desktop\engenharia de computação\técnicas de programação\jogo\application\src\inimigos\mumia.h
+1542443096 c:\users\pedro\desktop\engenharia de computação\técnicas de programação\jogo\application\src\inimigos\mumia.h
 	"../GerenciadorGrafico.h"
 	"../Inimigos/Inimigo.h"
 	"../Jogador/Jogador.h"
 	"../common.h"
 
-1542376516 source:c:\users\pedro\desktop\engenharia de computação\técnicas de programação\jogo\application\src\cenas\menu.cc
+1542443096 source:c:\users\pedro\desktop\engenharia de computação\técnicas de programação\jogo\application\src\cenas\menu.cc
 	"Menu.h"
 
-1542376516 source:c:\users\pedro\desktop\engenharia de computação\técnicas de programação\jogo\application\src\cenas\teladecreditos.cc
+1542443096 source:c:\users\pedro\desktop\engenharia de computação\técnicas de programação\jogo\application\src\cenas\teladecreditos.cc
 	"TelaDeCreditos.h"
 
-1542459255 source:c:\users\pedro\desktop\engenharia de computação\técnicas de programação\jogo\application\src\entidades\entidade.cc
+1542469523 source:c:\users\pedro\desktop\engenharia de computação\técnicas de programação\jogo\application\src\entidades\entidade.cc
 	"Entidade.h"
 
-1542376516 source:c:\users\pedro\desktop\engenharia de computação\técnicas de programação\jogo\application\src\entidades\personagem.cc
+1542443096 source:c:\users\pedro\desktop\engenharia de computação\técnicas de programação\jogo\application\src\entidades\personagem.cc
 	"Personagem.h"
 
-1542376516 source:c:\users\pedro\desktop\engenharia de computação\técnicas de programação\jogo\application\src\entidades\plataforma.cc
+1542474131 source:c:\users\pedro\desktop\engenharia de computação\técnicas de programação\jogo\application\src\entidades\plataforma.cc
 	"Plataforma.h"
 
-1542376516 source:c:\users\pedro\desktop\engenharia de computação\técnicas de programação\jogo\application\src\gerenciadorgrafico.cc
+1542443096 source:c:\users\pedro\desktop\engenharia de computação\técnicas de programação\jogo\application\src\gerenciadorgrafico.cc
 	"GerenciadorGrafico.h"
 
-1542376516 source:c:\users\pedro\desktop\engenharia de computação\técnicas de programação\jogo\application\src\inimigos\inimigo.cpp
+1542471083 source:c:\users\pedro\desktop\engenharia de computação\técnicas de programação\jogo\application\src\inimigos\inimigo.cpp
 	"Inimigo.h"
 
-1542460504 source:c:\users\pedro\desktop\engenharia de computação\técnicas de programação\jogo\application\src\inimigos\mumia.cpp
+1542443096 source:c:\users\pedro\desktop\engenharia de computação\técnicas de programação\jogo\application\src\inimigos\mumia.cpp
 	"Mumia.h"
 
-1542376516 source:c:\users\pedro\desktop\engenharia de computação\técnicas de programação\jogo\application\src\jogador\gerenciadordeinput.cc
+1542443096 source:c:\users\pedro\desktop\engenharia de computação\técnicas de programação\jogo\application\src\jogador\gerenciadordeinput.cc
 	"GerenciadorDeInput.h"
 
-1542459242 source:c:\users\pedro\desktop\engenharia de computação\técnicas de programação\jogo\application\src\jogador\jogador.cc
+1542443096 source:c:\users\pedro\desktop\engenharia de computação\técnicas de programação\jogo\application\src\jogador\jogador.cc
 	"Jogador.h"
 
 1542308705 source:c:\users\pedro\desktop\engenharia de computação\técnicas de programação\jogo\application\src\cenas\fase.cc
@@ -693,15 +694,23 @@
 	"../Inimigos/Inimigo.h"
 	"../Entidades/Plataforma.h"
 
-1542460950 source:c:\users\pedro\desktop\engenharia de computação\técnicas de programação\jogo\application\src\jogador\registrodejogada.cc
+1542475057 source:c:\users\pedro\desktop\engenharia de computação\técnicas de programação\jogo\application\src\jogador\registrodejogada.cc
 	"RegistroDeJogada.h"
 
-1542450954 c:\users\pedro\desktop\engenharia de computação\técnicas de programação\jogo\application\src\jogador\registrodejogada.h
+1542475089 c:\users\pedro\desktop\engenharia de computação\técnicas de programação\jogo\application\src\jogador\registrodejogada.h
 	"Jogador.h"
 	"../Inimigos/Inimigo.h"
+	"../Inimigos/Mumia.h"
 	"../Entidades/Plataforma.h"
 	"../LinkedLists.h"
 	<fstream>
 	<SFML/Graphics.hpp>
 	<string.h>
+
+1542443096 c:\users\pedro\desktop\engenharia de computação\técnicas de programação\jogo\application\src\animador.h
+	<SFML/Graphics.hpp>
+	"common.h"
+
+1542443096 source:c:\users\pedro\desktop\engenharia de computação\técnicas de programação\jogo\application\src\animador.cpp
+	"Animador.h"
 

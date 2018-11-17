@@ -3,6 +3,7 @@
 
 #include "Jogador.h"
 #include "../Inimigos/Inimigo.h"
+#include "../Inimigos/Mumia.h"
 #include "../Entidades/Plataforma.h"
 #include "../LinkedLists.h"
 #include <fstream>
