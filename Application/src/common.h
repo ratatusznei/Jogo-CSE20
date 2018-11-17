@@ -65,4 +65,11 @@ enum class Direcao {
 	Direita = 1,
 };
 
+enum class TipoInimigo{
+    _Mumia = 0,
+    _Bad_Robot,
+    _Cobra,
+    _Hieracosphinx,
+};
+
 #endif // COMMON_H_INCLUDED
