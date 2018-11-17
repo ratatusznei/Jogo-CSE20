@@ -25,22 +25,16 @@ public:
 	Fase ();
 	~Fase ();
 
-	/*	IN: Path para um arquivo de fase
-		OUT: Preenche as listas de entidades conforme o arquivo */
-	void CarregarFase (char* path);
-
 	/*	IN: Nenhum
 		OUT: Executa os objetos internos */
-	void Executar ();
+	bool Executar (Jogador* j1, Jogador* j2, Lista<Inimigo*>* li,
+                    Lista<Plataforma*>* lp, GerenciadorDeColisao* colisoes);
 
 private:
-	int _isOver;
 
-	Personagem* _jogador1;
-	Personagem* _jogador2;
+	bool _isOver;
+    GerenciadorGrafico *janela;
 
-	Lista<Inimigo*> _listaInimigos;
-	Lista<Plataforma*> _listaPlataformas;
 };
 
 
