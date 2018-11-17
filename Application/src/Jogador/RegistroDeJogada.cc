@@ -79,19 +79,19 @@ int* pontuacao){
                 break;
 
             case 'K':
-                sscanf(data,"K %d %d",xis,ipsilon);
+                sscanf(data,"K %d %d",&xis,&ipsilon);
                 j1->SetPosX(xis);
                 j1->SetPosY(ipsilon);
                 break;
 
             case 'L':
-                sscanf(data,"L %d %d",xis,ipsilon);
+                sscanf(data,"L %d %d",&xis,&ipsilon);
                 j2->SetPosX(xis);
                 j2->SetPosY(ipsilon);
                 break;
 
             case 'I':
-                sscanf(data,"I %d %d %d", xis, ipsilon, f);
+                sscanf(data,"I %d %d %d", &xis, &ipsilon, &f);
                 switch(f){
 
                     case 0:
@@ -111,7 +111,7 @@ int* pontuacao){
                 break;
 
             case 'P':
-                sscanf(data,"P %d %d %d %d",xis,ipsilon,w,h);
+                sscanf(data,"P %d %d %d %d",&xis,&ipsilon,&w,&h);
                 lp->colaNoFinal(new Plataforma(xis,ipsilon,w,h));
                 break;
 
