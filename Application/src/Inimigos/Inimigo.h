@@ -16,7 +16,13 @@ class Inimigo: public Personagem {
 		OUT: Calcula novas propriedades do inimigo */
 		virtual void Executar(float dt) = 0;
 
+    /*  IN: void
+        OUT: retorna o valor correspondente ao tipo de inimigo */
+        int QualTipo();
+
 	protected:
+
+	    int _tipo;
 
 };
 
