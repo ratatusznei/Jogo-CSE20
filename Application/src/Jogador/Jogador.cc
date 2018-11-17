@@ -1,22 +1,65 @@
 #include "Jogador.h"
 
+int total_anims = 4;
+int anim_parado = 0;
+int anim_pulando = 1;
+int anim_atacando = 2;
+int anim_andando = 3;
+
 Jogador::Jogador (GerenciadorDeInput *inputs, int x, int y):
-Personagem(x, y, Resources::tex_jogador),
+Personagem(x, y, Resources::tex_jogador, total_anims),
 _inputs(inputs)
 {
-	_tex_rect.top = 0;
-	_tex_rect.left = 0;
-	_tex_rect.width = Resources::block_size;
-	_tex_rect.height = Resources::block_size;
-	_sp.setTextureRect(_tex_rect);
-
-	_esta_no_chao = false;
-	_max_vx = Fisica::max_vx_jogador;
-	_max_vy = Fisica::velocidade_terminal;
 }
 
 Jogador::~Jogador () {
 	delete _inputs;
+}
+
+void Jogador::IniciarRobo () {
+	_max_vx = ConstsPersonagens::J_max_vx;
+	_max_vy = Fisica::velocidade_terminal;
+
+	_aceleracao_caminhada = ConstsPersonagens::J_aceleracao;
+	_desaceleracao = ConstsPersonagens::J_desaceleracao;
+
+	_velocidade_pulo = ConstsPersonagens::J_v0_pulo;
+	_vmin_pulo = ConstsPersonagens::J_vmin_pulo;
+
+	_animador.SetTextureBox(&_tex_rect);
+	_animador.SetSprite(&_sp);
+	_animador.SetTamanhoQuadro(Resources::block_size);
+
+	_animador.SetOffSetY(0);
+	_animador.SetPeriodo(0.1);
+
+	_animador.SetFrameCount(anim_parado, 1);
+	_animador.SetFrameCount(anim_pulando, 1);
+	_animador.SetFrameCount(anim_atacando, 3);
+	_animador.SetFrameCount(anim_andando, 2);
+}
+
+void Jogador::IniciarDoctor () {
+	_max_vx = ConstsPersonagens::J_max_vx;
+	_max_vy = Fisica::velocidade_terminal;
+
+	_aceleracao_caminhada = ConstsPersonagens::J_aceleracao;
+	_desaceleracao = ConstsPersonagens::J_desaceleracao;
+
+	_velocidade_pulo = ConstsPersonagens::J_v0_pulo;
+	_vmin_pulo = ConstsPersonagens::J_vmin_pulo;
+
+	_animador.SetTextureBox(&_tex_rect);
+	_animador.SetSprite(&_sp);
+	_animador.SetTamanhoQuadro(Resources::block_size);
+
+	_animador.SetOffSetY(Resources::block_size * total_anims);
+	_animador.SetPeriodo(0.1);
+
+	_animador.SetFrameCount(anim_parado, 1);
+	_animador.SetFrameCount(anim_pulando, 1);
+	_animador.SetFrameCount(anim_atacando, 1);
+	_animador.SetFrameCount(anim_andando, 2);
 }
 
 void Jogador::Executar (float dt) {
@@ -32,7 +75,10 @@ void Jogador::Executar (float dt) {
 	case EstadoJogador::Parado:
 		_velocidade.y = 0;
 
-		Desacelerar(dt, Fisica::desaceleracao_jogador);
+		_animador.Play(anim_parado);
+		_animador.SetLoop(false);
+
+		Desacelerar(dt, _desaceleracao);
 
 		if (!_esta_no_chao) {
 			_estado = EstadoJogador::Pulando;
@@ -44,15 +90,22 @@ void Jogador::Executar (float dt) {
 			_estado = EstadoJogador::Atacando;
 		}
 		else if (_inputs->GetPulou()) {
-			_velocidade.y = -Fisica::v0_pulo_jogador;
+			_velocidade.y = -_velocidade_pulo;
 			_esta_no_chao = false;
 			_estado = EstadoJogador::Pulando;
+		}
+		else if (_inputs->GetAtacou()) {
+			_velocidade.x = 0;
+			_estado = EstadoJogador::Atacando;
 		}
 
 		break;
 
 	case EstadoJogador::Andando:
 		_velocidade.y = 0;
+
+		_animador.Play(anim_andando);
+		_animador.SetLoop(true);
 
 		if (!_esta_no_chao) {
 			_estado = EstadoJogador::Pulando;
@@ -62,16 +115,20 @@ void Jogador::Executar (float dt) {
 			_estado = EstadoJogador::Parado;
 		}
 		else if (_inputs->GetEsquerda()) {
-			Acelerar(dt, -Fisica::aceleracao_jogador);
+			Acelerar(dt, -_aceleracao_caminhada);
 		}
 		else if (_inputs->GetDireita()) {
-			Acelerar(dt, Fisica::aceleracao_jogador);
+			Acelerar(dt, _aceleracao_caminhada);
 		}
 
 		if (_inputs->GetPulou()) {
-			_velocidade.y = -Fisica::v0_pulo_jogador;
+			_velocidade.y = -_velocidade_pulo;
 			_esta_no_chao = false;
 			_estado = EstadoJogador::Pulando;
+		}
+		else if (_inputs->GetAtacou()) {
+			_velocidade.x = 0;
+			_estado = EstadoJogador::Atacando;
 		}
 
 		break;
@@ -79,21 +136,24 @@ void Jogador::Executar (float dt) {
 	case EstadoJogador::Pulando:
 		_aceleracao.y = Fisica::G;
 
+		_animador.Play(anim_pulando);
+		_animador.SetLoop(false);
+
 		// Salta mais alto quando pressionar o botar mais tempo
 		if (!_inputs->GetPulando() && _velocidade.y < 0) {
-			if (-_velocidade.y > Fisica::vmin_pulo_jogador) {
-				_velocidade.y = -Fisica::vmin_pulo_jogador;
+			if (-_velocidade.y > _vmin_pulo) {
+				_velocidade.y = -_vmin_pulo;
 			}
 		}
 
 		if (_inputs->GetEsquerda() == _inputs->GetDireita()) {
-			Desacelerar(dt, Fisica::desaceleracao_jogador);
+			Desacelerar(dt, _desaceleracao);
 		}
 		else if (_inputs->GetEsquerda()) {
-			Acelerar(dt, -Fisica::aceleracao_jogador);
+			Acelerar(dt, -_aceleracao_caminhada);
 		}
 		else if (_inputs->GetDireita()) {
-			Acelerar(dt, Fisica::aceleracao_jogador);
+			Acelerar(dt, _aceleracao_caminhada);
 		}
 
 		if (_esta_no_chao) {
@@ -108,12 +168,23 @@ void Jogador::Executar (float dt) {
 		break;
 
 	case EstadoJogador::Atacando:
+		_animador.Play(anim_atacando);
+		_animador.SetLoop(false);
+
+		_velocidade.x = 0;
+
+		if (_animador.GetTerminou()) {
+			_estado = EstadoJogador::Parado;
+		}
+		break;
+
 	case EstadoJogador::Machucado:
 	default:
 		_estado = EstadoJogador::Parado;
 	}
 
 	AtualizarFisica(dt);
+	_animador.Executar(dt);
 }
 
 const sf::Vector2f Jogador::GetPosicao () {

@@ -6,8 +6,15 @@ Inimigo(x, y, Resources::tex_mumia) {
 	_j2 = j2;
 	_estado = EstadoMumia::Perdida;
 
-	_max_vx = max_vx_mumia;
-	_max_vy = max_vy_mumia;
+	_max_vx = ConstsPersonagens::M_max_vx;
+	_max_vy = Fisica::velocidade_terminal;
+
+	_aceleracao_caminhada = ConstsPersonagens::M_aceleracao;
+	_desaceleracao = ConstsPersonagens::M_desaceleracao;
+
+	_velocidade_pulo = ConstsPersonagens::M_v_pulo;
+
+	_range = ConstsPersonagens::M_distancia_deteccao;
 
 	_x0 = x;
 }
@@ -48,75 +55,75 @@ void Mumia::Executar (float dt) {
         switch (_estado) {
         case EstadoMumia::Perdida:
 		if (_posicao.x > _x0 && _posicao.x - _x0 >= delta_x) {
-			Acelerar(dt, -aceleracao_mumia);
+			Acelerar(dt, -_aceleracao_caminhada);
 		}
 		else if (_posicao.x < _x0 && _x0 - _posicao.x >= delta_x) {
-			Acelerar(dt, aceleracao_mumia);
+			Acelerar(dt, _aceleracao_caminhada);
 		}
 		else if (_velocidade.x > 0) {
-			Acelerar(dt, aceleracao_mumia);
+			Acelerar(dt, _aceleracao_caminhada);
 		}
 		else {
-			Acelerar(dt, -aceleracao_mumia);
+			Acelerar(dt, -_aceleracao_caminhada);
 		}
 
 		if (_esta_no_chao) {
 			if (_batendo_esquerda || _batendo_direta) {
-				_velocidade.y = -v_pulo_mumia;
+				_velocidade.y = -_velocidade_pulo;
 			}
 		}
 
 		if (_j1 != NULL) {
-			if (mag_dist_j1 < distancia_deteccao && mag_dist_j1 < mag_dist_j2) {
+			if (mag_dist_j1 < _range && mag_dist_j1 < mag_dist_j2) {
 				_estado = EstadoMumia::SeguindoJ1;
 			}
 		}
 
 		if (_j2 != NULL) {
-			if (mag_dist_j2 < distancia_deteccao && mag_dist_j2 < mag_dist_j1) {
+			if (mag_dist_j2 < _range && mag_dist_j2 < mag_dist_j1) {
 				_estado = EstadoMumia::SeguindoJ2;
 			}
 		}
 		break;
 
 	case EstadoMumia::SeguindoJ1:
-		if (_j2 != NULL && mag_dist_j2 < distancia_deteccao && mag_dist_j2 < mag_dist_j1) {
+		if (_j2 != NULL && mag_dist_j2 < _range && mag_dist_j2 < mag_dist_j1) {
 			_estado = EstadoMumia::SeguindoJ2;
 		}
-		else if (mag_dist_j1 > distancia_deteccao) {
+		else if (mag_dist_j1 > _range) {
 			_estado = EstadoMumia::Perdida;
 		}
 		else if (dist_j1 > 0) {
-			Acelerar(dt, aceleracao_mumia);
+			Acelerar(dt, _aceleracao_caminhada);
 		}
 		else if (dist_j1 < 0) {
-			Acelerar(dt,-aceleracao_mumia);
+			Acelerar(dt,-_aceleracao_caminhada);
 		}
 
 		if (_esta_no_chao) {
 			if (_batendo_esquerda || _batendo_direta) {
-				_velocidade.y = -v_pulo_mumia;
+				_velocidade.y = -_velocidade_pulo;
 			}
 		}
 		break;
 
 	case EstadoMumia::SeguindoJ2:
-		if (_j1 != NULL && mag_dist_j1 < distancia_deteccao && mag_dist_j1 < mag_dist_j2) {
+		if (_j1 != NULL && mag_dist_j1 < _range && mag_dist_j1 < mag_dist_j2) {
 			_estado = EstadoMumia::SeguindoJ1;
 		}
-		else if (mag_dist_j2 > distancia_deteccao) {
+		else if (mag_dist_j2 > _range) {
 			_estado = EstadoMumia::Perdida;
 		}
 		else if (dist_j2 > 0) {
-			Acelerar(dt, aceleracao_mumia);
+			Acelerar(dt, _aceleracao_caminhada);
 		}
 		else if (dist_j2 < 0) {
-			Acelerar(dt, -aceleracao_mumia);
+			Acelerar(dt, -_aceleracao_caminhada);
 		}
 
 		if (_esta_no_chao) {
 			if (_batendo_esquerda || _batendo_direta) {
-				_velocidade.y = -v_pulo_mumia;
+				_velocidade.y = -_velocidade_pulo;
 			}
 		}
 		break;

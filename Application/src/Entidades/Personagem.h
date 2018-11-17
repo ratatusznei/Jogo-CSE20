@@ -5,12 +5,13 @@
 #ifndef PERSONAGEM_H
 #define PERSONAGEM_H
 
+#include "../Animador.h"
 #include "Entidade.h"
 #include "Plataforma.h"
 
 class Personagem: public Entidade {
 	public:
-		Personagem (float x = 0, float y = 0, string tex_path = "");
+		Personagem (float x = 0, float y = 0, string tex_path = "", int n_animacoes = 1);
 		~Personagem ();
 
 		/*	IN: O dano causado
@@ -45,6 +46,8 @@ class Personagem: public Entidade {
 			OUT: Aplica uma aceleracao */
 		void Acelerar (float dt, float aceleracao);
 
+		Animador _animador;
+
 		int _vida;
 
 		sf::Vector2f _velocidade;
@@ -57,6 +60,11 @@ class Personagem: public Entidade {
 
 		float _max_vx;
 		float _max_vy;
+
+		float _aceleracao_caminhada;
+		float _desaceleracao;
+
+		float _velocidade_pulo;
 };
 
 #endif // PERSONAGEM_H

@@ -13,15 +13,6 @@
 #include "../Jogador/Jogador.h"
 #include "../common.h"
 
-const int distancia_deteccao = 120;
-const int aceleracao_mumia = 300;
-const int desaceleracao_mumia = 500;
-
-const int v_pulo_mumia = Fisica::v0_pulo_jogador;
-
-const int max_vx_mumia = 40;
-const int max_vy_mumia = Fisica::velocidade_terminal;
-
 class Mumia: public Inimigo {
 	enum class EstadoMumia {
 		SeguindoJ1,
@@ -40,6 +31,7 @@ class Mumia: public Inimigo {
 		Jogador *_j2;
 
 		int _x0;
+		float _range;
 
 		EstadoMumia _estado;
 

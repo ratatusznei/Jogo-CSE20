@@ -5,13 +5,13 @@
 #include "src/GerenciadorDeColisao.h"
 #include "src/Inimigos/Mumia.h"
 
-int main () {
+int __main () {
 	Principal p;
 	p.Executar();
 	return 0;
 }
 
-int __main () {
+int main () {
 	GerenciadorGrafico* janela = GerenciadorGrafico::GetInstance();
 	janela->CriaJanela(sf::VideoMode(Janela::largura, Janela::altura), Janela::titulo);
 
@@ -29,10 +29,13 @@ int __main () {
 	i_j2.SetKeyEsquerda(sf::Keyboard::Left);
 	i_j2.SetKeyDireita(sf::Keyboard::Right);
 	i_j2.SetKeyPulo(sf::Keyboard::Up);
-	i_j2.SetKeyAtaque(sf::Keyboard::M);
+	i_j2.SetKeyAtaque(sf::Keyboard::RShift);
 
 	Jogador j1(&i_j1, 20, 50);
 	Jogador j2(&i_j2, 680, 0);
+
+	j1.IniciarRobo();
+	j2.IniciarDoctor();
 
 	Plataforma p1(0, Janela::altura - 16, 16, 1);
 	Plataforma p2(70, Janela::altura - 16 * 4, 3, 1);
@@ -51,6 +54,12 @@ int __main () {
 	colisoes.Incluir(&p3);
 	colisoes.Incluir(&p4);
 
+	sf::Texture t_fundo;
+	t_fundo.loadFromFile("res/sprites/egypt_backg.png");
+
+	sf::Sprite fundo(t_fundo);
+	fundo.setScale(2, 2);
+
 	while (1) {
 		float dt = janela->GetDeltaTime();
 
@@ -63,6 +72,8 @@ int __main () {
 		m1.Executar(dt);
 
 		colisoes.Calcular();
+
+		janela->Desenhar(fundo);
 
 		p1.Desenhar();
 		p2.Desenhar();

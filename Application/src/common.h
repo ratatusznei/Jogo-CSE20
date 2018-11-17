@@ -34,14 +34,25 @@ namespace Resources {
 }
 
 namespace Fisica {
-	const float G = 300;
+	const float G = 600;
 	const float velocidade_terminal = 800;
+}
 
-	const float desaceleracao_jogador = 500;
-	const float aceleracao_jogador = 340;
-	const float max_vx_jogador = 160;
-	const float v0_pulo_jogador = 205;
-	const float vmin_pulo_jogador = 100;
+namespace ConstsPersonagens {
+	// Jogadores
+	const float J_desaceleracao = 500;
+	const float J_aceleracao = 340;
+	const float J_max_vx = 160;
+	const float J_v0_pulo = 305;
+	const float J_vmin_pulo = 100;
+
+	// Mumia
+	const float M_desaceleracao = 500;
+	const float M_aceleracao = 300;
+	const float M_max_vx = 40;
+	const float M_v_pulo = J_v0_pulo;
+	const float M_distancia_deteccao = 120;
+
 }
 
 enum class EstadoApp {
