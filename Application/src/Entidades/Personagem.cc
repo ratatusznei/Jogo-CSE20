@@ -28,11 +28,11 @@ void Personagem::Machucar (int dano) {
 void Personagem::Desenhar () {
 	GerenciadorGrafico* janela = GerenciadorGrafico::GetInstance();
 
-	if (_velocidade.x > 0.01) {
+	if (_velocidade.x > 0.1) {
 		_sp.setScale(Resources::pixel_scale, Resources::pixel_scale);
 		_sp.setOrigin(0, 0);
 	}
-	else if (_velocidade.x < -0.01) {
+	else if (_velocidade.x < -0.1) {
 		_sp.setOrigin(_sp.getLocalBounds().width, 0);
 		_sp.setScale(-Resources::pixel_scale, Resources::pixel_scale);
 	}

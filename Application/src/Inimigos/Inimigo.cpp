@@ -1,7 +1,7 @@
 #include "Inimigo.h"
 
-Inimigo::Inimigo (float x, float y, string tex_path):
-Personagem(x, y, tex_path) {
+Inimigo::Inimigo (float x, float y, string tex_path, int n_animacoes):
+Personagem(x, y, tex_path, n_animacoes) {
 	//ctor
 }
 
