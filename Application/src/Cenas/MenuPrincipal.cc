@@ -18,11 +18,11 @@ MenuPrincipal::~MenuPrincipal () {
 EstadoApp MenuPrincipal::InterpretarEscolha (int botao_selecionado) {
 	switch (botao_selecionado) {
 	case 0:
-		//solo
+		return EstadoApp::Jogo_Solo;
 		break;
 
 	case 1:
-		//coop
+		return EstadoApp::Jogo_Coop;
 		break;
 
 	case 2:
