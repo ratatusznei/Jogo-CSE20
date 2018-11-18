@@ -34,7 +34,7 @@
 	"../common.h"
 	"../GerenciadorGrafico.h"
 
-1542558607 /home/fernando/Programming/time-travel/Application/src/Cenas/Jogo.h
+1542563689 /home/fernando/Programming/time-travel/Application/src/Cenas/Jogo.h
 	<SFML/System.hpp>
 	<fstream>
 	"../GerenciadorGrafico.h"
@@ -117,7 +117,7 @@
 	"../Jogador/Jogador.h"
 	"../common.h"
 
-1542560044 source:/home/fernando/Programming/time-travel/Application/src/Cenas/Jogo.cc
+1542564138 source:/home/fernando/Programming/time-travel/Application/src/Cenas/Jogo.cc
 	"Jogo.h"
 	<time.h>
 
@@ -151,13 +151,13 @@
 1542558920 source:/home/fernando/Programming/time-travel/Application/src/Inimigos/Inimigo.cpp
 	"Inimigo.h"
 
-1542558949 source:/home/fernando/Programming/time-travel/Application/src/Inimigos/Mumia.cpp
+1542563423 source:/home/fernando/Programming/time-travel/Application/src/Inimigos/Mumia.cpp
 	"Mumia.h"
 
 1541891399 source:/home/fernando/Programming/time-travel/Application/src/Jogador/GerenciadorDeInput.cc
 	"GerenciadorDeInput.h"
 
-1542561846 source:/home/fernando/Programming/time-travel/Application/src/Jogador/Jogador.cc
+1542563453 source:/home/fernando/Programming/time-travel/Application/src/Jogador/Jogador.cc
 	"Jogador.h"
 
 1542549076 source:/home/fernando/Programming/time-travel/Application/src/Principal.cc

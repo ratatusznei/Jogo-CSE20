@@ -85,149 +85,154 @@ void Jogador::Machucar (int dano) {
 }
 
 void Jogador::Executar (float dt) {
-	_inputs->Atualizar();
-
-	/****  Temporario ****/
-	if (_posicao.y + _sp.getGlobalBounds().height > Janela::altura) {
-		_posicao.y = 0;
-	}
-	/****  Temporario/ ****/
-
-	switch (_estado) {
-	case EstadoJogador::Parado:
-		_velocidade.y = 0;
-
-		_animador.Play(anim_parado);
-		_animador.SetLoop(false);
-
-		Desacelerar(dt, _desaceleracao);
-
-		if (!_esta_no_chao) {
-			_estado = EstadoJogador::Pulando;
-		}
-		else if (_inputs->GetDireita() != _inputs->GetEsquerda()) {
-			_estado = EstadoJogador::Andando;
-		}
-		else if (_inputs->GetAtacou()) {
-			_estado = EstadoJogador::Atacando;
-		}
-		else if (_inputs->GetPulou()) {
-			_velocidade.y = -_velocidade_pulo;
-			_esta_no_chao = false;
-			_estado = EstadoJogador::Pulando;
-		}
-		else if (_inputs->GetAtacou()) {
-			_velocidade.x = 0;
-			_estado = EstadoJogador::Atacando;
-		}
-
-		break;
-
-	case EstadoJogador::Andando:
-		_velocidade.y = 0;
-
-		_animador.Play(anim_andando);
-		_animador.SetLoop(true);
-
-		if (!_esta_no_chao) {
-			_estado = EstadoJogador::Pulando;
-		}
-
-		if (_inputs->GetDireita() == _inputs->GetEsquerda()) {
-			_estado = EstadoJogador::Parado;
-		}
-		else if (_inputs->GetEsquerda()) {
-			Acelerar(dt, -_aceleracao_caminhada);
-		}
-		else if (_inputs->GetDireita()) {
-			Acelerar(dt, _aceleracao_caminhada);
-		}
-
-		if (_inputs->GetPulou()) {
-			_velocidade.y = -_velocidade_pulo;
-			_esta_no_chao = false;
-			_estado = EstadoJogador::Pulando;
-		}
-		else if (_inputs->GetAtacou()) {
-			_velocidade.x = 0;
-			_estado = EstadoJogador::Atacando;
-		}
-
-		break;
-
-	case EstadoJogador::Pulando:
-		_aceleracao.y = Fisica::G;
-
-		_animador.Play(anim_pulando);
-		_animador.SetLoop(false);
-
-		// Salta mais alto quando pressionar o botar mais tempo
-		if (!_inputs->GetPulando() && _velocidade.y < 0) {
-			if (-_velocidade.y > _vmin_pulo) {
-				_velocidade.y = -_vmin_pulo;
-			}
-		}
-
-		if (_inputs->GetEsquerda() == _inputs->GetDireita()) {
-			Desacelerar(dt, _desaceleracao);
-		}
-		else if (_inputs->GetEsquerda()) {
-			Acelerar(dt, -_aceleracao_caminhada);
-		}
-		else if (_inputs->GetDireita()) {
-			Acelerar(dt, _aceleracao_caminhada);
-		}
-
-		if (_esta_no_chao) {
-			if (_inputs->GetEsquerda() == _inputs->GetDireita()) {
-				_estado = EstadoJogador::Parado;
-			}
-			else if (_inputs->GetEsquerda() != _inputs->GetDireita()) {
-				_estado = EstadoJogador::Andando;
-			}
-		}
-
-		break;
-
-	case EstadoJogador::Atacando:
-		_animador.Play(anim_atacando);
-		_animador.SetLoop(false);
-
-		_velocidade.x = 0;
-
-		if (_podeAtacar) {
-			Atacar();
-			_podeAtacar = false;
-		}
-
-		if (_animador.GetTerminou()) {
-			_estado = EstadoJogador::Parado;
-			_podeAtacar = true;
-		}
-		break;
-
-	default:
-		_estado = EstadoJogador::Parado;
-	}
-
-	if (_timerMachucado > 0) {
-		_timerMachucado -= dt;
-		_piscadorMachucado += dt;
-
-		if (_piscadorMachucado > 0.2) {
-			_piscadorMachucado -= 0.2;
-			_sp.setColor(sf::Color::White);
-		}
-		else if (_piscadorMachucado > 0.1){
-			_sp.setColor(sf::Color::Red);
-		}
+	if (GetMorreu()) {
+		SetPosicao(-666, 0);
 	}
 	else {
-		_sp.setColor(sf::Color::White);
-	}
+		_inputs->Atualizar();
 
-	AtualizarFisica(dt);
-	_animador.Executar(dt);
+		/****  Temporario ****/
+		if (_posicao.y + _sp.getGlobalBounds().height > Janela::altura) {
+			_posicao.y = 0;
+		}
+		/****  Temporario/ ****/
+
+		switch (_estado) {
+		case EstadoJogador::Parado:
+			_velocidade.y = 0;
+
+			_animador.Play(anim_parado);
+			_animador.SetLoop(false);
+
+			Desacelerar(dt, _desaceleracao);
+
+			if (!_esta_no_chao) {
+				_estado = EstadoJogador::Pulando;
+			}
+			else if (_inputs->GetDireita() != _inputs->GetEsquerda()) {
+				_estado = EstadoJogador::Andando;
+			}
+			else if (_inputs->GetAtacou()) {
+				_estado = EstadoJogador::Atacando;
+			}
+			else if (_inputs->GetPulou()) {
+				_velocidade.y = -_velocidade_pulo;
+				_esta_no_chao = false;
+				_estado = EstadoJogador::Pulando;
+			}
+			else if (_inputs->GetAtacou()) {
+				_velocidade.x = 0;
+				_estado = EstadoJogador::Atacando;
+			}
+
+			break;
+
+		case EstadoJogador::Andando:
+			_velocidade.y = 0;
+
+			_animador.Play(anim_andando);
+			_animador.SetLoop(true);
+
+			if (!_esta_no_chao) {
+				_estado = EstadoJogador::Pulando;
+			}
+
+			if (_inputs->GetDireita() == _inputs->GetEsquerda()) {
+				_estado = EstadoJogador::Parado;
+			}
+			else if (_inputs->GetEsquerda()) {
+				Acelerar(dt, -_aceleracao_caminhada);
+			}
+			else if (_inputs->GetDireita()) {
+				Acelerar(dt, _aceleracao_caminhada);
+			}
+
+			if (_inputs->GetPulou()) {
+				_velocidade.y = -_velocidade_pulo;
+				_esta_no_chao = false;
+				_estado = EstadoJogador::Pulando;
+			}
+			else if (_inputs->GetAtacou()) {
+				_velocidade.x = 0;
+				_estado = EstadoJogador::Atacando;
+			}
+
+			break;
+
+		case EstadoJogador::Pulando:
+			_aceleracao.y = Fisica::G;
+
+			_animador.Play(anim_pulando);
+			_animador.SetLoop(false);
+
+			// Salta mais alto quando pressionar o botar mais tempo
+			if (!_inputs->GetPulando() && _velocidade.y < 0) {
+				if (-_velocidade.y > _vmin_pulo) {
+					_velocidade.y = -_vmin_pulo;
+				}
+			}
+
+			if (_inputs->GetEsquerda() == _inputs->GetDireita()) {
+				Desacelerar(dt, _desaceleracao);
+			}
+			else if (_inputs->GetEsquerda()) {
+				Acelerar(dt, -_aceleracao_caminhada);
+			}
+			else if (_inputs->GetDireita()) {
+				Acelerar(dt, _aceleracao_caminhada);
+			}
+
+			if (_esta_no_chao) {
+				if (_inputs->GetEsquerda() == _inputs->GetDireita()) {
+					_estado = EstadoJogador::Parado;
+				}
+				else if (_inputs->GetEsquerda() != _inputs->GetDireita()) {
+					_estado = EstadoJogador::Andando;
+				}
+			}
+
+			break;
+
+		case EstadoJogador::Atacando:
+			_animador.Play(anim_atacando);
+			_animador.SetLoop(false);
+
+			_velocidade.x = 0;
+
+			if (_podeAtacar) {
+				Atacar();
+				_podeAtacar = false;
+			}
+
+			if (_animador.GetTerminou()) {
+				_estado = EstadoJogador::Parado;
+				_podeAtacar = true;
+			}
+			break;
+
+		default:
+			_estado = EstadoJogador::Parado;
+		}
+
+		if (_timerMachucado > 0) {
+			_timerMachucado -= dt;
+			_piscadorMachucado += dt;
+
+			if (_piscadorMachucado > 0.2) {
+				_piscadorMachucado -= 0.2;
+				_sp.setColor(sf::Color::White);
+			}
+			else if (_piscadorMachucado > 0.1){
+				_sp.setColor(sf::Color::Red);
+			}
+		}
+		else {
+			_sp.setColor(sf::Color::White);
+		}
+
+		AtualizarFisica(dt);
+		_animador.Executar(dt);
+	}
 }
 
 

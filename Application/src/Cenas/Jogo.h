@@ -40,6 +40,8 @@ class Jogo {
 
 		bool _coop;
 
+		int _camera_x;
+
 		Jogador _jogador1;
 		Jogador _jogador2;
 		GerenciadorDeInput _in_j1;
