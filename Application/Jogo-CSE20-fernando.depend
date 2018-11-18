@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1542544177 source:/home/fernando/Programming/time-travel/Application/main.cc
+1542544420 source:/home/fernando/Programming/time-travel/Application/main.cc
 	"src/Principal.h"
 	"Jogador.h"
 	"src/Entidades/Plataforma.h"
@@ -138,7 +138,7 @@
 1542540912 source:/home/fernando/Programming/time-travel/Application/src/Fases/Fase.cpp
 	"Fase.h"
 
-1542312969 source:/home/fernando/Programming/time-travel/Application/src/GerenciadorDeColisao.cpp
+1542544664 source:/home/fernando/Programming/time-travel/Application/src/GerenciadorDeColisao.cpp
 	"GerenciadorDeColisao.h"
 
 1541886480 source:/home/fernando/Programming/time-travel/Application/src/GerenciadorGrafico.cc
@@ -156,7 +156,7 @@
 1542544177 source:/home/fernando/Programming/time-travel/Application/src/Jogador/Jogador.cc
 	"Jogador.h"
 
-1542386327 source:/home/fernando/Programming/time-travel/Application/src/Principal.cc
+1542544486 source:/home/fernando/Programming/time-travel/Application/src/Principal.cc
 	"Principal.h"
 
 1542473543 /home/fernando/Programming/time-travel/Application/src/Animador.h
@@ -166,7 +166,7 @@
 1542473531 source:/home/fernando/Programming/time-travel/Application/src/Animador.cpp
 	"Animador.h"
 
-1542489456 source:/home/fernando/Programming/time-travel/Application/src/Jogador/RegistroDeJogada.cc
+1542544301 source:/home/fernando/Programming/time-travel/Application/src/Jogador/RegistroDeJogada.cc
 	"RegistroDeJogada.h"
 
 1542478172 /home/fernando/Programming/time-travel/Application/src/Jogador/RegistroDeJogada.h
@@ -179,7 +179,7 @@
 	<SFML/Graphics.hpp>
 	<string.h>
 
-1542493498 source:/home/fernando/Programming/time-travel/Application/src/Entidades/Projetil.cpp
+1542544177 source:/home/fernando/Programming/time-travel/Application/src/Entidades/Projetil.cpp
 	"Projetil.h"
 
 1542544177 /home/fernando/Programming/time-travel/Application/src/Entidades/Projetil.h

@@ -40,6 +40,16 @@ void Principal::Executar () {
 			_main.Desenhar();
 			break;
 
+		case EstadoApp::Iniciar_jogo_coop:
+			_jogo.Iniciar(true);
+			_estado = EstadoApp::Jogo;
+			break;
+
+		case EstadoApp::Iniciar_jogo_solo:
+			_jogo.Iniciar(false);
+			_estado = EstadoApp::Jogo;
+			break;
+
 		case EstadoApp::Jogo:
 			_jogo.Executar();
 			_jogo.Desenhar();

@@ -97,7 +97,7 @@ void Jogo::Iniciar(bool ehCoop) {
 
 void Jogo::CarregarFase (char *path) {
 	int x, y, w, h, i;
-	int n = rand() % 1;
+	int n = rand() % 5 + 3;
 	char str[64];
 	ifstream f;
 
