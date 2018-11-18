@@ -36,6 +36,13 @@ Inimigo(x, y, projeteis, C_total_anims) {
 	_animador.SetFrameCount(C_anim_parado, 1);
 	_animador.SetFrameCount(C_anim_atacando, 1);
 	_animador.SetFrameCount(C_anim_andando, 2);
+
+	_projetil_protipo.SetTexture(GerenciadorDeTexturas::GetInstance()->GetCobra());
+	_projetil_protipo.SetTempoPraMorrer(1.5);
+	_projetil_protipo.SetOffSetY(C_total_anims * Resources::block_size);
+	_vx_ataque = 300;
+
+	_timerDescanso = -1;
 }
 
 Cobra::~Cobra() {
@@ -43,11 +50,9 @@ Cobra::~Cobra() {
 }
 
 void Cobra::Executar (float dt) {
-	/****  Temporario ****/
 	if (_posicao.y + _sp.getGlobalBounds().height > Janela::altura) {
-		_posicao.y = 0;
+		_vida = -1;
 	}
-	/****  Temporario/ ****/
 
 	float dist_j1;
 	float dist_j2;
@@ -119,7 +124,7 @@ void Cobra::Executar (float dt) {
 		if (!_esta_no_chao) {
 			_estado = EstadoCobra::Perdida;
 		}
-		else if (mag_dist_j1 < _range_ataque) {
+		else if (mag_dist_j1 < _range_ataque && _podeAtacar) {
 			_estado = EstadoCobra::Atacando;
 		}
 		else if (_j2 != NULL && mag_dist_j2 < _range && mag_dist_j2 < mag_dist_j1) {
@@ -149,7 +154,7 @@ void Cobra::Executar (float dt) {
 		if (!_esta_no_chao) {
 			_estado = EstadoCobra::Perdida;
 		}
-		else if (mag_dist_j2 < _range_ataque) {
+		else if (mag_dist_j2 < _range_ataque && _podeAtacar) {
 			_estado = EstadoCobra::Atacando;
 		}
 		else if (_j1 != NULL && mag_dist_j1 < _range && mag_dist_j1 < mag_dist_j2) {
@@ -178,12 +183,14 @@ void Cobra::Executar (float dt) {
 
 		_velocidade.x = 0;
 
+		if (_podeAtacar) {
+			Atacar();
+			_timerDescanso = 4;
+			_podeAtacar = false;
+		}
+
 		if (_animador.GetTerminou()) {
-			if (mag_dist_j1 < _range_ataque || mag_dist_j2 < _range_ataque) {
-				_estado = EstadoCobra::Atacando;
-				_animador.Restart();
-			}
-			else if (mag_dist_j1 < _range) {
+			if (mag_dist_j1 < _range) {
 				_estado = EstadoCobra::SeguindoJ1;
 			}
 			else if (mag_dist_j2 < _range) {
@@ -197,6 +204,14 @@ void Cobra::Executar (float dt) {
 
 	default:
 		_estado = EstadoCobra::Perdida;
+	}
+
+	if (_timerDescanso > 0) {
+		_timerDescanso -= dt;
+		_podeAtacar = false;
+	}
+	else {
+		_podeAtacar = true;
 	}
 
 	AtualizarFisica(dt);

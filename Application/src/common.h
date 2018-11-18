@@ -51,7 +51,7 @@ namespace ConstsPersonagens {
 	const float J_max_vx = 160;
 	const float J_v0_pulo = 550;
 	const float J_vmin_pulo = 350;
-	const float J_tempo_imunidade = 0.7;
+	const float J_tempo_imunidade = 1;
 
 	// Mumia
 	const float M_desaceleracao = 500;

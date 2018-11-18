@@ -33,6 +33,7 @@ class Cobra: public Inimigo {
 		Jogador *_j2;
 
 		int _x0;
+		float _timerDescanso;
 		float _range;
 		float _range_ataque;
 

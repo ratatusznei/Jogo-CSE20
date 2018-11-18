@@ -25,6 +25,9 @@ Jogador::~Jogador () {
 void Jogador::IniciarRobo () {
 	_podeAtacar = true;
 
+	_velocidade.x = 0;
+	_velocidade.y = 0;
+
 	_vida = 3;
 	_timerMachucado = -1;
 
@@ -55,6 +58,9 @@ void Jogador::IniciarRobo () {
 
 void Jogador::IniciarDoctor () {
 	_podeAtacar = true;
+
+	_velocidade.x = 0;
+	_velocidade.y = 0;
 
 	_vida = 3;
 	_timerMachucado = -1;

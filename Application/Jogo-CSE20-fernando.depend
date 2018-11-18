@@ -20,7 +20,7 @@
 	<string>
 	"../common.h"
 
-1542583168 /home/fernando/Programming/time-travel/Application/src/common.h
+1542584411 /home/fernando/Programming/time-travel/Application/src/common.h
 	<string>
 	<iostream>
 
@@ -157,7 +157,7 @@
 1541891399 source:/home/fernando/Programming/time-travel/Application/src/Jogador/GerenciadorDeInput.cc
 	"GerenciadorDeInput.h"
 
-1542575080 source:/home/fernando/Programming/time-travel/Application/src/Jogador/Jogador.cc
+1542584530 source:/home/fernando/Programming/time-travel/Application/src/Jogador/Jogador.cc
 	"Jogador.h"
 
 1542565155 source:/home/fernando/Programming/time-travel/Application/src/Principal.cc
@@ -195,7 +195,7 @@
 	<SFML/Graphics.hpp>
 	"common.h"
 
-1542578959 source:/home/fernando/Programming/time-travel/Application/src/GerenciadorDeTexturas.cpp
+1542583170 source:/home/fernando/Programming/time-travel/Application/src/GerenciadorDeTexturas.cpp
 	"GerenciadorDeTexturas.h"
 
 1542578959 /home/fernando/Programming/time-travel/Application/src/Fases/FaseEgito.h
@@ -207,7 +207,7 @@
 1542582985 source:/home/fernando/Programming/time-travel/Application/src/Fases/FaseEgito.cpp
 	"FaseEgito.h"
 
-1542578959 /home/fernando/Programming/time-travel/Application/src/Inimigos/Cobra.h
+1542583972 /home/fernando/Programming/time-travel/Application/src/Inimigos/Cobra.h
 	"../GerenciadorDeTexturas.h"
 	"../GerenciadorGrafico.h"
 	"../Inimigos/Inimigo.h"
@@ -234,6 +234,6 @@
 	"../Jogador/Jogador.h"
 	"../common.h"
 
-1542579656 source:/home/fernando/Programming/time-travel/Application/src/Inimigos/Cobra.cpp
+1542584181 source:/home/fernando/Programming/time-travel/Application/src/Inimigos/Cobra.cpp
 	"Cobra.h"
 
