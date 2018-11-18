@@ -10,6 +10,8 @@ _tempoPraMorrer(0)
 	_tex_rect.width = Resources::block_size;
 	_tex_rect.height = Resources::block_size;
 	_sp.setTextureRect(_tex_rect);
+
+	_dano = 1;
 }
 
 Projetil::Projetil(Projetil& prototipo, int x, int y, int vx, int vy):
@@ -17,6 +19,8 @@ Entidade(x, y),
 _velocidade(vx, vy),
 _tempoPraMorrer(prototipo.GetTempoPraMorrer())
 {
+	SetOffSetY(prototipo.GetOffSetY());
+
 	_texture = prototipo.GetTexture();
 	_sp.setTexture(*_texture);
 
@@ -39,8 +43,25 @@ void Projetil::SetTexture (sf::Texture *tex) {
 	_sp.setTexture(*_texture);
 }
 
-void Projetil::SetVelocidade(int vx) {
+void Projetil::SetVelocidade (int vx) {
 	_velocidade.x = vx;
+}
+
+void Projetil::SetDano (int dano) {
+	_dano = dano;
+}
+
+int Projetil::GetDano () {
+	return _dano;
+}
+
+int Projetil::GetOffSetY () {
+	return _offSetY;
+}
+
+void Projetil::SetOffSetY (int offset) {
+	_offSetY = offset;
+	_sp.setTextureRect(sf::IntRect(0, _offSetY, Resources::block_size, Resources::block_size));
 }
 
 void Projetil::SetTempoPraMorrer (float t) {

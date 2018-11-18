@@ -133,7 +133,7 @@
 1542545256 source:/home/fernando/Programming/time-travel/Application/src/Entidades/Entidade.cc
 	"Entidade.h"
 
-1542560416 source:/home/fernando/Programming/time-travel/Application/src/Entidades/Personagem.cc
+1542569441 source:/home/fernando/Programming/time-travel/Application/src/Entidades/Personagem.cc
 	"Personagem.h"
 
 1542549695 source:/home/fernando/Programming/time-travel/Application/src/Entidades/Plataforma.cc
@@ -157,7 +157,7 @@
 1541891399 source:/home/fernando/Programming/time-travel/Application/src/Jogador/GerenciadorDeInput.cc
 	"GerenciadorDeInput.h"
 
-1542566185 source:/home/fernando/Programming/time-travel/Application/src/Jogador/Jogador.cc
+1542569433 source:/home/fernando/Programming/time-travel/Application/src/Jogador/Jogador.cc
 	"Jogador.h"
 
 1542565155 source:/home/fernando/Programming/time-travel/Application/src/Principal.cc
@@ -183,10 +183,10 @@
 	<SFML/Graphics.hpp>
 	<string.h>
 
-1542559289 source:/home/fernando/Programming/time-travel/Application/src/Entidades/Projetil.cpp
+1542569711 source:/home/fernando/Programming/time-travel/Application/src/Entidades/Projetil.cpp
 	"Projetil.h"
 
-1542559278 /home/fernando/Programming/time-travel/Application/src/Entidades/Projetil.h
+1542569719 /home/fernando/Programming/time-travel/Application/src/Entidades/Projetil.h
 	"Entidade.h"
 	"../LinkedLists.h"
 	"../common.h"

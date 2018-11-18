@@ -49,7 +49,8 @@ void Jogador::IniciarRobo () {
 	_animador.SetFrameCount(anim_atacando, 3);
 	_animador.SetFrameCount(anim_andando, 2);
 
-	_projetil_protipo.SetTempoPraMorrer(1);
+	_projetil_protipo.SetTempoPraMorrer(0.3);
+	_projetil_protipo.SetOffSetY((2 * total_anims) * Resources::block_size);
 }
 
 void Jogador::IniciarDoctor () {
@@ -79,7 +80,9 @@ void Jogador::IniciarDoctor () {
 	_animador.SetFrameCount(anim_atacando, 1);
 	_animador.SetFrameCount(anim_andando, 2);
 
-	_projetil_protipo.SetTempoPraMorrer(1);
+	_vx_ataque = 600;
+	_projetil_protipo.SetTempoPraMorrer(0.5);
+	_projetil_protipo.SetOffSetY((2 * total_anims + 1) * Resources::block_size);
 }
 
 void Jogador::Machucar (int dano) {

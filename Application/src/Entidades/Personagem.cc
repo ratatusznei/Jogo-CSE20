@@ -18,7 +18,7 @@ _batendo_esquerda(false)
 	_tex_rect.height = Resources::block_size;
 	_sp.setTextureRect(_tex_rect);
 
-	_offSetAtaqueX = 0;
+	_offSetAtaqueX = Resources::block_size / 2;
 	_offSetAtaqueY = 0;
 	_vx_ataque = 100;
 	_tempoPraMorrerAtaque = 1;
@@ -39,12 +39,12 @@ bool Personagem::GetMorreu () {
 void Personagem::Atacar () {
 	Projetil* pp = new Projetil(_projetil_protipo);
 
-	pp->SetPosicao(_posicao.x + _offSetAtaqueX, _posicao.y + _offSetAtaqueY);
-
 	if (_viradoPraEsquerda) {
+		pp->SetPosicao(_posicao.x + _offSetAtaqueX, _posicao.y + _offSetAtaqueY);
 		pp->SetVelocidade(_vx_ataque);
 	}
 	else {
+		pp->SetPosicao(_posicao.x - _offSetAtaqueX, _posicao.y + _offSetAtaqueY);
 		pp->SetVelocidade(-_vx_ataque);
 	}
 

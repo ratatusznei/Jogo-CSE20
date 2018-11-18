@@ -33,12 +33,15 @@ void GerenciadorDeColisao::Calcular () {
 	// Colisoes com jogadores
 	if (!_jogadores.estaVazia()) {
 		do {
+			Jogador* pj = _jogadores.getWhatIsHere();
+
 			if (!_inimigos->estaVazia()) {
 				_inimigos->goToTop();
 				do {
-					if (_jogadores.getWhatIsHere()->GetCaixaDeColisao().intersects(_inimigos->getWhatIsHere()->GetCaixaDeColisao())) {
-						/**** TEMPORARIO ****/
-						_jogadores.getWhatIsHere()->Machucar(1);
+					Inimigo* ii = _inimigos->getWhatIsHere();
+
+					if (pj->GetCaixaDeColisao().intersects(ii->GetCaixaDeColisao())) {
+						pj->Machucar(1);
 					}
 				} while(!(++(*_inimigos)));
 			}
@@ -46,9 +49,13 @@ void GerenciadorDeColisao::Calcular () {
 			if (!_projInimigos->estaVazia()) {
 				_projInimigos->goToTop();
 				do {
-					if (_jogadores.getWhatIsHere()->GetCaixaDeColisao().intersects(_projInimigos->getWhatIsHere()->GetCaixaDeColisao())) {
-						/**** TEMPORARIO ****/
-						_jogadores.getWhatIsHere()->Machucar(1);
+					Projetil* pp = _projInimigos->getWhatIsHere();
+
+					if (pj->GetCaixaDeColisao().intersects(pp->GetCaixaDeColisao())) {
+						pj->Machucar(pp->GetDano());
+
+						_projInimigos->removeWhatIsHere();
+						--(*_projInimigos);
 					}
 				} while(!(++(*_projInimigos)));
 			}
@@ -56,7 +63,7 @@ void GerenciadorDeColisao::Calcular () {
 			if (!_plataformas->estaVazia()) {
 				_plataformas->goToTop();
 				do {
-					if(_jogadores.getWhatIsHere()->ChecarChao(_plataformas->getWhatIsHere())){
+					if(pj->ChecarChao(_plataformas->getWhatIsHere())){
 						break;
 					}
 				} while(!(++(*_plataformas)));
@@ -64,21 +71,21 @@ void GerenciadorDeColisao::Calcular () {
 
 				_plataformas->goToTop();
 				do {
-					if(_jogadores.getWhatIsHere()->ChecarEsquerda(_plataformas->getWhatIsHere())){
+					if(pj->ChecarEsquerda(_plataformas->getWhatIsHere())){
 						break;
 					}
 				} while(!(++(*_plataformas)));
 
 				_plataformas->goToTop();
 				do {
-					if(_jogadores.getWhatIsHere()->ChecarDireita(_plataformas->getWhatIsHere())){
+					if(pj->ChecarDireita(_plataformas->getWhatIsHere())){
 						break;
 					}
 				} while(!(++(*_plataformas)));
 
 				_plataformas->goToTop();
 				do {
-					if(_jogadores.getWhatIsHere()->ChecarTeto(_plataformas->getWhatIsHere())){
+					if(pj->ChecarTeto(_plataformas->getWhatIsHere())){
 						break;
 					}
 				} while(!(++(*_plataformas)));
@@ -91,40 +98,46 @@ void GerenciadorDeColisao::Calcular () {
 	if (!_inimigos->estaVazia() && !_plataformas->estaVazia()) {
 		_inimigos->goToTop();
 		do {
+			Inimigo* ii = _inimigos->getWhatIsHere();
+
 			if (!_projAmigos->estaVazia()) {
 				_projAmigos->goToTop();
 				do {
-					if (_inimigos->getWhatIsHere()->GetCaixaDeColisao().intersects(_projAmigos->getWhatIsHere()->GetCaixaDeColisao())) {
-						/**** TEMPORARIO ****/
-						_inimigos->getWhatIsHere()->Machucar(1);
+					Projetil* pp = _projAmigos->getWhatIsHere();
+
+					if (ii->GetCaixaDeColisao().intersects(pp->GetCaixaDeColisao())) {
+						ii->Machucar(pp->GetDano());
+
+						_projAmigos->removeWhatIsHere();
+						--(*_projAmigos);
 					}
 				} while(!(++(*_projAmigos)));
 			}
 
 			_plataformas->goToTop();
 			do {
-				if(_inimigos->getWhatIsHere()->ChecarChao(_plataformas->getWhatIsHere())){
+				if(ii->ChecarChao(_plataformas->getWhatIsHere())){
 					break;
 				}
 			} while(!(++(*_plataformas)));
 
 			_plataformas->goToTop();
 			do {
-				if(_inimigos->getWhatIsHere()->ChecarEsquerda(_plataformas->getWhatIsHere())){
+				if(ii->ChecarEsquerda(_plataformas->getWhatIsHere())){
 					break;
 				}
 			} while(!(++(*_plataformas)));
 
 			_plataformas->goToTop();
 			do {
-				if(_inimigos->getWhatIsHere()->ChecarDireita(_plataformas->getWhatIsHere())){
+				if(ii->ChecarDireita(_plataformas->getWhatIsHere())){
 					break;
 				}
 			} while(!(++(*_plataformas)));
 
 			_plataformas->goToTop();
 			do {
-				if(_inimigos->getWhatIsHere()->ChecarTeto(_plataformas->getWhatIsHere())){
+				if(ii->ChecarTeto(_plataformas->getWhatIsHere())){
 					break;
 				}
 			} while(!(++(*_plataformas)));

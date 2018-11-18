@@ -16,6 +16,12 @@ class Projetil: public Entidade {
 
 		void SetVelocidade (int vx);
 
+		void SetDano (int dano);
+		int GetDano ();
+
+		int GetOffSetY ();
+		void SetOffSetY (int offset);
+
 		void SetTempoPraMorrer (float t);
 		float GetTempoPraMorrer ();
 
@@ -28,6 +34,9 @@ class Projetil: public Entidade {
 		sf::Vector2f _velocidade;
 		float _tempoPraMorrer;
 
+		int _dano;
+
+		int _offSetY;
 		sf::Texture* _texture;
 };
 
