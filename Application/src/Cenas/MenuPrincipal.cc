@@ -18,12 +18,10 @@ MenuPrincipal::~MenuPrincipal () {
 EstadoApp MenuPrincipal::InterpretarEscolha (int botao_selecionado) {
 	switch (botao_selecionado) {
 	case 0:
-		return EstadoApp::Jogo_Solo;
-		break;
+		return EstadoApp::Iniciar_jogo_solo;
 
 	case 1:
-		return EstadoApp::Jogo_Coop;
-		break;
+		return EstadoApp::Iniciar_jogo_coop;
 
 	case 2:
 		//carregar
@@ -31,11 +29,9 @@ EstadoApp MenuPrincipal::InterpretarEscolha (int botao_selecionado) {
 
 	case 3:
 		return EstadoApp::Tela_de_creditos;
-		break;
 
 	case 4:
 		return EstadoApp::Sair;
-		break;
 
 	default:
 		break;

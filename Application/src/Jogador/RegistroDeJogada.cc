@@ -80,14 +80,12 @@ int* pontuacao){
 
             case 'K':
                 sscanf(data,"K %d %d",&xis,&ipsilon);
-                j1->SetPosX(xis);
-                j1->SetPosY(ipsilon);
+                j1->SetPosicao(xis, ipsilon);
                 break;
 
             case 'L':
                 sscanf(data,"L %d %d",&xis,&ipsilon);
-                j2->SetPosX(xis);
-                j2->SetPosY(ipsilon);
+                j1->SetPosicao(xis, ipsilon);
                 break;
 
             case 'I':

@@ -58,6 +58,8 @@ namespace ConstsPersonagens {
 enum class EstadoApp {
 	Nenhum = 0,
 	Menu,
+	Iniciar_jogo_solo,
+	Iniciar_jogo_coop,
 	Jogo,
 	Tela_de_creditos,
 	Sair,

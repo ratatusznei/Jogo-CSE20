@@ -27,20 +27,28 @@ class Jogo {
 		void Executar ();
 		void Desenhar ();
 
+		void Iniciar (bool ehCoop);
 		/*	IN: Path para um arquivo de fase
-		OUT: Preenche as listas de entidades conforme o arquivo */
-        void CarregarFase (char* path);
+			OUT: Preenche as listas de entidades conforme o arquivo */
+		void CarregarFase (char* path);
 
 	private:
-		Fase* _fase;
-		Jogador* _jogador1;
-        Jogador* _jogador2;
+		Fase _fase;
 
-        GerenciadorDeColisao colisoes;
+		bool _coop;
 
-        Lista<Inimigo*> _listaInimigos;
-        Lista<Plataforma*> _listaPlataformas;
+		Jogador _jogador1;
+		Jogador _jogador2;
+		GerenciadorDeInput _in_j1;
+		GerenciadorDeInput _in_j2;
 
+		sf::Texture _tex_fundo;
+		sf::Sprite _sp_fundo;
+
+		GerenciadorDeColisao _colisoes;
+
+		Lista<Inimigo*> _listaInimigos;
+		Lista<Plataforma*> _listaPlataformas;
 };
 
 #endif // JOGO_H

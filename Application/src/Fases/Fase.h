@@ -21,20 +21,22 @@
 #include "../Entidades/Plataforma.h"
 
 class Fase {
-public:
-	Fase ();
-	~Fase ();
+	public:
+		Fase ();
+		~Fase ();
 
-	/*	IN: Nenhum
-		OUT: Executa os objetos internos */
-	bool Executar (Jogador* j1, Jogador* j2, Lista<Inimigo*>* li,
-                    Lista<Plataforma*>* lp, GerenciadorDeColisao* colisoes);
+		/*	IN: Nenhum
+			OUT: Executa os objetos internos */
+		bool Executar ();
 
-private:
+	private:
+		Jogador* _jogador1;
+		Jogador* _jogador2;
 
-	bool _isOver;
-    GerenciadorGrafico *janela;
+		Lista<Inimigo*> _listaInimigos;
+		Lista<Plataforma*> _listaPlataformas;
 
+		bool _isOver;
 };
 
 

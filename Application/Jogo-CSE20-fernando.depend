@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1542490180 source:/home/fernando/Programming/time-travel/Application/main.cc
+1542544177 source:/home/fernando/Programming/time-travel/Application/main.cc
 	"src/Principal.h"
 	"Jogador.h"
 	"src/Entidades/Plataforma.h"
@@ -20,7 +20,7 @@
 	<string>
 	"../common.h"
 
-1542464444 /home/fernando/Programming/time-travel/Application/src/common.h
+1542544265 /home/fernando/Programming/time-travel/Application/src/common.h
 	<string>
 	<iostream>
 
@@ -34,11 +34,19 @@
 	"../common.h"
 	"../GerenciadorGrafico.h"
 
-1542389996 /home/fernando/Programming/time-travel/Application/src/Cenas/Jogo.h
+1542542314 /home/fernando/Programming/time-travel/Application/src/Cenas/Jogo.h
 	"../GerenciadorGrafico.h"
 	"../Fases/Fase.h"
+	<SFML/System.hpp>
+	<fstream>
+	"../GerenciadorGrafico.h"
+	"../GerenciadorDeColisao.h"
+	"../LinkedLists.h"
+	"../Jogador/Jogador.h"
+	"../Inimigos/Mumia.h"
+	"../Entidades/Plataforma.h"
 
-1542390459 /home/fernando/Programming/time-travel/Application/src/Fases/Fase.h
+1542541125 /home/fernando/Programming/time-travel/Application/src/Fases/Fase.h
 	<SFML/System.hpp>
 	<fstream>
 	"../GerenciadorGrafico.h"
@@ -54,10 +62,10 @@
 	"Inimigos/Inimigo.h"
 	"Entidades/Plataforma.h"
 
-1542492695 /home/fernando/Programming/time-travel/Application/src/LinkedLists.h
+1542544177 /home/fernando/Programming/time-travel/Application/src/LinkedLists.h
 	<stdlib.h>
 
-1542464444 /home/fernando/Programming/time-travel/Application/src/Jogador/Jogador.h
+1542544177 /home/fernando/Programming/time-travel/Application/src/Jogador/Jogador.h
 	"GerenciadorDeInput.h"
 	"../Entidades/Personagem.h"
 	"../common.h"
@@ -66,22 +74,22 @@
 	<SFML/Window/Keyboard.hpp>
 	"../common.h"
 
-1542489912 /home/fernando/Programming/time-travel/Application/src/Entidades/Personagem.h
+1542544177 /home/fernando/Programming/time-travel/Application/src/Entidades/Personagem.h
 	"../Animador.h"
 	"Entidade.h"
 	"Plataforma.h"
 	"Projetil.h"
 
-1542493314 /home/fernando/Programming/time-travel/Application/src/Entidades/Entidade.h
+1542544177 /home/fernando/Programming/time-travel/Application/src/Entidades/Entidade.h
 	"../GerenciadorGrafico.h"
 	"../common.h"
 
-1542472734 /home/fernando/Programming/time-travel/Application/src/Entidades/Plataforma.h
+1542544177 /home/fernando/Programming/time-travel/Application/src/Entidades/Plataforma.h
 	"Entidade.h"
 
 1542464061 D
 
-1542464634 /home/fernando/Programming/time-travel/Application/src/Inimigos/Inimigo.h
+1542544145 /home/fernando/Programming/time-travel/Application/src/Inimigos/Inimigo.h
 	"../Entidades/Personagem.h"
 
 1542419025 macoes
@@ -105,28 +113,29 @@
 	"../Jogador/Jogador.h"
 	"../common.h"
 
-1541855234 source:/home/fernando/Programming/time-travel/Application/src/Cenas/Jogo.cc
+1542542546 source:/home/fernando/Programming/time-travel/Application/src/Cenas/Jogo.cc
 	"Jogo.h"
+	<time.h>
 
 1542386296 source:/home/fernando/Programming/time-travel/Application/src/Cenas/Menu.cc
 	"Menu.h"
 
-1542386352 source:/home/fernando/Programming/time-travel/Application/src/Cenas/MenuPrincipal.cc
+1542540112 source:/home/fernando/Programming/time-travel/Application/src/Cenas/MenuPrincipal.cc
 	"MenuPrincipal.h"
 
 1542398866 source:/home/fernando/Programming/time-travel/Application/src/Cenas/TelaDeCreditos.cc
 	"TelaDeCreditos.h"
 
-1542493324 source:/home/fernando/Programming/time-travel/Application/src/Entidades/Entidade.cc
+1542544177 source:/home/fernando/Programming/time-travel/Application/src/Entidades/Entidade.cc
 	"Entidade.h"
 
-1542493449 source:/home/fernando/Programming/time-travel/Application/src/Entidades/Personagem.cc
+1542544177 source:/home/fernando/Programming/time-travel/Application/src/Entidades/Personagem.cc
 	"Personagem.h"
 
-1542473120 source:/home/fernando/Programming/time-travel/Application/src/Entidades/Plataforma.cc
+1542544177 source:/home/fernando/Programming/time-travel/Application/src/Entidades/Plataforma.cc
 	"Plataforma.h"
 
-1542312421 source:/home/fernando/Programming/time-travel/Application/src/Fases/Fase.cpp
+1542540912 source:/home/fernando/Programming/time-travel/Application/src/Fases/Fase.cpp
 	"Fase.h"
 
 1542312969 source:/home/fernando/Programming/time-travel/Application/src/GerenciadorDeColisao.cpp
@@ -135,16 +144,16 @@
 1541886480 source:/home/fernando/Programming/time-travel/Application/src/GerenciadorGrafico.cc
 	"GerenciadorGrafico.h"
 
-1542464556 source:/home/fernando/Programming/time-travel/Application/src/Inimigos/Inimigo.cpp
+1542544177 source:/home/fernando/Programming/time-travel/Application/src/Inimigos/Inimigo.cpp
 	"Inimigo.h"
 
-1542473696 source:/home/fernando/Programming/time-travel/Application/src/Inimigos/Mumia.cpp
+1542544143 source:/home/fernando/Programming/time-travel/Application/src/Inimigos/Mumia.cpp
 	"Mumia.h"
 
 1541891399 source:/home/fernando/Programming/time-travel/Application/src/Jogador/GerenciadorDeInput.cc
 	"GerenciadorDeInput.h"
 
-1542493514 source:/home/fernando/Programming/time-travel/Application/src/Jogador/Jogador.cc
+1542544177 source:/home/fernando/Programming/time-travel/Application/src/Jogador/Jogador.cc
 	"Jogador.h"
 
 1542386327 source:/home/fernando/Programming/time-travel/Application/src/Principal.cc
@@ -173,7 +182,7 @@
 1542493498 source:/home/fernando/Programming/time-travel/Application/src/Entidades/Projetil.cpp
 	"Projetil.h"
 
-1542493483 /home/fernando/Programming/time-travel/Application/src/Entidades/Projetil.h
+1542544177 /home/fernando/Programming/time-travel/Application/src/Entidades/Projetil.h
 	"Entidade.h"
 	"../LinkedLists.h"
 	"../common.h"
