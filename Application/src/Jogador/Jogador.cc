@@ -17,7 +17,6 @@ _inputs(inputs)
 }
 
 Jogador::~Jogador () {
-	delete _inputs;
 }
 
 void Jogador::IniciarRobo () {

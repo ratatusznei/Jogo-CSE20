@@ -46,6 +46,8 @@ class GerenciadorGrafico {
 			OUT: Retorna o tempo decorrido na ultima frame, em segundos */
 		float GetDeltaTime ();
 
+		void SetCamera (int x);
+
 		/*	IN: Nenhum
 			OUT: Apaga todos os graficos na janela */
 		void Limpar ();
@@ -64,6 +66,8 @@ class GerenciadorGrafico {
 
 		sf::Clock _timer;
 		float _delta_t;
+
+		sf::View _camera;
 
 		sf::RenderWindow _window;
 		sf::VideoMode _video_mode;

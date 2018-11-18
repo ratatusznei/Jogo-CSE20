@@ -4,7 +4,7 @@
 Jogo::Jogo ():
 _jogador1(&_in_j1, 20, 50),
 _jogador2(&_in_j2, 680, 0)
- {
+{
 	srand(clock());
 
 	CarregarFase("res/fases/egypt.txt");
@@ -53,7 +53,19 @@ Jogo::~Jogo () {
 void Jogo::Executar () {
 	GerenciadorGrafico* janela = GerenciadorGrafico::GetInstance();
 	float dt = janela->GetDeltaTime();
+	int camera_x;
 
+
+	if (_coop) {
+		camera_x = (_jogador1.GetPosicao().x + _jogador2.GetPosicao().x) / 2;
+	}
+	else {
+		camera_x = _jogador1.GetPosicao().x;
+	}
+
+	janela->SetCamera(camera_x);
+
+	_sp_fundo.setPosition(camera_x - Janela::largura / 2, 0);
 	janela->Desenhar(_sp_fundo);
 
 	_jogador1.Executar(dt);

@@ -14,7 +14,7 @@
 	"Cenas/Jogo.h"
 	"Cenas/TelaDeCreditos.h"
 
-1542388389 /home/fernando/Programming/time-travel/Application/src/GerenciadorGrafico.h
+1542550717 /home/fernando/Programming/time-travel/Application/src/GerenciadorGrafico.h
 	<SFML/Window.hpp>
 	<SFML/Graphics.hpp>
 	<string>
@@ -34,7 +34,7 @@
 	"../common.h"
 	"../GerenciadorGrafico.h"
 
-1542542314 /home/fernando/Programming/time-travel/Application/src/Cenas/Jogo.h
+1542549973 /home/fernando/Programming/time-travel/Application/src/Cenas/Jogo.h
 	"../GerenciadorGrafico.h"
 	"../Fases/Fase.h"
 	<SFML/System.hpp>
@@ -116,7 +116,7 @@
 	"../Jogador/Jogador.h"
 	"../common.h"
 
-1542549557 source:/home/fernando/Programming/time-travel/Application/src/Cenas/Jogo.cc
+1542551053 source:/home/fernando/Programming/time-travel/Application/src/Cenas/Jogo.cc
 	"Jogo.h"
 	<time.h>
 
@@ -135,7 +135,7 @@
 1542545767 source:/home/fernando/Programming/time-travel/Application/src/Entidades/Personagem.cc
 	"Personagem.h"
 
-1542547748 source:/home/fernando/Programming/time-travel/Application/src/Entidades/Plataforma.cc
+1542549695 source:/home/fernando/Programming/time-travel/Application/src/Entidades/Plataforma.cc
 	"Plataforma.h"
 
 1542540912 source:/home/fernando/Programming/time-travel/Application/src/Fases/Fase.cpp
@@ -144,7 +144,7 @@
 1542549418 source:/home/fernando/Programming/time-travel/Application/src/GerenciadorDeColisao.cpp
 	"GerenciadorDeColisao.h"
 
-1541886480 source:/home/fernando/Programming/time-travel/Application/src/GerenciadorGrafico.cc
+1542550815 source:/home/fernando/Programming/time-travel/Application/src/GerenciadorGrafico.cc
 	"GerenciadorGrafico.h"
 
 1542545495 source:/home/fernando/Programming/time-travel/Application/src/Inimigos/Inimigo.cpp
@@ -156,7 +156,7 @@
 1541891399 source:/home/fernando/Programming/time-travel/Application/src/Jogador/GerenciadorDeInput.cc
 	"GerenciadorDeInput.h"
 
-1542549269 source:/home/fernando/Programming/time-travel/Application/src/Jogador/Jogador.cc
+1542550003 source:/home/fernando/Programming/time-travel/Application/src/Jogador/Jogador.cc
 	"Jogador.h"
 
 1542549076 source:/home/fernando/Programming/time-travel/Application/src/Principal.cc
