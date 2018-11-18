@@ -1,7 +1,7 @@
 #include "Inimigo.h"
 
-Inimigo::Inimigo (float x, float y, int n_animacoes):
-Personagem(x, y, n_animacoes) {
+Inimigo::Inimigo (float x, float y, Lista<Projetil*>* projeteis, int n_animacoes):
+Personagem(x, y, projeteis, n_animacoes) {
 	//ctor
 }
 

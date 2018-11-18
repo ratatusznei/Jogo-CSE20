@@ -50,6 +50,9 @@ class Jogo {
 
 		GerenciadorDeColisao _colisoes;
 
+		Lista<Projetil*> _listaProjAmigos;
+		Lista<Projetil*> _listaProjInimigos;
+
 		Lista<Inimigo*> _listaInimigos;
 		Lista<Plataforma*> _listaPlataformas;
 };

@@ -93,7 +93,7 @@ int* pontuacao){
                 switch(f){
 
                     case 0:
-                        li->colaNoFinal(new Mumia(j1,j2,xis,ipsilon));
+                        //li->colaNoFinal(new Mumia(j1,j2,xis,ipsilon));
                         break;
 
                     case 1:

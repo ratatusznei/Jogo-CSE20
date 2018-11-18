@@ -24,17 +24,11 @@ class Projetil: public Entidade {
 		void Desenhar ();
 		void Executar (float dt);
 
-		static void ExecutarTodos (float dt);
-		static void DesenharTodos ();
-		static void Incluir (Projetil* pp);
-
 	private:
 		sf::Vector2f _velocidade;
 		float _tempoPraMorrer;
 
 		sf::Texture* _texture;
-
-		static Lista<Projetil*> projeteis;
 };
 
 #endif // PROJETIL_H

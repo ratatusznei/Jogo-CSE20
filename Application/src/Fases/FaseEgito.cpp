@@ -21,7 +21,7 @@ FaseEgito::~FaseEgito () {
 	//dtor
 }
 
-void FaseEgito::CarregaInimigos (Lista<Inimigo*>* _pLista) {
+void FaseEgito::CarregaInimigos (Lista<Inimigo*>* _pLista, Lista<Projetil*>* projeteis) {
 	int n_mumias = rand() % 5 + 5;
 
 	while (n_mumias > 0 && !_listaSpawnMumia.estaVazia()) {
@@ -30,7 +30,7 @@ void FaseEgito::CarregaInimigos (Lista<Inimigo*>* _pLista) {
 		sf::Vector2i* pos = _listaSpawnMumia.getWhatIsHere();
 		_listaSpawnMumia.removeWhatIsHere();
 
-		Inimigo* pi = (Inimigo*) new Mumia(_j1, _j2, pos->x, pos->y);
+		Inimigo* pi = (Inimigo*) new Mumia(_j1, _j2, projeteis, pos->x, pos->y);
 		_pLista->colaNoFinal(pi);
 
 		n_mumias--;

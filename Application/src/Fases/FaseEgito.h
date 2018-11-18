@@ -10,7 +10,7 @@ class FaseEgito: public Fase {
 		FaseEgito (Jogador *j1, Jogador* j2);
 		~FaseEgito ();
 
-		void CarregaInimigos (Lista<Inimigo*>* _pLista);
+		void CarregaInimigos (Lista<Inimigo*>* _pLista, Lista<Projetil*>* projeteis);
 		void CarregaPlataformas (Lista<Plataforma*>* _pLista);
 
 	private:

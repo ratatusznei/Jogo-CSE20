@@ -72,6 +72,8 @@
 		<Unit filename="src/Entidades/Projetil.h" />
 		<Unit filename="src/Fases/Fase.cpp" />
 		<Unit filename="src/Fases/Fase.h" />
+		<Unit filename="src/Fases/FaseEgito.cpp" />
+		<Unit filename="src/Fases/FaseEgito.h" />
 		<Unit filename="src/GerenciadorDeColisao.cpp" />
 		<Unit filename="src/GerenciadorDeColisao.h" />
 		<Unit filename="src/GerenciadorDeTexturas.cpp" />

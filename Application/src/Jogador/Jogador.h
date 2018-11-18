@@ -14,7 +14,7 @@
 
 class Jogador: public Personagem {
 	public:
-		Jogador(GerenciadorDeInput *inputs = NULL, int x = 0, int y = 0);
+		Jogador(GerenciadorDeInput *inputs = NULL, Lista<Projetil*>* projeteis = NULL, int x = 0, int y = 0);
 		~Jogador();
 
 		void IniciarRobo ();

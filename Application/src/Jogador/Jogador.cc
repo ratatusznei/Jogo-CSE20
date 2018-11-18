@@ -6,8 +6,8 @@ int anim_pulando = 1;
 int anim_atacando = 2;
 int anim_andando = 3;
 
-Jogador::Jogador (GerenciadorDeInput *inputs, int x, int y):
-Personagem(x, y, total_anims),
+Jogador::Jogador (GerenciadorDeInput *inputs, Lista<Projetil*>* projeteis, int x, int y):
+Personagem(x, y, projeteis, total_anims),
 _inputs(inputs)
 {
 	_projetil_protipo.SetTexture(GerenciadorDeTexturas::GetInstance()->GetJogador());

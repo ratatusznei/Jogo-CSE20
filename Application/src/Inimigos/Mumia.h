@@ -26,7 +26,7 @@ class Mumia: public Inimigo {
 	};
 
 	public:
-		Mumia(Jogador *j1 = NULL, Jogador *j2 = NULL, int x = 0, int y = 0);
+		Mumia(Jogador *j1 = NULL, Jogador *j2 = NULL, Lista<Projetil*>* projeteis = NULL, int x = 0, int y = 0);
 		~Mumia();
 
 		void Executar (float dt);

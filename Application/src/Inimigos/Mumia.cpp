@@ -6,8 +6,8 @@ int M_anim_pulando = 1;
 int M_anim_atacando = 2;
 int M_anim_andando = 3;
 
-Mumia::Mumia(Jogador *j1, Jogador *j2, int x, int y):
-Inimigo(x, y, M_total_anims) {
+Mumia::Mumia(Jogador *j1, Jogador *j2, Lista<Projetil*>* projeteis, int x, int y):
+Inimigo(x, y, projeteis, M_total_anims) {
 	_sp.setTexture(*GerenciadorDeTexturas::GetInstance()->GetMumia());
 
 	_j1 = j1;

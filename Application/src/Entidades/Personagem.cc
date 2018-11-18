@@ -1,9 +1,10 @@
 #include "Personagem.h"
 
-Personagem::Personagem (float x, float y, int n_animacoes):
+Personagem::Personagem (float x, float y, Lista<Projetil*>* projeteis, int n_animacoes):
 Entidade(x, y),
 _animador(n_animacoes),
 _projetil_protipo(),
+_listaProjeteis(projeteis),
 _esta_no_chao(false),
 _batendo_teto(false),
 _batendo_direta(false),
@@ -43,7 +44,7 @@ void Personagem::Atacar () {
 		pp->SetVelocidade(-_vx_ataque);
 	}
 
-	Projetil::Incluir(pp);
+	_listaProjeteis->colaNoFinal(pp);
 }
 
 void Personagem::Desenhar () {
@@ -120,8 +121,8 @@ void Personagem::Acelerar(float dt, float aceleracao) {
 	}
 }
 
-bool Personagem::ChecarChao (Plataforma& plat) {
-	sf::IntRect plat_rect = plat.GetCaixaDeColisao();
+bool Personagem::ChecarChao (Plataforma* plat) {
+	sf::IntRect plat_rect = plat->GetCaixaDeColisao();
 	sf::IntRect pers_rect = GetCaixaDeColisao();
 
 	// Linha 1px embaixo do personagem
@@ -148,8 +149,8 @@ bool Personagem::ChecarChao (Plataforma& plat) {
 	}
 }
 
-bool Personagem::ChecarTeto (Plataforma& plat) {
-	sf::IntRect plat_rect = plat.GetCaixaDeColisao();
+bool Personagem::ChecarTeto (Plataforma* plat) {
+	sf::IntRect plat_rect = plat->GetCaixaDeColisao();
 	sf::IntRect pers_rect = GetCaixaDeColisao();
 
 	// Linha 1px em cima do personagem
@@ -177,8 +178,8 @@ bool Personagem::ChecarTeto (Plataforma& plat) {
 	}
 }
 
-bool Personagem::ChecarEsquerda (Plataforma& plat) {
-	sf::IntRect plat_rect = plat.GetCaixaDeColisao();
+bool Personagem::ChecarEsquerda (Plataforma* plat) {
+	sf::IntRect plat_rect = plat->GetCaixaDeColisao();
 	sf::IntRect pers_rect = GetCaixaDeColisao();
 
 	// Linha 1px a esquerda do personagem
@@ -206,8 +207,8 @@ bool Personagem::ChecarEsquerda (Plataforma& plat) {
 	}
 }
 
-bool Personagem::ChecarDireita (Plataforma& plat) {
-	sf::IntRect plat_rect = plat.GetCaixaDeColisao();
+bool Personagem::ChecarDireita (Plataforma* plat) {
+	sf::IntRect plat_rect = plat->GetCaixaDeColisao();
 	sf::IntRect pers_rect = GetCaixaDeColisao();
 
 	// Linha 1px a direita do personagem

@@ -1,39 +1,5 @@
 #include "Projetil.h"
 
-Lista<Projetil*> Projetil::projeteis;
-
-void Projetil::Incluir(Projetil* pp) {
-	projeteis.colaNoFinal(pp);
-}
-
-void Projetil::ExecutarTodos(float dt) {
-	if (!projeteis.estaVazia()) {
-		projeteis.goToTop();
-
-		do {
-			Projetil* pp = projeteis.getWhatIsHere();
-
-			pp->Executar(dt);
-
-			if(pp->GetMorreu()) {
-				projeteis.removeWhatIsHere();
-				delete pp;
-				--projeteis;
-			}
-		} while (!(++projeteis));
-	}
-}
-
-void Projetil::DesenharTodos () {
-	if (!projeteis.estaVazia()) {
-		projeteis.goToTop();
-
-		do {
-			projeteis.getWhatIsHere()->Desenhar();
-		} while (!(++projeteis));
-	}
-}
-
 Projetil::Projetil ():
 Entidade(0, 0),
 _velocidade(0, 0),

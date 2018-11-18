@@ -22,15 +22,22 @@ class GerenciadorDeColisao {
 		/* 	IN: Objeto para tratar as colisoes
 			OUT: Adiciona o objeto nas listas internas */
 		void Incluir (Jogador *pj);
-		void Incluir (Inimigo *pi);
-		void Incluir (Plataforma *pp);
+
+		void SetListaInimigos (Lista<Inimigo*>* pLista);
+		void SetListaPlataformas (Lista<Plataforma*>* pLista);
+		void SetListaProjInimigos (Lista<Projetil*>* pLista);
+		void SetListaProjAmigos (Lista<Projetil*>* pLista);
 
 		void Calcular ();
 
 	private:
 		Lista<Jogador*> _jogadores;
-		Lista<Inimigo*> _inimigos;
-		Lista<Plataforma*> _plataformas;
+
+		Lista<Inimigo*>* _inimigos;
+		Lista<Plataforma*>* _plataformas;
+
+		Lista<Projetil*>* _projAmigos;
+		Lista<Projetil*>* _projInimigos;
 };
 
 #endif // DIRETORDECOLISAO_H

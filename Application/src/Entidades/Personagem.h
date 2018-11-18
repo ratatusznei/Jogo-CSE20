@@ -12,7 +12,7 @@
 
 class Personagem: public Entidade {
 	public:
-		Personagem (float x = 0, float y = 0, int n_animacoes = 1);
+		Personagem (float x = 0, float y = 0, Lista<Projetil*>* projeteis = NULL, int n_animacoes = 1);
 		~Personagem ();
 
 		/*	IN: O dano causado
@@ -31,10 +31,10 @@ class Personagem: public Entidade {
 
 		/*	IN: Plataforma
 			OUT: Retorna verdadeiro se o personagem esta colidindo com a plataforma: a baixo, em cima, a esquerda ou a direita, respectivamente */
-		bool ChecarChao (Plataforma& plat);
-		bool ChecarTeto (Plataforma& plat);
-		bool ChecarEsquerda (Plataforma& plat);
-		bool ChecarDireita (Plataforma& plat);
+		bool ChecarChao (Plataforma* plat);
+		bool ChecarTeto (Plataforma* plat);
+		bool ChecarEsquerda (Plataforma* plat);
+		bool ChecarDireita (Plataforma* plat);
 
 	protected:
 		/*	IN: Delta tempo da ultima frame
@@ -52,6 +52,7 @@ class Personagem: public Entidade {
 		Animador _animador;
 
 		Projetil _projetil_protipo;
+		Lista<Projetil*>* _listaProjeteis;
 		int _offSetAtaqueX;
 		int _offSetAtaqueY;
 		int _vx_ataque;
