@@ -6,10 +6,7 @@ _jogador1(&_in_j1, &_listaProjAmigos, 20, 50),
 _jogador2(&_in_j2, &_listaProjAmigos, 680, 0)
 {
 	srand(clock());
-
-	_fase1 = new FaseEgito(&_jogador1, &_jogador2);
-
-	CarregarFase(_fase1);
+	_faseAtual = NULL;
 
 	_in_j1.SetKeyEsquerda(sf::Keyboard::A);
 	_in_j1.SetKeyDireita(sf::Keyboard::D);
@@ -40,59 +37,68 @@ _jogador2(&_in_j2, &_listaProjAmigos, 680, 0)
 
 
 Jogo::~Jogo () {
-	//dtor
+	delete _faseAtual;
+	_faseAtual = NULL;
 }
 
 void Jogo::Executar () {
-	GerenciadorGrafico* janela = GerenciadorGrafico::GetInstance();
-	float dt = janela->GetDeltaTime();
-
-	_jogador1.Executar(dt);
-	_jogador2.Executar(dt);
-
-	if (!_listaInimigos.estaVazia()) {
-		_listaInimigos.goToTop();
-		do {
-			Inimigo* pi = _listaInimigos.getWhatIsHere();
-
-			pi->Executar(dt);
-
-			if (pi->GetMorreu()) {
-				_listaInimigos.removeWhatIsHere();
-				--_listaInimigos;
-			}
-		} while(!(++_listaInimigos));
+	if (_jogador1.GetMorreu() && (!_coop || _jogador2.GetMorreu())) {
+		_acabou = true;
 	}
-
-	if (!_listaProjAmigos.estaVazia()) {
-		_listaProjAmigos.goToTop();
-		do {
-			Projetil* pp = _listaProjAmigos.getWhatIsHere();
-
-			pp->Executar(dt);
-
-			if (pp->GetMorreu()) {
-				_listaProjAmigos.removeWhatIsHere();
-				--_listaProjAmigos;
-			}
-		} while(!(++_listaProjAmigos));
+	else if (_faseAtual->ChecarObjetivo()) {
+		_acabou = true;
 	}
+	else {
+		GerenciadorGrafico* janela = GerenciadorGrafico::GetInstance();
+		float dt = janela->GetDeltaTime();
 
-	if (!_listaProjInimigos.estaVazia()) {
-		_listaProjInimigos.goToTop();
-		do {
-			Projetil* pp = _listaProjInimigos.getWhatIsHere();
+		_jogador1.Executar(dt);
+		_jogador2.Executar(dt);
 
-			pp->Executar(dt);
+		if (!_listaInimigos.estaVazia()) {
+			_listaInimigos.goToTop();
+			do {
+				Inimigo* pi = _listaInimigos.getWhatIsHere();
 
-			if (pp->GetMorreu()) {
-				_listaProjInimigos.removeWhatIsHere();
-				--_listaProjInimigos;
-			}
-		} while(!(++_listaProjInimigos));
+				pi->Executar(dt);
+
+				if (pi->GetMorreu()) {
+					_listaInimigos.removeWhatIsHere();
+					--_listaInimigos;
+				}
+			} while(!(++_listaInimigos));
+		}
+
+		if (!_listaProjAmigos.estaVazia()) {
+			_listaProjAmigos.goToTop();
+			do {
+				Projetil* pp = _listaProjAmigos.getWhatIsHere();
+
+				pp->Executar(dt);
+
+				if (pp->GetMorreu()) {
+					_listaProjAmigos.removeWhatIsHere();
+					--_listaProjAmigos;
+				}
+			} while(!(++_listaProjAmigos));
+		}
+
+		if (!_listaProjInimigos.estaVazia()) {
+			_listaProjInimigos.goToTop();
+			do {
+				Projetil* pp = _listaProjInimigos.getWhatIsHere();
+
+				pp->Executar(dt);
+
+				if (pp->GetMorreu()) {
+					_listaProjInimigos.removeWhatIsHere();
+					--_listaProjInimigos;
+				}
+			} while(!(++_listaProjInimigos));
+		}
+
+		_colisoes.Calcular();
 	}
-
-	_colisoes.Calcular();
 }
 
 void Jogo::Desenhar () {
@@ -161,9 +167,26 @@ void Jogo::Desenhar () {
 
 void Jogo::Iniciar(bool ehCoop) {
 	_coop = ehCoop;
+	_acabou = false;
+
+	_jogador1.IniciarDoctor();
+	_jogador2.IniciarRobo();
+
+	if (_faseAtual != NULL) {
+		delete _faseAtual;
+		_faseAtual = NULL;
+	}
+
+	_faseAtual = new FaseEgito(&_jogador1, &_jogador2);
+	CarregarFase(_faseAtual);
+}
+
+bool Jogo::GameOver () {
+	return _acabou;
 }
 
 void Jogo::CarregarFase (Fase *pFase) {
+	pFase->CarregaJogadores();
 	pFase->CarregaPlataformas(&_listaPlataformas);
 	pFase->CarregaInimigos(&_listaInimigos, &_listaProjInimigos);
 }

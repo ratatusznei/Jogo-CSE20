@@ -1,7 +1,6 @@
 /*
 	Classe que representa fases
 
-	Possui os inimigos e plataformas da fase
 	Possui referencias para os jogadores
 */
 
@@ -23,16 +22,16 @@
 class Fase {
 	public:
 		Fase (Jogador *j1, Jogador* j2);
-		~Fase ();
+		virtual ~Fase ();
 
+		virtual bool ChecarObjetivo () = 0;
+		virtual void CarregaJogadores () = 0;
 		virtual void CarregaInimigos (Lista<Inimigo*>* _pLista, Lista<Projetil*>* projeteis) = 0;
 		virtual void CarregaPlataformas (Lista<Plataforma*>* _pLista) = 0;
 
 	protected:
 		Jogador* _j1;
 		Jogador* _j2;
-
-		bool _isOver;
 };
 
 #endif // FASE_H

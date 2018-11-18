@@ -53,6 +53,11 @@ void Principal::Executar () {
 		case EstadoApp::Jogo:
 			_jogo.Executar();
 			_jogo.Desenhar();
+
+			if (_jogo.GameOver()) {
+				_estado = EstadoApp::Menu;
+				GerenciadorGrafico::GetInstance()->ResetCamera();
+			}
 			break;
 
 		case EstadoApp::Tela_de_creditos:

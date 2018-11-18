@@ -15,10 +15,21 @@ Fase(j1, j2)
 	IncluiSpawnMumia(650, 0);
 	IncluiSpawnMumia(700, 0);
 	IncluiSpawnMumia(750, 0);
+
+	chefe = NULL;
 }
 
 FaseEgito::~FaseEgito () {
 	//dtor
+}
+
+bool FaseEgito::ChecarObjetivo () {
+	return chefe->GetMorreu();
+}
+
+void FaseEgito::CarregaJogadores () {
+	_j1->SetPosicao(20, 20);
+	_j2->SetPosicao(50, 20);
 }
 
 void FaseEgito::CarregaInimigos (Lista<Inimigo*>* _pLista, Lista<Projetil*>* projeteis) {
@@ -35,6 +46,9 @@ void FaseEgito::CarregaInimigos (Lista<Inimigo*>* _pLista, Lista<Projetil*>* pro
 
 		n_mumias--;
 	}
+
+	chefe = new Mumia(_j1, _j2, projeteis, 1000, 0);
+	_pLista->colaNoFinal(chefe);
 }
 
 void FaseEgito::CarregaPlataformas (Lista<Plataforma*>* _pLista) {

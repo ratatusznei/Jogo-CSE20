@@ -29,16 +29,13 @@ class Jogo {
 		void Desenhar ();
 
 		void Iniciar (bool ehCoop);
-
-		void CarregarFase (Fase *pFase);
+		bool GameOver ();
 
 	private:
-		Fase *_fase1;
-		Fase *_fase2;
-
-		int _faseAtual;
+		Fase* _faseAtual;
 
 		bool _coop;
+		bool _acabou;
 
 		int _camera_x;
 
@@ -57,6 +54,8 @@ class Jogo {
 
 		Lista<Inimigo*> _listaInimigos;
 		Lista<Plataforma*> _listaPlataformas;
+
+		void CarregarFase (Fase *pFase);
 };
 
 #endif // JOGO_H

@@ -47,6 +47,7 @@ class GerenciadorGrafico {
 		float GetDeltaTime ();
 
 		void SetCamera (int x);
+		void ResetCamera ();
 
 		/*	IN: Nenhum
 			OUT: Apaga todos os graficos na janela */

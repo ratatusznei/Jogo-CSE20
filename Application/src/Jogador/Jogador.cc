@@ -23,6 +23,11 @@ Jogador::~Jogador () {
 }
 
 void Jogador::IniciarRobo () {
+	_podeAtacar = true;
+
+	_vida = 3;
+	_timerMachucado = -1;
+
 	_max_vx = ConstsPersonagens::J_max_vx;
 	_max_vy = Fisica::velocidade_terminal;
 
@@ -48,6 +53,11 @@ void Jogador::IniciarRobo () {
 }
 
 void Jogador::IniciarDoctor () {
+	_podeAtacar = true;
+
+	_vida = 3;
+	_timerMachucado = -1;
+
 	_max_vx = ConstsPersonagens::J_max_vx;
 	_max_vy = Fisica::velocidade_terminal;
 

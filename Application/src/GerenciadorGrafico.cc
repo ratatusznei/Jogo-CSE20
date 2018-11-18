@@ -32,6 +32,7 @@ void GerenciadorGrafico::CriaJanela (sf::VideoMode video_mode, string titulo) {
 	sf::FloatRect camera_rect(0, 0, video_mode.width, video_mode.height);
 	_camera.reset(camera_rect);
 
+
 	_window.create(video_mode, titulo, sf::Style::Close);
 	_window.setVerticalSyncEnabled(true);
 	_window.setView(_camera);
@@ -57,8 +58,14 @@ float GerenciadorGrafico::GetDeltaTime () {
 	return _delta_t;
 }
 
-void GerenciadorGrafico::SetCamera(int x) {
+void GerenciadorGrafico::SetCamera (int x) {
 	_camera.setCenter(x, _video_mode.height / 2);
+	_window.setView(_camera);
+}
+
+void GerenciadorGrafico::ResetCamera () {
+	sf::FloatRect camera_rect(0, 0, _video_mode.width, _video_mode.height);
+	_camera.reset(camera_rect);
 	_window.setView(_camera);
 }
 
