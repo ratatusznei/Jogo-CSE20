@@ -34,7 +34,7 @@ namespace Resources {
 }
 
 namespace Fisica {
-	const float G = 600;
+	const float G = 800;
 	const float velocidade_terminal = 800;
 }
 
@@ -43,8 +43,8 @@ namespace ConstsPersonagens {
 	const float J_desaceleracao = 500;
 	const float J_aceleracao = 340;
 	const float J_max_vx = 160;
-	const float J_v0_pulo = 305;
-	const float J_vmin_pulo = 100;
+	const float J_v0_pulo = 550;
+	const float J_vmin_pulo = 350;
 	const float J_tempo_imunidade = 0.7;
 
 	// Mumia

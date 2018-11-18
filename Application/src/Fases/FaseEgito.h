@@ -17,6 +17,9 @@ class FaseEgito: public Fase {
 
 	private:
 		Inimigo* chefe;
+		int _chefeX;
+		int _chefeY;
+
 		Lista<sf::Vector2i*> _listaSpawnMumia;
 		Lista<sf::Vector2i*> _listaSpawnCobra;
 		Lista<Plataforma*> _listaPlataformas;

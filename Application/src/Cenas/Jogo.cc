@@ -186,6 +186,9 @@ bool Jogo::GameOver () {
 }
 
 void Jogo::CarregarFase (Fase *pFase) {
+	_listaPlataformas.mataLista();
+	_listaInimigos.mataLista();
+
 	pFase->CarregaJogadores();
 	pFase->CarregaPlataformas(&_listaPlataformas);
 	pFase->CarregaInimigos(&_listaInimigos, &_listaProjInimigos);

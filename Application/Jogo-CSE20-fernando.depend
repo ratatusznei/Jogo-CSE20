@@ -20,7 +20,7 @@
 	<string>
 	"../common.h"
 
-1542561365 /home/fernando/Programming/time-travel/Application/src/common.h
+1542576642 /home/fernando/Programming/time-travel/Application/src/common.h
 	<string>
 	<iostream>
 
@@ -63,7 +63,7 @@
 	"Inimigos/Inimigo.h"
 	"Entidades/Plataforma.h"
 
-1542553294 /home/fernando/Programming/time-travel/Application/src/LinkedLists.h
+1542578277 /home/fernando/Programming/time-travel/Application/src/LinkedLists.h
 	<stdlib.h>
 
 1542561879 /home/fernando/Programming/time-travel/Application/src/Jogador/Jogador.h
@@ -117,7 +117,7 @@
 	"../Jogador/Jogador.h"
 	"../common.h"
 
-1542566513 source:/home/fernando/Programming/time-travel/Application/src/Cenas/Jogo.cc
+1542577843 source:/home/fernando/Programming/time-travel/Application/src/Cenas/Jogo.cc
 	"Jogo.h"
 	<time.h>
 
@@ -136,13 +136,13 @@
 1542569441 source:/home/fernando/Programming/time-travel/Application/src/Entidades/Personagem.cc
 	"Personagem.h"
 
-1542549695 source:/home/fernando/Programming/time-travel/Application/src/Entidades/Plataforma.cc
+1542576204 source:/home/fernando/Programming/time-travel/Application/src/Entidades/Plataforma.cc
 	"Plataforma.h"
 
 1542565893 source:/home/fernando/Programming/time-travel/Application/src/Fases/Fase.cpp
 	"Fase.h"
 
-1542559796 source:/home/fernando/Programming/time-travel/Application/src/GerenciadorDeColisao.cpp
+1542570019 source:/home/fernando/Programming/time-travel/Application/src/GerenciadorDeColisao.cpp
 	"GerenciadorDeColisao.h"
 
 1542565181 source:/home/fernando/Programming/time-travel/Application/src/GerenciadorGrafico.cc
@@ -157,7 +157,7 @@
 1541891399 source:/home/fernando/Programming/time-travel/Application/src/Jogador/GerenciadorDeInput.cc
 	"GerenciadorDeInput.h"
 
-1542569433 source:/home/fernando/Programming/time-travel/Application/src/Jogador/Jogador.cc
+1542575080 source:/home/fernando/Programming/time-travel/Application/src/Jogador/Jogador.cc
 	"Jogador.h"
 
 1542565155 source:/home/fernando/Programming/time-travel/Application/src/Principal.cc
@@ -198,11 +198,11 @@
 1542548599 source:/home/fernando/Programming/time-travel/Application/src/GerenciadorDeTexturas.cpp
 	"GerenciadorDeTexturas.h"
 
-1542566368 /home/fernando/Programming/time-travel/Application/src/Fases/FaseEgito.h
+1542578869 /home/fernando/Programming/time-travel/Application/src/Fases/FaseEgito.h
 	"Fase.h"
 	"../LinkedLists.h"
 	"../Inimigos/Mumia.h"
 
-1542566482 source:/home/fernando/Programming/time-travel/Application/src/Fases/FaseEgito.cpp
+1542577967 source:/home/fernando/Programming/time-travel/Application/src/Fases/FaseEgito.cpp
 	"FaseEgito.h"
 

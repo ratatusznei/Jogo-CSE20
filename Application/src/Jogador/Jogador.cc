@@ -104,12 +104,6 @@ void Jogador::Executar (float dt) {
 	else {
 		_inputs->Atualizar();
 
-		/****  Temporario ****/
-		if (_posicao.y + _sp.getGlobalBounds().height > Janela::altura) {
-			_posicao.y = 0;
-		}
-		/****  Temporario/ ****/
-
 		switch (_estado) {
 		case EstadoJogador::Parado:
 			_velocidade.y = 0;
@@ -225,6 +219,18 @@ void Jogador::Executar (float dt) {
 
 		default:
 			_estado = EstadoJogador::Parado;
+		}
+
+		if (_posicao.y + _sp.getGlobalBounds().height > Janela::altura) {
+			_vida = -1;
+		}
+
+		if (_posicao.x < 0) {
+			_posicao.x = 0;
+
+			if (_velocidade.x < 0) {
+				_velocidade.x = 0;
+			}
 		}
 
 		if (_timerMachucado > 0) {
