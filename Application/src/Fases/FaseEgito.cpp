@@ -6,15 +6,15 @@ Fase(j1, j2)
 	IncluiPlataforma(0, Janela::altura - Resources::block_size, 1, 50);
 
 	IncluiSpawnMumia(300, 0);
-	IncluiSpawnMumia(350, 0);
+	IncluiSpawnCobra(350, 0);
 	IncluiSpawnMumia(400, 0);
-	IncluiSpawnMumia(450, 0);
+	IncluiSpawnCobra(450, 0);
 	IncluiSpawnMumia(500, 0);
-	IncluiSpawnMumia(550, 0);
+	IncluiSpawnCobra(550, 0);
 	IncluiSpawnMumia(600, 0);
-	IncluiSpawnMumia(650, 0);
+	IncluiSpawnCobra(650, 0);
 	IncluiSpawnMumia(700, 0);
-	IncluiSpawnMumia(750, 0);
+	IncluiSpawnCobra(750, 0);
 
 	chefe = NULL;
 }
@@ -34,6 +34,7 @@ void FaseEgito::CarregaJogadores () {
 
 void FaseEgito::CarregaInimigos (Lista<Inimigo*>* _pLista, Lista<Projetil*>* projeteis) {
 	int n_mumias = rand() % 5 + 5;
+	int n_cobras = rand() % 5 + 5;
 
 	while (n_mumias > 0 && !_listaSpawnMumia.estaVazia()) {
 		_listaSpawnMumia.goToTop();
@@ -42,6 +43,17 @@ void FaseEgito::CarregaInimigos (Lista<Inimigo*>* _pLista, Lista<Projetil*>* pro
 		_listaSpawnMumia.removeWhatIsHere();
 
 		Inimigo* pi = (Inimigo*) new Mumia(_j1, _j2, projeteis, pos->x, pos->y);
+		_pLista->colaNoFinal(pi);
+
+		n_mumias--;
+	}
+	while (n_cobras > 0 && !_listaSpawnCobra.estaVazia()) {
+		_listaSpawnCobra.goToTop();
+
+		sf::Vector2i* pos = _listaSpawnCobra.getWhatIsHere();
+		_listaSpawnCobra.removeWhatIsHere();
+
+		Inimigo* pi = (Inimigo*) new Cobra(_j1, _j2, projeteis, pos->x, pos->y);
 		_pLista->colaNoFinal(pi);
 
 		n_mumias--;

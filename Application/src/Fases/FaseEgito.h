@@ -4,6 +4,7 @@
 #include "Fase.h"
 #include "../LinkedLists.h"
 #include "../Inimigos/Mumia.h"
+#include "../Inimigos/Cobra.h"
 
 class FaseEgito: public Fase {
 	public:
