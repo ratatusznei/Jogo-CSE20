@@ -17,7 +17,8 @@ class Personagem: public Entidade {
 
 		/*	IN: O dano causado
 			OUT: Remove da vida o dano */
-		void Machucar (int dano);
+		virtual void Machucar (int dano);
+		bool GetMorreu ();
 
 		void Atacar ();
 

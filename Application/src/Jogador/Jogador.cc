@@ -14,6 +14,9 @@ _inputs(inputs)
 	_sp.setTexture(*GerenciadorDeTexturas::GetInstance()->GetJogador());
 
 	_podeAtacar = true;
+
+	_vida = 3;
+	_timerMachucado = -1;
 }
 
 Jogador::~Jogador () {
@@ -67,6 +70,18 @@ void Jogador::IniciarDoctor () {
 	_animador.SetFrameCount(anim_andando, 2);
 
 	_projetil_protipo.SetTempoPraMorrer(1);
+}
+
+void Jogador::Machucar (int dano) {
+	if (_timerMachucado < 0) {
+		_vida -= dano;
+		_velocidade.y = -_velocidade_pulo;;
+		_esta_no_chao = false;
+
+		_timerMachucado = ConstsPersonagens::J_tempo_imunidade;
+
+		_estado = EstadoJogador::Pulando;
+	}
 }
 
 void Jogador::Executar (float dt) {
@@ -191,9 +206,24 @@ void Jogador::Executar (float dt) {
 		}
 		break;
 
-	case EstadoJogador::Machucado:
 	default:
 		_estado = EstadoJogador::Parado;
+	}
+
+	if (_timerMachucado > 0) {
+		_timerMachucado -= dt;
+		_piscadorMachucado += dt;
+
+		if (_piscadorMachucado > 0.2) {
+			_piscadorMachucado -= 0.2;
+			_sp.setColor(sf::Color::White);
+		}
+		else if (_piscadorMachucado > 0.1){
+			_sp.setColor(sf::Color::Red);
+		}
+	}
+	else {
+		_sp.setColor(sf::Color::White);
 	}
 
 	AtualizarFisica(dt);

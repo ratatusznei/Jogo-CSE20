@@ -81,6 +81,11 @@ void Jogo::Executar () {
 
 			pi->Executar(dt);
 			pi->Desenhar();
+
+			if (pi->GetMorreu()) {
+				_listaInimigos.removeWhatIsHere();
+				--_listaInimigos;
+			}
 		} while(!(++_listaInimigos));
 	}
 

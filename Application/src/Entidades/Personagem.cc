@@ -10,6 +10,8 @@ _batendo_teto(false),
 _batendo_direta(false),
 _batendo_esquerda(false)
 {
+	_vida = 1;
+
 	_tex_rect.top = 0;
 	_tex_rect.left = 0;
 	_tex_rect.width = Resources::block_size;
@@ -28,8 +30,10 @@ Personagem::~Personagem () {
 
 void Personagem::Machucar (int dano) {
 	_vida -= dano;
-	/**** TEMPORARIO ****/
-	_posicao.y -= 100;
+}
+
+bool Personagem::GetMorreu () {
+	return _vida <= 0;
 }
 
 void Personagem::Atacar () {

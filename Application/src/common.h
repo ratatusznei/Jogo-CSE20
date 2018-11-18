@@ -45,6 +45,7 @@ namespace ConstsPersonagens {
 	const float J_max_vx = 160;
 	const float J_v0_pulo = 305;
 	const float J_vmin_pulo = 100;
+	const float J_tempo_imunidade = 0.7;
 
 	// Mumia
 	const float M_desaceleracao = 500;
@@ -63,14 +64,6 @@ enum class EstadoApp {
 	Jogo,
 	Tela_de_creditos,
 	Sair,
-};
-
-enum class EstadoJogador {
-	Parado = 0,
-	Andando,
-	Pulando,
-	Atacando,
-	Machucado,
 };
 
 enum class Direcao {
