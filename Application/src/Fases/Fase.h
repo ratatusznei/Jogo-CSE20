@@ -22,22 +22,17 @@
 
 class Fase {
 	public:
-		Fase ();
+		Fase (Jogador *j1, Jogador* j2);
 		~Fase ();
 
-		/*	IN: Nenhum
-			OUT: Executa os objetos internos */
-		bool Executar ();
+		virtual void CarregaInimigos (Lista<Inimigo*>* _pLista) = 0;
+		virtual void CarregaPlataformas (Lista<Plataforma*>* _pLista) = 0;
 
-	private:
-		Jogador* _jogador1;
-		Jogador* _jogador2;
-
-		Lista<Inimigo*> _listaInimigos;
-		Lista<Plataforma*> _listaPlataformas;
+	protected:
+		Jogador* _j1;
+		Jogador* _j2;
 
 		bool _isOver;
 };
-
 
 #endif // FASE_H

@@ -1,12 +1,11 @@
 #include "Fase.h"
 
-Fase::Fase () {
-
+Fase::Fase (Jogador *j1, Jogador* j2):
+_j1(j1),
+_j2(j2)
+{
 }
 
 Fase::~Fase () {
 }
 
-bool Fase::Executar () {
-	return _isOver;
-}

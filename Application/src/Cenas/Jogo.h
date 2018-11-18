@@ -1,15 +1,16 @@
 /*
-	Possui a fase, camera e jogadores
+	Possui a fase e jogadores
 */
 
 #ifndef JOGO_H
 #define JOGO_H
 
-#include "../GerenciadorGrafico.h"
-#include "../Fases/Fase.h"
-
 #include <SFML/System.hpp>
 #include <fstream>
+
+#include "../GerenciadorGrafico.h"
+#include "../Fases/Fase.h"
+#include "../Fases/FaseEgito.h"
 
 #include "../GerenciadorGrafico.h"
 #include "../GerenciadorDeColisao.h"
@@ -28,12 +29,14 @@ class Jogo {
 		void Desenhar ();
 
 		void Iniciar (bool ehCoop);
-		/*	IN: Path para um arquivo de fase
-			OUT: Preenche as listas de entidades conforme o arquivo */
-		void CarregarFase (char* path);
+
+		void CarregarFase (Fase *pFase);
 
 	private:
-		Fase _fase;
+		Fase *_fase1;
+		Fase *_fase2;
+
+		int _faseAtual;
 
 		bool _coop;
 

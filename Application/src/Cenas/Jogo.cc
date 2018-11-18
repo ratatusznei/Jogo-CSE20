@@ -7,7 +7,9 @@ _jogador2(&_in_j2, 680, 0)
 {
 	srand(clock());
 
-	CarregarFase("res/fases/egypt.txt");
+	_fase1 = new FaseEgito(&_jogador1, &_jogador2);
+
+	CarregarFase(_fase1);
 
 	_in_j1.SetKeyEsquerda(sf::Keyboard::A);
 	_in_j1.SetKeyDireita(sf::Keyboard::D);
@@ -107,36 +109,7 @@ void Jogo::Iniciar(bool ehCoop) {
 	_coop = ehCoop;
 }
 
-void Jogo::CarregarFase (char *path) {
-	Plataforma *p = new Plataforma(20, 500, 16, 1);
-	_listaPlataformas.colaNoComeco(p);
-	return;
-
-	int x, y, w, h, i;
-	int n = rand() % 5 + 3;
-	char str[64];
-	ifstream f;
-
-	f.open(path);
-
-	if (f.fail()) {
-		return;
-	}
-
-	while (!f.eof()) {
-		f.getline(str, 64);
-
-		if (str[0] == 'P') {
-			sscanf(str, "P %d,%d,%d,%d", &x, &y, &w, &h);
-			Plataforma *p = new Plataforma(x, y, w, h);
-			_listaPlataformas.colaNoComeco(p);
-		}
-	}
-
-	for(i = 0 ; i < n ; i++){
-		Mumia* m = new Mumia(&_jogador1, &_jogador2, rand() % Janela::largura, rand() % Janela::altura);
-		_listaInimigos.colaNoFinal(m);
-	}
-
-	f.close();
+void Jogo::CarregarFase (Fase *pFase) {
+	pFase->CarregaPlataformas(&_listaPlataformas);
+	pFase->CarregaInimigos(&_listaInimigos);
 }
