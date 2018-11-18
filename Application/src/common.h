@@ -28,6 +28,9 @@ namespace Resources {
 	const string tex_jogador = "res/jogador.png";
 	const string tex_plataforma = "res/plataforma.png";
 	const string tex_mumia = "res/mumia.png";
+	const string tex_cobra = "res/cobra.png";
+	const string tex_brobot = "res/badrobot.png";
+	const string tex_alien = "res/alienigena.png";
 
 	const float pixel_scale = 2;
 	const int block_size = 16;
