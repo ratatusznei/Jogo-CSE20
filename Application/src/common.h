@@ -26,7 +26,10 @@ namespace Resources {
 	const string fundo_tela_creditos = "res/backgrounds/tela_creditos.png";
 
 	const string tex_jogador = "res/jogador.png";
+
 	const string tex_plataforma = "res/plataforma.png";
+	const string tex_plataforma_egito = "res/p_egypt.png";
+
 	const string tex_mumia = "res/mumia.png";
 	const string tex_cobra = "res/cobra.png";
 	const string tex_brobot = "res/badrobot.png";

@@ -12,7 +12,7 @@ class Plataforma: public Entidade {
 	public:
 		/*	IN: Posicao na janela e o tamanho da plataforma em blocos
 			OUT: Cria a plataforma */
-		Plataforma (int x = 0, int y = 0, int w = 0, int h = 0);
+		Plataforma (int x = 0, int y = 0, int w = 0, int h = 0, sf::Texture* tex = GerenciadorDeTexturas::GetInstance()->GetPlataforma());
 		~Plataforma ();
 
 		void Desenhar ();

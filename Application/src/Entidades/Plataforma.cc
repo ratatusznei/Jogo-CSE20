@@ -1,12 +1,12 @@
 #include "Plataforma.h"
 
-Plataforma::Plataforma (int x, int y, int w, int h):
+Plataforma::Plataforma (int x, int y, int w, int h, sf::Texture* tex):
 Entidade(x, y),
 _largura(w),
 _altura(h),
 _caixa_colisao(x, y, 0, 0)
 {
-	_sp.setTexture(*GerenciadorDeTexturas::GetInstance()->GetPlataforma());
+	_sp.setTexture(*tex);
 
 	// Pre calcula caixa de colisao
 	_caixa_colisao.width = _largura * _sp.getGlobalBounds().width;

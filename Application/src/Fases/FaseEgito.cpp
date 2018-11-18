@@ -6,7 +6,6 @@ Fase(j1, j2)
 	const int bs = Resources::block_size * Resources::pixel_scale;
 	const int altitude0 = Janela::altura - bs;
 
-	// Chao e parede no final
 	IncluiPlataforma(0, altitude0, 69, 2);
 	IncluiPlataforma(71 * bs, altitude0, 15, 2);
 	IncluiPlataforma(89 * bs, altitude0, 64, 2);
@@ -44,21 +43,21 @@ Fase(j1, j2)
 	IncluiPlataforma(150 * bs, altitude0 - 3 * bs, 3, 1);
 	IncluiPlataforma(151 * bs, altitude0 - 4 * bs, 2, 1);
 
-	IncluiSpawnMumia(22 * bs, altitude0 - 1 * bs);
+	IncluiSpawnCobra(22 * bs, altitude0 - 1 * bs);
 	IncluiSpawnMumia(40 * bs, altitude0 - 1 * bs);
-	IncluiSpawnMumia(51 * bs, altitude0 - 1 * bs);
-	IncluiSpawnMumia(52 * bs, altitude0 - 1 * bs);
+	IncluiSpawnCobra(51 * bs, altitude0 - 1 * bs);
+	IncluiSpawnCobra(52 * bs, altitude0 - 1 * bs);
 	IncluiSpawnMumia(80 * bs, altitude0 - 10 * bs);
-	IncluiSpawnMumia(82 * bs, altitude0 - 10 * bs);
+	IncluiSpawnCobra(82 * bs, altitude0 - 10 * bs);
 	IncluiSpawnMumia(97 * bs, altitude0 - 1 * bs);
 	IncluiSpawnMumia(98 * bs, altitude0 - 1 * bs);
 	IncluiSpawnMumia(107 * bs, altitude0 - 1 * bs);
-	IncluiSpawnMumia(114 * bs, altitude0 - 1 * bs);
+	IncluiSpawnCobra(114 * bs, altitude0 - 1 * bs);
 	IncluiSpawnMumia(115 * bs, altitude0 - 1 * bs);
-	IncluiSpawnMumia(124 * bs, altitude0 - 1 * bs);
+	IncluiSpawnCobra(124 * bs, altitude0 - 1 * bs);
 	IncluiSpawnMumia(125 * bs, altitude0 - 1 * bs);
 	IncluiSpawnMumia(127 * bs, altitude0 - 1 * bs);
-	IncluiSpawnMumia(128 * bs, altitude0 - 1 * bs);
+	IncluiSpawnCobra(128 * bs, altitude0 - 1 * bs);
 
 	_chefeX = 174 * bs;
 	_chefeY = altitude0 - 1 * bs;
@@ -127,6 +126,6 @@ void FaseEgito::IncluiSpawnCobra (int x, int y) {
 }
 
 void FaseEgito::IncluiPlataforma (int x, int y, int w, int h) {
-	Plataforma* pp = new Plataforma(x, y, w, h);
+	Plataforma* pp = new Plataforma(x, y, w, h, GerenciadorDeTexturas::GetInstance()->GetPlataformaEgito());
 	_listaPlataformas.colaNoFinal(pp);
 }

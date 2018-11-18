@@ -20,7 +20,7 @@
 	<string>
 	"../common.h"
 
-1542576642 /home/fernando/Programming/time-travel/Application/src/common.h
+1542583168 /home/fernando/Programming/time-travel/Application/src/common.h
 	<string>
 	<iostream>
 
@@ -86,7 +86,7 @@
 	"../GerenciadorGrafico.h"
 	"../common.h"
 
-1542546396 /home/fernando/Programming/time-travel/Application/src/Entidades/Plataforma.h
+1542583033 /home/fernando/Programming/time-travel/Application/src/Entidades/Plataforma.h
 	"../GerenciadorDeTexturas.h"
 	"Entidade.h"
 
@@ -136,7 +136,7 @@
 1542569441 source:/home/fernando/Programming/time-travel/Application/src/Entidades/Personagem.cc
 	"Personagem.h"
 
-1542576204 source:/home/fernando/Programming/time-travel/Application/src/Entidades/Plataforma.cc
+1542582955 source:/home/fernando/Programming/time-travel/Application/src/Entidades/Plataforma.cc
 	"Plataforma.h"
 
 1542565893 source:/home/fernando/Programming/time-travel/Application/src/Fases/Fase.cpp
@@ -151,7 +151,7 @@
 1542558920 source:/home/fernando/Programming/time-travel/Application/src/Inimigos/Inimigo.cpp
 	"Inimigo.h"
 
-1542563423 source:/home/fernando/Programming/time-travel/Application/src/Inimigos/Mumia.cpp
+1542578959 source:/home/fernando/Programming/time-travel/Application/src/Inimigos/Mumia.cpp
 	"Mumia.h"
 
 1541891399 source:/home/fernando/Programming/time-travel/Application/src/Jogador/GerenciadorDeInput.cc
@@ -163,11 +163,11 @@
 1542565155 source:/home/fernando/Programming/time-travel/Application/src/Principal.cc
 	"Principal.h"
 
-1542473543 /home/fernando/Programming/time-travel/Application/src/Animador.h
+1542579649 /home/fernando/Programming/time-travel/Application/src/Animador.h
 	<SFML/Graphics.hpp>
 	"common.h"
 
-1542473531 source:/home/fernando/Programming/time-travel/Application/src/Animador.cpp
+1542579651 source:/home/fernando/Programming/time-travel/Application/src/Animador.cpp
 	"Animador.h"
 
 1542559188 source:/home/fernando/Programming/time-travel/Application/src/Jogador/RegistroDeJogada.cc
@@ -191,18 +191,49 @@
 	"../LinkedLists.h"
 	"../common.h"
 
-1542547736 /home/fernando/Programming/time-travel/Application/src/GerenciadorDeTexturas.h
+1542583056 /home/fernando/Programming/time-travel/Application/src/GerenciadorDeTexturas.h
 	<SFML/Graphics.hpp>
 	"common.h"
 
-1542548599 source:/home/fernando/Programming/time-travel/Application/src/GerenciadorDeTexturas.cpp
+1542578959 source:/home/fernando/Programming/time-travel/Application/src/GerenciadorDeTexturas.cpp
 	"GerenciadorDeTexturas.h"
 
-1542578869 /home/fernando/Programming/time-travel/Application/src/Fases/FaseEgito.h
+1542578959 /home/fernando/Programming/time-travel/Application/src/Fases/FaseEgito.h
 	"Fase.h"
 	"../LinkedLists.h"
 	"../Inimigos/Mumia.h"
+	"../Inimigos/Cobra.h"
 
-1542577967 source:/home/fernando/Programming/time-travel/Application/src/Fases/FaseEgito.cpp
+1542582985 source:/home/fernando/Programming/time-travel/Application/src/Fases/FaseEgito.cpp
 	"FaseEgito.h"
+
+1542578959 /home/fernando/Programming/time-travel/Application/src/Inimigos/Cobra.h
+	"../GerenciadorDeTexturas.h"
+	"../GerenciadorGrafico.h"
+	"../Inimigos/Inimigo.h"
+	"../Jogador/Jogador.h"
+	"../common.h"
+
+1542578959 source:/home/fernando/Programming/time-travel/Application/src/Inimigos/Alienigena.cpp
+	"Alienigena.h"
+
+1542578959 /home/fernando/Programming/time-travel/Application/src/Inimigos/Alienigena.h
+	"../GerenciadorDeTexturas.h"
+	"../GerenciadorGrafico.h"
+	"../Inimigos/Inimigo.h"
+	"../Jogador/Jogador.h"
+	"../common.h"
+
+1542578959 source:/home/fernando/Programming/time-travel/Application/src/Inimigos/BadRobot.cpp
+	"BadRobot.h"
+
+1542578959 /home/fernando/Programming/time-travel/Application/src/Inimigos/BadRobot.h
+	"../GerenciadorDeTexturas.h"
+	"../GerenciadorGrafico.h"
+	"../Inimigos/Inimigo.h"
+	"../Jogador/Jogador.h"
+	"../common.h"
+
+1542579656 source:/home/fernando/Programming/time-travel/Application/src/Inimigos/Cobra.cpp
+	"Cobra.h"
 
