@@ -1,9 +1,9 @@
 #include "Personagem.h"
 
-Personagem::Personagem (float x, float y, string tex_path, int n_animacoes):
-Entidade(x, y, tex_path),
+Personagem::Personagem (float x, float y, int n_animacoes):
+Entidade(x, y),
 _animador(n_animacoes),
-_projetil_protipo(tex_path),
+_projetil_protipo(),
 _esta_no_chao(false),
 _batendo_teto(false),
 _batendo_direta(false),

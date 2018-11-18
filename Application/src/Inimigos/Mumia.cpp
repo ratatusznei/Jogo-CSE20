@@ -7,7 +7,9 @@ int M_anim_atacando = 2;
 int M_anim_andando = 3;
 
 Mumia::Mumia(Jogador *j1, Jogador *j2, int x, int y):
-Inimigo(x, y, Resources::tex_mumia, 4) {
+Inimigo(x, y, 4) {
+	_sp.setTexture(*GerenciadorDeTexturas::GetInstance()->GetMumia());
+
 	_j1 = j1;
 	_j2 = j2;
 	_estado = EstadoMumia::Perdida;

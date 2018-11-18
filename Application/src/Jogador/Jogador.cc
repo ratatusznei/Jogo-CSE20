@@ -7,9 +7,12 @@ int anim_atacando = 2;
 int anim_andando = 3;
 
 Jogador::Jogador (GerenciadorDeInput *inputs, int x, int y):
-Personagem(x, y, Resources::tex_jogador, total_anims),
+Personagem(x, y, total_anims),
 _inputs(inputs)
 {
+	_projetil_protipo.SetTexture(GerenciadorDeTexturas::GetInstance()->GetJogador());
+	_sp.setTexture(*GerenciadorDeTexturas::GetInstance()->GetJogador());
+
 	_podeAtacar = true;
 }
 

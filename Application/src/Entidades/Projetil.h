@@ -7,11 +7,12 @@
 
 class Projetil: public Entidade {
 	public:
-		Projetil(string tex_path = "");
+		Projetil();
 		Projetil(Projetil& prototipo, int x, int y, int vx, int vy);
 		virtual ~Projetil();
 
-		const string GetTexPath ();
+		sf::Texture* GetTexture ();
+		void SetTexture (sf::Texture *tex);
 
 		void SetVelocidade (int vx);
 
@@ -31,7 +32,7 @@ class Projetil: public Entidade {
 		sf::Vector2f _velocidade;
 		float _tempoPraMorrer;
 
-		string _tex_path;
+		sf::Texture* _texture;
 
 		static Lista<Projetil*> projeteis;
 };

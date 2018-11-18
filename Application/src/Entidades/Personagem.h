@@ -12,7 +12,7 @@
 
 class Personagem: public Entidade {
 	public:
-		Personagem (float x = 0, float y = 0, string tex_path = "", int n_animacoes = 1);
+		Personagem (float x = 0, float y = 0, int n_animacoes = 1);
 		~Personagem ();
 
 		/*	IN: O dano causado

@@ -7,6 +7,7 @@
 #ifndef JOGADOR_H
 #define JOGADOR_H
 
+#include "../GerenciadorDeTexturas.h"
 #include "GerenciadorDeInput.h"
 #include "../Entidades/Personagem.h"
 #include "../common.h"

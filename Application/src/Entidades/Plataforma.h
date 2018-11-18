@@ -5,6 +5,7 @@
 #ifndef PLATAFORMA_H
 #define PLATAFORMA_H
 
+#include "../GerenciadorDeTexturas.h"
 #include "Entidade.h"
 
 class Plataforma: public Entidade {

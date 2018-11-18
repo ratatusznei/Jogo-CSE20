@@ -96,6 +96,10 @@ void Jogo::Iniciar(bool ehCoop) {
 }
 
 void Jogo::CarregarFase (char *path) {
+	Plataforma *p = new Plataforma(20, 500, 16, 1);
+	_listaPlataformas.colaNoComeco(p);
+	return;
+
 	int x, y, w, h, i;
 	int n = rand() % 5 + 3;
 	char str[64];
@@ -109,10 +113,12 @@ void Jogo::CarregarFase (char *path) {
 
 	while (!f.eof()) {
 		f.getline(str, 64);
-		sscanf(str, "%d,%d,%d,%d", &x, &y, &w, &h);
-		Plataforma *p = new Plataforma(x, y, w, h);
-		_listaPlataformas.colaNoComeco(p);
-		f.getline(str, 1);
+
+		if (str[0] == 'P') {
+			sscanf(str, "P %d,%d,%d,%d", &x, &y, &w, &h);
+			Plataforma *p = new Plataforma(x, y, w, h);
+			_listaPlataformas.colaNoComeco(p);
+		}
 	}
 
 	for(i = 0 ; i < n ; i++){

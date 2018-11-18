@@ -68,10 +68,14 @@
 		<Unit filename="src/Entidades/Personagem.h" />
 		<Unit filename="src/Entidades/Plataforma.cc" />
 		<Unit filename="src/Entidades/Plataforma.h" />
+		<Unit filename="src/Entidades/Projetil.cpp" />
+		<Unit filename="src/Entidades/Projetil.h" />
 		<Unit filename="src/Fases/Fase.cpp" />
 		<Unit filename="src/Fases/Fase.h" />
 		<Unit filename="src/GerenciadorDeColisao.cpp" />
 		<Unit filename="src/GerenciadorDeColisao.h" />
+		<Unit filename="src/GerenciadorDeTexturas.cpp" />
+		<Unit filename="src/GerenciadorDeTexturas.h" />
 		<Unit filename="src/GerenciadorGrafico.cc" />
 		<Unit filename="src/GerenciadorGrafico.h" />
 		<Unit filename="src/Inimigos/Inimigo.cpp" />

@@ -8,6 +8,7 @@
 #ifndef MUMIA_H
 #define MUMIA_H
 
+#include "../GerenciadorDeTexturas.h"
 #include "../GerenciadorGrafico.h"
 #include "../Inimigos/Inimigo.h"
 #include "../Jogador/Jogador.h"

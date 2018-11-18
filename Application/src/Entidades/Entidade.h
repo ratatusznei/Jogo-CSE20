@@ -10,7 +10,7 @@
 
 class Entidade {
 	public:
-		Entidade (float x = 0, float y = 0, string tex_path = "");
+		Entidade (float x = 0, float y = 0);
 		~Entidade ();
 
 		/*	IN: Nenhum
@@ -28,7 +28,6 @@ class Entidade {
 		void SetPosicao(int x, int y);
 
 	protected:
-		sf::Texture _tex;
 		sf::IntRect _tex_rect;
 		sf::Sprite _sp;
 

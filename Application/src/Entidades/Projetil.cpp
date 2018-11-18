@@ -34,8 +34,8 @@ void Projetil::DesenharTodos () {
 	}
 }
 
-Projetil::Projetil (string tex_path):
-Entidade(0, 0, tex_path),
+Projetil::Projetil ():
+Entidade(0, 0),
 _velocidade(0, 0),
 _tempoPraMorrer(0)
 {
@@ -47,11 +47,13 @@ _tempoPraMorrer(0)
 }
 
 Projetil::Projetil(Projetil& prototipo, int x, int y, int vx, int vy):
-Entidade(x, y, prototipo.GetTexPath()),
+Entidade(x, y),
 _velocidade(vx, vy),
-_tempoPraMorrer(prototipo.GetTempoPraMorrer()),
-_tex_path(prototipo.GetTexPath())
+_tempoPraMorrer(prototipo.GetTempoPraMorrer())
 {
+	_texture = prototipo.GetTexture();
+	_sp.setTexture(*_texture);
+
 	_tex_rect.top = 0;
 	_tex_rect.left = 0;
 	_tex_rect.width = Resources::block_size;
@@ -62,8 +64,13 @@ _tex_path(prototipo.GetTexPath())
 Projetil::~Projetil () {
 }
 
-const string Projetil::GetTexPath () {
-	return _tex_path;
+sf::Texture* Projetil::GetTexture () {
+	return _texture;
+}
+
+void Projetil::SetTexture (sf::Texture *tex) {
+	_texture = tex;
+	_sp.setTexture(*_texture);
 }
 
 void Projetil::SetVelocidade(int vx) {
