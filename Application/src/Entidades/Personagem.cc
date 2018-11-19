@@ -29,7 +29,9 @@ Personagem::~Personagem () {
 }
 
 void Personagem::Machucar (int dano) {
-	_vida -= dano;
+	if(PodeMachucar()){
+		_vida -= dano;
+	}
 }
 
 bool Personagem::GetMorreu () {
@@ -238,4 +240,8 @@ bool Personagem::ChecarDireita (Plataforma* plat) {
 
 		return true;
 	}
+}
+
+bool Personagem::PodeMachucar(){
+	return true;
 }
