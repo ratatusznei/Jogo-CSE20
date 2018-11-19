@@ -17,6 +17,8 @@
 class Esfinge: public Inimigo{
     
     enum class EstadoEsfinge {
+	SeguindoJ1,
+	SeguindoJ2,
 	Atacando,
 	Pulando,
         Esperando,
