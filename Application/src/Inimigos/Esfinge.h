@@ -17,26 +17,28 @@
 class Esfinge: public Inimigo{
     
     enum class EstadoEsfinge {
-		Atacando,
-		Pulando,
+	Atacando,
+	Pulando,
         Esperando,
+	Guardando,
     };
     
     public:
         
         Esfinge(Jogador *j1 = NULL, Jogador *j2 = NULL, Lista<Projetil*>* projeteis = NULL, int x = 0, int y = 0);
-		~Esfinge();
+	~Esfinge();
 
-		void Executar (float dt);
+	void Executar (float dt);
 
     private:
     
         Jogador *_j1;
-		Jogador *_j2;
+	Jogador *_j2;
 
-		int _x0;
-		float _range;
-		float _range_ataque;
+	int _x0;
+	float _range;
+	float _range_ataque;
+	float _range_dist;
 
         EstadoEsfinge _estado;
 
