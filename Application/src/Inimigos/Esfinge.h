@@ -29,6 +29,7 @@ class Esfinge: public Inimigo{
 	~Esfinge();
 
 	void Executar (float dt);
+	virtual bool PodeMachucar();
 
     private:
     
