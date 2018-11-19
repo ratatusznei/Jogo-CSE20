@@ -19,6 +19,7 @@ class Inimigo: public Personagem {
 		/*	IN: void
 			OUT: retorna o valor correspondente ao tipo de inimigo */
 		int QualTipo();
+		virtual bool PodeMachucar();
 
 	protected:
 
