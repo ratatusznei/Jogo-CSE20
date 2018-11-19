@@ -41,3 +41,12 @@ Inimigo(x, y, projeteis, E_total_anims){
 	_animador.SetFrameCount(E_anim_guardando, 1);
     
 }
+
+bool Esfinge::PodeMachucar(){
+	if(_estado == EstadoEsfinge::Esperando){
+		return true;
+	}
+	else{
+		return false;
+	}
+}
