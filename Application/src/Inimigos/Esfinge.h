@@ -20,7 +20,6 @@ class Esfinge: public Inimigo{
 	SeguindoJ1,
 	SeguindoJ2,
 	Atacando,
-	Pulando,
         Esperando,
 	Guardando,
     };
@@ -41,7 +40,6 @@ class Esfinge: public Inimigo{
 	int _x0;
 	float _range;
 	float _range_ataque;
-	float _range_dist;
 
         EstadoEsfinge _estado;
 
