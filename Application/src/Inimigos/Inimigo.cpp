@@ -12,3 +12,7 @@ Inimigo::~Inimigo () {
 int Inimigo::QualTipo() {
 	return _tipo;
 }
+
+bool Inimigo::PodeMachucar(){
+	return true;
+}
