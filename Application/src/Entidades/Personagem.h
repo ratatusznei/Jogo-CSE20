@@ -36,6 +36,7 @@ class Personagem: public Entidade {
 		bool ChecarTeto (Plataforma* plat);
 		bool ChecarEsquerda (Plataforma* plat);
 		bool ChecarDireita (Plataforma* plat);
+		virtual bool PodeMachucar();
 
 	protected:
 		/*	IN: Delta tempo da ultima frame
