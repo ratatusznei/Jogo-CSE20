@@ -50,7 +50,18 @@
 		</Build>
 		<Compiler>
 			<Add option="-Wall" />
+			<Add option="-std=c++0x" />
+			<Add option="-DSFML_STATIC" />
+			<Add directory="../../SFML-2.5.1/lib" />
+			<Add directory="../../SFML-2.5.1/include" />
 		</Compiler>
+		<Linker>
+			<Add library="sfml-window" />
+			<Add library="sfml-graphics" />
+			<Add library="sfml-system" />
+			<Add directory="../../SFML-2.5.1/include" />
+			<Add directory="../../SFML-2.5.1/lib" />
+		</Linker>
 		<Unit filename="main.cc" />
 		<Unit filename="src/Animador.cpp" />
 		<Unit filename="src/Animador.h" />
@@ -80,6 +91,12 @@
 		<Unit filename="src/GerenciadorDeTexturas.h" />
 		<Unit filename="src/GerenciadorGrafico.cc" />
 		<Unit filename="src/GerenciadorGrafico.h" />
+		<Unit filename="src/Inimigos/Alienigena.cpp" />
+		<Unit filename="src/Inimigos/Alienigena.h" />
+		<Unit filename="src/Inimigos/BadRobot.cpp" />
+		<Unit filename="src/Inimigos/BadRobot.h" />
+		<Unit filename="src/Inimigos/Cobra.cpp" />
+		<Unit filename="src/Inimigos/Cobra.h" />
 		<Unit filename="src/Inimigos/Inimigo.cpp" />
 		<Unit filename="src/Inimigos/Inimigo.h" />
 		<Unit filename="src/Inimigos/Mumia.cpp" />

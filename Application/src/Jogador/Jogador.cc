@@ -244,7 +244,7 @@ void Jogador::Executar (float dt) {
 			_piscadorMachucado += dt;
 
 			if (_piscadorMachucado > 0.2) {
-				_piscadorMachucado -= 0.2;
+				_piscadorMachucado = 0;
 				_sp.setColor(sf::Color::White);
 			}
 			else if (_piscadorMachucado > 0.1){

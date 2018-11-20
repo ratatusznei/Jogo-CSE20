@@ -3,7 +3,7 @@
     Chefao da fase do Egito
     Se tem um jogador no seu alcance, ataca
     Se não, ele pula, dando dano em área
-    
+
 */
 #ifndef ESFINGE_H
 #define ESFINGE_H
@@ -14,18 +14,17 @@
 #include "../Jogador/Jogador.h"
 #include "../common.h"
 
-class Esfinge: public Inimigo{
-    
+class Esfinge: public Inimigo {
     enum class EstadoEsfinge {
-	SeguindoJ1,
-	SeguindoJ2,
-	Atacando,
+        SeguindoJ1,
+        SeguindoJ2,
+        Atacando,
         Esperando,
-	Guardando,
+        Guardando,
     };
-    
+
     public:
-        
+
         Esfinge(Jogador *j1 = NULL, Jogador *j2 = NULL, Lista<Projetil*>* projeteis = NULL, int x = 0, int y = 0);
 	~Esfinge();
 
@@ -33,7 +32,7 @@ class Esfinge: public Inimigo{
 	virtual bool PodeMachucar();
 
     private:
-    
+
         Jogador *_j1;
 	Jogador *_j2;
 

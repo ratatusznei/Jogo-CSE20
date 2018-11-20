@@ -39,7 +39,7 @@ Inimigo(x, y, projeteis, E_total_anims){
 	_animador.SetFrameCount(E_anim_andando, 2);
 	_animador.SetFrameCount(E_anim_atacando, 2);
 	_animador.SetFrameCount(E_anim_guardando, 1);
-    
+
 }
 
 Esfinge::~Esfinge(){}
@@ -56,7 +56,7 @@ void Esfinge::Executar(float dt){
 	float dist_j2;
 	float mag_dist_j1;
 	float mag_dist_j2;
-	
+
 	if (_j1 != NULL) {
 		dist_j1 = _j1->GetPosicao().x - _posicao.x;
 		mag_dist_j1 = dist_j1 > 0? dist_j1: -dist_j1;
@@ -72,20 +72,15 @@ void Esfinge::Executar(float dt){
 	else {
 		_aceleracao.y = 0;
 	}
-	
+
 	switch(_estado){
 	case EstadoEsfinge::Esperando:
 		_animador.Play(E_anim_parado);
 		_animador.SetLoop(true);
-		if(!_esta_no_chao){
-			_estado = EstadoEsfinge::Pulando;
-			
-		
-		
 	}
 
 }
-	
+
 bool Esfinge::PodeMachucar(){
 	if(_estado == EstadoEsfinge::Guardando){
 		return true;
