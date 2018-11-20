@@ -7,14 +7,9 @@
 			<Cursor1 position="671" topLine="6" />
 		</Cursor>
 	</File>
-	<File name="src\Cenas\TelaDeCreditos.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="src\Jogador\GerenciadorDeInput.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="93" topLine="5" />
-		</Cursor>
-	</File>
-	<File name="src\Fases\Fase.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="75" topLine="0" />
+			<Cursor1 position="765" topLine="24" />
 		</Cursor>
 	</File>
 	<File name="src\GerenciadorDeTexturas.h" open="1" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -22,49 +17,9 @@
 			<Cursor1 position="65" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="src\Entidades\Entidade.cc" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="src\Inimigos\Inimigo.h" open="1" top="0" tabpos="14" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="23" topLine="9" />
-		</Cursor>
-	</File>
-	<File name="src\Entidades\Plataforma.cc" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1283" topLine="38" />
-		</Cursor>
-	</File>
-	<File name="src\Cenas\MenuPrincipal.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="289" topLine="1" />
-		</Cursor>
-	</File>
-	<File name="src\Cenas\Jogo.h" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="65" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\Entidades\Projetil.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1331" topLine="60" />
-		</Cursor>
-	</File>
-	<File name="src\GerenciadorGrafico.h" open="1" top="0" tabpos="16" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="123" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\Cenas\MenuPrincipal.cc" open="0" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="497" topLine="10" />
-		</Cursor>
-	</File>
-	<File name="src\common.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="212" topLine="15" />
-		</Cursor>
-	</File>
-	<File name="src\GerenciadorDeColisao.cpp" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1044" topLine="31" />
+			<Cursor1 position="504" topLine="0" />
 		</Cursor>
 	</File>
 	<File name="src\GerenciadorGrafico.cc" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -72,74 +27,9 @@
 			<Cursor1 position="1327" topLine="42" />
 		</Cursor>
 	</File>
-	<File name="main.cc" open="1" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="src\GerenciadorDeColisao.cpp" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="194" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\Jogador\RegistroDeJogada.cc" open="0" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="2729" topLine="92" />
-		</Cursor>
-	</File>
-	<File name="src\Animador.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="0" topLine="73" />
-		</Cursor>
-	</File>
-	<File name="src\Fases\FaseEgito.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="492" topLine="5" />
-		</Cursor>
-	</File>
-	<File name="src\LinkedLists.h" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="5941" topLine="233" />
-		</Cursor>
-	</File>
-	<File name="src\Animador.h" open="1" top="0" tabpos="15" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="39" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\Entidades\Personagem.cc" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="5496" topLine="217" />
-		</Cursor>
-	</File>
-	<File name="src\Jogador\RegistroDeJogada.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="0" topLine="12" />
-		</Cursor>
-	</File>
-	<File name="src\Cenas\Menu.cc" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="540" topLine="11" />
-		</Cursor>
-	</File>
-	<File name="src\Principal.cc" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1182" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\Entidades\Projetil.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="0" topLine="9" />
-		</Cursor>
-	</File>
-	<File name="src\Inimigos\Mumia.cpp" open="1" top="1" tabpos="17" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="4858" topLine="203" />
-		</Cursor>
-	</File>
-	<File name="src\Jogador\Jogador.cc" open="1" top="0" tabpos="11" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="5584" topLine="226" />
-		</Cursor>
-	</File>
-	<File name="src\Cenas\Menu.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="910" topLine="33" />
+			<Cursor1 position="1044" topLine="31" />
 		</Cursor>
 	</File>
 	<File name="src\Inimigos\Mumia.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -147,29 +37,19 @@
 			<Cursor1 position="680" topLine="18" />
 		</Cursor>
 	</File>
-	<File name="src\Principal.h" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="src\Cenas\MenuPrincipal.cc" open="0" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="523" topLine="3" />
+			<Cursor1 position="497" topLine="10" />
 		</Cursor>
 	</File>
-	<File name="src\Cenas\TelaDeCreditos.cc" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="src\Jogador\Jogador.cc" open="1" top="0" tabpos="11" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="376" topLine="0" />
+			<Cursor1 position="5584" topLine="226" />
 		</Cursor>
 	</File>
-	<File name="src\Inimigos\Inimigo.cpp" open="1" top="0" tabpos="13" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="src\Fases\FaseEgito.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="237" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\Jogador\GerenciadorDeInput.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="765" topLine="24" />
-		</Cursor>
-	</File>
-	<File name="src\Entidades\Personagem.h" open="1" top="0" tabpos="12" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1028" topLine="32" />
+			<Cursor1 position="492" topLine="5" />
 		</Cursor>
 	</File>
 	<File name="src\Jogador\Jogador.h" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -177,9 +57,34 @@
 			<Cursor1 position="542" topLine="13" />
 		</Cursor>
 	</File>
-	<File name="src\Entidades\Plataforma.h" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="src\GerenciadorGrafico.h" open="1" top="0" tabpos="16" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="303" topLine="0" />
+			<Cursor1 position="123" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\Jogador\RegistroDeJogada.cc" open="0" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2729" topLine="92" />
+		</Cursor>
+	</File>
+	<File name="src\Jogador\RegistroDeJogada.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="12" />
+		</Cursor>
+	</File>
+	<File name="src\Entidades\Projetil.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1331" topLine="60" />
+		</Cursor>
+	</File>
+	<File name="src\Entidades\Plataforma.cc" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1283" topLine="38" />
+		</Cursor>
+	</File>
+	<File name="src\Principal.h" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="523" topLine="3" />
 		</Cursor>
 	</File>
 	<File name="src\Fases\Fase.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -187,14 +92,19 @@
 			<Cursor1 position="422" topLine="6" />
 		</Cursor>
 	</File>
-	<File name="src\Inimigos\Inimigo.h" open="1" top="0" tabpos="14" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="src\Cenas\MenuPrincipal.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="504" topLine="0" />
+			<Cursor1 position="289" topLine="1" />
 		</Cursor>
 	</File>
-	<File name="src\Entidades\Entidade.h" open="0" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="src\Principal.cc" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="164" topLine="7" />
+			<Cursor1 position="1182" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\common.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="212" topLine="15" />
 		</Cursor>
 	</File>
 	<File name="src\Fases\FaseEgito.cpp" open="1" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -202,14 +112,104 @@
 			<Cursor1 position="3412" topLine="98" />
 		</Cursor>
 	</File>
-	<File name="src\GerenciadorDeColisao.h" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="src\Animador.h" open="1" top="0" tabpos="15" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="750" topLine="7" />
+			<Cursor1 position="39" topLine="0" />
 		</Cursor>
 	</File>
 	<File name="src\Cenas\Jogo.cc" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="1912" topLine="36" />
+		</Cursor>
+	</File>
+	<File name="src\Cenas\Jogo.h" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="65" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\Entidades\Projetil.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="9" />
+		</Cursor>
+	</File>
+	<File name="src\Cenas\Menu.cc" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="540" topLine="11" />
+		</Cursor>
+	</File>
+	<File name="src\Inimigos\Inimigo.cpp" open="1" top="0" tabpos="13" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="237" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="main.cc" open="1" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="194" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\Entidades\Entidade.cc" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="23" topLine="9" />
+		</Cursor>
+	</File>
+	<File name="src\Entidades\Entidade.h" open="0" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="164" topLine="7" />
+		</Cursor>
+	</File>
+	<File name="src\Entidades\Plataforma.h" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="303" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\GerenciadorDeColisao.h" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="750" topLine="7" />
+		</Cursor>
+	</File>
+	<File name="src\Animador.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="73" />
+		</Cursor>
+	</File>
+	<File name="src\LinkedLists.h" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="5941" topLine="233" />
+		</Cursor>
+	</File>
+	<File name="src\Cenas\Menu.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="910" topLine="33" />
+		</Cursor>
+	</File>
+	<File name="src\Fases\Fase.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="75" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\Entidades\Personagem.h" open="1" top="0" tabpos="12" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1028" topLine="32" />
+		</Cursor>
+	</File>
+	<File name="src\Entidades\Personagem.cc" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="5496" topLine="217" />
+		</Cursor>
+	</File>
+	<File name="src\Cenas\TelaDeCreditos.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="93" topLine="5" />
+		</Cursor>
+	</File>
+	<File name="src\Cenas\TelaDeCreditos.cc" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="376" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\Inimigos\Mumia.cpp" open="1" top="1" tabpos="17" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="4858" topLine="203" />
 		</Cursor>
 	</File>
 </CodeBlocks_layout_file>
