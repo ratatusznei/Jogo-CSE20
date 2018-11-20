@@ -9,6 +9,7 @@ sf::Texture GerenciadorDeTexturas::tex_plataforma_egito;
 sf::Texture GerenciadorDeTexturas::tex_cobra;
 sf::Texture GerenciadorDeTexturas::tex_brobot;
 sf::Texture GerenciadorDeTexturas::tex_alien;
+sf::Texture GerenciadorDeTexturas::tex_farao;
 
 GerenciadorDeTexturas* GerenciadorDeTexturas::GetInstance () {
 	if (_instance == NULL) {
@@ -26,6 +27,7 @@ GerenciadorDeTexturas::GerenciadorDeTexturas () {
 	tex_cobra.loadFromFile(Resources::tex_cobra);
 	tex_brobot.loadFromFile(Resources::tex_brobot);
 	tex_alien.loadFromFile(Resources::tex_alien);
+	tex_farao.loadFromFile(Resources::tex_farao);
 }
 
 GerenciadorDeTexturas::~GerenciadorDeTexturas () {
@@ -58,4 +60,8 @@ sf::Texture* GerenciadorDeTexturas::GetBRobot () {
 
 sf::Texture* GerenciadorDeTexturas::GetAlien () {
 	return &tex_alien;
+}
+
+sf::Texture* GerenciadorDeTexturas::GetFarao () {
+	return &tex_farao;
 }

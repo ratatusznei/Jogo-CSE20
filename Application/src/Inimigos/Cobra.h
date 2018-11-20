@@ -29,14 +29,7 @@ class Cobra: public Inimigo {
 		void Executar (float dt);
 
 	private:
-		Jogador *_j1;
-		Jogador *_j2;
-
-		int _x0;
 		float _timerDescanso;
-		float _range;
-		float _range_ataque;
-
 		EstadoCobra _estado;
 
 };

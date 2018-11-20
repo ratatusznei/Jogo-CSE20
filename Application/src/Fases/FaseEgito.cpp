@@ -103,7 +103,7 @@ void FaseEgito::CarregaInimigos (Lista<Inimigo*>* _pLista, Lista<Projetil*>* pro
 		n_mumias--;
 	}
 
-	chefe = new Mumia(_j1, _j2, projeteis, _chefeX, _chefeY);
+	chefe = new Farao(_j1, _j2, projeteis, _chefeX, _chefeY);
 	_pLista->colaNoFinal(chefe);
 }
 

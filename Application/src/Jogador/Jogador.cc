@@ -259,5 +259,3 @@ void Jogador::Executar (float dt) {
 		_animador.Executar(dt);
 	}
 }
-
-

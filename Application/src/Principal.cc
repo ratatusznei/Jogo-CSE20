@@ -32,6 +32,10 @@ void Principal::Executar () {
 			else if (evento.type == sf::Event::MouseButtonPressed && evento.mouseButton.button == sf::Mouse::Button::Left) {
 				mouse_clicked = true;
 			}
+
+			else if (_estado == EstadoApp::Jogo && evento.type == sf::Event::KeyPressed && evento.key.code == sf::Keyboard::P) {
+                _jogo.TogglePausa();
+			}
 		}
 
 		switch (_estado) {

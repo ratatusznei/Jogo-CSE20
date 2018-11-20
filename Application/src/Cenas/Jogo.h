@@ -31,6 +31,8 @@ class Jogo {
 		void Iniciar (bool ehCoop);
 		bool GameOver ();
 
+		void TogglePausa ();
+
 	private:
 		Fase* _faseAtual;
 
@@ -54,6 +56,10 @@ class Jogo {
 
 		Lista<Inimigo*> _listaInimigos;
 		Lista<Plataforma*> _listaPlataformas;
+
+		bool _estaPausado;
+		sf::Font _fontePausado;
+		sf::Text _textoPausado;
 
 		void CarregarFase (Fase *pFase);
 };

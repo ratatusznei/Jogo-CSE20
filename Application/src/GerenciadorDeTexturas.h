@@ -19,6 +19,7 @@ class GerenciadorDeTexturas {
 		sf::Texture* GetCobra ();
 		sf::Texture* GetBRobot ();
 		sf::Texture* GetAlien ();
+		sf::Texture* GetFarao ();
 
 	protected:
 		GerenciadorDeTexturas();
@@ -32,6 +33,7 @@ class GerenciadorDeTexturas {
 		static sf::Texture tex_cobra;
 		static sf::Texture tex_brobot;
 		static sf::Texture tex_alien;
+		static sf::Texture tex_farao;
 
 	private:
 };

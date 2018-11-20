@@ -32,12 +32,7 @@ class Alienigena: public Inimigo {
 		void Executar (float dt);
 
 	private:
-		Jogador *_j1;
-		Jogador *_j2;
-
-		int _x0;
-		float _range;
-		float _range_ataque;
+		float _timerDescanso;
 
 		EstadoAlien _estado;
 

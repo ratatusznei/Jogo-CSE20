@@ -33,6 +33,12 @@ _jogador2(&_in_j2, &_listaProjAmigos, 680, 0)
 	_sp_fundo.setScale(2, 2);
 
 	_camera_x = 0;
+	_estaPausado = false;
+
+    _fontePausado.loadFromFile(Resources::fonte_menu);
+	_textoPausado.setFont(_fontePausado);
+	_textoPausado.setString("PAUSE");
+	_textoPausado.setOrigin(_textoPausado.getLocalBounds().width / 2, _textoPausado.getLocalBounds().height / 2);
 }
 
 
@@ -48,7 +54,7 @@ void Jogo::Executar () {
 	else if (_faseAtual->ChecarObjetivo()) {
 		_acabou = true;
 	}
-	else {
+	else if (!_estaPausado) {
 		GerenciadorGrafico* janela = GerenciadorGrafico::GetInstance();
 		float dt = janela->GetDeltaTime();
 
@@ -123,7 +129,7 @@ void Jogo::Desenhar () {
 	_camera_x = _camera_x + (desejado_camera_x - _camera_x) * dt / 0.2;
 	janela->SetCamera(_camera_x);
 
-	_sp_fundo.setPosition(_camera_x - Janela::largura / 2, 0);
+	_sp_fundo.setPosition(_camera_x - Janela::meia_largura, 0);
 	janela->Desenhar(_sp_fundo);
 
 	if (!_jogador1.GetMorreu()) {
@@ -163,6 +169,11 @@ void Jogo::Desenhar () {
 			pp->Desenhar();
 		} while(!(++_listaProjInimigos));
 	}
+
+	if (_estaPausado) {
+        _textoPausado.setPosition(_camera_x, Janela::meia_altura);
+        janela->Desenhar(_textoPausado);
+	}
 }
 
 void Jogo::Iniciar(bool ehCoop) {
@@ -192,4 +203,8 @@ void Jogo::CarregarFase (Fase *pFase) {
 	pFase->CarregaJogadores();
 	pFase->CarregaPlataformas(&_listaPlataformas);
 	pFase->CarregaInimigos(&_listaInimigos, &_listaProjInimigos);
+}
+
+void Jogo::TogglePausa () {
+    _estaPausado = !_estaPausado;
 }

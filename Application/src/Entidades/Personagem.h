@@ -28,7 +28,7 @@ class Personagem: public Entidade {
 
 		/*	IN: Nenhum
 			OUT: Desenha o personagem na tela */
-		void Desenhar ();
+		virtual void Desenhar ();
 
 		/*	IN: Plataforma
 			OUT: Retorna verdadeiro se o personagem esta colidindo com a plataforma: a baixo, em cima, a esquerda ou a direita, respectivamente */

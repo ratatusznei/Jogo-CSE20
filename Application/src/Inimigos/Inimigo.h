@@ -6,6 +6,7 @@
 #define INIMIGO_H
 
 #include "../Entidades/Personagem.h"
+#include "../Jogador/Jogador.h"
 
 class Inimigo: public Personagem {
 	public:
@@ -22,6 +23,12 @@ class Inimigo: public Personagem {
 		virtual bool PodeMachucar();
 
 	protected:
+        Jogador *_j1;
+		Jogador *_j2;
+
+		int _x0;
+		float _range;
+		float _range_ataque;
 
 	    int _tipo;
 

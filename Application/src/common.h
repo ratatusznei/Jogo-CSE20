@@ -21,7 +21,7 @@ namespace Janela {
 }
 
 namespace Resources {
-	const string fonte_menu = "res/fonts/BLKCHCRY.TTF";
+	const string fonte_menu = "res/fonts/Minecraft.ttf";
 	const string fundo_menu_principal = "res/backgrounds/menu_principal.png";
 	const string fundo_tela_creditos = "res/backgrounds/tela_creditos.png";
 
@@ -34,6 +34,7 @@ namespace Resources {
 	const string tex_cobra = "res/cobra.png";
 	const string tex_brobot = "res/badrobot.png";
 	const string tex_alien = "res/alienigena.png";
+	const string tex_farao = "res/farao.png";
 
 	const float pixel_scale = 2;
 	const int block_size = 16;

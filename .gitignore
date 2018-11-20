@@ -1,4 +1,4 @@
-**/bin/*
+Application/bin/*
 **/.vscode/*
 .vscode/
 Application/*.dll
