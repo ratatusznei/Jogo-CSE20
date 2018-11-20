@@ -23,7 +23,7 @@ Inimigo(x, y, projeteis, F_total_anims){
 	_velocidade_pulo = ConstsPersonagens::M_v_pulo * 1.1;
 
 	_range = ConstsPersonagens::M_distancia_deteccao * 4;
-	_range_ataque = 100;
+	_range_ataque = 400;
 
 	_x0 = x;
 	_vida = 10;
@@ -237,11 +237,7 @@ void Farao::Executar(float dt){
 		}
 
 		if (_animador.GetTerminou()) {
-			if (mag_dist_j1 < _range_ataque || mag_dist_j2 < _range_ataque) {
-				_estado = EstadoFarao::Atacando;
-				_animador.Restart();
-			}
-			else if (mag_dist_j1 < _range) {
+			if (mag_dist_j1 < _range) {
 				_estado = EstadoFarao::SeguindoJ1;
 			}
 			else if (mag_dist_j2 < _range) {
