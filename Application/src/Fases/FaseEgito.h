@@ -12,13 +12,15 @@ class FaseEgito: public Fase {
 		FaseEgito (Jogador *j1, Jogador* j2);
 		~FaseEgito ();
 
+		Fase *CarregaProximaFase();
+
 		bool ChecarObjetivo ();
 		void CarregaJogadores ();
 		void CarregaInimigos (Lista<Inimigo*>* _pLista, Lista<Projetil*>* projeteis);
 		void CarregaPlataformas (Lista<Plataforma*>* _pLista);
 
 	private:
-		Inimigo* chefe;
+		Farao* chefe;
 		int _chefeX;
 		int _chefeY;
 

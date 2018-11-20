@@ -12584,7 +12584,7 @@
 											"top": 1687,
 											"width": 711.76904296875,
 											"height": 13,
-											"text": "Esfinge"
+											"text": "Farao"
 										},
 										{
 											"_type": "LabelView",
@@ -12656,7 +12656,7 @@
 											"top": 1710,
 											"width": 711.76904296875,
 											"height": 13,
-											"text": "-_estado: EstadoEsfinge",
+											"text": "-_estado: EstadoFarao",
 											"horizontalAlignment": 0
 										}
 									],
@@ -12690,7 +12690,7 @@
 											"top": 1733,
 											"width": 711.76904296875,
 											"height": 13,
-											"text": "«Constructor»+Esfinge(j1: Jogador* = NULL, j2: Jogador* = NULL, projeteis: Lista<Projeteis*>* = NULL, x: int = 0, y: int = 0)",
+											"text": "«Constructor»+Farao(j1: Jogador* = NULL, j2: Jogador* = NULL, projeteis: Lista<Projeteis*>* = NULL, x: int = 0, y: int = 0)",
 											"horizontalAlignment": 0
 										},
 										{
@@ -12707,7 +12707,7 @@
 											"top": 1748,
 											"width": 711.76904296875,
 											"height": 13,
-											"text": "«Destructor»~Esfinge()",
+											"text": "«Destructor»~Farao()",
 											"horizontalAlignment": 0
 										},
 										{
@@ -13971,7 +13971,7 @@
 											"top": 662,
 											"width": 428.8603515625,
 											"height": 13,
-											"text": "-_chefe: Esfinge*",
+											"text": "-_chefe: Farao*",
 											"horizontalAlignment": 0
 										},
 										{
@@ -21957,7 +21957,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "Esfinge",
+					"name": "Farao",
 					"ownedElements": [
 						{
 							"_type": "UMLGeneralization",
@@ -22012,7 +22012,7 @@
 							},
 							"name": "_estado",
 							"visibility": "private",
-							"type": "EstadoEsfinge"
+							"type": "EstadoFarao"
 						}
 					],
 					"operations": [
@@ -22022,7 +22022,7 @@
 							"_parent": {
 								"$ref": "AAAAAAFnLC4Z+l26MYk="
 							},
-							"name": "Esfinge",
+							"name": "Farao",
 							"stereotype": "Constructor",
 							"parameters": [
 								{
@@ -22083,7 +22083,7 @@
 							"_parent": {
 								"$ref": "AAAAAAFnLC4Z+l26MYk="
 							},
-							"name": "Esfinge",
+							"name": "Farao",
 							"stereotype": "Destructor",
 							"visibility": "package"
 						},
@@ -22520,7 +22520,7 @@
 							},
 							"name": "_chefe",
 							"visibility": "private",
-							"type": "Esfinge*"
+							"type": "Farao*"
 						},
 						{
 							"_type": "UMLAttribute",

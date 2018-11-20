@@ -67,6 +67,10 @@ FaseEgito::~FaseEgito () {
 	//dtor
 }
 
+Fase* FaseEgito::CarregaProximaFase () {
+    return NULL;
+}
+
 bool FaseEgito::ChecarObjetivo () {
 	return chefe->GetMorreu();
 }

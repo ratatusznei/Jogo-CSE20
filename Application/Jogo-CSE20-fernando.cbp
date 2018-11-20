@@ -101,6 +101,8 @@
 		<Unit filename="src/Inimigos/BadRobot.h" />
 		<Unit filename="src/Inimigos/Cobra.cpp" />
 		<Unit filename="src/Inimigos/Cobra.h" />
+		<Unit filename="src/Inimigos/Farao.cpp" />
+		<Unit filename="src/Inimigos/Farao.h" />
 		<Unit filename="src/Inimigos/Inimigo.cpp" />
 		<Unit filename="src/Inimigos/Inimigo.h" />
 		<Unit filename="src/Inimigos/Mumia.cpp" />

@@ -1329,7 +1329,7 @@
 	"../Inimigos/Mumia.h"
 	"../Entidades/Plataforma.h"
 
-1542680527 c:\users\a\desktop\time-travel\application\src\fases\fase.h
+1542692776 c:\users\a\desktop\time-travel\application\src\fases\fase.h
 	<SFML/System.hpp>
 	<fstream>
 	"../GerenciadorGrafico.h"
@@ -1389,7 +1389,7 @@
 	"../Entidades/Personagem.h"
 	"../Jogador/Jogador.h"
 
-1542691410 c:\users\a\desktop\time-travel\application\src\fases\faseegito.h
+1542692565 c:\users\a\desktop\time-travel\application\src\fases\faseegito.h
 	"Fase.h"
 	"../LinkedLists.h"
 	"../Inimigos/Mumia.h"
@@ -1418,7 +1418,7 @@
 1542680527 source:c:\users\a\desktop\time-travel\application\src\animador.cpp
 	"Animador.h"
 
-1542687478 source:c:\users\a\desktop\time-travel\application\src\cenas\jogo.cc
+1542693074 source:c:\users\a\desktop\time-travel\application\src\cenas\jogo.cc
 	"Jogo.h"
 	<time.h>
 
@@ -1434,7 +1434,7 @@
 1542680527 source:c:\users\a\desktop\time-travel\application\src\entidades\entidade.cc
 	"Entidade.h"
 
-1542680527 source:c:\users\a\desktop\time-travel\application\src\entidades\personagem.cc
+1542692895 source:c:\users\a\desktop\time-travel\application\src\entidades\personagem.cc
 	"Personagem.h"
 
 1542680527 source:c:\users\a\desktop\time-travel\application\src\entidades\plataforma.cc
@@ -1446,7 +1446,7 @@
 1542680527 source:c:\users\a\desktop\time-travel\application\src\fases\fase.cpp
 	"Fase.h"
 
-1542691389 source:c:\users\a\desktop\time-travel\application\src\fases\faseegito.cpp
+1542692601 source:c:\users\a\desktop\time-travel\application\src\fases\faseegito.cpp
 	"FaseEgito.h"
 
 1542680527 source:c:\users\a\desktop\time-travel\application\src\gerenciadordecolisao.cpp
@@ -1506,10 +1506,10 @@
 	<SFML/Graphics.hpp>
 	<string.h>
 
-1542686697 source:c:\users\a\desktop\time-travel\application\src\principal.cc
+1542693043 source:c:\users\a\desktop\time-travel\application\src\principal.cc
 	"Principal.h"
 
-1542689598 source:c:\users\a\desktop\time-travel\application\src\inimigos\farao.cpp
+1542691666 source:c:\users\a\desktop\time-travel\application\src\inimigos\farao.cpp
 	"Farao.h"
 
 1542690236 c:\users\a\desktop\time-travel\application\src\inimigos\farao.h

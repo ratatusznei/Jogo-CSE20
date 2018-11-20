@@ -160,7 +160,7 @@ bool Personagem::ChecarTeto (Plataforma* plat) {
 	sf::IntRect pers_rect = GetCaixaDeColisao();
 
 	// Linha 1px em cima do personagem
-	int y = pers_rect.top - 6;
+	int y = pers_rect.top - 10;
 	int x0 = pers_rect.left + 1;
 	int xf = pers_rect.left + pers_rect.width - 1;
 

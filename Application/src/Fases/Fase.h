@@ -24,6 +24,7 @@ class Fase {
 		Fase (Jogador *j1, Jogador* j2);
 		virtual ~Fase ();
 
+		virtual Fase* CarregaProximaFase () = 0;
 		virtual bool ChecarObjetivo () = 0;
 		virtual void CarregaJogadores () = 0;
 		virtual void CarregaInimigos (Lista<Inimigo*>* _pLista, Lista<Projetil*>* projeteis) = 0;

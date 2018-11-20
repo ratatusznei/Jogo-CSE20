@@ -43,8 +43,9 @@ _jogador2(&_in_j2, &_listaProjAmigos, 680, 0)
 
 
 Jogo::~Jogo () {
-	delete _faseAtual;
-	_faseAtual = NULL;
+    if (_faseAtual != NULL) {
+        delete _faseAtual;
+    }
 }
 
 void Jogo::Executar () {
@@ -52,7 +53,15 @@ void Jogo::Executar () {
 		_acabou = true;
 	}
 	else if (_faseAtual->ChecarObjetivo()) {
-		_acabou = true;
+        Fase* nova_fase = _faseAtual->CarregaProximaFase();
+        delete _faseAtual;
+
+        if (nova_fase != NULL) {
+            _faseAtual = nova_fase;
+        }
+        else {
+            _acabou = true;
+        }
 	}
 	else if (!_estaPausado) {
 		GerenciadorGrafico* janela = GerenciadorGrafico::GetInstance();
