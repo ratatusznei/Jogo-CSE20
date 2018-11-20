@@ -24,12 +24,16 @@ class Jogador: public Personagem {
 		Jogador(GerenciadorDeInput *inputs = NULL, Lista<Projetil*>* projeteis = NULL, int x = 0, int y = 0);
 		~Jogador();
 
+		/*  IN: Nenhum
+            OUT: Inicializa a instancia como um dos personagens jogaveis */
 		void IniciarRobo ();
 		void IniciarDoctor ();
 
+		/*  IN: O dano causado
+            OUT: Reduz o dano da vida */
 		void Machucar (int dano);
 
-		/*	IN: O delta tempo da ultima frame
+		/*	IN: O tempo da ultima frame
 			OUT: Calcula novas propriedades do jogador conforme entradas */
 		void Executar (float dt);
 
@@ -38,7 +42,7 @@ class Jogador: public Personagem {
 
 		EstadoJogador _estado;
 
-		float _vmin_pulo;
+		float _vMinPulo;
 
 		float _timerMachucado;
 		float _piscadorMachucado;

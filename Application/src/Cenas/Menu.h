@@ -43,8 +43,8 @@ class Menu {
 		vector<sf::Text*> _opcoes;
 
 		sf::Font _font;
-		sf::Texture _tx_fundo;
-		sf::Sprite _sp_fundo;
+		sf::Texture _txFundo;
+		sf::Sprite _spFundo;
 
 		/*	IN: Indice do botao selecionado
 			OUT: Retorna o novo estado que o botao selecionado representa */

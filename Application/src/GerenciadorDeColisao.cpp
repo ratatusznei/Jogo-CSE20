@@ -16,7 +16,7 @@ void GerenciadorDeColisao::SetListaInimigos (Lista<Inimigo*>* pLista) {
 	_inimigos = pLista;
 }
 void GerenciadorDeColisao::SetListaPlataformas (Lista<Plataforma*>* pLista) {
-	_plataformas = pLista;
+    _plataformas = pLista;
 }
 
 void GerenciadorDeColisao::SetListaProjInimigos (Lista<Projetil*>* pLista) {

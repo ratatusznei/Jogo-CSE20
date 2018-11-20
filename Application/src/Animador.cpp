@@ -1,11 +1,11 @@
 #include "Animador.h"
 
 Animador::Animador (int n_animacoes) {
-	_max_frames = new int[n_animacoes];
-	_n_anims = n_animacoes;
+	_maxFrames = new int[n_animacoes];
+	_nAnims = n_animacoes;
 
-	_anim_atual = 0;
-	_quadro_atual = 0;
+	_animAtual = 0;
+	_quadroAtual = 0;
 
 	_timer = 0;
 
@@ -14,30 +14,30 @@ Animador::Animador (int n_animacoes) {
 }
 
 Animador::~Animador () {
-	delete[] _max_frames;
+	delete[] _maxFrames;
 }
 
 void Animador::Play (int indice) {
-	if (indice != _anim_atual) {
-		_anim_atual = indice;
-		_quadro_atual = 0;
+	if (indice != _animAtual) {
+		_animAtual = indice;
+		_quadroAtual = 0;
 		_timer = 0;
 		_terminou = false;
 
-		_tex_rect->top = _anim_atual * _tamanho + _offSetY;
-		_tex_rect->left = _quadro_atual * _tamanho;
-		_sp->setTextureRect(*_tex_rect);
+		_texRect->top = _animAtual * _tamanho + _offSetY;
+		_texRect->left = _quadroAtual * _tamanho;
+		_sp->setTextureRect(*_texRect);
 	}
 }
 
 void Animador::Restart () {
-	_quadro_atual = 0;
+	_quadroAtual = 0;
 	_timer = 0;
 	_terminou = false;
 
-	_tex_rect->top = _anim_atual * _tamanho + _offSetY;
-	_tex_rect->left = _quadro_atual * _tamanho;
-	_sp->setTextureRect(*_tex_rect);
+	_texRect->top = _animAtual * _tamanho + _offSetY;
+	_texRect->left = _quadroAtual * _tamanho;
+	_sp->setTextureRect(*_texRect);
 }
 
 void Animador::Executar (float dt) {
@@ -47,36 +47,36 @@ void Animador::Executar (float dt) {
 		if (!_terminou) {
 			_timer -= _periodo;
 
-			_quadro_atual += 1;
+			_quadroAtual += 1;
 
-			if (_quadro_atual >= _max_frames[_anim_atual]) {
+			if (_quadroAtual >= _maxFrames[_animAtual]) {
 				if (_ehLoop) {
-					_quadro_atual = 0;
+					_quadroAtual = 0;
 				}
 				else {
-					_quadro_atual = 0;
+					_quadroAtual = 0;
 					_terminou = true;
 				}
 			}
 
-			_tex_rect->top = _anim_atual * _tamanho + _offSetY;
-			_tex_rect->left = _quadro_atual * _tamanho;
-			_sp->setTextureRect(*_tex_rect);
+			_texRect->top = _animAtual * _tamanho + _offSetY;
+			_texRect->left = _quadroAtual * _tamanho;
+			_sp->setTextureRect(*_texRect);
 		}
 	}
 }
 
 void Animador::SetFrameCount (int indice, int count) {
-	if (indice < _n_anims) {
-		_max_frames[indice] = count;
+	if (indice < _nAnims) {
+		_maxFrames[indice] = count;
 	}
 }
 
 void Animador::SetTamanhoQuadro (int tamanho) {
 	_tamanho = tamanho;
 
-	_tex_rect->width = tamanho;
-	_tex_rect->height = tamanho;
+	_texRect->width = tamanho;
+	_texRect->height = tamanho;
 }
 
 void Animador::SetOffSetY (int offset) {
@@ -88,7 +88,7 @@ void Animador::SetPeriodo (float t) {
 }
 
 void Animador::SetTextureBox (sf::IntRect* tex_rect) {
-	_tex_rect = tex_rect;
+	_texRect = tex_rect;
 }
 
 void Animador::SetSprite (sf::Sprite* sprite) {

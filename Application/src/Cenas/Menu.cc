@@ -2,8 +2,8 @@
 
 Menu::Menu ():
 _opcoes(),
-_tx_fundo(),
-_sp_fundo()
+_txFundo(),
+_spFundo()
 {
 }
 
@@ -34,7 +34,7 @@ void Menu::Executar (sf::Vector2i mouse_pos, bool mouse_click, EstadoApp *estado
 void Menu::Desenhar () {
 	GerenciadorGrafico* janela = GerenciadorGrafico::GetInstance();
 
-	janela->Desenhar(_sp_fundo);
+	janela->Desenhar(_spFundo);
 
 	for (unsigned i = 0; i < _opcoes.size(); i++) {
 		janela->Desenhar(*_opcoes[i]);
@@ -46,8 +46,8 @@ void Menu::SetFont (string file) {
 }
 
 void Menu::SetFundo (string file) {
-	_tx_fundo.loadFromFile(file);
-	_sp_fundo.setTexture(_tx_fundo);
+	_txFundo.loadFromFile(file);
+	_spFundo.setTexture(_txFundo);
 }
 
 void Menu::IncluirOpcao (string text, int x, int y) {

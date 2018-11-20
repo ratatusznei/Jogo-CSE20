@@ -49,15 +49,15 @@ namespace ConstsPersonagens {
 	// Jogadores
 	const float J_desaceleracao = 500;
 	const float J_aceleracao = 340;
-	const float J_max_vx = 160;
+	const float J_maxVx = 160;
 	const float J_v0_pulo = 550;
-	const float J_vmin_pulo = 350;
+	const float J_vMinPulo = 350;
 	const float J_tempo_imunidade = 1;
 
 	// Mumia
 	const float M_desaceleracao = 500;
 	const float M_aceleracao = 300;
-	const float M_max_vx = 40;
+	const float M_maxVx = 40;
 	const float M_v_pulo = J_v0_pulo;
 	const float M_distancia_deteccao = 120;
 

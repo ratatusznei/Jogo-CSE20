@@ -2,7 +2,7 @@
 	Inimigo: Mumia
 
 	Segue os jogadores que chegam perto
-	Fica patrulhando se nao tem jogador perto
+	Fica patrulhando (perdida) se nao tem jogador perto
 */
 
 #ifndef MUMIA_H

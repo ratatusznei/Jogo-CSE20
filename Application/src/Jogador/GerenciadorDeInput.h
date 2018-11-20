@@ -1,7 +1,9 @@
 /*
 	Interface das entradas do usuario para o controle do personagem
 
-	TODO: Implementar isso atraves de um bridge se der tempo
+	Desacoplaria a implementacao dos inputs da interface (abstracao) de inputs que o jogador utiliza (Bridge pattern)
+
+	A ideia original possui duas implementacoes de inputs, uma pelo teclado e outra por um joystick
 */
 
 #ifndef GERENCIADORDEINPUT_H

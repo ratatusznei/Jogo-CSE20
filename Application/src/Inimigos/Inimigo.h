@@ -17,9 +17,12 @@ class Inimigo: public Personagem {
 			OUT: Calcula novas propriedades do inimigo */
 		virtual void Executar(float dt) = 0;
 
-		/*	IN: void
+		/*	IN: Nenhum
 			OUT: retorna o valor correspondente ao tipo de inimigo */
 		int QualTipo();
+
+		/*  IN: Nenhum
+            OUT: Verdadeiro se o inimigo pode ser machucado */
 		virtual bool PodeMachucar();
 
 	protected:
@@ -28,7 +31,7 @@ class Inimigo: public Personagem {
 
 		int _x0;
 		float _range;
-		float _range_ataque;
+		float _rangeAtaque;
 
 	    int _tipo;
 

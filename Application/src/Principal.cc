@@ -24,6 +24,7 @@ void Principal::Executar () {
 		_janela->Limpar();
 		mouse_clicked = false;
 
+		// Checa eventos: Fechar Janela, Click de Mouse e Jogo Pausado
 		if (_janela->SondarEvento(evento)) {
 			if (evento.type == sf::Event::Closed) {
 				_estado = EstadoApp::Sair;
@@ -38,6 +39,7 @@ void Principal::Executar () {
 			}
 		}
 
+        // Executa a cena correta conforme o estado da classe principal
 		switch (_estado) {
 		case EstadoApp::Menu:
 			_main.Executar(_janela->GetPosicaoDoMouse(), mouse_clicked, &_estado);

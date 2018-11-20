@@ -2,21 +2,21 @@
 #include<time.h>
 
 Jogo::Jogo ():
-_jogador1(&_in_j1, &_listaProjAmigos, 20, 50),
-_jogador2(&_in_j2, &_listaProjAmigos, 680, 0)
+_jogador1(&_inJ1, &_listaProjAmigos, 20, 50),
+_jogador2(&_inJ2, &_listaProjAmigos, 680, 0)
 {
 	srand(clock());
 	_faseAtual = NULL;
 
-	_in_j1.SetKeyEsquerda(sf::Keyboard::A);
-	_in_j1.SetKeyDireita(sf::Keyboard::D);
-	_in_j1.SetKeyPulo(sf::Keyboard::W);
-	_in_j1.SetKeyAtaque(sf::Keyboard::Space);
+	_inJ1.SetKeyEsquerda(sf::Keyboard::A);
+	_inJ1.SetKeyDireita(sf::Keyboard::D);
+	_inJ1.SetKeyPulo(sf::Keyboard::W);
+	_inJ1.SetKeyAtaque(sf::Keyboard::Space);
 
-	_in_j2.SetKeyEsquerda(sf::Keyboard::Left);
-	_in_j2.SetKeyDireita(sf::Keyboard::Right);
-	_in_j2.SetKeyPulo(sf::Keyboard::Up);
-	_in_j2.SetKeyAtaque(sf::Keyboard::RShift);
+	_inJ2.SetKeyEsquerda(sf::Keyboard::Left);
+	_inJ2.SetKeyDireita(sf::Keyboard::Right);
+	_inJ2.SetKeyPulo(sf::Keyboard::Up);
+	_inJ2.SetKeyAtaque(sf::Keyboard::RShift);
 
 	_jogador1.IniciarDoctor();
 	_jogador2.IniciarRobo();
@@ -28,11 +28,11 @@ _jogador2(&_in_j2, &_listaProjAmigos, 680, 0)
 	_colisoes.SetListaProjAmigos(&_listaProjAmigos);
 	_colisoes.SetListaProjInimigos(&_listaProjInimigos);
 
-	_tex_fundo.loadFromFile("res/sprites/egypt_backg.png");
-	_sp_fundo.setTexture(_tex_fundo);
-	_sp_fundo.setScale(2, 2);
+	_texFundo.loadFromFile("res/sprites/egypt_backg.png");
+	_spFundo.setTexture(_texFundo);
+	_spFundo.setScale(2, 2);
 
-	_camera_x = 0;
+	_cameraX = 0;
 	_estaPausado = false;
 
     _fontePausado.loadFromFile(Resources::fonte_menu);
@@ -120,26 +120,26 @@ void Jogo::Desenhar () {
 	GerenciadorGrafico* janela = GerenciadorGrafico::GetInstance();
 	float dt = janela->GetDeltaTime();
 
-	int desejado_camera_x = 0;
+	int desejado_cameraX = 0;
 
 	if (!_jogador1.GetMorreu()) {
-			desejado_camera_x += _jogador1.GetPosicao().x;
+			desejado_cameraX += _jogador1.GetPosicao().x;
 	}
 
 	if (_coop && !_jogador2.GetMorreu()) {
-		desejado_camera_x += _jogador2.GetPosicao().x;
+		desejado_cameraX += _jogador2.GetPosicao().x;
 
 		if (!_jogador1.GetMorreu()) {
-			desejado_camera_x /= 2;
+			desejado_cameraX /= 2;
 		}
 	}
 
 	// Interpolacao linear da camera
-	_camera_x = _camera_x + (desejado_camera_x - _camera_x) * dt / 0.2;
-	janela->SetCamera(_camera_x);
+	_cameraX = _cameraX + (desejado_cameraX - _cameraX) * dt / 0.2;
+	janela->SetCamera(_cameraX);
 
-	_sp_fundo.setPosition(_camera_x - Janela::meia_largura, 0);
-	janela->Desenhar(_sp_fundo);
+	_spFundo.setPosition(_cameraX - Janela::meia_largura, 0);
+	janela->Desenhar(_spFundo);
 
 	if (!_jogador1.GetMorreu()) {
 		_jogador1.Desenhar();
@@ -180,7 +180,7 @@ void Jogo::Desenhar () {
 	}
 
 	if (_estaPausado) {
-        _textoPausado.setPosition(_camera_x, Janela::meia_altura);
+        _textoPausado.setPosition(_cameraX, Janela::meia_altura);
         janela->Desenhar(_textoPausado);
 	}
 }

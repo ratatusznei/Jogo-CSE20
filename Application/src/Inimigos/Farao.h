@@ -1,7 +1,7 @@
 /*
-
     Chefao da fase do Egito
 
+    Segue os jogadores e atira um ankh neles
 */
 #ifndef FARAO_H
 #define FARAO_H
@@ -30,7 +30,7 @@ class Farao: public Inimigo {
         ~Farao();
 
         void Executar (float dt);
-        virtual bool PodeMachucar();
+        bool PodeMachucar();
 
     private:
         float _timerDescanso;

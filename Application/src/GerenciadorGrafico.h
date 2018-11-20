@@ -1,7 +1,7 @@
 /*
-	Um wrapper em volta da interface do SFML
+	Um wrapper da interface do SFML
 
-	Eh Singleton
+	Singleton
 */
 
 #ifndef GERENCIADORGRAFICO_H
@@ -31,7 +31,7 @@ class GerenciadorGrafico {
 		bool EstaAberta ();
 
 		/*	IN: Referencia para um evento do SFML
-			OUT: Preenche a varivel recibida por referencia com os dados do proximo evento SFML da poll */
+			OUT: Preenche a varivel recebida por referencia com os dados do proximo evento SFML da poll */
 		bool SondarEvento (sf::Event& evento);
 
 		/*	IN: Nenhum
@@ -46,7 +46,12 @@ class GerenciadorGrafico {
 			OUT: Retorna o tempo decorrido na ultima frame, em segundos */
 		float GetDeltaTime ();
 
+		/*  IN: Posicao da camera em X
+            OUT: Posiciona a camera em X */
 		void SetCamera (int x);
+
+		/*  IN: Nenhum
+            OUT: Posiciona a camera na origem */
 		void ResetCamera ();
 
 		/*	IN: Nenhum
@@ -66,12 +71,12 @@ class GerenciadorGrafico {
 		static GerenciadorGrafico* _instance;
 
 		sf::Clock _timer;
-		float _delta_t;
+		float _deltaT;
 
 		sf::View _camera;
 
 		sf::RenderWindow _window;
-		sf::VideoMode _video_mode;
+		sf::VideoMode _videoMode;
 		string _titulo;
 };
 

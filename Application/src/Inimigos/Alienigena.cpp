@@ -14,20 +14,20 @@ Inimigo(x, y, projeteis, A_total_anims) {
 	_j2 = j2;
 	_estado = EstadoAlien::Perdido;
 
-	_max_vx = ConstsPersonagens::M_max_vx;
-	_max_vy = Fisica::velocidade_terminal;
+	_maxVx = ConstsPersonagens::M_maxVx;
+	_maxVy = Fisica::velocidade_terminal;
 
-	_aceleracao_caminhada = ConstsPersonagens::M_aceleracao * 1.2;
+	_aceleracaoCaminhada = ConstsPersonagens::M_aceleracao * 1.2;
 	_desaceleracao = ConstsPersonagens::M_desaceleracao * 1.2;
 
-	_velocidade_pulo = ConstsPersonagens::M_v_pulo;
+	_velocidadePulo = ConstsPersonagens::M_v_pulo;
 
 	_range = ConstsPersonagens::M_distancia_deteccao * 10;
-	_range_ataque = 300;
+	_rangeAtaque = 300;
 
 	_x0 = x;
 
-	_animador.SetTextureBox(&_tex_rect);
+	_animador.SetTextureBox(&_texRect);
 	_animador.SetSprite(&_sp);
 	_animador.SetTamanhoQuadro(Resources::block_size);
 
@@ -45,11 +45,9 @@ Alienigena::~Alienigena() {
 }
 
 void Alienigena::Executar (float dt) {
-	/****  Temporario ****/
 	if (_posicao.y + _sp.getGlobalBounds().height > Janela::altura) {
-		_posicao.y = 0;
+		_vida = -1;
 	}
-	/****  Temporario/ ****/
 
 	float dist_j1;
 	float dist_j2;
@@ -65,7 +63,7 @@ void Alienigena::Executar (float dt) {
 		mag_dist_j2 = dist_j2 > 0? dist_j2: -dist_j2;
 	}
 
-	if (!_esta_no_chao) {
+	if (!_estaNoChao) {
 		_aceleracao.y = Fisica::G;
 	}
 	else {
@@ -73,32 +71,32 @@ void Alienigena::Executar (float dt) {
 	}
 
 	int delta_x = 50;
-        switch (_estado) {
-        case EstadoAlien::Perdido:
+    switch (_estado) {
+    case EstadoAlien::Perdido:
 		_animador.Play(A_anim_andando);
 		_animador.SetLoop(true);
 
-		if (!_esta_no_chao) {
+		if (!_estaNoChao) {
 			_estado = EstadoAlien::Pulando;
 		}
 
 		if (_posicao.x > _x0 && _posicao.x - _x0 >= delta_x) {
-			Acelerar(dt, -_aceleracao_caminhada);
+			Acelerar(dt, -_aceleracaoCaminhada);
 		}
 		else if (_posicao.x < _x0 && _x0 - _posicao.x >= delta_x) {
-			Acelerar(dt, _aceleracao_caminhada);
+			Acelerar(dt, _aceleracaoCaminhada);
 		}
 		else if (_velocidade.x > 0) {
-			Acelerar(dt, _aceleracao_caminhada);
+			Acelerar(dt, _aceleracaoCaminhada);
 		}
 		else {
-			Acelerar(dt, -_aceleracao_caminhada);
+			Acelerar(dt, -_aceleracaoCaminhada);
 		}
 
-		if (_esta_no_chao) {
-			if (_batendo_esquerda || _batendo_direta) {
+		if (_estaNoChao) {
+			if (_batendoEsquerda || _batendoDireta) {
 				_estado = EstadoAlien::Pulando;
-				_velocidade.y = -_velocidade_pulo;
+				_velocidade.y = -_velocidadePulo;
 			}
 		}
 
@@ -119,10 +117,10 @@ void Alienigena::Executar (float dt) {
 		_animador.Play(A_anim_andando);
 		_animador.SetLoop(true);
 
-		if (!_esta_no_chao) {
+		if (!_estaNoChao) {
 			_estado = EstadoAlien::Pulando;
 		}
-		else if (mag_dist_j1 < _range_ataque) {
+		else if (mag_dist_j1 < _rangeAtaque) {
 			_estado = EstadoAlien::Atacando;
 		}
 		else if (_j2 != NULL && mag_dist_j2 < _range && mag_dist_j2 < mag_dist_j1) {
@@ -132,16 +130,16 @@ void Alienigena::Executar (float dt) {
 			_estado = EstadoAlien::Perdido;
 		}
 		else if (dist_j1 > 0) {
-			Acelerar(dt, _aceleracao_caminhada);
+			Acelerar(dt, _aceleracaoCaminhada);
 		}
 		else if (dist_j1 < 0) {
-			Acelerar(dt,-_aceleracao_caminhada);
+			Acelerar(dt,-_aceleracaoCaminhada);
 		}
 
-		if (_esta_no_chao) {
-			if (_batendo_esquerda || _batendo_direta) {
+		if (_estaNoChao) {
+			if (_batendoEsquerda || _batendoDireta) {
 				_estado = EstadoAlien::PulandoParaJ1;
-				_velocidade.y = -_velocidade_pulo;
+				_velocidade.y = -_velocidadePulo;
 			}
 		}
 		break;
@@ -150,10 +148,10 @@ void Alienigena::Executar (float dt) {
 		_animador.Play(A_anim_andando);
 		_animador.SetLoop(true);
 
-		if (!_esta_no_chao) {
+		if (!_estaNoChao) {
 			_estado = EstadoAlien::Pulando;
 		}
-		else if (mag_dist_j2 < _range_ataque) {
+		else if (mag_dist_j2 < _rangeAtaque) {
 			_estado = EstadoAlien::Atacando;
 		}
 		else if (_j1 != NULL && mag_dist_j1 < _range && mag_dist_j1 < mag_dist_j2) {
@@ -163,16 +161,16 @@ void Alienigena::Executar (float dt) {
 			_estado = EstadoAlien::Perdido;
 		}
 		else if (dist_j2 > 0) {
-			Acelerar(dt, _aceleracao_caminhada);
+			Acelerar(dt, _aceleracaoCaminhada);
 		}
 		else if (dist_j2 < 0) {
-			Acelerar(dt, -_aceleracao_caminhada);
+			Acelerar(dt, -_aceleracaoCaminhada);
 		}
 
-		if (_esta_no_chao) {
-			if (_batendo_esquerda || _batendo_direta) {
+		if (_estaNoChao) {
+			if (_batendoEsquerda || _batendoDireta) {
 				_estado = EstadoAlien::PulandoParaJ2;
-				_velocidade.y = -_velocidade_pulo;
+				_velocidade.y = -_velocidadePulo;
 			}
 		}
 		break;
@@ -181,7 +179,7 @@ void Alienigena::Executar (float dt) {
 		_animador.Play(A_anim_pulando);
 		_animador.SetLoop(false);
 
-		if (_esta_no_chao) {
+		if (_estaNoChao) {
 			_estado = EstadoAlien::Perdido;
 		}
 		break;
@@ -191,13 +189,13 @@ void Alienigena::Executar (float dt) {
 		_animador.SetLoop(false);
 
 		if (dist_j1 > 0) {
-			Acelerar(dt, _aceleracao_caminhada);
+			Acelerar(dt, _aceleracaoCaminhada);
 		}
 		else if (dist_j1 < 0) {
-			Acelerar(dt,-_aceleracao_caminhada);
+			Acelerar(dt,-_aceleracaoCaminhada);
 		}
 
-		if (_esta_no_chao) {
+		if (_estaNoChao) {
 			_estado = EstadoAlien::Perdido;
 		}
 		break;
@@ -207,13 +205,13 @@ void Alienigena::Executar (float dt) {
 		_animador.SetLoop(false);
 
 		if (dist_j2 > 0) {
-			Acelerar(dt, _aceleracao_caminhada);
+			Acelerar(dt, _aceleracaoCaminhada);
 		}
 		else if (dist_j2 < 0) {
-			Acelerar(dt,-_aceleracao_caminhada);
+			Acelerar(dt,-_aceleracaoCaminhada);
 		}
 
-		if (_esta_no_chao) {
+		if (_estaNoChao) {
 			_estado = EstadoAlien::Perdido;
 		}
 		break;
@@ -225,7 +223,7 @@ void Alienigena::Executar (float dt) {
 		_velocidade.x = 0;
 
 		if (_animador.GetTerminou()) {
-			if (mag_dist_j1 < _range_ataque || mag_dist_j2 < _range_ataque) {
+			if (mag_dist_j1 < _rangeAtaque || mag_dist_j2 < _rangeAtaque) {
 				_estado = EstadoAlien::Atacando;
 				_animador.Restart();
 			}

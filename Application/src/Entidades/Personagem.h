@@ -18,8 +18,13 @@ class Personagem: public Entidade {
 		/*	IN: O dano causado
 			OUT: Remove da vida o dano */
 		virtual void Machucar (int dano);
+
+		/*  IN: Nenhum
+            OUT: Verdadeiro se o personagem morreu */
 		bool GetMorreu ();
 
+		/*  IN: Nenhum
+            OUT: Cria uma instancia do projetil conforme o prototipo */
 		void Atacar ();
 
 		/*	IN: Delta tempo da ultima frame
@@ -36,6 +41,9 @@ class Personagem: public Entidade {
 		bool ChecarTeto (Plataforma* plat);
 		bool ChecarEsquerda (Plataforma* plat);
 		bool ChecarDireita (Plataforma* plat);
+
+		/*  IN: Nenhum
+            OUT: Verdadeiro se o personagem pode ser machucado */
 		virtual bool PodeMachucar();
 
 	protected:
@@ -53,11 +61,11 @@ class Personagem: public Entidade {
 
 		Animador _animador;
 
-		Projetil _projetil_protipo;
+		Projetil _projetilProtipo;
 		Lista<Projetil*>* _listaProjeteis;
 		int _offSetAtaqueX;
 		int _offSetAtaqueY;
-		int _vx_ataque;
+		int _vXAtaque;
 		float _tempoPraMorrerAtaque;
 
 		bool _podeAtacar;
@@ -67,18 +75,18 @@ class Personagem: public Entidade {
 		sf::Vector2f _velocidade;
 		sf::Vector2f _aceleracao;
 
-		bool _esta_no_chao;
-		bool _batendo_teto;
-		bool _batendo_direta;
-		bool _batendo_esquerda;
+		bool _estaNoChao;
+		bool _batendoTeto;
+		bool _batendoDireta;
+		bool _batendoEsquerda;
 
-		float _max_vx;
-		float _max_vy;
+		float _maxVx;
+		float _maxVy;
 
-		float _aceleracao_caminhada;
+		float _aceleracaoCaminhada;
 		float _desaceleracao;
 
-		float _velocidade_pulo;
+		float _velocidadePulo;
 };
 
 #endif // PERSONAGEM_H

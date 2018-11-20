@@ -16,16 +16,24 @@ class Plataforma: public Entidade {
 		~Plataforma ();
 
 		void Desenhar ();
+
+		/*  IN: Posicao x, y da plataforma
+            OUT: Seta a posicao */
 		void SetPosicao (int x, int y);
+
+		/*  IN: Tamanho da plataforma em blocos
+            OUT: Seta o tamanho */
 		void SetTamanho (int w, int h);
 
+		/*  IN: Nenhum
+            OUT: A caixa de colisao relativa ao top esquerdo da janela */
 		sf::IntRect GetCaixaDeColisao();
 
 	protected:
 		int _largura;
 		int _altura;
 
-		sf::IntRect _caixa_colisao;
+		sf::IntRect _caixaDeColisao;
 };
 
 #endif // PLATAFORMA_H

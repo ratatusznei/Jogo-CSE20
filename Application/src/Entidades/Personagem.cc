@@ -3,24 +3,24 @@
 Personagem::Personagem (float x, float y, Lista<Projetil*>* projeteis, int n_animacoes):
 Entidade(x, y),
 _animador(n_animacoes),
-_projetil_protipo(),
+_projetilProtipo(),
 _listaProjeteis(projeteis),
-_esta_no_chao(false),
-_batendo_teto(false),
-_batendo_direta(false),
-_batendo_esquerda(false)
+_estaNoChao(false),
+_batendoTeto(false),
+_batendoDireta(false),
+_batendoEsquerda(false)
 {
 	_vida = 1;
 
-	_tex_rect.top = 0;
-	_tex_rect.left = 0;
-	_tex_rect.width = Resources::block_size;
-	_tex_rect.height = Resources::block_size;
-	_sp.setTextureRect(_tex_rect);
+	_texRect.top = 0;
+	_texRect.left = 0;
+	_texRect.width = Resources::block_size;
+	_texRect.height = Resources::block_size;
+	_sp.setTextureRect(_texRect);
 
 	_offSetAtaqueX = Resources::block_size / 2;
 	_offSetAtaqueY = 0;
-	_vx_ataque = 100;
+	_vXAtaque = 100;
 	_tempoPraMorrerAtaque = 1;
 }
 
@@ -39,15 +39,15 @@ bool Personagem::GetMorreu () {
 }
 
 void Personagem::Atacar () {
-	Projetil* pp = new Projetil(_projetil_protipo);
+	Projetil* pp = new Projetil(_projetilProtipo);
 
 	if (_viradoPraEsquerda) {
 		pp->SetPosicao(_posicao.x + _offSetAtaqueX, _posicao.y + _offSetAtaqueY);
-		pp->SetVelocidade(_vx_ataque);
+		pp->SetVelocidade(_vXAtaque);
 	}
 	else {
 		pp->SetPosicao(_posicao.x - _offSetAtaqueX, _posicao.y + _offSetAtaqueY);
-		pp->SetVelocidade(-_vx_ataque);
+		pp->SetVelocidade(-_vXAtaque);
 	}
 
 	_listaProjeteis->colaNoFinal(pp);
@@ -79,15 +79,15 @@ void Personagem::AtualizarFisica (float dt) {
 		_viradoPraEsquerda = false;
 	}
 
-	if (_velocidade.x > _max_vx) {
-		_velocidade.x = _max_vx;
+	if (_velocidade.x > _maxVx) {
+		_velocidade.x = _maxVx;
 	}
-	else if (_velocidade.x < -_max_vx) {
-		_velocidade.x = -_max_vx;
+	else if (_velocidade.x < -_maxVx) {
+		_velocidade.x = -_maxVx;
 	}
 
-	if (_velocidade.y > _max_vy) {
-		_velocidade.y = _max_vy;
+	if (_velocidade.y > _maxVy) {
+		_velocidade.y = _maxVy;
 	}
 
 	_aceleracao.x = 0;
@@ -142,14 +142,14 @@ bool Personagem::ChecarChao (Plataforma* plat) {
 		(y < plat_rect.top) ||
 		(y > plat_rect.top + plat_rect.height)) {
 
-		_esta_no_chao = false;
+		_estaNoChao = false;
 		return false;
 	}
 	else {
 		if (_velocidade.y > -0.01) {
 			_posicao.y = plat_rect.top - pers_rect.height;
 			_velocidade.y = 0;
-			_esta_no_chao = true;
+			_estaNoChao = true;
 		}
 		return true;
 	}
@@ -159,7 +159,7 @@ bool Personagem::ChecarTeto (Plataforma* plat) {
 	sf::IntRect plat_rect = plat->GetCaixaDeColisao();
 	sf::IntRect pers_rect = GetCaixaDeColisao();
 
-	// Linha 1px em cima do personagem
+	// Linha em cima do personagem
 	int y = pers_rect.top - 10;
 	int x0 = pers_rect.left + 1;
 	int xf = pers_rect.left + pers_rect.width - 1;
@@ -170,14 +170,14 @@ bool Personagem::ChecarTeto (Plataforma* plat) {
 		(y < plat_rect.top) ||
 		(y > plat_rect.top + plat_rect.height)) {
 
-		_batendo_teto = false;
+		_batendoTeto = false;
 		return false;
 	}
 	else {
 		if (_velocidade.y < 0.01) {
 			_posicao.y = plat_rect.top + plat_rect.height;
 			_velocidade.y = 0;
-			_batendo_teto = true;
+			_batendoTeto = true;
 		}
 
 		return true;
@@ -199,14 +199,14 @@ bool Personagem::ChecarEsquerda (Plataforma* plat) {
 		(x < plat_rect.left) ||
 		(x > plat_rect.left + plat_rect.width)) {
 
-		_batendo_esquerda = false;
+		_batendoEsquerda = false;
 		return false;
 	}
 	else {
 		if (_velocidade.x < 0.01) {
 			_posicao.x = plat_rect.left + plat_rect.width;
 			_velocidade.x = 0;
-			_batendo_esquerda = true;
+			_batendoEsquerda = true;
 		}
 
 		return true;
@@ -228,14 +228,14 @@ bool Personagem::ChecarDireita (Plataforma* plat) {
 		(x < plat_rect.left) ||
 		(x > plat_rect.left + plat_rect.width)) {
 
-		_batendo_direta = false;
+		_batendoDireta = false;
 		return false;
 	}
 	else {
 		if (_velocidade.x > -0.01) {
 			_posicao.x = plat_rect.left - pers_rect.width;
 			_velocidade.x = 0;
-			_batendo_direta = true;
+			_batendoDireta = true;
 		}
 
 		return true;

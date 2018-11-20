@@ -12,10 +12,10 @@ GerenciadorGrafico* GerenciadorGrafico::GetInstance () {
 
 GerenciadorGrafico::GerenciadorGrafico ():
 _timer(),
-_delta_t(0),
+_deltaT(0),
 _camera(),
 _window(),
-_video_mode(),
+_videoMode(),
 _titulo()
 {
 
@@ -26,7 +26,7 @@ GerenciadorGrafico::~GerenciadorGrafico () {
 }
 
 void GerenciadorGrafico::CriaJanela (sf::VideoMode video_mode, string titulo) {
-	_video_mode = video_mode;
+	_videoMode = video_mode;
 	_titulo = titulo;
 
 	sf::FloatRect camera_rect(0, 0, video_mode.width, video_mode.height);
@@ -55,16 +55,16 @@ bool GerenciadorGrafico::GetMouseClick() {
 }
 
 float GerenciadorGrafico::GetDeltaTime () {
-	return _delta_t;
+	return _deltaT;
 }
 
 void GerenciadorGrafico::SetCamera (int x) {
-	_camera.setCenter(x, _video_mode.height / 2);
+	_camera.setCenter(x, _videoMode.height / 2);
 	_window.setView(_camera);
 }
 
 void GerenciadorGrafico::ResetCamera () {
-	sf::FloatRect camera_rect(0, 0, _video_mode.width, _video_mode.height);
+	sf::FloatRect camera_rect(0, 0, _videoMode.width, _videoMode.height);
 	_camera.reset(camera_rect);
 	_window.setView(_camera);
 }
@@ -75,7 +75,7 @@ void GerenciadorGrafico::Limpar () {
 
 void GerenciadorGrafico::Atualizar () {
 	_window.display();
-	_delta_t = _timer.restart().asSeconds();
+	_deltaT = _timer.restart().asSeconds();
 }
 
 void GerenciadorGrafico::Desenhar (sf::Drawable& objeto) {

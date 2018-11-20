@@ -20,6 +20,7 @@ GerenciadorDeTexturas* GerenciadorDeTexturas::GetInstance () {
 }
 
 GerenciadorDeTexturas::GerenciadorDeTexturas () {
+    // Carrega as texturas
 	tex_jogador.loadFromFile(Resources::tex_jogador);
 	tex_mumia.loadFromFile(Resources::tex_mumia);
 	tex_plataforma.loadFromFile(Resources::tex_plataforma);

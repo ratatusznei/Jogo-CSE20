@@ -12,6 +12,8 @@ class GerenciadorDeTexturas {
 
 		~GerenciadorDeTexturas();
 
+		/*  IN: Nenhum
+            OUT: Referencia para a textura correspondente */
 		sf::Texture* GetJogador ();
 		sf::Texture* GetMumia ();
 		sf::Texture* GetPlataforma ();
@@ -34,8 +36,6 @@ class GerenciadorDeTexturas {
 		static sf::Texture tex_brobot;
 		static sf::Texture tex_alien;
 		static sf::Texture tex_farao;
-
-	private:
 };
 
 #endif // GERENCIADORDETEXTURAS_H

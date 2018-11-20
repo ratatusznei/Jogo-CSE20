@@ -1097,7 +1097,7 @@
 
 1542681592 c:\users\a\desktop\time-travel\application\sfml-2.5.1\include\sfml\window\windowstyle.hpp
 
-1542680527 c:\users\a\desktop\time-travel\application\src\gerenciadorgrafico.h
+1542749895 c:\users\a\desktop\time-travel\application\src\gerenciadorgrafico.h
 	<SFML/Window.hpp>
 	<SFML/Graphics.hpp>
 	<string>
@@ -1302,7 +1302,7 @@
 	<SFML/Graphics/Drawable.hpp>
 	<SFML/Window/GlResource.hpp>
 
-1542689742 c:\users\a\desktop\time-travel\application\src\common.h
+1542753268 c:\users\a\desktop\time-travel\application\src\common.h
 	<string>
 	<iostream>
 
@@ -1310,13 +1310,13 @@
 	"Menu.h"
 	"../common.h"
 
-1542680527 c:\users\a\desktop\time-travel\application\src\cenas\menu.h
+1542753463 c:\users\a\desktop\time-travel\application\src\cenas\menu.h
 	<vector>
 	<string>
 	"../common.h"
 	"../GerenciadorGrafico.h"
 
-1542687156 c:\users\a\desktop\time-travel\application\src\cenas\jogo.h
+1542753627 c:\users\a\desktop\time-travel\application\src\cenas\jogo.h
 	<SFML/System.hpp>
 	<fstream>
 	"../GerenciadorGrafico.h"
@@ -1329,7 +1329,7 @@
 	"../Inimigos/Mumia.h"
 	"../Entidades/Plataforma.h"
 
-1542692776 c:\users\a\desktop\time-travel\application\src\fases\fase.h
+1542752350 c:\users\a\desktop\time-travel\application\src\fases\fase.h
 	<SFML/System.hpp>
 	<fstream>
 	"../GerenciadorGrafico.h"
@@ -1339,7 +1339,7 @@
 	"../Inimigos/Inimigo.h"
 	"../Entidades/Plataforma.h"
 
-1542680527 c:\users\a\desktop\time-travel\application\src\gerenciadordecolisao.h
+1542750134 c:\users\a\desktop\time-travel\application\src\gerenciadordecolisao.h
 	"LinkedLists.h"
 	"Jogador.h"
 	"Inimigos/Inimigo.h"
@@ -1348,55 +1348,55 @@
 1542680527 c:\users\a\desktop\time-travel\application\src\linkedlists.h
 	<stdlib.h>
 
-1542688836 c:\users\a\desktop\time-travel\application\src\jogador\jogador.h
+1542751068 c:\users\a\desktop\time-travel\application\src\jogador\jogador.h
 	"../GerenciadorDeTexturas.h"
 	"GerenciadorDeInput.h"
 	"../Entidades/Personagem.h"
 	"../common.h"
 
-1542689677 c:\users\a\desktop\time-travel\application\src\gerenciadordetexturas.h
+1542749957 c:\users\a\desktop\time-travel\application\src\gerenciadordetexturas.h
 	<SFML/Graphics.hpp>
 	"common.h"
 
-1542680527 c:\users\a\desktop\time-travel\application\src\jogador\gerenciadordeinput.h
+1542751402 c:\users\a\desktop\time-travel\application\src\jogador\gerenciadordeinput.h
 	<SFML/Window/Keyboard.hpp>
 	"../common.h"
 
-1542688465 c:\users\a\desktop\time-travel\application\src\entidades\personagem.h
+1542753323 c:\users\a\desktop\time-travel\application\src\entidades\personagem.h
 	"../Animador.h"
 	"Entidade.h"
 	"Plataforma.h"
 	"Projetil.h"
 
-1542680527 c:\users\a\desktop\time-travel\application\src\animador.h
+1542750886 c:\users\a\desktop\time-travel\application\src\animador.h
 	<SFML/Graphics.hpp>
 	"common.h"
 
-1542680527 c:\users\a\desktop\time-travel\application\src\entidades\entidade.h
+1542753392 c:\users\a\desktop\time-travel\application\src\entidades\entidade.h
 	"../GerenciadorGrafico.h"
 	"../common.h"
 
-1542680527 c:\users\a\desktop\time-travel\application\src\entidades\plataforma.h
+1542752891 c:\users\a\desktop\time-travel\application\src\entidades\plataforma.h
 	"../GerenciadorDeTexturas.h"
 	"Entidade.h"
 
-1542680527 c:\users\a\desktop\time-travel\application\src\entidades\projetil.h
+1542752773 c:\users\a\desktop\time-travel\application\src\entidades\projetil.h
 	"Entidade.h"
 	"../LinkedLists.h"
 	"../common.h"
 
-1542688284 c:\users\a\desktop\time-travel\application\src\inimigos\inimigo.h
+1542752062 c:\users\a\desktop\time-travel\application\src\inimigos\inimigo.h
 	"../Entidades/Personagem.h"
 	"../Jogador/Jogador.h"
 
-1542692565 c:\users\a\desktop\time-travel\application\src\fases\faseegito.h
+1542752126 c:\users\a\desktop\time-travel\application\src\fases\faseegito.h
 	"Fase.h"
 	"../LinkedLists.h"
 	"../Inimigos/Mumia.h"
 	"../Inimigos/Cobra.h"
 	"../Inimigos/Farao.h"
 
-1542688193 c:\users\a\desktop\time-travel\application\src\inimigos\mumia.h
+1542751745 c:\users\a\desktop\time-travel\application\src\inimigos\mumia.h
 	"../GerenciadorDeTexturas.h"
 	"../GerenciadorGrafico.h"
 	"../Inimigos/Inimigo.h"
@@ -1415,14 +1415,14 @@
 	"../common.h"
 	"Menu.h"
 
-1542680527 source:c:\users\a\desktop\time-travel\application\src\animador.cpp
+1542750470 source:c:\users\a\desktop\time-travel\application\src\animador.cpp
 	"Animador.h"
 
-1542693074 source:c:\users\a\desktop\time-travel\application\src\cenas\jogo.cc
+1542753511 source:c:\users\a\desktop\time-travel\application\src\cenas\jogo.cc
 	"Jogo.h"
 	<time.h>
 
-1542680527 source:c:\users\a\desktop\time-travel\application\src\cenas\menu.cc
+1542753462 source:c:\users\a\desktop\time-travel\application\src\cenas\menu.cc
 	"Menu.h"
 
 1542680527 source:c:\users\a\desktop\time-travel\application\src\cenas\menuprincipal.cc
@@ -1434,13 +1434,13 @@
 1542680527 source:c:\users\a\desktop\time-travel\application\src\entidades\entidade.cc
 	"Entidade.h"
 
-1542692895 source:c:\users\a\desktop\time-travel\application\src\entidades\personagem.cc
+1542753360 source:c:\users\a\desktop\time-travel\application\src\entidades\personagem.cc
 	"Personagem.h"
 
-1542680527 source:c:\users\a\desktop\time-travel\application\src\entidades\plataforma.cc
+1542752900 source:c:\users\a\desktop\time-travel\application\src\entidades\plataforma.cc
 	"Plataforma.h"
 
-1542680527 source:c:\users\a\desktop\time-travel\application\src\entidades\projetil.cpp
+1542750458 source:c:\users\a\desktop\time-travel\application\src\entidades\projetil.cpp
 	"Projetil.h"
 
 1542680527 source:c:\users\a\desktop\time-travel\application\src\fases\fase.cpp
@@ -1449,16 +1449,16 @@
 1542692601 source:c:\users\a\desktop\time-travel\application\src\fases\faseegito.cpp
 	"FaseEgito.h"
 
-1542680527 source:c:\users\a\desktop\time-travel\application\src\gerenciadordecolisao.cpp
+1542750148 source:c:\users\a\desktop\time-travel\application\src\gerenciadordecolisao.cpp
 	"GerenciadorDeColisao.h"
 
-1542689894 source:c:\users\a\desktop\time-travel\application\src\gerenciadordetexturas.cpp
+1542749977 source:c:\users\a\desktop\time-travel\application\src\gerenciadordetexturas.cpp
 	"GerenciadorDeTexturas.h"
 
-1542680527 source:c:\users\a\desktop\time-travel\application\src\gerenciadorgrafico.cc
+1542749730 source:c:\users\a\desktop\time-travel\application\src\gerenciadorgrafico.cc
 	"GerenciadorGrafico.h"
 
-1542680527 source:c:\users\a\desktop\time-travel\application\src\inimigos\alienigena.cpp
+1542753319 source:c:\users\a\desktop\time-travel\application\src\inimigos\alienigena.cpp
 	"Alienigena.h"
 
 1542688240 c:\users\a\desktop\time-travel\application\src\inimigos\alienigena.h
@@ -1468,7 +1468,7 @@
 	"../Jogador/Jogador.h"
 	"../common.h"
 
-1542680527 source:c:\users\a\desktop\time-travel\application\src\inimigos\badrobot.cpp
+1542753321 source:c:\users\a\desktop\time-travel\application\src\inimigos\badrobot.cpp
 	"BadRobot.h"
 
 1542688227 c:\users\a\desktop\time-travel\application\src\inimigos\badrobot.h
@@ -1478,19 +1478,19 @@
 	"../Jogador/Jogador.h"
 	"../common.h"
 
-1542680527 source:c:\users\a\desktop\time-travel\application\src\inimigos\cobra.cpp
+1542753318 source:c:\users\a\desktop\time-travel\application\src\inimigos\cobra.cpp
 	"Cobra.h"
 
 1542680527 source:c:\users\a\desktop\time-travel\application\src\inimigos\inimigo.cpp
 	"Inimigo.h"
 
-1542689960 source:c:\users\a\desktop\time-travel\application\src\inimigos\mumia.cpp
+1542753322 source:c:\users\a\desktop\time-travel\application\src\inimigos\mumia.cpp
 	"Mumia.h"
 
 1542680527 source:c:\users\a\desktop\time-travel\application\src\jogador\gerenciadordeinput.cc
 	"GerenciadorDeInput.h"
 
-1542688833 source:c:\users\a\desktop\time-travel\application\src\jogador\jogador.cc
+1542753320 source:c:\users\a\desktop\time-travel\application\src\jogador\jogador.cc
 	"Jogador.h"
 
 1542680527 source:c:\users\a\desktop\time-travel\application\src\jogador\registrodejogada.cc
@@ -1506,13 +1506,13 @@
 	<SFML/Graphics.hpp>
 	<string.h>
 
-1542693043 source:c:\users\a\desktop\time-travel\application\src\principal.cc
+1542749655 source:c:\users\a\desktop\time-travel\application\src\principal.cc
 	"Principal.h"
 
-1542691666 source:c:\users\a\desktop\time-travel\application\src\inimigos\farao.cpp
+1542753322 source:c:\users\a\desktop\time-travel\application\src\inimigos\farao.cpp
 	"Farao.h"
 
-1542690236 c:\users\a\desktop\time-travel\application\src\inimigos\farao.h
+1542751888 c:\users\a\desktop\time-travel\application\src\inimigos\farao.h
 	"../GerenciadorDeTexturas.h"
 	"../GerenciadorGrafico.h"
 	"../Inimigos/Inimigo.h"

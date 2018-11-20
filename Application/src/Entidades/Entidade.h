@@ -25,10 +25,12 @@ class Entidade {
 			OUT: Posicao relativa ao TOPO-ESQUERDO da janela */
 		const sf::Vector2f GetPosicao ();
 
+		/*  IN: Posicao x, y
+            OUT: Seta a posicao */
 		void SetPosicao(int x, int y);
 
 	protected:
-		sf::IntRect _tex_rect;
+		sf::IntRect _texRect;
 		sf::Sprite _sp;
 
 		sf::Vector2f _posicao;

@@ -5,11 +5,11 @@ Entidade(0, 0),
 _velocidade(0, 0),
 _tempoPraMorrer(0)
 {
-	_tex_rect.top = 0;
-	_tex_rect.left = 0;
-	_tex_rect.width = Resources::block_size;
-	_tex_rect.height = Resources::block_size;
-	_sp.setTextureRect(_tex_rect);
+	_texRect.top = 0;
+	_texRect.left = 0;
+	_texRect.width = Resources::block_size;
+	_texRect.height = Resources::block_size;
+	_sp.setTextureRect(_texRect);
 
 	_dano = 1;
 }
@@ -24,11 +24,11 @@ _tempoPraMorrer(prototipo.GetTempoPraMorrer())
 	_texture = prototipo.GetTexture();
 	_sp.setTexture(*_texture);
 
-	_tex_rect.top = 0;
-	_tex_rect.left = 0;
-	_tex_rect.width = Resources::block_size;
-	_tex_rect.height = Resources::block_size;
-	_sp.setTextureRect(_tex_rect);
+	_texRect.top = 0;
+	_texRect.left = 0;
+	_texRect.width = Resources::block_size;
+	_texRect.height = Resources::block_size;
+	_sp.setTextureRect(_texRect);
 }
 
 Projetil::~Projetil () {

@@ -28,9 +28,16 @@ class Jogo {
 		void Executar ();
 		void Desenhar ();
 
+		/*  IN: Verdadeiro se dois jogadores, falso se um jogador
+            OUT: Inicia o jogo, carregando a 1a fase */
 		void Iniciar (bool ehCoop);
+
+		/*  IN: Nenhum
+            OUT: Verdadeiro se o jogo acabou */
 		bool GameOver ();
 
+		/*  IN: Nenhum
+            OUT: Altera o estado do jogo de pausado para rodando ou de rodando para pausado */
 		void TogglePausa ();
 
 	private:
@@ -39,15 +46,15 @@ class Jogo {
 		bool _coop;
 		bool _acabou;
 
-		int _camera_x;
+		int _cameraX;
 
 		Jogador _jogador1;
 		Jogador _jogador2;
-		GerenciadorDeInput _in_j1;
-		GerenciadorDeInput _in_j2;
+		GerenciadorDeInput _inJ1;
+		GerenciadorDeInput _inJ2;
 
-		sf::Texture _tex_fundo;
-		sf::Sprite _sp_fundo;
+		sf::Texture _texFundo;
+		sf::Sprite _spFundo;
 
 		GerenciadorDeColisao _colisoes;
 

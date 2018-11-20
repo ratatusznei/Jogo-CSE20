@@ -13,20 +13,20 @@ Inimigo(x, y, projeteis, C_total_anims) {
 	_j2 = j2;
 	_estado = EstadoCobra::Perdida;
 
-	_max_vx = ConstsPersonagens::M_max_vx;
-	_max_vy = Fisica::velocidade_terminal;
+	_maxVx = ConstsPersonagens::M_maxVx;
+	_maxVy = Fisica::velocidade_terminal;
 
-	_aceleracao_caminhada = ConstsPersonagens::M_aceleracao / 2;
+	_aceleracaoCaminhada = ConstsPersonagens::M_aceleracao / 2;
 	_desaceleracao = ConstsPersonagens::M_desaceleracao / 2;
 
-	_velocidade_pulo = ConstsPersonagens::M_v_pulo;
+	_velocidadePulo = ConstsPersonagens::M_v_pulo;
 
 	_range = ConstsPersonagens::M_distancia_deteccao * 30;
-	_range_ataque = 300;
+	_rangeAtaque = 300;
 
 	_x0 = x;
 
-	_animador.SetTextureBox(&_tex_rect);
+	_animador.SetTextureBox(&_texRect);
 	_animador.SetSprite(&_sp);
 	_animador.SetTamanhoQuadro(Resources::block_size);
 
@@ -37,10 +37,10 @@ Inimigo(x, y, projeteis, C_total_anims) {
 	_animador.SetFrameCount(C_anim_atacando, 1);
 	_animador.SetFrameCount(C_anim_andando, 2);
 
-	_projetil_protipo.SetTexture(GerenciadorDeTexturas::GetInstance()->GetCobra());
-	_projetil_protipo.SetTempoPraMorrer(1.5);
-	_projetil_protipo.SetOffSetY(C_total_anims * Resources::block_size);
-	_vx_ataque = 300;
+	_projetilProtipo.SetTexture(GerenciadorDeTexturas::GetInstance()->GetCobra());
+	_projetilProtipo.SetTempoPraMorrer(1.5);
+	_projetilProtipo.SetOffSetY(C_total_anims * Resources::block_size);
+	_vXAtaque = 300;
 
 	_timerDescanso = -1;
 }
@@ -68,7 +68,7 @@ void Cobra::Executar (float dt) {
 		mag_dist_j2 = dist_j2 > 0? dist_j2: -dist_j2;
 	}
 
-	if (!_esta_no_chao) {
+	if (!_estaNoChao) {
 		_aceleracao.y = Fisica::G;
 	}
 	else {
@@ -76,30 +76,30 @@ void Cobra::Executar (float dt) {
 	}
 
 	int delta_x = 50;
-        switch (_estado) {
-        case EstadoCobra::Perdida:
+    switch (_estado) {
+    case EstadoCobra::Perdida:
 		_animador.Play(C_anim_andando);
 		_animador.SetLoop(true);
 
-		if (!_esta_no_chao) {
+		if (!_estaNoChao) {
 			_estado = EstadoCobra::Perdida;
 		}
 
 		if (_posicao.x > _x0 && _posicao.x - _x0 >= delta_x) {
-			Acelerar(dt, -_aceleracao_caminhada);
+			Acelerar(dt, -_aceleracaoCaminhada);
 		}
 		else if (_posicao.x < _x0 && _x0 - _posicao.x >= delta_x) {
-			Acelerar(dt, _aceleracao_caminhada);
+			Acelerar(dt, _aceleracaoCaminhada);
 		}
 		else if (_velocidade.x > 0) {
-			Acelerar(dt, _aceleracao_caminhada);
+			Acelerar(dt, _aceleracaoCaminhada);
 		}
 		else {
-			Acelerar(dt, -_aceleracao_caminhada);
+			Acelerar(dt, -_aceleracaoCaminhada);
 		}
 
-		if (_esta_no_chao) {
-			if (_batendo_esquerda || _batendo_direta) {
+		if (_estaNoChao) {
+			if (_batendoEsquerda || _batendoDireta) {
 				_estado = EstadoCobra::Perdida;
 			}
 		}
@@ -121,10 +121,10 @@ void Cobra::Executar (float dt) {
 		_animador.Play(C_anim_andando);
 		_animador.SetLoop(true);
 
-		if (!_esta_no_chao) {
+		if (!_estaNoChao) {
 			_estado = EstadoCobra::Perdida;
 		}
-		else if (mag_dist_j1 < _range_ataque && _podeAtacar) {
+		else if (mag_dist_j1 < _rangeAtaque && _podeAtacar) {
 			_estado = EstadoCobra::Atacando;
 		}
 		else if (_j2 != NULL && mag_dist_j2 < _range && mag_dist_j2 < mag_dist_j1) {
@@ -134,14 +134,14 @@ void Cobra::Executar (float dt) {
 			_estado = EstadoCobra::Perdida;
 		}
 		else if (dist_j1 > 0) {
-			Acelerar(dt, _aceleracao_caminhada);
+			Acelerar(dt, _aceleracaoCaminhada);
 		}
 		else if (dist_j1 < 0) {
-			Acelerar(dt,-_aceleracao_caminhada);
+			Acelerar(dt,-_aceleracaoCaminhada);
 		}
 
-		if (_esta_no_chao) {
-			if (_batendo_esquerda || _batendo_direta) {
+		if (_estaNoChao) {
+			if (_batendoEsquerda || _batendoDireta) {
 				_estado = EstadoCobra::SeguindoJ1;
 			}
 		}
@@ -151,10 +151,10 @@ void Cobra::Executar (float dt) {
 		_animador.Play(C_anim_andando);
 		_animador.SetLoop(true);
 
-		if (!_esta_no_chao) {
+		if (!_estaNoChao) {
 			_estado = EstadoCobra::Perdida;
 		}
-		else if (mag_dist_j2 < _range_ataque && _podeAtacar) {
+		else if (mag_dist_j2 < _rangeAtaque && _podeAtacar) {
 			_estado = EstadoCobra::Atacando;
 		}
 		else if (_j1 != NULL && mag_dist_j1 < _range && mag_dist_j1 < mag_dist_j2) {
@@ -164,14 +164,14 @@ void Cobra::Executar (float dt) {
 			_estado = EstadoCobra::Perdida;
 		}
 		else if (dist_j2 > 0) {
-			Acelerar(dt, _aceleracao_caminhada);
+			Acelerar(dt, _aceleracaoCaminhada);
 		}
 		else if (dist_j2 < 0) {
-			Acelerar(dt, -_aceleracao_caminhada);
+			Acelerar(dt, -_aceleracaoCaminhada);
 		}
 
-		if (_esta_no_chao) {
-			if (_batendo_esquerda || _batendo_direta) {
+		if (_estaNoChao) {
+			if (_batendoEsquerda || _batendoDireta) {
 				_estado = EstadoCobra::SeguindoJ2;
 			}
 		}

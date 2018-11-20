@@ -4,13 +4,13 @@ Plataforma::Plataforma (int x, int y, int w, int h, sf::Texture* tex):
 Entidade(x, y),
 _largura(w),
 _altura(h),
-_caixa_colisao(x, y, 0, 0)
+_caixaDeColisao(x, y, 0, 0)
 {
 	_sp.setTexture(*tex);
 
-	// Pre calcula caixa de colisao
-	_caixa_colisao.width = _largura * _sp.getGlobalBounds().width;
-	_caixa_colisao.height = _altura * _sp.getGlobalBounds().height;
+	// Pre calcular caixa de colisao
+	_caixaDeColisao.width = _largura * _sp.getGlobalBounds().width;
+	_caixaDeColisao.height = _altura * _sp.getGlobalBounds().height;
 }
 
 Plataforma::~Plataforma () {
@@ -38,8 +38,8 @@ void Plataforma::SetPosicao (int x, int y) {
 	_posicao.x = x;
 	_posicao.y = y;
 
-	_caixa_colisao.left = x;
-	_caixa_colisao.top = y;
+	_caixaDeColisao.left = x;
+	_caixaDeColisao.top = y;
 }
 
 void Plataforma::SetTamanho (int w, int h) {
@@ -48,12 +48,12 @@ void Plataforma::SetTamanho (int w, int h) {
 
 	sf::FloatRect temp = _sp.getGlobalBounds();
 
-	_caixa_colisao.top = temp.top;
-	_caixa_colisao.left = temp.left;
-	_caixa_colisao.width = temp.width * _largura;
-	_caixa_colisao.height = temp.height * _altura;
+	_caixaDeColisao.top = temp.top;
+	_caixaDeColisao.left = temp.left;
+	_caixaDeColisao.width = temp.width * _largura;
+	_caixaDeColisao.height = temp.height * _altura;
 }
 
 sf::IntRect Plataforma::GetCaixaDeColisao() {
-	return _caixa_colisao;
+	return _caixaDeColisao;
 }
