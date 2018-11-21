@@ -1,3 +1,8 @@
+Application/bin/*
+**/.vscode/*
+.vscode/
+Application/*.dll
+
 # Prerequisites
 *.d
 
